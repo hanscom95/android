@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_sleep_chart"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="se.com.band.sleep.SleepChartActivity"
+    tools:showIn="@layout/activity_sleep_chart">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                app:tabIndicatorColor="@color/today"
+                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                android:layout_marginLeft="@dimen/activity_side"
+                android:layout_marginRight="@dimen/activity_side" >
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="day"/>
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="week" />
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="month" />
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="year" />
+            </android.support.design.widget.TabLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/chart_pager"
+                android:layout_width="match_parent"
+                android:layout_height="221dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tabLayout"
+                android:padding="@dimen/activity_side">
+
+            </android.support.v4.view.ViewPager>
+
+
+            <LinearLayout
+                android:id="@+id/info"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/activity_side"
+                android:paddingRight="@dimen/activity_side"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/chart_pager"
+                android:background="@color/sleep_bg"
+                android:layout_height="match_parent">
+
+
+                <de.morrox.fontinator.FontTextView
+                    android:text="daily average score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/info_title"
+                    android:textSize="24sp"
+                    app:font="Regular.otf"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="@dimen/info_title_interval"
+                    android:layout_marginBottom="@dimen/info_title_interval"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:layout_marginRight="@dimen/info_inner_interval"
+                        android:paddingTop="@dimen/sleep_info_box_interval"
+                        android:paddingLeft="@dimen/sleep_info_box_interval"
+                        android:paddingBottom="@dimen/sleep_info_box_interval"
+                        android:background="@mipmap/sleep_daily_avg_box">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_min_text"
+                            android:textSize="11sp"
+                            android:fontFamily="sans-serif"
+                            app:font="Regular.otf"
+                            android:textColor="@android:color/white" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="07:40"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_min"
+                            android:textSize="35sp"
+                            android:fontFamily="sans-serif"
+                            app:font="Extra_Condensed_Semibold.otf"
+                            android:layout_below="@+id/heart_min_text"
+                            android:textColor="@android:color/white" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="hrs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_min_unit_text"
+                            android:layout_marginLeft="@dimen/info_inner_interval"
+                            android:textSize="14sp"
+                            app:font="Light_Italic.otf"
+                            android:textColor="@android:color/white"
+                            android:layout_below="@+id/heart_min"
+                            android:layout_alignParentStart="true" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:layout_marginRight="@dimen/info_inner_interval"
+                        android:paddingTop="@dimen/sleep_info_box_interval"
+                        android:paddingLeft="@dimen/sleep_info_box_interval"
+                        android:paddingBottom="@dimen/sleep_info_box_interval"
+                        android:background="@mipmap/sleep_daily_avg_box">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="light sleep"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_max_text"
+                            android:textSize="11sp"
+                            android:fontFamily="sans-serif"
+                            app:font="Regular.otf"
+                            android:textColor="@android:color/white" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="03:10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_max"
+                            android:textSize="35sp"
+                            android:fontFamily="sans-serif"
+                            app:font="Extra_Condensed_Semibold.otf"
+                            android:layout_below="@+id/heart_max_text"
+                            android:textColor="@android:color/white" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="hrs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_max_unit_text"
+                            android:layout_marginLeft="@dimen/info_inner_interval"
+                            android:textSize="14sp"
+                            app:font="Light_Italic.otf"
+                            android:textColor="@android:color/white"
+                            android:layout_below="@+id/heart_max"
+                            android:layout_alignParentStart="true" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:layout_marginRight="@dimen/info_inner_interval"
+                        android:paddingTop="@dimen/sleep_info_box_interval"
+                        android:paddingLeft="@dimen/sleep_info_box_interval"
+                        android:paddingBottom="@dimen/sleep_info_box_interval"
+                        android:background="@mipmap/sleep_daily_avg_box">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="deep sleep"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sleep_deep_sleep_text"
+                            android:textSize="11sp"
+                            android:fontFamily="sans-serif"
+                            app:font="Regular.otf"
+                            android:textColor="@android:color/white" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="04:30"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sleep_deep_sleep"
+                            android:textSize="35sp"
+                            android:fontFamily="sans-serif"
+                            app:font="Extra_Condensed_Semibold.otf"
+                            android:layout_below="@+id/sleep_deep_sleep_text"
+                            android:textColor="@android:color/white" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="hrs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sleep_deep_sleep_unit_text"
+                            android:layout_marginLeft="@dimen/info_inner_interval"
+                            android:textSize="14sp"
+                            app:font="Light_Italic.otf"
+                            android:textColor="@android:color/white"
+                            android:layout_below="@+id/sleep_deep_sleep"
+                            android:layout_alignParentStart="true" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

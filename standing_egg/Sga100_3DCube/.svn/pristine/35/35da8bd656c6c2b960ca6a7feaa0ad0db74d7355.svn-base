@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#FF2222</color>
+    <color name="black">#000000</color>
+    <color name="gen_app_color">#337799</color>
+    <color name="switch_checked">#ff00996b</color>
+    <color name="switch_unchecked">#FF464646</color>
+</resources>

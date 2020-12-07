@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:background="@drawable/result_background">
+
+
+        <RelativeLayout
+            android:layout_width="170dp"
+            android:orientation="horizontal"
+            android:gravity="left"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@drawable/result_goal_score"
+                android:gravity="right"
+                android:layout_marginTop="10dp"
+                android:layout_height="38.5dp"
+                android:layout_width="170dp">
+            </LinearLayout>
+            <TextView
+                android:id="@+id/goal_text"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="20sp"
+                android:textColor="@color/colorDarkGray"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentBottom="true"
+                android:paddingLeft="40dp" />
+        </RelativeLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="170dp"
+            android:orientation="horizontal"
+            android:gravity="left"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@drawable/result_counting_score"
+                android:gravity="right"
+                android:layout_marginTop="10dp"
+                android:layout_height="38.5dp"
+                android:layout_width="170dp"></LinearLayout>
+
+            <TextView
+                android:id="@+id/step_text"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="20sp"
+                android:textColor="@color/colorStep"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentBottom="true"
+                android:paddingLeft="40dp" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:orientation="horizontal"
+                android:gravity="left"
+                android:layout_marginLeft="30dp"
+                android:layout_height="50dp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:background="@drawable/result_walking_score"
+                    android:gravity="right"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="17dp"
+                    android:layout_width="80dp"></LinearLayout>
+
+                <TextView
+                    android:id="@+id/walk_text"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorGray"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_alignParentTop="false"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:orientation="horizontal"
+                android:gravity="left"
+                android:layout_marginLeft="30dp"
+                android:layout_height="50dp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:background="@drawable/result_running_score"
+                    android:gravity="right"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="17dp"
+                    android:layout_width="80dp"></LinearLayout>
+
+                <TextView
+                    android:id="@+id/run_text"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorGray"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_alignParentTop="false"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:baselineAligned="false"
+        android:gravity="left|center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/result_hit_rate"
+            android:gravity="bottom">
+
+            <TextView
+                android:id="@+id/percent_text"
+                android:layout_width="121dp"
+                android:layout_height="59dp"
+                android:padding="10dp"
+                android:textColor="@color/colorStep"
+                android:textStyle="bold"
+                android:textSize="30sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/result_button_delete"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical|center_horizontal" />
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/result_button_save_data"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical|center_horizontal" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/all_rights_reserved"
+            android:layout_marginBottom="10dp" />
+    </LinearLayout>
+
+</LinearLayout>

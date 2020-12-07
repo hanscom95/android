@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.standingegg.acc">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-sdk android:minSdkVersion="16" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.standingegg.acc.IntroActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".GoalActivity"
+                   android:screenOrientation="portrait"/>
+        <activity android:name=".StepActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".WalkingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RunningActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ResultActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SaveActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SaveChartActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

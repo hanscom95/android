@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chart_top_msg"
+        android:layout_marginLeft="@dimen/info_text_interval"
+        android:layout_marginRight="@dimen/info_text_interval">
+
+        <de.morrox.fontinator.FontTextView
+            android:text="minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chart_axis_text"
+            android:textSize="12sp"
+            app:font="Light_Italic.otf"
+            android:textColor="@color/chart_axis_title"
+            android:layout_weight="1" />
+
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:srcCompat="@color/chart_light_sleep"
+            android:id="@+id/light_credit_view"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="4dp"
+            android:layout_toStartOf="@+id/chart_credits_light_text" />
+        <de.morrox.fontinator.FontTextView
+            android:text="light sleep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chart_credits_light_text"
+            android:textSize="12sp"
+            app:font="Regular.otf"
+            android:textColor="@color/chart_axis_title"
+            android:layout_weight="1"
+            android:layout_marginEnd="26dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/deep_credit_view" />
+
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:srcCompat="@color/chart_deep_sleep"
+            android:id="@+id/deep_credit_view"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="4dp"
+            android:layout_toStartOf="@+id/chart_credits_deep_text" />
+        <de.morrox.fontinator.FontTextView
+            android:text="deep sleep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chart_credits_deep_text"
+            android:textSize="12sp"
+            app:font="Regular.otf"
+            android:textColor="@color/chart_axis_title"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1" />
+
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/chart_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/chart_top_msg" />
+
+</RelativeLayout>

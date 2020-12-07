@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background">
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/log_text"
+                />
+        </ScrollView>
+
+        <Button
+            android:layout_height="@dimen/selector_button"
+            android:id="@+id/activity_button"
+            android:background="@drawable/selector_btn_activity"
+            android:layout_marginBottom="15dp"
+            android:layout_width="@dimen/selector_button"
+            android:visibility="visible"/>
+
+        <Button
+            android:layout_width="@dimen/selector_button"
+            android:layout_height="@dimen/selector_button"
+            android:id="@+id/fitness_button"
+            android:background="@drawable/selector_btn_fitness"
+            android:layout_marginTop="15dp"
+            android:visibility="visible" />
+
+        <Button
+            android:layout_width="@dimen/selector_button"
+            android:layout_height="@dimen/selector_button"
+            android:id="@+id/heartrate_button"
+            android:background="@drawable/selector_btn_heartrate"
+            android:layout_marginTop="15dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:text="Waiting...."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/button_layout"
+        android:paddingBottom="20dp"
+        android:textSize="26sp"
+        android:id="@+id/waitText"
+        android:visibility="gone"/>
+</RelativeLayout>

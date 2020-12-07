@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/element_setting_option_bg"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical|center|center_horizontal"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:paddingLeft="130dp"
+            android:paddingRight="20dp"
+            android:background="@drawable/element_call"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/call_alarm"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <com.standingegg.band.contents.OnOffButton
+                android:id="@+id/call_alarm"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/alarm_background_on_state"
+                android:content="@+id/slideContentLayout1"
+                android:handle="@+id/slideHandle1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/slideHandle1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/alarm_button_thumb" >
+                </Button>
+
+                <LinearLayout
+                    android:id="@+id/slideContentLayout1"
+                    android:layout_width="60dp"
+                    android:layout_height="10dp"
+                    android:orientation="horizontal"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp" >
+                </LinearLayout>
+            </com.standingegg.band.contents.OnOffButton>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:paddingLeft="130dp"
+            android:paddingRight="20dp"
+            android:background="@drawable/element_message"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/sms_alarm"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <com.standingegg.band.contents.OnOffButton
+                android:id="@+id/sms_alarm"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/alarm_background_on_state"
+                android:content="@+id/slideContentLayout1"
+                android:handle="@+id/slideHandle1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/slideHandle1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/alarm_button_thumb" >
+                </Button>
+
+                <LinearLayout
+                    android:id="@+id/slideContentLayout1"
+                    android:layout_width="60dp"
+                    android:layout_height="10dp"
+                    android:orientation="horizontal"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp" >
+                </LinearLayout>
+
+            </com.standingegg.band.contents.OnOffButton>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:paddingLeft="130dp"
+            android:paddingRight="20dp"
+            android:background="@drawable/element_wechat"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/wechat_alarm"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <com.standingegg.band.contents.OnOffButton
+                android:id="@+id/wechat_alarm"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/alarm_background_on_state"
+                android:content="@+id/slideContentLayout2"
+                android:handle="@+id/slideHandle2"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/slideHandle2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/alarm_button_thumb" >
+                </Button>
+
+                <LinearLayout
+                    android:id="@+id/slideContentLayout2"
+                    android:layout_width="60dp"
+                    android:layout_height="10dp"
+                    android:orientation="horizontal"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp" >
+                </LinearLayout>
+
+            </com.standingegg.band.contents.OnOffButton>
+
+            <!-- <Switch -->
+            <!-- android:id="@+id/kakao_alarm" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:thumb="@drawable/alarm_button_thumb" -->
+            <!-- android:track="@drawable/alarm_background_on_state" -->
+            <!-- android:visibility="gone"/> -->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:paddingLeft="130dp"
+            android:paddingRight="20dp"
+            android:background="@drawable/element_qq"
+            android:nestedScrollingEnabled="false">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/qq_alarm"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <com.standingegg.band.contents.OnOffButton
+                android:id="@+id/qq_alarm"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/alarm_background_on_state"
+                android:content="@+id/slideContentLayout3"
+                android:handle="@+id/slideHandle3"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/slideHandle3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/alarm_button_thumb" >
+                </Button>
+
+
+                <LinearLayout
+                    android:id="@+id/slideContentLayout3"
+                    android:layout_width="60dp"
+                    android:layout_height="10dp"
+                    android:orientation="horizontal"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp" >
+                </LinearLayout>
+            </com.standingegg.band.contents.OnOffButton>
+
+            <!-- <Switch -->
+            <!-- android:id="@+id/kakao_alarm" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:thumb="@drawable/alarm_button_thumb" -->
+            <!-- android:track="@drawable/alarm_background_on_state" -->
+            <!-- android:visibility="gone"/> -->
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

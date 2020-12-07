@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_goal_setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="se.com.band.goal.GoalSettingActivity"
+    tools:showIn="@layout/activity_goal_setting">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="3"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:id="@+id/setting_layout">
+            <de.morrox.fontinator.FontTextView
+                android:text="SETTING GOALS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/goal_setting_text"
+                android:textColor="@color/sleep_bg"
+                android:textSize="22sp"
+                app:font="Regular.otf"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/activity_bg"
+            android:gravity="center"
+            android:id="@+id/activity_layout">
+
+            <de.morrox.fontinator.FontTextView
+                android:text="A C T I V I T Y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/goal_activity_text"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                app:font="Semibold.otf"
+                android:layout_centerHorizontal="true" />
+
+            <de.morrox.fontinator.FontTextView
+                android:text="T R A C K I N G"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/goal_ac_tracking_text"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                app:font="Light.otf"
+                android:layout_below="@+id/goal_activity_text"
+                android:layout_centerHorizontal="true" />
+
+            <de.morrox.fontinator.FontTextView
+                android:text="walking &amp; running"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/goal_walk_run_text"
+                android:textColor="@color/sleep_bg"
+                android:textSize="14sp"
+                app:font="Regular.otf"
+                android:layout_below="@+id/goal_ac_tracking_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/motion_bg"
+            android:gravity="center"
+            android:id="@+id/motion_layout">
+
+            <de.morrox.fontinator.FontTextView
+                android:text="M O T I O N"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/goal_motion_text"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                app:font="Semibold.otf"
+                android:layout_centerHorizontal="true" />
+
+            <de.morrox.fontinator.FontTextView
+                android:text="T R A C K I N G"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/goal_mo_tracking_text"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                app:font="Light.otf"
+                android:layout_below="@+id/goal_motion_text"
+                android:layout_centerHorizontal="true" />
+
+            <de.morrox.fontinator.FontTextView
+                android:text="11 motions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/goal_motions_text"
+                android:textColor="@color/sleep_bg"
+                android:textSize="14sp"
+                app:font="Regular.otf"
+                android:layout_below="@+id/goal_mo_tracking_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

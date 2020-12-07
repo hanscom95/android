@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <HorizontalScrollView
+        android:id="@+id/graph_view"
+        android:layout_width="fill_parent"
+        android:layout_height="232dp"
+        android:background="@drawable/element_bg_act_wide"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        
+         >
+
+        <RelativeLayout
+            android:id="@+id/graph_view2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:id="@+id/ichart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/view"
+                android:layout_marginTop="60dp"
+                android:gravity="bottom" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:background="#00FF00" />
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/relative"
+        android:layout_width="fill_parent"
+        android:layout_height="329dp"
+        android:layout_gravity="top"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="52dp" />
+
+        <!-- Text -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingEnd="40dp"
+            android:paddingStart="40dp" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/active_mass"
+                android:textColor="@color/gray1"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/element_360_divider" >
+        </LinearLayout>
+
+        <!-- Data -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingEnd="40dp"
+            android:paddingStart="40dp" >
+
+            <TextView
+                android:id="@+id/activity_km_all"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="left"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/activity_cnt_all"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/activity_kcal_all"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="right"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="34dp" />
+        <!-- Text -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingEnd="40dp"
+            android:paddingStart="40dp" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/walking"
+                android:textColor="@color/gray1"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/element_360_divider" >
+        </LinearLayout>
+        <!-- Data -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingEnd="40dp"
+            android:paddingStart="40dp" >
+
+            <TextView
+                android:id="@+id/walk_km"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="left"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/walk_h"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/walk_kcal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="right"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="34dp" />
+        <!-- Text -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" 
+            android:paddingEnd="40dp"
+            android:paddingStart="40dp" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/running"
+                android:textColor="@color/gray1"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+         <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/element_360_divider" >
+        </LinearLayout>
+        <!-- Data -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingEnd="40dp"
+            android:paddingStart="40dp" >
+
+            <TextView
+                android:id="@+id/run_km"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="left"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/run_h"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/run_kcal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="right"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+        </LinearLayout>
+        
+        
+         <Space
+            android:layout_width="wrap_content"
+            android:layout_height="108dp" />
+         
+           <ImageButton 
+             android:id="@+id/sleep_today_btn"
+             android:layout_width="32dp"
+             android:layout_height="32dp"
+             android:src="@drawable/element_act_moon"
+             android:background="@android:color/transparent"
+             android:layout_gravity="center"/>
+         
+         
+         
+         
+    </LinearLayout>
+
+</LinearLayout>

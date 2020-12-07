@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.standingegg.band"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="19" >
+    </uses-sdk>
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_MMS" />
+
+    <application
+        android:name="CrashReport"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".IntroActivity"
+            android:label="@string/app_name"
+            android:theme="@style/NoActionBar"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <instrumentation
+            android:name="android.test.InstrumentationTestRunner"
+            android:label="@string/app_name"
+            android:targetPackage="HealthDiary1" />
+
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name=".bluetooth.BandConnect"
+            android:label="@string/device_connect_t_ok"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".join.JoinTermActivity"
+            android:theme="@style/NoActionBar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".join.CreateUserActivity"
+            android:label="계정 만들기"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".join.CreateUserInfoActivity"
+            android:label="프로필 저장"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".join.JoinLoadingActivity"
+            android:theme="@style/NoActionBar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".join.CreateGoalActivity"
+            android:theme="@style/NoActionBar"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityTodayDetailActivity"
+            android:label="TODAY"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.ActivityDetailPartActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".sleeping.SleepDetailPartActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".sleeping.SleepTodayDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".setting.AlarmAcitivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:icon="@drawable/main_menu"
+            android:label="TODAY"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.LoginDataLoading"
+            android:theme="@style/NoActionBar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:label="Login"
+            android:theme="@style/NoActionBar" 
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.JoinActivity"
+            android:label="Join"
+            android:screenOrientation="portrait"  />
+        <activity
+            android:name=".login.UserProfileActivity"
+            android:label="프로필"
+            android:screenOrientation="portrait"  />
+        <activity
+            android:name=".login.ForgotPwActivity"
+            android:label="비밀번호 찾기"
+            android:screenOrientation="portrait"  />
+        <activity
+            android:name=".login.ChangePwActivity"
+            android:label="비밀번호 재설정"
+            android:screenOrientation="portrait"  />
+        <activity
+            android:name=".login.UserProfileModifyActivity"
+            android:label="프로필수정"
+            android:screenOrientation="portrait"  />
+        <activity
+            android:name=".setting.SettingActivity"
+            android:label="설정"
+            android:screenOrientation="portrait"  />
+        <activity
+            android:name=".setting.AlarmSettingActivity"
+            android:label="알람 설정"
+            android:screenOrientation="portrait"  />
+        <activity
+            android:name=".setting.SupportActivity"
+            android:label="지원"
+            android:screenOrientation="portrait"  />
+        <activity
+            android:name=".setting.DeviceActivity"
+            android:label="펌웨어업데이트"
+            android:screenOrientation="portrait"  />
+        <activity
+            android:name="org.acra.CrashReportDialog"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
+            android:launchMode="singleInstance"
+            android:process=":error_report" />
+        <activity
+            android:name=".bluetooth.DeviceScanListActivity"
+            android:configChanges="keyboardHidden"
+            android:label="@string/device_find"
+            android:screenOrientation="portrait"  >
+        </activity>
+
+        <service
+            android:name=".service.BTCTemplateService"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
+        </service>
+        
+        <service android:name=".service.NotificationService"
+                 android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+	        <intent-filter>
+	            <action android:name="android.service.notification.NotificationListenerService" />
+	        </intent-filter>
+        </service>
+
+        <!-- Broadcast receiver -->
+        <receiver android:name="com.standingegg.band.service.ServiceMonitoring$ServiceMonitoringBR" />
+        
+        <receiver android:name="com.standingegg.band.MainActivity$MyReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name="com.standingegg.band.setting.SettingActivity$MyReceiver1" />
+        <receiver android:name="com.standingegg.band.setting.SupportActivity$MyReceiver2" />
+        
+        <receiver
+            android:name="com.standingegg.band.ota.BluetoothGattReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BLUETOOTH_GATT_UPDATE" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name="com.standingegg.band.packet.serverAutoUpdate" android:process=":remote" />
+        
+    </application>
+
+</manifest>

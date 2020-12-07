@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="se.com.band"
+    android:versionCode="1">
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="19" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".IntroActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HelloActivity"
+            android:label="@string/title_activity_hello"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".dfu.NotificationActivity"
+            android:label="@string/dfu_feature_title" />
+
+        <service
+            android:name=".ble.BluetoothLeService"
+            android:enabled="true" />
+        <service
+            android:name=".dfu.DfuService"
+            android:enabled="true" />
+
+        <activity
+            android:name=".login.LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".activity.WalkRunActivity"
+            android:label="@string/title_activity_progress"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.WalkRunChartActivity"
+            android:label="@string/title_activity_chart"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".motion.MotionActivity"
+            android:label="@string/title_activity_motion"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".motion.MotionDetailActivity"
+            android:label="@string/title_activity_motion"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".motion.MotionChartActivity"
+            android:label="@string/title_activity_motion"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".login.AccountActivity"
+            android:label="@string/title_activity_account"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".sleep.SleepActivity"
+            android:label="@string/title_activity_sleep"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".sleep.SleepChartActivity"
+            android:label="@string/title_activity_sleep"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".heart.HeartActivity"
+            android:label="@string/title_activity_heart"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".heart.HeartChartActivity"
+            android:label="@string/title_activity_heart"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".option.NotificationActivity"
+            android:label="@string/title_activity_notification"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainMenuActivity"
+            android:label="@string/title_activity_main_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".option.ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".login.DeviceConnectActivity"
+            android:label="@string/title_activity_device_connect"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".goal.GoalActivity"
+            android:label="@string/title_activity_goal"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".option.UnregisterActivity"
+            android:label="@string/title_activity_unregister"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".goal.GoalSettingActivity"
+            android:label="@string/title_activity_goal_setting"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".option.OptionActivity"
+            android:label="@string/title_activity_option"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".option.AlarmActivity"
+            android:label="@string/title_activity_alarm"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".option.BatteryActivity"
+            android:label="@string/title_activity_battery"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".option.OtaActivity"
+            android:label="@string/title_activity_ota"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".option.TestActivity"
+            android:label="@string/title_activity_test"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

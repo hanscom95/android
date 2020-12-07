@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_account"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="se.com.band.login.AccountActivity"
+    tools:showIn="@layout/activity_account"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <ProgressBar
+        android:id="@+id/account_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/account_form_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:id="@+id/name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/info_textbox"
+                android:layout_marginStart="26.67dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp">
+
+                <de.morrox.fontinator.FontTextView
+                    android:text="@string/name_signup"
+                    android:id="@+id/signup_name_text"
+                    android:textSize="12sp"
+                    android:textColor="#7D878E"
+                    app:font="Semibold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13.33dp"
+                    android:layout_centerVertical="true"/>
+
+                <de.morrox.fontinator.FontEditText
+                    android:id="@+id/name_edit"
+                    android:textSize="12sp"
+                    android:textColor="#7D878E"
+                    app:font="Light.otf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/signup_name_text"
+                    android:layout_marginLeft="20dp"
+                    android:ellipsize="middle"
+                    android:inputType="textPersonName"
+                    android:gravity="end"
+                    android:ems="10"
+                    android:layout_marginRight="20dp"
+                    android:maxLines="1"
+                    android:paddingTop="20dp"
+                    android:background="@null"
+                    android:textCursorDrawable="@null"
+                    android:text=""/>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/info_textbox"
+                android:layout_marginStart="26.67dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/email_layout" >
+
+                <de.morrox.fontinator.FontTextView
+                    android:text="@string/email_signup"
+                    android:id="@+id/signup_email_text"
+                    android:textSize="12sp"
+                    android:textColor="#7D878E"
+                    app:font="Semibold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13.33dp"
+                    android:layout_centerVertical="true"/>
+
+                <de.morrox.fontinator.FontEditText
+                    android:id="@+id/email_edit"
+                    android:textSize="12sp"
+                    android:textColor="#7D878E"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/signup_email_text"
+                    android:layout_marginLeft="20dp"
+                    android:ellipsize="middle"
+                    android:inputType="textEmailAddress"
+                    app:font="Light.otf"
+                    android:gravity="end"
+                    android:ems="10"
+                    android:layout_marginRight="20dp"
+                    android:maxLines="1"
+                    android:paddingTop="20dp"
+                    android:background="@null"
+                    android:textCursorDrawable="@null"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/info_textbox"
+                android:layout_marginStart="26.67dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/password_layout">
+
+                <de.morrox.fontinator.FontTextView
+                    android:text="@string/pw_signup"
+                    android:id="@+id/signup_password_text"
+                    android:textSize="12sp"
+                    android:textColor="#7D878E"
+                    app:font="Semibold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13.33dp"
+                    android:layout_centerVertical="true"/>
+
+                <de.morrox.fontinator.FontEditText
+                    android:id="@+id/password_edit"
+                    android:textSize="12sp"
+                    android:textColor="#7D878E"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/signup_password_text"
+                    android:layout_marginLeft="20dp"
+                    app:font="Light.otf"
+                    android:ellipsize="middle"
+                    android:inputType="textPassword"
+                    android:gravity="end"
+                    android:ems="10"
+                    android:layout_marginRight="20dp"
+                    android:maxLines="1"
+                    android:paddingTop="20dp"
+                    android:background="@null"
+                    android:textCursorDrawable="@null"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/info_textbox"
+                android:layout_marginStart="26.67dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/gender_layout">
+
+                <de.morrox.fontinator.FontTextView
+                    android:text="@string/gender_signup"
+                    android:id="@+id/signup_gender_text"
+                    android:textSize="12sp"
+                    android:textColor="#7D878E"
+                    app:font="Semibold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13.33dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity=""/>
+
+                <RadioGroup
+                    android:id="@+id/gender_group"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp">
+
+                    <RadioButton
+                        android:id="@+id/female_button"
+                        android:text="@string/female_button"
+                        android:textColor="#7D878E"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:background="#00FF0000"
+                        android:gravity="end|center"
+                        android:layout_width="66dp"
+                        android:layout_height="match_parent"
+                        android:button="@null"
+                        android:paddingEnd="20dp"/>
+
+                    <ImageView
+                        android:id="@+id/genderbar_img"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@mipmap/text_bar"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"/>
+
+                    <RadioButton
+                        android:id="@+id/male_button"
+                        android:text="@string/male_button"
+                        android:textColor="#7D878E"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:background="#00FF0000"
+                        android:gravity="start|center"
+                        android:layout_width="47dp"
+                        android:layout_height="match_parent"
+                        android:button="@null"
+                        android:paddingStart="20dp"/>
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/info_textbox"
+                android:layout_marginStart="26.67dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/birth_layout">
+                <de.morrox.fontinator.FontTextView
+                    android:text="@string/birth_signup"
+                    android:id="@+id/signup_birth_text"
+                    android:textSize="12sp"
+                    android:textColor="#7D878E"
+                    app:font="Semibold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13.33dp"
+                    android:layout_centerVertical="true" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/birth_text"
+                    android:textColor="#7D878E"
+                    android:textSize="12sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/signup_birth_text"
+                    android:layout_marginLeft="20dp"
+                    android:inputType="date"
+                    android:gravity="end"
+                    android:ems="10"
+                    android:layout_marginRight="20dp"
+                    android:maxLines="1"
+                    android:paddingTop="20dp"
+                    android:background="@null"
+                    app:font="Light.otf"
+                    android:textCursorDrawable="@null"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_below="@+id/birth_layout"
+                android:layout_marginStart="26.67dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp">
+
+                <de.morrox.fontinator.FontButton
+                    android:id="@+id/signup_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/signup_button"
+                    app:font="Bold.otf"
+                    android:background="@drawable/toggle_signup_button"
+                    android:textColor="@android:color/white"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

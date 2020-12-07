@@ -1,0 +1,1162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_motion_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="se.com.band.motion.MotionDetailActivity"
+    tools:showIn="@layout/activity_motion_detail">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/button_layout">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                app:srcCompat="@color/motion_bg"
+                android:layout_alignParentTop="true"
+                android:id="@+id/motion_bg"
+                android:layout_height="343dp" />
+
+            <RelativeLayout
+                android:id="@+id/motion_tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="16dp">
+
+                <ViewFlipper
+                    android:id="@+id/tab_left_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+                        <de.morrox.fontinator.FontTextView
+                            android:text="push up\n "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/mo_tab_left_text"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Regular.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_push_up"
+                            android:id="@+id/mo_tab_left_img1"
+                            android:layout_below="@+id/mo_tab_left_text"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_left_text_2"
+                            android:text="sit up\n "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Regular.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_sit_up"
+                            android:layout_below="@+id/mo_tab_left_text_2"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_left_text_3"
+                            android:text="butterfly\n "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Regular.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_butterfly"
+                            android:layout_below="@+id/mo_tab_left_text_3"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_left_text_4"
+                            android:text="biceps curl\n "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Regular.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_bicepscurl"
+                            android:layout_below="@+id/mo_tab_left_text_4"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_left_text_5"
+                            android:text="shoulder press\n "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Regular.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_shoulder_press"
+                            android:layout_below="@+id/mo_tab_left_text_5"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_left_text_6"
+                            android:text="bench\nkickback"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Regular.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_bench_kickback"
+                            android:layout_below="@+id/mo_tab_left_text_6"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_left_text_7"
+                            android:text="squat\n "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Regular.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_squat"
+                            android:layout_below="@+id/mo_tab_left_text_7"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_left_text_8"
+                            android:text="kettlebell\nswing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Regular.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_kettlebell"
+                            android:layout_below="@+id/mo_tab_left_text_8"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_left_text_9"
+                            android:text="seated\ncable row"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Regular.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_seated_cable"
+                            android:layout_below="@+id/mo_tab_left_text_9"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_left_text_10"
+                            android:text="seated dumbell\ntriceps press"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Regular.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_seated_dumbell"
+                            android:layout_below="@+id/mo_tab_left_text_10"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_left_text_11"
+                            android:text="alternate\ndeltoid raise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Regular.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_butterfly"
+                            android:layout_below="@+id/mo_tab_left_text_11"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                </ViewFlipper>
+
+                <Button
+                    android:layout_width="10dp"
+                    android:layout_height="13dp"
+                    android:background="@mipmap/arrow_left"
+                    android:id="@+id/tab_arrow_left"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/tab_center_layout"
+                    android:layout_marginRight="-20dp" />
+
+                <ViewFlipper
+                    android:id="@+id/tab_center_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+                        <de.morrox.fontinator.FontTextView
+                            android:text="push up\n "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/mo_tab_center_text"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Semibold.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_push_up_active"
+                            android:id="@+id/mo_tab_center_img1"
+                            android:layout_below="@+id/mo_tab_center_text"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_center_text_2"
+                            android:text="sit up\n "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Semibold.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_sit_up_active"
+                            android:layout_below="@+id/mo_tab_center_text_2"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_center_text_3"
+                            android:text="butterfly\n "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Semibold.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_butterfly_active"
+                            android:layout_below="@+id/mo_tab_center_text_3"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_center_text_4"
+                            android:text="biceps curl\n "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Semibold.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_bicepscurl_active"
+                            android:layout_below="@+id/mo_tab_center_text_4"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_center_text_5"
+                            android:text="shoulder press\n "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Semibold.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_shoulder_press_active"
+                            android:layout_below="@+id/mo_tab_center_text_5"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_center_text_6"
+                            android:text="bench\nkickback"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Semibold.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_bench_kickback_active"
+                            android:layout_below="@+id/mo_tab_center_text_6"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_center_text_7"
+                            android:text="squat\n "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Semibold.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_squat_active"
+                            android:layout_below="@+id/mo_tab_center_text_7"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_center_text_8"
+                            android:text="kettlebell\nswing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Semibold.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_kettlebell_active"
+                            android:layout_below="@+id/mo_tab_center_text_8"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_center_text_9"
+                            android:text="seated\ncable row"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Semibold.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_seated_cable_active"
+                            android:layout_below="@+id/mo_tab_center_text_9"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_center_text_10"
+                            android:text="seated dumbell\ntriceps press"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Semibold.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_seated_dumbell_active"
+                            android:layout_below="@+id/mo_tab_center_text_10"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_center_text_11"
+                            android:text="alternate\ndeltoid raise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Semibold.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_butterfly_active"
+                            android:layout_below="@+id/mo_tab_center_text_11"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                </ViewFlipper>
+
+                <Button
+                    android:layout_width="10dp"
+                    android:layout_height="13dp"
+                    android:background="@mipmap/arrow_right"
+                    android:id="@+id/tab_arrwo_right"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/tab_center_layout"
+                    android:layout_marginLeft="-20dp" />
+
+                <ViewFlipper
+                    android:id="@+id/tab_right_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+                        <de.morrox.fontinator.FontTextView
+                            android:text="push up\n "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/mo_tab_right_text"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Regular.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_push_up"
+                            android:id="@+id/mo_tab_right_img1"
+                            android:layout_below="@+id/mo_tab_right_text"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_right_text_2"
+                            android:text="sit up\n "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Regular.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_sit_up"
+                            android:layout_below="@+id/mo_tab_right_text_2"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_right_text_3"
+                            android:text="butterfly\n "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Regular.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_butterfly"
+                            android:layout_below="@+id/mo_tab_right_text_3"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_right_text_4"
+                            android:text="biceps curl\n "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Regular.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_bicepscurl"
+                            android:layout_below="@+id/mo_tab_right_text_4"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_right_text_5"
+                            android:text="shoulder press\n "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Regular.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_shoulder_press"
+                            android:layout_below="@+id/mo_tab_right_text_5"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_right_text_6"
+                            android:text="bench\nkickback"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Regular.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_bench_kickback"
+                            android:layout_below="@+id/mo_tab_right_text_6"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_right_text_7"
+                            android:text="squat\n "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Regular.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_squat"
+                            android:layout_below="@+id/mo_tab_right_text_7"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_right_text_8"
+                            android:text="kettlebell\nswing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Regular.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_kettlebell"
+                            android:layout_below="@+id/mo_tab_right_text_8"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_right_text_9"
+                            android:text="seated\ncable row"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Regular.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_seated_cable"
+                            android:layout_below="@+id/mo_tab_right_text_9"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_right_text_10"
+                            android:text="seated dumbell\ntriceps press"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Regular.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_seated_dumbell"
+                            android:layout_below="@+id/mo_tab_right_text_10"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/mo_tab_right_text_11"
+                            android:text="alternate\ndeltoid raise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gauge_percent"
+                            android:textSize="14sp"
+                            app:font="Regular.otf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/tab_butterfly"
+                            android:layout_below="@+id/mo_tab_right_text_11"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                </ViewFlipper>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:background="@mipmap/mo_detail_info_panel"
+                android:layout_below="@+id/motion_tab_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/mo_gauge_top"
+                android:layout_width="293dp"
+                android:layout_height="293dp">
+
+                <de.morrox.fontinator.FontTextView
+                    android:text="62"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gauge_bar"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="80sp"
+                    app:font="Bold.otf"/>
+
+                <de.morrox.fontinator.FontTextView
+                    android:text="%"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gauge_percent_text"
+                    android:textColor="@android:color/white"
+                    android:textSize="30sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="@dimen/info_inner_interval"
+                    android:layout_alignTop="@+id/gauge_bar"
+                    android:layout_toEndOf="@+id/gauge_bar"
+                    app:font="Regular_Italic.otf" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:text="/"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gauge_step_center"
+                    android:textColor="@color/gauge_percent"
+                    android:layout_above="@+id/gauge_start_sleep_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/info_inner_interval"
+                    android:layout_marginRight="@dimen/info_inner_interval"
+                    app:font="Light.otf"
+                    android:textSize="18sp" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:text="count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gauge_start_sleep_text"
+                    android:textColor="@color/gauge_percent"
+                    android:layout_above="@+id/gauge_bar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/gauge_top_text_interval"
+                    app:font="Regular_Italic.otf"/>
+
+                <de.morrox.fontinator.FontTextView
+                    android:text="400"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gauge_step_goal"
+                    android:textColor="@android:color/white"
+                    android:layout_above="@+id/gauge_start_sleep_text"
+                    android:layout_toEndOf="@+id/gauge_step_center"
+                    app:font="Light.otf"
+                    android:textSize="18sp" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:text="250"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gauge_step"
+                    android:layout_alignBaseline="@+id/gauge_step_center"
+                    android:layout_alignBottom="@+id/gauge_step_center"
+                    android:layout_toStartOf="@+id/gauge_step_center"
+                    android:textStyle="normal|bold"
+                    android:textColor="@android:color/white"
+                    app:font="Semibold.otf"
+                    android:textSize="18sp" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:text="125"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gauge_end_sleep_text"
+                    android:layout_below="@+id/gauge_bar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/gauge_top_text_interval"
+                    android:textColor="@android:color/white"
+                    app:font="Light.otf"
+                    android:textSize="24sp" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:text="kcal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gauge_cal_text"
+                    android:layout_below="@+id/gauge_end_sleep_text"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/gauge_percent"
+                    app:font="Regular_Italic.otf" />
+
+                <se.com.band.utility.GaugeView
+                    android:id="@+id/progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/gauge_none"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="46dp"
+                android:id="@+id/motion_main_button"
+                android:background="@drawable/toggle_mo_menu_button"
+                android:layout_below="@+id/motion_bg"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="@dimen/mo_list_img_right"
+                android:layout_marginTop="@dimen/mo_info_detail_img_top"
+                android:layout_height="46dp" />
+
+            <de.morrox.fontinator.FontTextView
+                android:text="MOTION"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/motion_bg"
+                android:layout_alignParentStart="true"
+                android:id="@+id/motion_title"
+                android:layout_marginTop="@dimen/motion_top"
+                android:layout_marginLeft="@dimen/motion_info_title"
+                app:font="Bold.otf" />
+
+            <de.morrox.fontinator.FontTextView
+                android:text="total score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/motion_title"
+                android:layout_alignStart="@+id/motion_title"
+                android:id="@+id/score_text"
+                app:font="Regular.otf" />
+
+            <LinearLayout
+                android:id="@+id/info"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/motion_main_button"
+                android:layout_marginTop="@dimen/mo_info_top"
+                android:layout_marginLeft="@dimen/motion_side"
+                android:layout_marginRight="@dimen/motion_side">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:paddingTop="@dimen/info_text_interval"
+                        android:paddingLeft="@dimen/motion_info_box_interval"
+                        android:paddingBottom="@dimen/info_text_interval"
+                        android:background="@mipmap/info_box"
+                        android:layout_marginRight="@dimen/info_inner_interval">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="1020"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/motion_count"
+                            android:textSize="35sp"
+                            android:fontFamily="sans-serif"
+                            app:font="Extra_Condensed_Semibold.otf"
+                            android:textColor="@color/motion_bg" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/motion_steps_text"
+                            android:layout_marginLeft="@dimen/info_inner_interval"
+                            android:textSize="14sp"
+                            app:font="Light_Italic.otf"
+                            android:layout_below="@+id/motion_count"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:paddingTop="@dimen/info_text_interval"
+                        android:paddingLeft="@dimen/motion_info_box_interval"
+                        android:paddingBottom="@dimen/info_text_interval"
+                        android:background="@mipmap/info_box"
+                        android:layout_marginRight="@dimen/info_inner_interval">
+
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="528"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/motion_cal"
+                            android:textSize="35sp"
+                            app:font="Extra_Condensed_Semibold.otf"
+                            android:textColor="@color/motion_bg" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="kcal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/motion_cal_text"
+                            android:layout_marginLeft="@dimen/info_inner_interval"
+                            android:layout_below="@+id/motion_cal"
+                            android:textSize="14sp"
+                            app:font="Light_Italic.otf" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:paddingTop="@dimen/info_text_interval"
+                        android:paddingLeft="@dimen/motion_info_box_interval"
+                        android:paddingBottom="@dimen/info_text_interval"
+                        android:background="@mipmap/info_box"
+                        android:layout_marginRight="@dimen/info_inner_interval">
+
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="01:10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/motion_time"
+                            android:textSize="35sp"
+                            app:font="Extra_Condensed_Semibold.otf"
+                            android:textColor="@color/motion_bg" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="hrs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/motion_time_text"
+                            android:layout_marginLeft="@dimen/info_inner_interval"
+                            android:layout_below="@+id/motion_time"
+                            android:textSize="14sp"
+                            app:font="Light_Italic.otf" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_bottom_button"
+        android:weightSum="1"
+        android:layout_alignParentBottom="true">
+        <de.morrox.fontinator.FontButton
+            android:id="@+id/activity_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.499"
+            android:text="@string/activity_button"
+            android:textColor="@color/activity_bg"
+            android:background="@drawable/toggle_bottom_button"
+            app:font="Bold.otf"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.002"
+            android:background="@mipmap/button_space"
+            />
+        <de.morrox.fontinator.FontButton
+            android:id="@+id/sleep_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.499"
+            android:text="@string/sleep_button"
+            android:textColor="@color/sleep_bg"
+            android:background="@drawable/toggle_bottom_button"
+            app:font="Bold.otf"/>
+    </LinearLayout>
+
+</RelativeLayout>

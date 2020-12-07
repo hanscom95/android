@@ -1,0 +1,150 @@
+<resources>
+    <string name="app_name">APEX</string>
+
+    <string name="title_activity_progress">Activity</string>
+    <string name="title_activity_number">NumberActivity</string>
+    <string name="title_activity_sleep">SleepActivity</string>
+    <string name="title_activity_heart">HeartActivity</string>
+    <string name="title_activity_motion">MotionActivity</string>
+    <string name="title_activity_test_tab">TestTabActivity</string>
+    <string name="title_activity_account">AccountActivity</string>
+    <string name="title_activity_notification">NotificationActivity</string>
+    <string name="title_activity_chart">ChartActivity</string>
+    <string name="title_activity_tab">TabActivity</string>
+    <string name="title_activity_main_menu">MainMenuActivity</string>
+    <string name="title_activity_device_connect">DeviceConnectActivity</string>
+    <string name="title_activity_goal">GoalActivity</string>
+    <string name="title_activity_unregister">UnregisterActivity</string>
+    <string name="title_activity_goal_setting">GoalSettingActivity</string>
+    <string name="title_activity_option">OptionActivity</string>
+    <string name="title_activity_hello">HelloActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string name="unknown_device">Unknown device</string>
+    <string name="unknown_characteristic">Unknown characteristic</string>
+    <string name="unknown_service">Unknown service</string>
+
+
+    <string name="title_devices">BLE Device Scan</string>
+    <string name="ble_not_supported">BLE is not supported</string>
+    <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
+    <string name="dfu_feature_title">DFU</string>
+
+
+    <string name="dfu_uploading_percentage">%d%%</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Id</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This id is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing id
+        completions."
+    </string>
+
+    <string name="today">today</string>
+    <string name="sleep_text">last night</string>
+    <string name="heart_text">last check</string>
+
+    <string name="activity_button">A C T I V I T Y</string>
+    <string name="motion_button">M O T I O N</string>
+    <string name="sleep_button">S L E E P</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_signup">W E L C O M E</string>
+
+
+    <string name="id">Id</string>
+    <string name="pw">Pw</string>
+    <string name="name">Name</string>
+    <string name="birth">Birth</string>
+    <string name="email">Email</string>
+    <string name="tall">Tall</string>
+    <string name="weight">Weight</string>
+    <string name="gender">Gender</string>
+    <string name="age">Age</string>
+    <string name="hand">Hand</string>
+
+    <string name="female_button">female</string>
+    <string name="male_button">male</string>
+
+    <!-- Menu activity-->
+    <string name="menu_profile_n_unit">PROFILE &amp; UNIT</string>
+    <string name="menu_goal">GOAL</string>
+    <string name="menu_activity">ACTIVITY</string>
+    <string name="menu_motion">MOTION</string>
+    <string name="menu_sleep">SLEEP</string>
+    <string name="menu_heartrate">HEART RATE</string>
+    <string name="menu_test">TEST</string>
+    <string name="menu_option">OPTION</string>
+    <string name="menu_logout">LOG OUT</string>
+
+    <!-- Account activity-->
+    <string name="name_signup">NAME</string>
+    <string name="pw_signup">PW</string>
+    <string name="id_login">ID</string>
+    <string name="pw_login">PW</string>
+    <string name="email_signup">EMAIL</string>
+    <string name="gender_signup">GENDER</string>
+    <string name="birth_signup">DATE OF BIRTH</string>
+    <string name="signup_button">SIGN UP</string>
+    <string name="login_button">LOG IN</string>
+
+    <!--profile activity-->
+    <string name="strapline_setting_unit">setting unit</string>
+    <string name="strapline_profile">profile</string>
+
+    <string name="height">HEIGHT</string>
+    <string name="weight_upper">WEIGHT</string>
+    <string name="distance">DISTANCE</string>
+    <string name="height_cm">cm</string>
+    <string name="weight_kg">kg</string>
+    <string name="distance_km">km</string>
+
+    <string name="ft_button">ft</string>
+    <string name="cm_button">cm</string>
+    <string name="lbs_button">lbs</string>
+    <string name="kg_button">kg</string>
+    <string name="mile_button">mile</string>
+    <string name="km_button">km</string>
+
+    <string name="continue_button">CONTINUE</string>
+    <string name="update_button">UPDATE</string>
+
+    <string name="title_activity_profile">P R O F I L E &amp; U N I T</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- option menu -->
+    <string name="option_search_device">SEARCH DEVICE</string>
+    <string name="option_battery">BATTERY</string>
+    <string name="option_alarm">ALARM</string>
+    <string name="option_notification">NOTIFICATION</string>
+    <string name="option_ota">OTA</string>
+    <string name="option_unregister">UNREGISTER</string>
+    <string name="title_activity_alarm">AlarmActivity</string>
+
+
+    <string name="unknown_time">09:00</string>
+    <string name="title_activity_archery">ArcheryActivity</string>
+
+
+    <string name="record">Record</string>
+    <string name="stop">Stop</string>
+    <string name="description_info">Info</string>
+    <string name="permission_request">This sample needs permission for camera and audio recording.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="title_activity_battery">BatteryActivity</string>
+    <string name="title_activity_ota">OtaActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+</resources>

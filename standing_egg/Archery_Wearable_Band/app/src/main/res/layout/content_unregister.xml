@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_unregister"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="se.com.band.option.UnregisterActivity"
+    tools:showIn="@layout/activity_unregister"
+    android:adjustViewBounds="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+
+    <RelativeLayout
+        android:id="@+id/continue_button_layout"
+        android:layout_width="141.67dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:id="@+id/Id_layout"
+            android:theme="@style/UnregisterTextLabel">
+
+            <AutoCompleteTextView
+                android:id="@+id/id_text"
+                android:hint="@string/id_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/option_bg"
+                android:textColor="@color/option_bg"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:id="@+id/pw_layout"
+            android:layout_below="@+id/Id_layout"
+            android:theme="@style/UnregisterTextLabel">
+
+            <EditText
+                android:id="@+id/pw_text"
+                android:hint="@string/pw_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="textPassword"
+                android:textColorHint="@color/option_bg"
+                android:textColor="@color/option_bg"
+                android:imeActionId="@+id/login_ime"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <de.morrox.fontinator.FontButton
+            android:id="@+id/continue_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/continue_button"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            app:font="Semibold.otf"
+            android:background="@drawable/toggle_signup_button"
+            android:layout_below="@+id/pw_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            />
+    </RelativeLayout>
+</RelativeLayout>

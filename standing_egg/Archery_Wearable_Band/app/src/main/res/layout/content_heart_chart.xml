@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_heart_chart"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="se.com.band.heart.HeartChartActivity"
+    tools:showIn="@layout/activity_heart_chart">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                app:tabIndicatorColor="@color/today"
+                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                android:layout_marginLeft="@dimen/activity_side"
+                android:layout_marginRight="@dimen/activity_side" >
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="day"/>
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="week" />
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="month" />
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="year" />
+            </android.support.design.widget.TabLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/chart_pager"
+                android:layout_width="match_parent"
+                android:layout_height="221dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tabLayout"
+                android:padding="@dimen/activity_side">
+
+            </android.support.v4.view.ViewPager>
+
+
+            <LinearLayout
+                android:id="@+id/info"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/activity_side"
+                android:paddingRight="@dimen/activity_side"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/chart_pager"
+                android:background="@color/heart_bg"
+                android:layout_height="match_parent">
+
+
+                <de.morrox.fontinator.FontTextView
+                    android:text="daily average score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/info_title"
+                    android:textSize="24sp"
+                    app:font="Regular.otf"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="@dimen/info_title_interval"
+                    android:layout_marginBottom="@dimen/info_title_interval"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_marginRight="@dimen/info_inner_interval"
+                        android:paddingTop="@dimen/info_text_interval"
+                        android:paddingLeft="@dimen/info_text_interval"
+                        android:paddingBottom="@dimen/info_text_interval"
+                        android:background="@mipmap/heart_daily_box">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="min."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_min_text"
+                            android:textSize="13sp"
+                            android:fontFamily="sans-serif"
+                            app:font="Regular.otf"
+                            android:textColor="@android:color/white" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="65"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_min"
+                            android:textSize="35sp"
+                            android:fontFamily="sans-serif"
+                            app:font="Extra_Condensed_Semibold.otf"
+                            android:layout_below="@+id/heart_min_text"
+                            android:textColor="@android:color/white" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="bpm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_min_unit"
+                            android:layout_marginLeft="@dimen/info_inner_interval"
+                            android:textSize="14sp"
+                            app:font="Light_Italic.otf"
+                            android:textColor="@android:color/white"
+                            android:layout_below="@+id/heart_min"
+                            android:layout_alignParentStart="true" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_marginLeft="@dimen/info_inner_interval"
+                        android:paddingTop="@dimen/info_text_interval"
+                        android:paddingLeft="@dimen/info_text_interval"
+                        android:paddingBottom="@dimen/info_text_interval"
+                        android:background="@mipmap/heart_daily_box">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="max."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_max_text"
+                            android:textSize="13sp"
+                            android:fontFamily="sans-serif"
+                            app:font="Regular.otf"
+                            android:textColor="@android:color/white" />
+
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="132"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_max"
+                            android:textSize="35sp"
+                            app:font="Extra_Condensed_Semibold.otf"
+                            android:layout_below="@+id/heart_max_text"
+                            android:textColor="@android:color/white" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="bpm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_max_unit"
+                            android:layout_marginLeft="@dimen/info_inner_interval"
+                            android:textSize="14sp"
+                            app:font="Light_Italic.otf"
+                            android:textColor="@android:color/white"
+                            android:layout_below="@+id/heart_max"
+                            android:layout_alignParentStart="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

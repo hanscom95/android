@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="@drawable/alarm_bar"
+    android:layout_marginBottom="20dp">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/alarm_remove_button"
+        android:background="@drawable/alarm_delete_button"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" />
+
+    <TextView
+        android:id="@+id/alarm_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="7 : 30"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_alignTop="@+id/alarm_remove_button"
+        android:layout_toEndOf="@+id/alarm_remove_button" />
+
+    <TextView
+        android:id="@+id/alarm_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/thur"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_below="@+id/alarm_time"
+        android:layout_toEndOf="@+id/alarm_remove_button" />
+
+    <com.standingegg.band.contents.OnOffButton
+        android:id="@+id/alarm_onoff"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/alarm_background_on_state"
+        android:content="@+id/slideContentLayout1"
+        android:handle="@+id/slideHandle1"
+        android:orientation="horizontal"
+        android:layout_marginRight="15dp">
+
+        <Button
+            android:id="@+id/slideHandle1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/alarm_button_thumb" >
+        </Button>
+
+        <LinearLayout
+            android:id="@+id/slideContentLayout1"
+            android:layout_width="60dp"
+            android:layout_height="10dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:padding="5dp" >
+        </LinearLayout>
+    </com.standingegg.band.contents.OnOffButton>
+</RelativeLayout>

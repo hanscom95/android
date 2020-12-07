@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/join_bg_gray"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <ImageView
+        android:layout_width="230dp"
+        android:layout_height="102dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="42dp"
+        android:gravity="center_vertical"
+        android:src="@drawable/element_tl_logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="63dp"
+        android:orientation="vertical" >
+
+        <!-- 아이디 특문 제외 -->
+
+        <EditText
+            android:id="@+id/join_id"
+            style="@style/MY.EditText.Style"
+            android:layout_width="288dp"
+            android:layout_height="33dp"
+            android:layout_gravity="center"
+            android:hint="@string/id_hint"
+            android:inputType="text"
+            android:nextFocusDown="@+id/join_pw" />
+
+        <LinearLayout
+            android:id="@+id/alert_linear"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/alert_txt"
+                android:layout_width="222dp"
+                android:layout_height="wrap_content"
+                android:text="@string/same_id"
+                android:textColor="@color/red"
+                android:textSize="@dimen/intro_font_size_small" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/element_alert_icon" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+        <EditText
+            android:id="@+id/join_pw"
+            style="@style/MY.EditText.Style"
+            android:layout_width="288dp"
+            android:layout_height="33dp"
+            android:layout_gravity="center"
+            android:hint="@string/pw_hint"
+            android:inputType="textPassword"
+            android:nextFocusDown="@+id/join_pw_chk" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+        <EditText
+            android:id="@+id/join_pw_chk"
+            style="@style/MY.EditText.Style"
+            android:layout_width="288dp"
+            android:layout_height="33dp"
+            android:layout_gravity="center"
+            android:hint="@string/pw_hint_2"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/alert_pw_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="33dp"
+            android:text="@string/unsame_pw"
+            android:textColor="@color/white"
+            android:textSize="@dimen/intro_font_size_small"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/agree_chk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:button="@drawable/checkbox"
+                android:paddingLeft="8dp"
+                android:text="본인은 Hercules의 "
+                android:textColor="@color/gray1"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/terms_privacy_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="회원 약관 및 개인정보보호정책"
+                android:textColor="@color/gray1"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="에 동의합니다."
+                android:textColor="@color/gray1"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/create_account_btn"
+            android:layout_width="288dp"
+            android:layout_height="33dp"
+            android:layout_gravity="center"
+            android:background="@drawable/element_box_hex_red"
+            android:text="@string/account_create"
+            android:textColor="@color/white"
+            android:textSize="@dimen/intro_font_size" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="se.com.band.option.ProfileActivity"
+    tools:showIn="@layout/activity_profile">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_n_unit_layout">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/strapline_setting_unit_text"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/strapline_top"
+                    android:layout_marginBottom="@dimen/strapline_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/strapline_setting_unit"
+                    android:textColor="@color/activity_bg"
+                    android:textSize="20sp"
+                    app:font="Regular.otf"/>
+
+                <RelativeLayout
+                    android:id="@+id/height_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/info_textbox"
+                    android:layout_marginStart="@dimen/box_start_interval"
+                    android:layout_marginEnd="@dimen/box_bottom_interval">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/unit_height_text"
+                        android:text="@string/height"
+                        android:textColor="@color/account_text"
+                        android:textSize="12sp"
+                        app:font="Semibold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/text_start_interval"
+                        android:layout_marginTop="@dimen/text_top_interval" />
+
+                    <RadioGroup
+                        android:id="@+id/height_group"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="20dp">
+
+                        <RadioButton
+                            android:id="@+id/ft_button"
+                            android:text="@string/ft_button"
+                            android:textColor="@color/account_text"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:background="#00FF0000"
+                            android:gravity="end|center"
+                            android:layout_width="66dp"
+                            android:layout_height="match_parent"
+                            android:button="@null"
+                            android:paddingEnd="20dp"/>
+
+                        <ImageView
+                            android:id="@+id/height_bar_img"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/text_bar"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"/>
+
+                        <RadioButton
+                            android:id="@+id/cm_button"
+                            android:text="@string/cm_button"
+                            android:textColor="@color/account_text"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:background="#00FF0000"
+                            android:gravity="start|center"
+                            android:layout_width="47dp"
+                            android:layout_height="match_parent"
+                            android:button="@null"
+                            android:paddingStart="20dp"/>
+                    </RadioGroup>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/weight_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/info_textbox"
+                    android:layout_marginStart="@dimen/box_start_interval"
+                    android:layout_marginEnd="@dimen/box_bottom_interval">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/unit_weight_text"
+                        android:text="@string/weight_upper"
+                        android:textColor="@color/account_text"
+                        android:textSize="12sp"
+                        app:font="Semibold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/text_start_interval"
+                        android:layout_marginTop="@dimen/text_top_interval" />
+
+                    <RadioGroup
+                        android:id="@+id/weight_group"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="20dp">
+
+                        <RadioButton
+                            android:id="@+id/lbs_button"
+                            android:text="@string/lbs_button"
+                            android:textColor="@color/account_text"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:background="#00FF0000"
+                            android:gravity="end|center"
+                            android:layout_width="66dp"
+                            android:layout_height="match_parent"
+                            android:button="@null"
+                            android:paddingEnd="20dp"/>
+
+                        <ImageView
+                            android:id="@+id/weight_bar_img"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/text_bar"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"/>
+
+                        <RadioButton
+                            android:id="@+id/kg_button"
+                            android:text="@string/kg_button"
+                            android:textColor="@color/account_text"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:background="#00FF0000"
+                            android:gravity="start|center"
+                            android:layout_width="47dp"
+                            android:layout_height="match_parent"
+                            android:button="@null"
+                            android:paddingStart="20dp"/>
+                    </RadioGroup>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/info_textbox"
+                    android:layout_marginStart="@dimen/box_start_interval"
+                    android:layout_marginEnd="@dimen/box_bottom_interval"
+                    android:id="@+id/distance_layout">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/unit_distance_text"
+                        android:text="@string/distance"
+                        android:textColor="@color/account_text"
+                        android:textSize="12sp"
+                        app:font="Semibold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/text_start_interval"
+                        android:layout_marginTop="@dimen/text_top_interval" />
+
+                    <RadioGroup
+                        android:id="@+id/distance_group"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="20dp">
+
+                        <RadioButton
+                            android:id="@+id/mile_button"
+                            android:text="@string/mile_button"
+                            android:textColor="@color/account_text"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:background="#00FF0000"
+                            android:gravity="end|center"
+                            android:layout_width="66dp"
+                            android:layout_height="match_parent"
+                            android:button="@null"
+                            android:paddingEnd="20dp"/>
+
+                        <ImageView
+                            android:id="@+id/distance_bar_img"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/text_bar"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"/>
+
+                        <RadioButton
+                            android:id="@+id/km_button"
+                            android:text="@string/km_button"
+                            android:textColor="@color/account_text"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:background="#00FF0000"
+                            android:gravity="start|center"
+                            android:layout_width="47dp"
+                            android:layout_height="match_parent"
+                            android:button="@null"
+                            android:paddingStart="20dp"/>
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+                <de.morrox.fontinator.FontTextView
+                    android:text="@string/strapline_profile"
+                    android:id="@+id/strapline_profile_text"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/strapline_top"
+                    android:layout_marginBottom="@dimen/strapline_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/activity_bg"
+                    app:font="Regular.otf"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:id="@+id/height_2nd_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/info_textbox"
+                    android:layout_marginStart="@dimen/box_start_interval"
+                    android:layout_marginEnd="@dimen/box_bottom_interval"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    >
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/profile_height_text"
+                        android:text="@string/height"
+                        android:textColor="@color/account_text"
+                        android:textSize="12sp"
+                        app:font="Semibold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/text_start_interval"
+                        android:layout_marginTop="@dimen/text_top_interval" />
+
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/height_2nd_text"
+                        android:text="@string/height_cm"
+                        android:textSize="12sp"
+                        app:font="Light.otf"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/profile_height_text"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="25dp" />
+
+                    <de.morrox.fontinator.FontEditText
+                        android:id="@+id/height_edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/profile_height_text"
+                        android:layout_toStartOf="@id/height_2nd_text"
+                        android:layout_toEndOf="@id/profile_height_text"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="end"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/account_text"
+                        android:textSize="12sp"
+                        android:background="@null"
+                        app:font="Semibold.otf"
+                        android:textCursorDrawable="@null"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/weight_2nd_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/info_textbox"
+                    android:layout_marginStart="@dimen/box_start_interval"
+                    android:layout_marginEnd="@dimen/box_bottom_interval"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/profile_weight_text"
+                        android:text="@string/weight_upper"
+                        android:textColor="@color/account_text"
+                        android:textSize="12sp"
+                        app:font="Semibold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/text_start_interval"
+                        android:layout_marginTop="@dimen/text_top_interval" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/weight_2nd_text"
+                        android:text="@string/weight_kg"
+                        app:font="Light.otf"
+                        android:textSize="12sp"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/profile_weight_text"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="24dp" />
+
+                    <de.morrox.fontinator.FontEditText
+                        android:id="@+id/weight_edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/profile_weight_text"
+                        android:layout_toStartOf="@id/weight_2nd_text"
+                        android:layout_toEndOf="@id/profile_weight_text"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="end"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/account_text"
+                        android:textSize="12sp"
+                        android:backgroundTint="#00FF0000"
+                        android:background="@null"
+                        app:font="Semibold.otf"
+                        android:textCursorDrawable="@null"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/continue_button_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="23.33dp">
+
+
+                    <de.morrox.fontinator.FontButton
+                        android:id="@+id/continue_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="26.67dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="@string/continue_button"
+                        android:textSize="18sp"
+                        android:textColor="#FFFFFF"
+                        app:font="Bold.otf"
+                        android:background="@drawable/toggle_signup_button"
+                        android:layout_below="@+id/button_interval"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

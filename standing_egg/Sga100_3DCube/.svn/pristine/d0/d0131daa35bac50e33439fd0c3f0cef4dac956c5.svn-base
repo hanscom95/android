@@ -1,0 +1,149 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+	android:weightSum="1">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:orientation="vertical"
+		android:layout_weight="1.00"
+		android:weightSum="1"
+		android:padding="20dp">
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="0.6"
+			android:layout_gravity="center_vertical"
+			android:background="@drawable/linearcorners">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Frequency Modes"
+				android:id="@+id/textView"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="20dp"
+				android:textColor="#ffffffff"
+				android:focusableInTouchMode="false"
+				android:singleLine="false"
+				android:textSize="20dp"
+				android:textStyle="bold" />
+
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent">
+
+					<Switch
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:text="High Frequency"
+                        android:id="@+id/switch1"
+                        android:checked="false"
+                        android:textColor="#ffffffff"
+                        android:textOn="On"
+                        android:textOff="Off"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+						style="@style/SwitchCustom" />
+
+					<Switch
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:text="Fusion"
+                        android:id="@+id/switch2"
+                        android:checked="false"
+                        android:textColor="#ffffffff"
+                        android:textOn="On"
+                        android:textOff="Off"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="60dp"
+						style="@style/SwitchCustom" />
+
+					<Switch
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:text="Motion"
+                        android:id="@+id/switch3"
+                        android:checked="false"
+                        android:textColor="#ffffffff"
+                        android:textOn="On"
+                        android:textOff="Off"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+						style="@style/SwitchCustom" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="30dp">
+
+					<Switch
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:text="Low Frequency"
+                        android:id="@+id/switch4"
+                        android:checked="false"
+                        android:textColor="#ffffffff"
+                        android:textOn="On"
+                        android:textOff="Off"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+						style="@style/SwitchCustom" />
+				</LinearLayout>
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="0.4"
+			android:layout_gravity="center_vertical"
+			android:background="@drawable/linearcorners"
+			android:layout_marginTop="10dp">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Current Motion"
+				android:id="@+id/textView2"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="20dp"
+				android:textColor="#ffffffff"
+				android:textSize="20dp"
+				android:textStyle="bold" />
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginTop="10dp"
+				android:gravity="center_vertical"
+				android:layout_gravity="center_horizontal">
+
+				<ImageView
+					android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/motionoff"
+					android:layout_alignParentTop="false"
+					android:layout_centerHorizontal="true" />
+			</RelativeLayout>
+
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

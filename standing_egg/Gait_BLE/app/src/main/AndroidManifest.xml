@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.se.gait"
+          android:versionCode="1">
+    <uses-sdk android:minSdkVersion="18" android:targetSdkVersion="19"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <application
+                 android:name=".utility.CrashReport"
+                 android:icon="@drawable/actionbar_logo"
+                 android:logo="@drawable/actionbar_logo"
+                 android:label="SEAP"
+                 android:allowBackup="true"
+                 android:theme="@style/AppTheme"
+                 android:largeHeap="true">
+
+        <activity android:name=".activity.ChartingDemoActivity"
+                  android:label="SEGA"
+                  android:launchMode="singleTask"
+                  android:configChanges="orientation"
+                  android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.ChartLineDemoActivity"
+            android:label="XY-Axis Chart"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChartAreaDemoActivity"
+            android:label="Z-Axis Chart"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChartZUPTDemoActivity"
+            android:label="ZUPT Chart"
+            android:screenOrientation="portrait" />
+        <service android:name=".ble.BluetoothLeService" android:enabled="true"/>
+
+        <activity
+            android:name="org.acra.CrashReportDialog"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
+            android:launchMode="singleInstance"
+            android:process=":error_report" />
+    </application>
+</manifest>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/join_bg_gray"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <ImageView
+        android:layout_width="230dp"
+        android:layout_height="102dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="42dp"
+        android:gravity="center_vertical"
+        android:src="@drawable/element_tl_logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+
+        <EditText
+            android:id="@+id/re_pw"
+            style="@style/MY.EditText.Style"
+            android:layout_width="288dp"
+            android:layout_height="33dp"
+            android:layout_gravity="center"
+            android:hint="@string/new_pw"
+            android:inputType="textPassword"
+            android:nextFocusDown="@+id/join_id" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+        <EditText
+            android:id="@+id/re_pw_chk"
+            style="@style/MY.EditText.Style"
+            android:layout_width="288dp"
+            android:layout_height="33dp"
+            android:layout_gravity="center"
+            android:hint="@string/new_pw_check"
+            android:inputType="textPassword"
+            android:nextFocusDown="@+id/birth" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="88dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="288dp"
+            android:layout_height="33dp"
+            android:background="@drawable/element_box_hex_red"
+            android:text="@string/pw_change"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        
+    </LinearLayout>
+
+</LinearLayout>

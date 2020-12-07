@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_heart"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="se.com.band.heart.HeartActivity"
+    tools:showIn="@layout/activity_heart">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:srcCompat="@color/heart_bg"
+                android:layout_alignParentTop="true"
+                android:id="@+id/heart_bg" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@mipmap/heart_panel_icon"
+                android:id="@+id/heart_icon_img"
+                android:layout_below="@+id/today_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="33dp" />
+
+            <de.morrox.fontinator.FontTextView
+                android:text="83"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gauge_score"
+                android:textColor="@android:color/white"
+                android:textSize="70sp"
+                android:layout_marginTop="20dp"
+                app:font="Bold.otf"
+                android:layout_below="@+id/heart_icon_img"
+                android:layout_centerHorizontal="true"/>
+
+            <de.morrox.fontinator.FontTextView
+                android:text="bpm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gauge_score_unit"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:font="Regular_Italic.otf"
+                android:layout_below="@+id/gauge_score"
+                android:layout_centerHorizontal="true" />
+
+            <RelativeLayout
+                android:layout_width="92dp"
+                android:layout_height="93dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="254dp">
+
+                <de.morrox.fontinator.FontButton
+                    android:text="CHECK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/check_text"
+                    android:background="@drawable/toggle_heart_check_button"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:font="Regular.otf"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/today_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/heart_text"
+                android:textColor="@android:color/white"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                app:font="Regular.otf"
+                android:layout_marginTop="@dimen/today_top"
+                android:textSize="18sp" />
+
+            <de.morrox.fontinator.FontTextView
+                android:text="HEART RATE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/heart_bg"
+                android:layout_alignParentStart="true"
+                android:id="@+id/heart_title"
+                android:layout_marginTop="@dimen/walking_top"
+                android:layout_marginLeft="@dimen/info_title"
+                app:font="Bold.otf" />
+
+            <de.morrox.fontinator.FontTextView
+                android:text="today score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/heart_title"
+                android:layout_alignStart="@+id/heart_title"
+                android:id="@+id/score_text"
+                app:font="Regular.otf" />
+
+            <LinearLayout
+                android:id="@+id/info"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/score_text"
+                android:layout_marginTop="@dimen/info_top"
+                android:layout_marginLeft="@dimen/heart_side"
+                android:layout_marginRight="@dimen/heart_side">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_marginRight="@dimen/heart_info_inner_interval"
+                        android:paddingTop="@dimen/heart_info_box_interval"
+                        android:paddingLeft="@dimen/heart_info_box_interval"
+                        android:paddingBottom="@dimen/info_text_interval"
+                        android:background="@mipmap/info_box">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="min."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_min_text"
+                            android:textSize="12sp"
+                            app:font="Regular.otf"
+                            android:textColor="@android:color/black" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="65"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_min"
+                            android:textSize="30sp"
+                            app:font="Extra_Condensed_Semibold.otf"
+                            android:textColor="@color/heart_bg"
+                            android:layout_below="@+id/heart_min_text"/>
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="bpm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_min_unit_text"
+                            android:layout_marginLeft="@dimen/info_inner_interval"
+                            android:textSize="11sp"
+                            app:font="Light_Italic.otf"
+                            android:layout_below="@+id/heart_min" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_marginRight="@dimen/heart_info_inner_interval"
+                        android:paddingTop="@dimen/heart_info_box_interval"
+                        android:paddingLeft="@dimen/heart_info_box_interval"
+                        android:paddingBottom="@dimen/info_text_interval"
+                        android:background="@mipmap/info_box">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_max_text"
+                            android:textSize="12sp"
+                            app:font="Regular.otf"
+                            android:textColor="@android:color/black"
+                            android:text="max." />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="132"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_max"
+                            android:textSize="30sp"
+                            app:font="Extra_Condensed_Semibold.otf"
+                            android:textColor="@color/heart_bg"
+                            android:layout_below="@+id/heart_max_text"/>
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="bpm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_max_unit_text"
+                            android:layout_marginLeft="@dimen/info_inner_interval"
+                            android:textSize="11sp"
+                            app:font="Light_Italic.otf"
+                            android:layout_below="@+id/heart_max" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

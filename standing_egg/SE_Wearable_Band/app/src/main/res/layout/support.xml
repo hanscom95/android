@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@color/white" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="53dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="40dp"
+        android:text="@string/device"
+        android:textColor="@color/red_circle"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/element_360_divider" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="53dp"
+        android:orientation="horizontal"
+        android:paddingEnd="16dp"
+        android:paddingStart="40dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/firmware_version"
+            android:textColor="@color/gray2"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/version_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="1.0.0"
+            android:textColor="@color/gray2"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/element_360_divider" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/firmware_update"
+        android:layout_width="fill_parent"
+        android:layout_height="53dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingEnd="16dp"
+        android:paddingStart="40dp" >
+
+        <TextView
+            android:id="@+id/firmware_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/firmware_update"
+            android:textColor="@color/gray2"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/firmware_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/firmware_txt"
+            android:src="@drawable/element_support_alert" />
+		<TextView
+            android:id="@+id/firmware_state_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:text="@string/firmware_last_version"
+            android:textColor="@color/gray2"
+            android:textSize="16sp" />
+        <ImageView
+            android:id="@+id/firmware_arrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/element_timeline_arrow" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/element_360_divider" >
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="80dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="53dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="40dp"
+        android:text="@string/account"
+        android:textColor="@color/red_circle"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/element_360_divider" >
+    </LinearLayout>
+
+    <RelativeLayout
+		android:id="@+id/poilcy_txt"
+        android:layout_width="fill_parent"
+        android:layout_height="53dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingEnd="16dp"
+        android:paddingStart="40dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/privacy_policy"
+            android:textColor="@color/gray2"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/element_timeline_arrow" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/element_360_divider" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/account_drop"
+        android:layout_width="fill_parent"
+        android:layout_height="53dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingEnd="16dp"
+        android:paddingStart="40dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/account_drop"
+            android:textColor="@color/gray2"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/element_timeline_arrow" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/element_360_divider" >
+    </LinearLayout>
+
+</LinearLayout>

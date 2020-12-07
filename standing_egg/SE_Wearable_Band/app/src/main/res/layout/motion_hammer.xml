@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:weightSum="1">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_gravity="center_horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_gravity="center_horizontal">
+            <LinearLayout
+                android:id="@+id/motion_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/element_bg_hammer"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal">
+
+                    <LinearLayout
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="false"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginLeft="120dp">
+
+                        <TextView
+                            android:text=""
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="30sp"
+                            android:id="@+id/motion_name" />
+
+                        <TextView
+                            android:id="@+id/hammer_cnt_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="60sp"
+                            android:textStyle="bold"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_marginTop="100dp">
+
+                <RelativeLayout
+                    android:id="@+id/sittingRelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/element_box_hex_white"
+                    android:padding="@dimen/tab_text_size">
+
+                    <com.standingegg.band.util.AltRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="SITTING"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_reguar_size"
+                        android:id="@+id/sittingText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.standingegg.band.util.AltBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_bold_size"
+                        android:textStyle="bold"
+                        android:id="@+id/sittingCntText"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/sittingMeterText" />
+
+                    <com.standingegg.band.util.AltLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Count"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_light_size"
+                        android:id="@+id/sittingMeterText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/jumpingRelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/element_box_hex_white"
+                    android:padding="@dimen/tab_text_size"
+                    android:layout_marginTop="20dp">
+
+                    <com.standingegg.band.util.AltRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="JUMPING"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_reguar_size"
+                        android:id="@+id/jumpingText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.standingegg.band.util.AltBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_bold_size"
+                        android:textStyle="bold"
+                        android:id="@+id/jumpingCntText"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/jumpingMeterText" />
+
+                    <com.standingegg.band.util.AltLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Count"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_light_size"
+                        android:id="@+id/jumpingMeterText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pushupRelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/element_box_hex_white"
+                    android:padding="@dimen/tab_text_size"
+                    android:layout_marginTop="20dp">
+
+                    <com.standingegg.band.util.AltRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="PUSH UP"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_reguar_size"
+                        android:id="@+id/pushupText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.standingegg.band.util.AltBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_bold_size"
+                        android:textStyle="bold"
+                        android:id="@+id/pushupCntText"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/pushupMeterText" />
+
+                    <com.standingegg.band.util.AltLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Count"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_light_size"
+                        android:id="@+id/pushupMeterText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/situpRelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/element_box_hex_white"
+                    android:padding="@dimen/tab_text_size"
+                    android:layout_marginTop="20dp">
+
+                    <com.standingegg.band.util.AltRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="SIT UP"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_reguar_size"
+                        android:id="@+id/situpText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.standingegg.band.util.AltBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_bold_size"
+                        android:textStyle="bold"
+                        android:id="@+id/situpCntText"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/situpMeterText" />
+
+                    <com.standingegg.band.util.AltLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Count"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_light_size"
+                        android:id="@+id/situpMeterText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/butterflyRelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/element_box_hex_white"
+                    android:padding="@dimen/tab_text_size"
+                    android:layout_marginTop="20dp">
+
+                    <com.standingegg.band.util.AltRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="BUTTERFLY"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_reguar_size"
+                        android:id="@+id/butterflyText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.standingegg.band.util.AltBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_bold_size"
+                        android:textStyle="bold"
+                        android:id="@+id/butterflyCntText"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/butterflyMeterText" />
+
+                    <com.standingegg.band.util.AltLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Count"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_light_size"
+                        android:id="@+id/butterflyMeterText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/bicepscurlRelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/element_box_hex_white"
+                    android:padding="@dimen/tab_text_size"
+                    android:layout_marginTop="20dp">
+
+                    <com.standingegg.band.util.AltRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="BICEPS CURL"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_reguar_size"
+                        android:id="@+id/bicepscurlText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.standingegg.band.util.AltBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_bold_size"
+                        android:textStyle="bold"
+                        android:id="@+id/bicepscurlCntText"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/bicepscurlMeterText" />
+
+                    <com.standingegg.band.util.AltLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Count"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_light_size"
+                        android:id="@+id/bicepscurlMeterText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/shoulderpressRelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/element_box_hex_white"
+                    android:padding="@dimen/tab_text_size"
+                    android:layout_marginTop="20dp">
+
+                    <com.standingegg.band.util.AltRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="SHOULDER PRESS"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_reguar_size"
+                        android:id="@+id/shoulderpressText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.standingegg.band.util.AltBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_bold_size"
+                        android:textStyle="bold"
+                        android:id="@+id/shoulderpressCntText"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/shoulderpressMeterText" />
+
+                    <com.standingegg.band.util.AltLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Count"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_light_size"
+                        android:id="@+id/shoulderpressMeterText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/uprightrowRelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/element_box_hex_white"
+                    android:padding="@dimen/tab_text_size"
+                    android:layout_marginTop="20dp">
+
+                    <com.standingegg.band.util.AltRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="UPRIGHT ROW"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_reguar_size"
+                        android:id="@+id/uprightrowText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.standingegg.band.util.AltBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_bold_size"
+                        android:textStyle="bold"
+                        android:id="@+id/uprightrowCntText"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/uprightrowMeterText" />
+
+                    <com.standingegg.band.util.AltLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Count"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_light_size"
+                        android:id="@+id/uprightrowMeterText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/toeraiseRelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/element_box_hex_white"
+                    android:padding="@dimen/tab_text_size"
+                    android:layout_marginTop="20dp">
+
+                    <com.standingegg.band.util.AltRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="TOE RAISE"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_reguar_size"
+                        android:id="@+id/toeraiseText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.standingegg.band.util.AltBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_bold_size"
+                        android:textStyle="bold"
+                        android:id="@+id/toeraiseCntText"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/toeraiseMeterText" />
+
+                    <com.standingegg.band.util.AltLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Count"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_light_size"
+                        android:id="@+id/toeraiseMeterText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lateralRelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/element_box_hex_white"
+                    android:padding="@dimen/tab_text_size"
+                    android:layout_marginTop="20dp">
+
+                    <com.standingegg.band.util.AltRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="LATERAL RAISE"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_reguar_size"
+                        android:id="@+id/lateralText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.standingegg.band.util.AltBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_bold_size"
+                        android:textStyle="bold"
+                        android:id="@+id/lateralCntText"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/lateralMeterText" />
+
+                    <com.standingegg.band.util.AltLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Count"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_box_light_size"
+                        android:id="@+id/lateralMeterText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

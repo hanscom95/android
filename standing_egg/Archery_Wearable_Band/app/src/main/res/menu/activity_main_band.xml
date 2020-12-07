@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@mipmap/menu_profile"
+            android:title="PROFILE &amp; UNIT" />
+        <item
+            android:id="@+id/nav_goal"
+            android:icon="@mipmap/menu_goal"
+            android:title="GOAL" />
+        <item
+            android:id="@+id/nav_activity"
+            android:icon="@mipmap/menu_activity"
+            android:title="ACTIVITY" />
+        <item
+            android:id="@+id/nav_motion"
+            android:icon="@mipmap/menu_motion"
+            android:title="MOTION" />
+        <item
+            android:id="@+id/nav_sleep"
+            android:icon="@mipmap/menu_sleep"
+            android:title="SLEEP" />
+        <item
+            android:id="@+id/nav_heart_rate"
+            android:icon="@mipmap/menu_heartrate"
+            android:title="HEART RATE" />
+        <item
+            android:id="@+id/nav_option"
+            android:icon="@mipmap/menu_option"
+            android:title="OPTION" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@mipmap/menu_log_out"
+            android:title="LOG OUT" />
+    </group>
+</menu>

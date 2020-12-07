@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="crash_toast_text">Crash Report Send</string>
+    <string name="ble_not_supported">is not supported</string>
+    <string name="label_data">Data:</string>
+    <string name="label_write">Write:</string>
+    <string name="label_send">Send</string>
+    <string name="label_Hercules_address">Band address:</string>
+    <string name="label_state">State:</string>
+    <string name="no_data">No data</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="title_Herculess">Band Scan</string>
+    <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
+    <string name="unknown_Hercules">Unknown Band</string>
+    <string name="unknown_characteristic">Unknown characteristic</string>
+    <string name="unknown_service">Unknown service</string>
+      <!-- Menu items -->
+    <string name="menu">menu</string>
+    <string name="menu_connect">Connect</string>
+    <string name="menu_disconnect">Disconnect</string>
+    <string name="menu_scan">Scan</string>
+    <string name="menu_stop">Stop</string>
+    
+    <string name="led">LED</string>
+    
+    <string name="main_menu_home">&#160;&#160;Home</string>
+    <string name="main_menu_profile">&#160;&#160;Profile</string>
+    <string name="main_menu_settings">&#160;&#160;Setting</string>
+    <string name="main_menu_arlam">&#160;&#160;Alarm</string>
+    <string name="main_menu_support">&#160;&#160;Support</string>
+    <string name="main_menu_logout">Logout</string>
+    <string name="terms">terms</string>
+    
+    <string name="mr">&#160;</string>
+    <string name="thur">tuesday</string>
+    <!-- Intro -->
+    <string name="login">login</string>
+    <string name="join_app">create Band Account</string>
+    <string name="pw_hint">Password</string>
+    <string name="pw_hint_2">re-write your password</string>
+    <string name="pw_enter">enter your password</string>
+    <string name="pw_check_hint">re-write your password</string>
+    <string name="pw_check_enter">enter your re-write password</string>
+    <string name="id_hint">ID</string>
+    <string name="id_enter">enter your id</string>
+    <string name="name_hint">NAME</string>
+    <string name="name_enter">enter your name</string>
+    <string name="create_account">Create Account</string>
+    <string name="bar">|</string>
+    <string name="forgot_pw">Forgot Password</string>
+    <string name="start">start</string>
+    <string name="save">save</string>
+    <string name="save_login">autoLogin</string>
+    <string name="before">Previous</string>
+    <string name="next">NEXT</string>
+    <string name="create">create Account</string>
+    <string name="gender_fe">FEMALE</string>
+    <string name="gender_ma">MALE</string>
+    <string name="gender">GENDER | </string>
+    <string name="tall">HEIGHT | </string>
+    <string name="weight_bar">WEIGHT | </string>
+    <string name="terms_txt">&#160;of Band</string>
+    <string name="terms_agree">I agree to Terms of Band</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="privacy_policy_agree">I agree to Privacy policy of Band</string>
+    <string name="activity_goal">Move goal</string>
+    <string name="activity_goal_edt">Move goal Modify</string>
+    <string name="sleep_goal">Sleep goal</string>
+    <string name="sleep_goal_h">Sleep goal Hour</string>
+    <string name="sleep_goal_m">Sleep goal Min</string>
+    <string name="device_connect1">No connected Band.</string>
+    <string name="device_connect2">Please register your Band to start.</string>
+    <string name="device_connect_t">Band connect setting</string>
+    <string name="device_connect_t_ok">registration complete</string>
+    <string name="device_connect_q">Do you want to register your Band?</string>
+    <string name="device_connect_f">Keep your Band as close as possible from your mobile</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="account_create">Create Account</string>
+    <string name="test1">PROPERTY READ</string>
+    <string name="test2">PROPERTY NOTI</string>
+    <string name="today">Today</string>
+    <string name="cancel">cancel</string>
+    <string name="login_null_chk">enter your ID, Password</string>
+    <string name="login_db_error_msg">DB error</string>
+    <string name="login_device_address_msg">Band address is not correct.</string>
+    <string name="login_invalid_device_msg">Invalid Band</string>
+    <string name="login_pw_confirm_msg">Invalid user name or password is incorrect</string>
+    <string name="login_member_policy">Terms and Privacy policy</string>
+    <string name="login_member_agr">Terms  \n\n\n\n\n\n Privacy policy</string>
+    <string name="login_member_policy_chk">you must agree to Terms and Privacy policy of Band.</string>
+    <string name="login_arlam">Alert</string>
+    <string name="forgot_value_chk">please enter correct value.</string>
+    <string name="forgot_400_error">Provided information is not correct</string>
+    <string name="forgot_460_error">User information does not exist</string>
+    <string name="join_ok">Account registration complete</string>
+    <string name="change_ok">change complete</string>
+    
+    <string name="find_txt">Please enter your account information and</string>
+    <string name="find_txt2">ID to reset your password.</string>
+    
+    <string name="pw_change">change password</string>
+    <string name="new_pw_check">re-write your new password</string>
+    <string name="new_pw">New password</string>
+    <string name="connecting">loading...</string>
+    
+    <string name="wrong_login">Invalid sign in information</string>
+    <string name="logout">logout</string>
+    
+    <string name="agree1">you must agree to Terms and Privacy policy.</string>
+    
+    
+    <string name="id_duplicate">ID duplicate</string>
+    <string name="id_none">User information does not exist</string>
+    <string name="address_duplicate">Band Duplicate</string>
+    <string name="invaild_value">Invalid data format</string>
+    <string name="invalid_data_value">BIRTH DATE format error</string>
+    <string name="device_address_invaild">BAND invaild</string>
+    <string name="server_error">server error</string>
+    <string name="space_step"> steps</string>    
+    <string name="validate_eng_length_msg">(more than 3 characters including English characters)</string>
+    
+    <string name="space_hour_space">&#160;h &#160;&#160;</string>
+    <string name="space_minutes">&#160;m</string>
+    
+    <string name="name_modify">NAME modify</string>
+    <string name="tall_modify">HEIGHT modify</string>
+    <string name="weight_modify">WEIGHT modify</string>
+    <string name="sleep_goal_modify">sleep goal modify</string>
+    
+    <string name="bluetooth_fail">Failed to connect Bluetooth. \nDo you want to see the saved data without connecting to the band?</string>
+    <string name="bluetooth_discon">Bluetooth connection has been lost. \nPlease restart the app.</string>
+    <string name="logout_">Are you sure to sign out? \nToday’s data will be lost.</string>
+    
+
+    <!-- 활동 -->
+    <string name="exam_txt">You achieved today’s move goal!</string>
+    <string name="exam_txt2">102 calories burned</string>
+    <string name="all_distance">Total km</string>
+    <string name="title_activity">Activity</string>
+	<string name="active_mass">Activity</string>
+    <string name="active_mass_avg">Avg. Activity</string>
+    <string name="walking">Walk</string>
+    <string name="walking_avg">Avg. Walk</string>
+    <string name="running">Run</string>
+    <string name="running_avg">Avg. Run</string>
+    <string name="all">Total</string>	
+    <!-- 수면 -->
+    <string name="title_sleep">Sleep</string>
+    <string name="sleep_h">Actual Sleep</string>
+    <string name="sleep_deep">Deep Sleep</string>
+    <string name="sleep_deep2">Deep Sleep</string>
+    <string name="sleep_low">Light Sleep</string>
+    <string name="sleep_start">Slept At</string>
+    <string name="sleep_wakeup">Woke Up At</string>
+    <string name="sleep_waking">Sleep Interruption</string>
+    <string name="sleep_avg">Avg. Sleep</string>
+    <string name="sleep_deep_avg">Avg. Deep Sleep</string>
+    <string name="sleep_light_avg">Avg. light sleep</string>
+    <string name="exam_txt3">0h00m</string>
+
+    <!-- Profile -->
+    <string name="activity_avg">Avg. Steps</string>
+    <string name="activity_walk">steps</string>
+    <string name="use_count">Total days</string>
+    <string name="birth">Birth date</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="unit">unit set</string>
+    <string name="cm">cm</string>
+    <string name="feet">feet</string>
+    <string name="kg">kg</string>
+    <string name="lbs">lbs</string>
+    <string name="battery">Remaining battery &#160;</string>
+    <string name="battery2"></string>
+    <string name="call_alarm">Incoming call</string>
+    <string name="notification_set">Notification Settings</string>
+    <string name="sms_alarm">Message</string>
+    <string name="device_con">Band Connection</string>
+    <string name="device_find">Find Band</string>
+    <string name="find">find</string>
+    <string name="finds">Find</string>
+    <string name="kakao_alarm">Kakao talk</string>
+    <string name="led_set">LED color set</string>
+    <string name="alarm_onoff">Alarm on/off</string>
+    <string name="clock">h&#160;</string>
+    <string name="minutes">m&#160;</string>
+    <string name="repeat">repeat</string>
+    <string name="scanning">Band Searching...</string>
+    <string name="none_paired">No paired devices</string>
+    <string name="none_found">No devices detected</string>
+    <string name="title_paired_Herculess">Paired devices</string>
+    <string name="device_title1">Available Band</string>
+    <string name="device_title2">Please select your Hercules band’s serial number</string>
+    <string name="device_title3">Band band is connected</string>
+    <string name="button_scan">Band Searh</string>
+    <string name="bt_title">bluetooth</string>
+    <string name="bt_state_init">initializing...</string>
+    <string name="bt_state_wait">waiting.. </string>
+    <string name="bt_state_connect">connecting...</string>
+    <string name="bt_state_connected">connect</string>
+    <string name="bt_state_error">error</string>
+    <string name="bt_not_enabled_leaving">Bluetooth is turned off. \nPlease activate the bluetooth from Settings on your smartphone.</string>
+    <string name="bt_cmd_sending_error">send fail</string>
+    <string name="bt_ble_not_supported">This device does not support BLE. \nApp is closing.</string>
+    <string name="this_week">This\nweek</string>
+    <string name="last_week">Last\nweek</string>
+    <string name="this_month">This month</string>
+    <string name="last_month">Last month</string>
+    
+    <string name="data_over">There will be an additional charge if you use this service with 3G, LTE, LTE-A except Wi-Fi.</string>
+    <string name="re_none">Do not show again</string>
+
+    <!-- Support -->
+    <string name="device">Band</string>
+    <string name="firmware_version">Version</string>
+    <string name="firmware_update">Update</string>
+    <string name="firmware_last_version">Latest version</string>
+    <string name="account">Account</string>
+    <string name="account_drop">Delete my account</string>
+    <string name="account_drop_success">delete my account complete</string>
+    <string name="account_user_is_not">User ID doesn’t exist</string>
+    <string name="account_pw_not_match">Password is incorrect</string>
+    <string name="account_invalid_device_address">Invalid device address</string>
+    <string name="account_db_error">database error</string>
+    <string name="account_drop_fail">Failed to withdraw the membership</string>
+    <string name="account_drop_question">Are you sure to withdraw the membership?</string>
+    <string name="network_connect_fail">Network signal is weak or network is not connected.</string>
+    <!-- alert 경고 메세지 -->
+    <string name="same_id">This ID is already in use.</string>
+    <string name="Invalid_user_id">Invalid ID type</string>
+    <string name="unsame_pw">Please check the password again.</string>
+    <string name="caution">Alert</string>
+    
+    <string name="insert_chk">Please enter a correct (it cannot contain special characters or spaces)</string>
+    <string name="validate">Invalid type</string>
+    <string name="validate_msg">(cannot contain spaces, special characters or Korean characters)</string>
+    <string name="validate_length_msg">(more than 3 characters including English characters)</string>
+    <string name="set">confirm</string>
+    <string name="one">only once</string>
+    <string name="one_space">only once&#160;</string>
+    
+    <string name="restart">restart Band</string>
+    <string name="select_led_color">LED color check</string>
+    
+    <string name="time">time</string>
+    <string name="timeline_start_1">Start Band App.</string>
+    <string name="timeline_start_2">welcome, &#160;</string>
+    <string name="timeline_start_3"></string>
+
+    <string name="timeline_start_4">Welcome back,&#160;</string>
+    <string name="timeline_start_5">Try to achieve move goal!</string>
+    
+    <string name="timeline_txt_1">Move time :&#160;</string>
+    <string name="timeline_txt_2">&#160;m&#160;</string>
+    
+    <string name="timeline_txt_3">about &#160;</string>
+
+    <string name="timeline_txt_act_goal">You achieved today’s move goal!</string>
+    <string name="timeline_txt_act_goal_2">congratulation!</string>
+    
+    <string name="timeline_txt_act_goal_11">You achieved your goal&#160;</string>
+    <string name="timeline_txt_act_goal_22">&#160;days in a row.</string>
+    
+    <string name="timeline_txt_act_goal_fail">Today’s way to go!&#160;</string>
+    <string name="timeline_txt_act_goal_fail2">&#160;steps!</string>
+    
+    <string name="timeline_txt_cal">carlories burned&#160;</string>
+    <string name="timeline_sleep_time">last night, you slept for: &#160;</string>
+    <string name="timeline_sleep_2">You didn’t achieved your sleep goal</string>
+    
+    <!-- alaram -->
+    <string name="alaram_time_title">time set</string>
+    <string name="alaram_date_everyday_msg">every day</string>
+    <string name="alaram_date_weekday_msg">weekday</string>
+    <string name="alaram_date_weekend_msg">weekend</string>
+    <string name="alaram_date_mon_day">Mon</string>
+    <string name="alaram_date_tue_day">Tue</string>
+    <string name="alaram_date_wed_day">Wed</string>
+    <string name="alaram_date_thu_day">Thu</string>
+    <string name="alaram_date_fri_day">Fri</string>
+    <string name="alaram_date_sat_day">Sat</string>
+    <string name="alaram_date_sun_day">Sun</string>
+    <string name="alaram_dialog_title">&#160;&#160;Alarm</string>
+    <string name="alaram_remove_dialog_title">remove alarm</string>
+    <string name="alaram_remove_dialog_msg">you want to delete the selected alarm?</string>
+    <string name="alaram_time_chk">This timeslot already has data. Please choose again.</string>
+    <string name="text_null"></string>
+    <string name="mon">mon</string>
+    <string name="tue">tue</string>
+    <string name="wed">wed</string>
+    <string name="thu">thu</string>
+    <string name="fri">fri</string>
+    <string name="sat">sat</string>
+    <string name="sun">sun</string>
+    
+    <string name="wokeup_up_modify">woke up time_modify</string>
+    <string name="slept_in_modify">slept in time modify</string>
+    
+    
+    <string name="january">january</string>
+    <string name="february">february</string>
+    <string name="march">march</string>
+    <string name="april">april</string>
+    <string name="may">may</string>
+    <string name="june">june</string>
+    <string name="july">july</string>
+    <string name="aguest">aguest</string>
+    <string name="september">september</string>
+    <string name="october">october</string>
+    <string name="november">november</string>
+    <string name="december">december</string>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- ota -->
+    <string name="ota_file_list_none">No items to be updated</string>
+    <string name="ota_delay">Preparing for OTA… please wait</string>
+    <string name="ota_i2c_error_title">I2C Parameter Error</string>
+    <string name="ota_i2c_error_msg">Invalid I2C Band address.</string>
+    <string name="ota_block_error_title">Invalid block size</string>
+    <string name="ota_block_error_msg">The block size cannot be zero.</string>
+    <string name="user_str">I agree to&#160;</string>
+    
+    <string name="backpressed">Press back again to leave</string>
+    
+    <string name="poilcy_txt">
+       1.	수집하는 개인정보의 항목 및 수집방법
+		\n&#160;&#160;&#160;가.	수집하는 개인정보의 항목
+		\n&#160;&#160;&#160; 회원가입, 원활한 고객상담, 각종 서비스의 제공을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+		\n&#160;&#160;&#160;- ID, 비밀번호
+		\n&#160;&#160;&#160;&#160;&#160;서비스 이용과정에서 아래와 같은 정보가 생성되어 수집될 수 있습니다.
+		\n&#160;&#160;&#160;- IP Address, 쿠키, 방문 일시, 서비스 이용 기록, 불량 이용 기록, 모바일 서비스 이용시 단말기 정보(단말기 모델, 이동통신사 정보, 하드웨어 ID, 광고 ID, 서비스 이용에 대한 기본 통계), 이용자 단말기 내 설치된 어플리케이션 정보(앱 설치/실행시각 포함), 결제기록
+		\n&#160;&#160;&#160;나.	개인정보 수집방법
+		\n&#160;&#160;&#160;회사는 다음과 같은 방법으로 개인정보를 수집합니다.
+		\n&#160;&#160;&#160;&#160;&#160;- 홈페이지, 모바일 기기, 서면양식, 팩스, 전화, 상담 게시판, 이메일, 이벤트 응모, 배송요청
+		\n&#160;&#160;&#160;&#160;&#160;- 협력회사로부터의 제공
+		\n&#160;&#160;&#160;&#160;&#160;- 생성정보 수집 툴을 통한 수집
+		\n&#160;&#160;&#160;또한, 회사는 서비스 이용 도중 추가적인 정보를 수집할 수 있으며, 이 경우 별도의 개인정보 수집 및 이용 동의를 받습니다.
+		\n2.	개인정보의 수집 및 이용목적
+		\n&#160;&#160;&#160;회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.
+		\n&#160;&#160;&#160;가.	서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산
+		\n&#160;&#160;&#160;컨텐츠 제공, 물품배송 또는 청구서 등 발송, 본인인증, 구매 및 요금 결제, 요금추심
+		\n&#160;&#160;&#160;나.	회원관리
+		\n&#160;&#160;&#160;회원제 서비스 제공, 개인식별, 불량회원(이용약관 위반에 따라 이용제한 또는 계약 해지된 회원)의 부정 이용방지와 비인가 사용방지, 가입의사 확인, 가입 및 가입횟수 제한, 만18세 미만 아동 개인정보 수집 시 법정 대리인 동의여부 확인, 추후 법정 대리인 본인확인, 분쟁 조정을 위한 기록보존, 불만처리 등 민원처리, 고지사항 전달
+		\n3.	개인정보의 보유 및 이용기간
+		\n&#160;&#160;&#160;이용자의 개인정보는 원칙적으로 개인정보의 수집 및 이용목적이 달성되면 지체 없이 파기합니다. 단, 회사는 개인정보 도용 등으로 인한 원치않는 회원탈퇴 등에 대비하기 위하여 회원탈퇴 요청 후, 7일간 개인정보를 보유합니다. 또한 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존하며, 그 외 다른 목적으로는 절대 사용하지 않습니다.
+		\n&#160;&#160;&#160;가.	회사 내부 방침에 의한 정보보유 사유
+		\n&#160;&#160;&#160;나.	관련법령에 의한 정보보유 사유
+		\n&#160;&#160;&#160;상법, 전자상거래 등에서의 소비자보호에 관한 법률 등 관계법령의 규정에 의하여 보존할 필요가 있는 경우 회사는 관계법령에서 정한 일정한 기간 동안 회원정보를 보관합니다. 이 경우 회사는 보관하는 정보를 그 보관의 목적으로만 이용하며 보존기간은 아래와 같습니다.
+    </string>
+</resources>

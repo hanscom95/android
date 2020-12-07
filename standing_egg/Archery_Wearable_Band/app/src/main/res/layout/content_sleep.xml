@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_sleep"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="se.com.band.sleep.SleepActivity"
+    tools:showIn="@layout/activity_sleep">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button_layout">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:srcCompat="@color/sleep_bg"
+                android:layout_alignParentTop="true"
+                android:id="@+id/sleep_bg" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/today_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sleep_text"
+                android:textColor="@android:color/white"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                app:font="Regular.otf"
+                android:layout_marginTop="@dimen/today_top"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:background="@mipmap/sleep_panel"
+                android:layout_below="@+id/today_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/gauge_top"
+                android:layout_width="293dp"
+                android:layout_height="293dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/sleep_panel_icon"
+                    android:id="@+id/gauge_sleep_icon"
+                    android:layout_above="@+id/gauge_start_sleep_text"
+                    android:layout_centerHorizontal="true" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:text="23:05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gauge_start_sleep_text"
+                    android:textColor="@android:color/white"
+                    android:layout_above="@+id/gauge_bar"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="40sp"
+                    app:font="Semibold.otf"
+                    android:layout_marginTop="@dimen/sleep_gauge_interval" />
+
+                <ImageView
+                    android:id="@+id/gauge_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/sleep_"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/sleep_gauge_interval"
+                    android:layout_marginBottom="@dimen/sleep_gauge_interval" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:text="07:30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gauge_end_sleep_text"
+                    android:layout_below="@+id/gauge_bar"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="40sp"
+                    app:font="Semibold.otf" />
+
+                <se.com.band.utility.GaugeView
+                    android:id="@+id/progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/sleep_gauge"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+            <de.morrox.fontinator.FontTextView
+                android:text="SLEEP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sleep_bg"
+                android:layout_alignParentStart="true"
+                android:id="@+id/sleep_title"
+                android:layout_marginTop="@dimen/walking_top"
+                android:layout_marginLeft="@dimen/info_title"
+                app:font="Bold.otf" />
+
+            <de.morrox.fontinator.FontTextView
+                android:text="total score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sleep_title"
+                android:layout_alignStart="@+id/sleep_title"
+                android:id="@+id/score_text"
+                app:font="Regular.otf" />
+
+            <LinearLayout
+                android:id="@+id/info"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/score_text"
+                android:layout_marginTop="@dimen/info_top"
+                android:layout_marginLeft="@dimen/sleep_side"
+                android:layout_marginRight="@dimen/sleep_side">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:layout_marginRight="@dimen/info_inner_interval"
+                        android:paddingTop="@dimen/sleep_info_box_interval"
+                        android:paddingLeft="@dimen/sleep_info_box_interval"
+                        android:paddingBottom="@dimen/info_text_interval"
+                        android:background="@mipmap/info_box">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_min_text"
+                            android:textSize="12sp"
+                            app:font="Regular.otf"
+                            android:textColor="@android:color/black" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="08:25"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_min"
+                            android:textSize="30sp"
+                            app:font="Extra_Condensed_Semibold.otf"
+                            android:textColor="@color/sleep_bg"
+                            android:layout_below="@+id/heart_min_text"/>
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="hrs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_min_unit_text"
+                            android:layout_marginLeft="@dimen/info_inner_interval"
+                            android:textSize="11sp"
+                            app:font="Light_Italic.otf"
+                            android:layout_below="@+id/heart_min" />
+
+                        <ImageView
+                            android:layout_width="29dp"
+                            android:layout_height="29dp"
+                            app:srcCompat="@mipmap/total_sleep"
+                            android:layout_below="@+id/heart_min_unit_text"
+                            android:layout_marginTop="@dimen/sleep_info_box_img_interval"
+                            android:id="@+id/total_sleep" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:layout_marginRight="@dimen/info_inner_interval"
+                        android:paddingTop="@dimen/sleep_info_box_interval"
+                        android:paddingLeft="@dimen/sleep_info_box_interval"
+                        android:paddingBottom="@dimen/info_text_interval"
+                        android:background="@mipmap/info_box">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_max_text"
+                            android:textSize="12sp"
+                            app:font="Regular.otf"
+                            android:textColor="@android:color/black"
+                            android:text="light sleep" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="03:10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_max"
+                            android:textSize="30sp"
+                            app:font="Extra_Condensed_Semibold.otf"
+                            android:textColor="@color/sleep_bg"
+                            android:layout_below="@+id/heart_max_text"/>
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="hrs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/heart_max_unit_text"
+                            android:layout_marginLeft="@dimen/info_inner_interval"
+                            android:textSize="11sp"
+                            app:font="Light_Italic.otf"
+                            android:layout_below="@+id/heart_max" />
+
+                        <ImageView
+                            android:layout_width="29dp"
+                            android:layout_height="29dp"
+                            app:srcCompat="@mipmap/light_sleep"
+                            android:layout_below="@+id/heart_max_unit_text"
+                            android:layout_marginTop="@dimen/sleep_info_box_img_interval"
+                            android:id="@+id/light_sleep" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:layout_marginRight="@dimen/info_inner_interval"
+                        android:paddingTop="@dimen/sleep_info_box_interval"
+                        android:paddingLeft="@dimen/sleep_info_box_interval"
+                        android:paddingBottom="@dimen/info_text_interval"
+                        android:background="@mipmap/info_box">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="deep sleep"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sleep_deep_sleep_text"
+                            android:textSize="12sp"
+                            app:font="Regular.otf"
+                            android:textColor="@android:color/black" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="05:15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sleep_deep_sleep"
+                            android:textSize="30sp"
+                            app:font="Extra_Condensed_Semibold.otf"
+                            android:textColor="@color/sleep_bg"
+                            android:layout_below="@+id/sleep_deep_sleep_text"/>
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="hrs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sleep_deep_sleep_unit_text"
+                            android:layout_marginLeft="@dimen/info_inner_interval"
+                            android:textSize="11sp"
+                            app:font="Light_Italic.otf"
+                            android:layout_below="@+id/sleep_deep_sleep" />
+
+                        <ImageView
+                            android:layout_width="29dp"
+                            android:layout_height="29dp"
+                            app:srcCompat="@mipmap/deep_sleep"
+                            android:layout_below="@+id/sleep_deep_sleep_unit_text"
+                            android:layout_marginTop="@dimen/sleep_info_box_img_interval"
+                            android:id="@+id/deep_sleep" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_bottom_button"
+        android:weightSum="1"
+        android:layout_alignParentBottom="true">
+        <de.morrox.fontinator.FontButton
+            android:id="@+id/activity_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.499"
+            android:text="@string/activity_button"
+            android:textColor="@color/activity_bg"
+            android:background="@drawable/toggle_bottom_button"
+            app:font="Bold.otf"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.002"
+            android:background="@mipmap/button_space"
+            />
+        <de.morrox.fontinator.FontButton
+            android:id="@+id/motion_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.499"
+            android:text="@string/motion_button"
+            android:textColor="@color/motion_bg"
+            android:background="@drawable/toggle_bottom_button"
+            app:font="Bold.otf"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

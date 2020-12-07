@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>line chart</title>
+    <style type="text/css">
+        #container rect.highcharts-background {fill : transparent;}
+    </style>
+
+
+    <script type="text/javascript" src="file:///android_asset/jquery.min.js"></script>
+    <script type="text/javascript">
+        function setChartData(categories, data) {
+            var chart = $('#container').highcharts();
+
+             //chart.series[0].addPoint(data);
+            chart.xAxis[0].setCategories(categories,true);
+            chart.series[0].setData(data, true);
+           // chart.series[0].setData(inCome, true);
+            //chart.xAxis[0].setCategories(data3,true);
+        }
+
+
+        $(function () {
+            Highcharts.setOptions({
+                colors: ["#3E6184"]
+            });
+
+             $('#container').highcharts({
+                chart: {
+                    type: 'area',
+                    inverted: true
+                },
+                title: {
+                    text : ""
+                },
+                credits : {
+                    enabled: false
+                },
+                xAxis: {
+                    categories: [
+                        'Data_1',
+                        'Data_2',
+                        'Data_3',
+                        'Data_4',
+                        'Data_5',
+                        'Data_6',
+                        'Data_7'
+                    ],
+                    labels: {
+                        useHTML: true,
+                        formatter: function() {
+                             return '<span style="display: flex;"><img src="file:///android_asset/folder_icon.png" style="width: 20px; height:20px; vertical-align: middle; margin-right: 5px;" /><span style="vertical-align: middle;">'+this.value+'</span></span>';
+                        }
+                    }
+                },
+                yAxis: {
+                    labels: {
+                        formatter: function () {
+                            return this.value + '%';
+                        }
+                    },
+                    min: 50,
+                    max: 120
+                },
+                legend: {
+                    enabled: false
+                },
+               exporting: {
+                    enabled: false
+                },
+                plotOptions: {
+                    area: {
+                        fillOpacity: 0.5
+                    }
+                },
+                series: [{
+                    name: 'Test'
+                    //data: [98, 90, 97, 96, 99, 88, 95]
+                }]
+            });
+            $('#container rect').attr('fill', 'transparent');
+        });
+
+    </script>
+</head>
+<body>
+<script src="file:///android_asset/highcharts.js"></script>
+<script src="file:///android_asset/exporting.js"></script>
+
+<div id="container" style="min-width: 310px; height: 420px; margin: 0 auto;"></div>
+
+</body>
+</html>

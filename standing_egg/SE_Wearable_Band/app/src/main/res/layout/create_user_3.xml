@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/element_cf_bg"
+    android:orientation="vertical"
+    android:gravity="center_vertical|center_horizontal">
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="88dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_goal"
+            android:textColor="@color/gray1" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="12dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/user_activity_goal"
+                android:layout_width="288dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center"
+                android:background="@drawable/element_box_hex_white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/edit_txt_padding_left"
+                android:paddingRight="@dimen/edit_txt_padding_left"
+                android:text="0"
+                android:textColor="@color/gray2"
+                android:textSize="@dimen/intro_font_size" />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:text="@string/sleep_goal"
+            android:textColor="@color/gray1" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="12dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            
+             <TextView
+                android:id="@+id/user_sleep_goal_h"
+                android:layout_width="130dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center"
+                android:background="@drawable/element_box_hex_white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/edit_txt_padding_small"
+                android:paddingRight="@dimen/edit_txt_padding_small"
+                android:text="0"
+                android:textColor="@color/gray2"
+                android:textSize="@dimen/intro_font_size" />
+            
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/user_sleep_goal_h"
+                android:layout_centerVertical="true"
+                android:paddingRight="10dp"
+                android:text="@string/clock"
+                android:textColor="@color/gray2" />
+
+             <TextView
+                android:id="@+id/user_sleep_goal_m"
+                android:layout_width="130dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center"
+                android:background="@drawable/element_box_hex_white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/edit_txt_padding_small"
+                android:paddingRight="@dimen/edit_txt_padding_small"
+                android:layout_toRightOf="@+id/user_sleep_goal_h"
+                android:text="0"
+                android:textColor="@color/gray2"
+                android:textSize="@dimen/intro_font_size" 
+                android:layout_marginLeft="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/user_sleep_goal_m"
+                android:layout_centerVertical="true"
+                android:paddingRight="10dp"
+                android:text="@string/minutes"
+                android:textColor="@color/gray2" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="84dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="95dp"
+            android:layout_height="43dp"
+            android:background="@drawable/element_button_white"
+            android:text="@string/before"
+            android:textColor="@color/gray1"
+            android:textSize="@dimen/intro_font_size" />
+
+        <Space
+            android:layout_width="14dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="95dp"
+            android:layout_height="43dp"
+            android:background="@drawable/element_button_red"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="@dimen/intro_font_size" />
+    </LinearLayout>
+
+</LinearLayout>

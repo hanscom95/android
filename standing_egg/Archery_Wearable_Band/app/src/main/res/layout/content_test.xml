@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_test"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="se.com.band.option.TestActivity"
+    tools:showIn="@layout/activity_test">
+
+    <RelativeLayout
+        android:id="@+id/test_button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="Activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/test_activity_button"
+            style="@style/Widget.AppCompat.Button.Colored"/>
+
+        <Button
+            android:text="Motion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/test_activity_button"
+            android:id="@+id/test_motion_button"
+            style="@style/Widget.AppCompat.Button.Colored" />
+
+        <Button
+            android:text="Sleep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/test_motion_button"
+            android:id="@+id/test_sleep_button"
+            style="@style/Widget.AppCompat.Button.Colored" />
+
+        <Button
+            android:text="Heart Rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/test_sleep_button"
+            android:id="@+id/test_heartrate_button"
+            style="@style/Widget.AppCompat.Button.Colored" />
+
+
+    </RelativeLayout>
+
+    <de.morrox.fontinator.FontTextView
+        android:layout_height="match_parent"
+        android:id="@+id/test_log_text"
+        android:textSize="16sp"
+        app:font="Regular.otf"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/test_button_layout" />
+
+</RelativeLayout>

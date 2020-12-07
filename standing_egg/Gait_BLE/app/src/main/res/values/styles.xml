@@ -1,0 +1,116 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <!--<item name="colorPrimary">#2196f3</item>-->
+        <item name="colorPrimary">#ceebf5</item>
+        <!--<item name="colorPrimaryDark">#1976d2</item>-->
+        <item name="colorPrimaryDark">#ceebf5</item>
+        <item name="colorAccent">#4FC3F7</item>
+        <item name="android:textColorPrimary">#212121</item>
+        <item name="android:textColorSecondary">#727272</item>
+        <item name="android:divider">#B6B6B6</item>
+    </style>
+
+    <style name="MenuTextAppearance">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!-- Base container style -->
+    <style name="ScrollViewTheme" parent="AppTheme">
+        <item name="android:background">#ffffff</item>
+    </style>
+
+    <!-- Headers of list style -->
+    <style name="CategoryName" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:textColor">#828282</item>
+    </style>
+
+    <!-- List style -->
+    <style name="ChartListView" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:choiceMode">singleChoice</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:dividerHeight">0dp</item>
+        <item name="android:isScrollContainer">false</item>
+    </style>
+
+    <!-- List item style-->
+    <style name="ListItemTheme" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceListItemSmall</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">32dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:background">?android:attr/activatedBackgroundIndicator</item>
+        <item name="android:minHeight">?android:attr/listPreferredItemHeightSmall</item>
+        <item name="android:textColor">#212121</item>
+    </style>
+
+    <!-- List item (in spinner) style -->
+    <style name="ListItemTheme.Fixed" parent="ListItemTheme">
+        <item name="android:layout_width">280dp</item>
+    </style>
+
+    <!-- Base container of category -->
+    <style name="BaseCategory" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!-- Base container with margin -->
+    <style name="BaseCategory.TopShift" parent="BaseCategory">
+        <item name="android:paddingTop">16dp</item>
+    </style>
+
+    <!-- Option content container -->
+    <style name="OptionContainer" parent="BaseCategory">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingLeft">32dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!-- Option seek bar text view -->
+    <style name="OptionSeekBar.Text" parent="AppTheme">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">end</item>
+        <item name="android:textColor">#212121</item>
+    </style>
+
+    <!-- Option seek bar -->
+    <style name="OptionSeekBar" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">24dp</item>
+    </style>
+
+    <!-- Option checkbox -->
+    <style name="OptionCheckBox" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceListItemSmall</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginLeft">32dp</item>
+    </style>
+
+    <!-- Option radio button -->
+    <style name="OptionRadioButton" parent="OptionCheckBox">
+        <item name="android:layout_marginLeft">26dp</item>
+        <item name="android:paddingLeft">8dp</item>
+    </style>
+
+</resources>

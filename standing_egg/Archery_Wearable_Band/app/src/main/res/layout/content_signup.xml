@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:id="@+id/name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/info_textbox"
+            android:layout_marginStart="26.67dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:text="@string/name_signup"
+                android:id="@+id/signup_name_text"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#7D878E"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13.33dp"
+                android:layout_marginTop="20dp"/>
+
+                <EditText
+                    android:id="@+id/name_edit"
+                    android:textSize="12sp"
+                    android:textColor="#7D878E"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@id/signup_name_text"
+                    android:layout_marginLeft="20dp"
+                    android:ellipsize="middle"
+                    android:inputType="textPersonName"
+                    android:gravity="end"
+                    android:ems="10"
+                    android:layout_marginRight="20dp"
+                    android:maxLines="1"
+                    android:paddingTop="20dp"
+                    android:background="@null"
+                    android:textCursorDrawable="@null"
+                    android:text=""/>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/info_textbox"
+            android:layout_marginStart="26.67dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/email_layout" >
+
+            <TextView
+                android:text="@string/email_signup"
+                android:id="@+id/signup_email_text"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#7D878E"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13.33dp"
+                android:layout_marginTop="20dp"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/email_edit"
+                android:textSize="12sp"
+                android:textColor="#7D878E"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@id/signup_email_text"
+                android:layout_marginLeft="20dp"
+                android:ellipsize="middle"
+                android:inputType="textEmailAddress"
+                android:gravity="end"
+                android:ems="10"
+                android:layout_marginRight="20dp"
+                android:maxLines="1"
+                android:paddingTop="20dp"
+                android:background="@null"
+                android:textCursorDrawable="@null"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/info_textbox"
+            android:layout_marginStart="26.67dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/password_layout">
+
+            <TextView
+                android:text="@string/pw_signup"
+                android:id="@+id/signup_password_text"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#7D878E"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13.33dp"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/password_edit"
+                android:textSize="12sp"
+                android:textColor="#7D878E"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@id/signup_password_text"
+                android:layout_marginLeft="20dp"
+                android:ellipsize="middle"
+                android:inputType="textPassword"
+                android:gravity="end"
+                android:ems="10"
+                android:layout_marginRight="20dp"
+                android:maxLines="1"
+                android:paddingTop="20dp"
+                android:background="@null"
+                android:textCursorDrawable="@null"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/info_textbox"
+            android:layout_marginStart="26.67dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/gender_layout">
+
+            <TextView
+                android:text="@string/gender_signup"
+                android:id="@+id/signup_gender_text"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#7D878E"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13.33dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity=""/>
+
+            <RadioGroup
+                android:id="@+id/gender_group"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp">
+
+                <RadioButton
+                    android:id="@+id/female_button"
+                    android:text="@string/female_button"
+                    android:textColor="#7D878E"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    android:background="#00FF0000"
+                    android:gravity="end|center"
+                    android:layout_width="66dp"
+                    android:layout_height="match_parent"
+                    android:button="@null"
+                    android:paddingEnd="20dp"/>
+
+                <ImageView
+                    android:id="@+id/genderbar_img"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/text_bar"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"/>
+
+                <RadioButton
+                    android:id="@+id/male_button"
+                    android:text="@string/male_button"
+                    android:textColor="#7D878E"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    android:background="#00FF0000"
+                    android:gravity="start|center"
+                    android:layout_width="47dp"
+                    android:layout_height="match_parent"
+                    android:button="@null"
+                    android:paddingStart="20dp"/>
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/info_textbox"
+            android:layout_marginStart="26.67dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/birth_layout">
+            <TextView
+                android:text="@string/birth_signup"
+                android:id="@+id/signup_birth_text"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#7D878E"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13.33dp"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/birth_edit"
+                android:textColor="#7D878E"
+                android:textSize="12sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@id/signup_birth_text"
+                android:layout_marginLeft="20dp"
+                android:inputType="date"
+                android:gravity="end"
+                android:ems="10"
+                android:layout_marginRight="20dp"
+                android:maxLines="1"
+                android:paddingTop="20dp"
+                android:background="@null"
+                android:textCursorDrawable="@null"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp">
+
+        <de.morrox.fontinator.FontButton
+            android:id="@+id/signup_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signup_button"
+            app:font="Regular.otf"
+            android:background="@drawable/toggle_signup_button"
+            android:textColor="@android:color/white"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+</LinearLayout>

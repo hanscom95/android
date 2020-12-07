@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.test1218.MainActivity" >
+    <item 
+        android:id="@+id/action_button3"
+        android:showAsAction="ifRoom|withText"
+        android:visible="true"
+        android:title="IP/Port"/>
+    <item 
+        android:id="@+id/action_button"
+        android:showAsAction="ifRoom|withText"
+        android:visible="true"
+        android:title="Noise"/>
+    <item 
+        android:id="@+id/action_button2"
+        android:showAsAction="ifRoom|withText"
+        android:visible="false"
+        android:title="Chart"/>
+</menu>

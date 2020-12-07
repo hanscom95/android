@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFFFF</color>
+    <color name="colorAccent">#4083ff</color>
+
+    <color name="colorBlue">#3F51B5</color>
+    <color name="colorBlueDark">#303f9f</color>
+
+    <color name="activity_bg">#00295B</color>
+    <color name="motion_bg">#B2ED11</color>
+    <color name="sleep_bg">#ACB9C1</color>
+    <color name="heart_bg">#FF4115</color>
+    <color name="notification_bg">#F0F2F1</color>
+    <color name="option_bg">#7D878E</color>
+    <color name="archery_bg">#7D878E</color>
+
+
+    <color name="today">#989C9E</color>
+    <color name="gauge_percent">#989C9E</color>
+    <color name="chart_axis_title">#7D878E</color>
+    <color name="chart_walking">#F21C4A</color>
+    <color name="chart_running">#9EF2E2</color>
+
+    <color name="chart_activation_text">#414042</color>
+    <color name="chart_non_activation_text">#989C9E</color>
+    <color name="chart_credits_bg">#F0F2F1</color>
+    <color name="chart_push_up">#209FED</color>
+    <color name="chart_sit_up">#FFA310</color>
+    <color name="chart_butterfly">#61D6E5</color>
+    <color name="chart_shoulder_press">#F43131</color>
+    <color name="chart_biceps_curl">#FFC610</color>
+    <color name="chart_kettlebell">#6C00D3</color>
+    <color name="chart_squat">#23759E</color>
+    <color name="chart_bench">#FF5317</color>
+    <color name="chart_cable_row">#00CE84</color>
+    <color name="chart_dumbell">#8E0000</color>
+    <color name="chart_alternate">#7F5CFF</color>
+
+
+    <color name="chart_light_sleep">#FFDD71</color>
+    <color name="chart_deep_sleep">#5329D6</color>
+
+
+    <color name="chart_max">#C90000</color>
+    <color name="chart_min">#FFA912</color>
+
+    <color name="account_text">#7D878E</color>
+    <color name="account_untext">#acacac</color>
+
+    <color name="black_overlay">#66000000</color>
+
+</resources>

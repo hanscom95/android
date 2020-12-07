@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_detail_linear"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/graph_view"
+        android:layout_width="fill_parent"
+        android:layout_height="231dp"
+        android:background="@drawable/today_background_today"
+        android:orientation="vertical"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp" >
+    
+        <!--
+             <Gallery
+            android:id="@+id/galleryLoop"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.4"
+            android:scrollX="@dimen/sdfsdf"
+            android:gravity="bottom" />
+        -->
+
+        <Gallery
+            android:id="@+id/graphLoop"
+            android:layout_width="fill_parent"
+            android:layout_height="210dp"
+            android:gravity="bottom"
+            android:scrollX="@dimen/sdfsdf" />
+
+        <ImageView
+            android:id="@+id/point"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:paddingBottom="20dp"
+            android:src="@drawable/point" />
+        <!--
+        android:layout_alignParentBottom="true"
+            android:paddingBottom="15dp"
+        -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/relative"
+        android:layout_width="fill_parent"
+        android:layout_height="329dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <!-- Text  활동량 평균 -->
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="24dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="40dp" >
+
+            <TextView
+                android:id="@+id/all_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/active_mass_avg"
+                android:textColor="@color/gray1"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/element_divider" />
+        <!-- Data  활동량 평균 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp" >
+
+            <TextView
+                android:id="@+id/activity_km_avg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="left"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/activity_h_avg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/activity_kcal_avg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="right"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="24dp" />
+        <!-- Text 걷기 평균 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="40dp" >
+
+            <TextView
+                android:id="@+id/walk_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/walking_avg"
+                android:textColor="@color/gray1"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/element_divider" />
+        <!-- Data 걷기 평균 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp" >
+
+            <TextView
+                android:id="@+id/walk_km_avg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="left"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/walk_h_avg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/walk_kcal_avg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="right"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="24dp" />
+        <!-- Text 달리기 평균 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="40dp" >
+
+            <TextView
+                android:id="@+id/run_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/running_avg"
+                android:textColor="@color/gray1"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/element_divider" />
+        <!-- Data 달리기 평균 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp" >
+
+            <TextView
+                android:id="@+id/run_km_avg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="left"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/run_h_avg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/run_kcal_avg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="right"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="24dp" />
+        <!-- Text 총 합계 -->
+
+        <LinearLayout
+            android:id="@+id/act_all_linear"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="40dp" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/all"
+                android:textColor="@color/gray1"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/act_all_linear_2"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/element_divider" />
+        <!-- Data 총 합계 -->
+
+        <LinearLayout
+            android:id="@+id/act_all_linear_3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp" >
+
+            <TextView
+                android:id="@+id/all_km"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="left"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/all_cnt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/all_kcal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="right"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+<!--         <Space -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="24dp" /> -->
+
+         <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/minus_btn"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/part_btn_minus" />
+
+            <Space
+                android:layout_width="24dp"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:id="@+id/sleep_btn"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/element_act_moon" />
+
+            <Space
+                android:layout_width="24dp"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:id="@+id/plus_btn"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/part_btn_plus" />
+        </LinearLayout> 
+    </LinearLayout>
+
+</LinearLayout>

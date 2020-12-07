@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>line chart</title>
+    <style type="text/css">
+        #container rect.highcharts-background {fill : transparent;}
+    </style>
+
+
+    <script type="text/javascript" src="file:///android_asset/jquery.min.js"></script>
+    <script type="text/javascript">
+        function setChartData(data) {
+            var chart = $('#container').highcharts();
+            inCome = data;
+            lenObj = inCome.length;
+            series1 = [];
+            series2 = [];
+
+             //chart.series[0].addPoint(data);
+            chart.series[0].setData(data, true);
+           // chart.series[0].setData(inCome, true);
+            //chart.xAxis[0].setCategories(data3,true);
+        }
+        function setChartData(data, data2) {
+            var chart = $('#container').highcharts();
+            inCome = data;
+            lenObj = inCome.length;
+            series1 = [];
+            series2 = [];
+
+             //chart.series[0].addPoint(data);
+            chart.series[0].setData(data, true);
+            chart.series[1].setData(data2, true);
+           // chart.series[0].setData(inCome, true);
+            //chart.xAxis[0].setCategories(data3,true);
+        }
+        function setChartData(data, data2, data3) {
+            var chart = $('#container').highcharts();
+            inCome = data;
+            lenObj = inCome.length;
+            series1 = [];
+            series2 = [];
+
+             //chart.series[0].addPoint(data);
+            chart.series[0].setData(data, true);
+            chart.series[1].setData(data2, true);
+            chart.series[2].setData(data3, true);
+           // chart.series[0].setData(inCome, true);
+            //chart.xAxis[0].setCategories(data3,true);
+        }
+
+        function addPlot(data,  data3) {
+            var chart = $('#container').highcharts();
+             chart.series[0].addPoint([data, data3]);
+            //chart.xAxis[0].setCategories(data3,true);
+        }
+
+
+
+
+        $(function () {
+            Highcharts.setOptions({
+                colors: ["#3E6184"]
+            });
+
+             $('#container').highcharts({
+                chart: {
+                    type: 'line'
+                },
+                title: {
+                    text : ""
+                },
+                credits : {
+                    enabled: false
+                },
+                xAxis: {
+                    title: {
+                        text: 'HOUR',
+                        align: 'high'
+                    },
+                    gridLineWidth: 1,
+                    //categories: ['0','1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
+                    //    '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23']
+                    categories: ['2', '4', '6', '8', '10',
+                        '12', '14', '16', '18', '20', '22', '24']
+                },
+                yAxis: {
+                    title: {
+                        text: 'STEPS',
+                        align: 'high'
+                    },
+                    labels: {
+                        format: '{value: .,0f}'
+                    },
+                    min: 0
+                },
+                legend: {
+                    enabled: false
+                },
+                exporting: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        lineWidth: 2,
+                        marker: {
+                            enabled: true,
+                            radius: 4
+                        }
+                    }
+                },
+                series: [{
+                    name: '사용자1'
+                    //data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+                },{
+                    name: '사용자2'
+                    //data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+                },{
+                    name: '사용자3'
+                    //data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+                }]
+            });
+            $('#container rect').attr('fill', 'transparent');
+        });
+
+    </script>
+</head>
+<body>
+<script src="file:///android_asset/highcharts.js"></script>
+<script src="file:///android_asset/exporting.js"></script>
+
+<div id="container" style="min-width: 310px; height: 280px; margin: 0 auto;"></div>
+
+</body>
+</html>

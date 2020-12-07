@@ -1,0 +1,27 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "24.0.1"
+
+    defaultConfig {
+        applicationId "com.standingegg.band"
+        minSdkVersion 18
+        targetSdkVersion 19
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.google.protobuf:protobuf-java:3.0.0-beta-1'
+    compile 'com.android.support:support-v4:19.1.0'
+    compile files('libs/acra-4.6.2.jar')
+    compile files('libs/samsung_ble_sdk_200.jar')
+    compile files('libs/NChart3D.jar')
+}

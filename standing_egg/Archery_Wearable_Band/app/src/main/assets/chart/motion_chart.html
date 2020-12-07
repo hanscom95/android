@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>column chart</title>
+    <style type="text/css">
+        #container rect.highcharts-background {fill : transparent;}
+    </style>
+
+
+    <script type="text/javascript" src="file:///android_asset/chart/jquery.min.js"></script>
+    <script type="text/javascript" src="file:///android_asset/chart/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+
+        function setChartData(data1, data2, data3, data4, data5, data6, data7, data8, data9, data10, data11) {
+            var chart = $('#container').highcharts();
+
+            chart.series[0].setData(data1, true);
+            chart.series[1].setData(data2, true);
+            chart.series[2].setData(data3, true);
+            chart.series[3].setData(data4, true);
+            chart.series[4].setData(data5, true);
+            chart.series[5].setData(data6, true);
+            chart.series[6].setData(data7, true);
+            chart.series[7].setData(data8, true);
+            chart.series[8].setData(data9, true);
+            chart.series[9].setData(data10, true);
+            chart.series[10].setData(data11, true);
+        }
+
+
+        $(function () {
+            var lastColumn;
+            var colors = ["#7F5CFF", "#8E0000", "#00CE84", "#FF5317", "#23759E", "#6C00D3", "#FFC610", "#F43131", "#61D6E5", "#FFA310", "#209FED"]
+
+            Highcharts.setOptions({
+                chart: {
+                    style: {
+                        fontFamily: 'file:///android_asset/fonts/Regular.otf'
+                    }
+                },
+                colors: ["#989C9E", "#989C9E", "#989C9E", "#989C9E", "#989C9E", "#989C9E", "#989C9E", "#989C9E", "#989C9E", "#989C9E", "#989C9E"]
+            });
+
+             var hiChart = Highcharts.chart('container', {
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text : ""
+                },
+                tooltip: {
+                    enabled: false
+                },
+                credits : {
+                    enabled: false
+                },
+                xAxis: {
+                    title: {
+                        text: ''
+                    },
+                    tickWidth: 0,
+                    //gridLineWidth: 1,
+                    //categories: ['0','1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
+                    //    '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23']
+                    categories: ['28', '29', '30', '31', '1', '2', '3']
+                },
+                yAxis: {
+                    title: {
+                        text: ''
+                    },
+                    labels: {
+                        format: '{value:,.0f}',
+                        align: 'right',
+                        x: 0,
+                        y: -2
+                    },
+                    opposite: true,
+                    tickAmount: 5,
+                    min: 0
+                },
+                legend: {
+                    enabled: false
+                },
+                exporting: {
+                    enabled: false
+                },
+                plotOptions: {
+                    column:{
+                        pointPadding: 0.3,
+                        borderWidth: 0
+                    },
+                    series: {
+                        stacking: 'normal',
+                        events: {
+                            click: function (event) {
+                                for(var i = 0; i < this.data.length; i++) {
+                                    if(i == event.point.index) {
+                                        for(var j = 0; j < this.chart.series.length; j++) {
+                                            hiChart.series[j].points[event.point.index].graphic.attr("fill",colors[j]);
+                                            //this.chart.series[j].points[event.point.index].update({color: '#fe5800'});
+                                        }
+                                    }else {
+                                        if((lastColumn != null) &&  ( i == lastColumn)) {
+                                          for(var k = 0; k < this.chart.series.length; k++) {
+                                            hiChart.series[k].points[lastColumn].graphic.attr("fill","#989C9E");
+                                            //this.chart.series[k].points[lastColumn].update({color: colors[k]});
+                                          }
+                                        }
+                                    }
+                                }
+                                lastColumn = event.point.index;
+                                window.android.callBackChart(lastColumn);
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: 'alternate'
+                },{
+                    name: 'dumbell'
+                }, {
+                    name: 'cable_row'
+                },{
+                    name: 'bench_kickback'
+                },{
+                    name: 'squat'
+                },{
+                    name: 'kettlebell'
+                },{
+                    name: 'biceps_curl'
+                },{
+                    name: 'shoulder_press'
+                },{
+                    name: 'butterfly'
+                },{
+                    name: 'situp'
+                },{
+                    name: 'pushup'
+                }]
+            });
+            $('#container rect').attr('fill', 'transparent');
+        });
+
+    </script>
+</head>
+<body>
+<script src="file:///android_asset/chart/highcharts.js"></script>
+<script src="file:///android_asset/chart/exporting.js"></script>
+
+<div id="container" style="min-width: 280px; height: 145px; margin: 0;"></div>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="crash_toast_text">Crash Report Send</string>
+    <string name="ble_not_supported">is not supported</string>
+    <string name="label_data">Data:</string>
+    <string name="label_write">Write:</string>
+    <string name="label_send">Send</string>
+    <string name="label_device_address">Device address:</string>
+    <string name="label_state">State:</string>
+    <string name="no_data">No data</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="title_devices">Device Scan</string>
+    <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
+    <string name="unknown_device">Unknown device</string>
+    <string name="unknown_characteristic">Unknown characteristic</string>
+    <string name="unknown_service">Unknown service</string>
+
+    <!-- Menu items -->
+    <string name="menu">menu</string>
+    <string name="menu_connect">Connect</string>
+    <string name="menu_disconnect">Disconnect</string>
+    <string name="menu_scan">Scan</string>
+    <string name="menu_stop">Stop</string>
+    <string name="main_menu_home">Home</string>
+    <string name="main_menu_profile">Profile</string>
+    <string name="main_menu_settings">Settings</string>
+    <string name="main_menu_arlam">Alarm</string>
+    <string name="main_menu_support">Support</string>
+
+    <!-- Intro -->
+    <string name="login">로그인</string>
+    <string name="join_app">LAMBORGHINI 회원가입</string>
+    <string name="pw_hint">비밀번호</string>
+    <string name="pw_hint_2">비밀번호 확인</string>
+    <string name="pw_enter">비밀번호를 입력해 주십시오</string>
+    <string name="pw_check_hint">비밀번호 확인</string>
+    <string name="pw_check_enter">비밀번호를 재입력해 주십시오</string>
+    <string name="id_hint">아이디</string>
+    <string name="id_enter">아이디를 입력해 주십시오</string>
+    <string name="name_hint">이름</string>
+    <string name="name_enter">이름을 입력해 주십시오</string>
+    <string name="create_account">계정만들기</string>
+    <string name="bar">|</string>
+    <string name="forgot_pw">비밀번호 찾기</string>
+    <string name="start">시작하기</string>
+    <string name="save_login">자동로그인</string>
+    <string name="before">이전</string>
+    <string name="next">다음</string>
+    <string name="create">회원가입</string>
+    <string name="gender_fe">FEMALE</string>
+    <string name="gender_ma">MALE</string>
+    <string name="terms">이용약관</string>
+    <string name="terms_agree">이용약관에 동의합니다.</string>
+    <string name="privacy_policy">개인정보보호정책</string>
+    <string name="privacy_policy_agree">개인정보보호정책에 동의합니다.</string>
+    <string name="activity_goal">활동 목표</string>
+    <string name="activity_goal_edt">활동 목표 수정</string>
+    <string name="sleep_goal">수면 목표</string>
+    <string name="sleep_goal_h">수면 목표 시간</string>
+    <string name="sleep_goal_m">수면 목표 분</string>
+    <string name="device_connect1">등록된 기기가 없습니다.</string>
+    <string name="device_connect2">기기를 등록하셔야 앱을 이용하실 수 있습니다.</string> 
+    <string name="device_connect_t">기기연결 설정</string>
+    <string name="device_connect_t_ok">기기등록 완료</string>
+    <string name="device_connect_q">기기를 등록하시겠습니까?</string>
+    <string name="device_connect_f">밴드를 스마트폰 가까이에 두고 대기해주세요</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="account_create">계정생성</string>
+    <string name="test1">PROPERTY READ</string>
+    <string name="test2">PROPERTY NOTI</string>
+    <string name="today">오늘</string>
+    <string name="cancel">취소</string>
+    <string name="login_null_chk">아이디, 비밀번호를 입력하세요</string>
+    <string name="login_db_error_msg">DB error</string>
+    <string name="login_device_address_msg">device 주소가 일치하지 않습니다.</string>
+    <string name="login_invalid_device_msg">유효하지 않은 device</string>
+    <string name="login_pw_confirm_msg">아이디가 존재하지 않거나 비밀번호가 틀립니다.</string>
+    <string name="login_member_policy">회원 약관 및 개인정보보호정책</string>
+    <string name="login_member_agr">회원 약관  \n\n\n\n\n\n 개인정보보호정책</string>
+    <string name="login_member_policy_chk">회원약관 및 개인정보보호정책에 동의하셔야 합니다.</string>
+    <string name="login_arlam">알림</string>
+    <string name="forgot_value_chk">정확한 값을 입력하세요.</string>
+    <string name="forgot_400_error">입력된 정보가 일치하지 않습니다.</string>
+    <string name="forgot_460_error">해당 사용자가 존재하지 않습니다.</string>
+
+    <!-- 활동 -->
+    <string name="all_distance">총km</string>
+    <string name="title_activity">활동</string>
+	<string name="active_mass">활동량</string>
+    <string name="active_mass_avg">활동량 평균</string>
+    <string name="walking">걷기</string>
+    <string name="walking_avg">걷기 평균</string>
+    <string name="running">달리기</string>
+    <string name="running_avg">달리기 평균</string>
+    <string name="all">총합계</string>	
+    <!-- 수면 -->
+    <string name="title_sleep">수면</string>
+    <string name="sleep_h">수면시간</string>
+    <string name="sleep_deep">숙면시간</string>
+    <string name="sleep_low">얕은 잠</string>
+    <string name="sleep_start">취침 시각</string>
+    <string name="sleep_wakeup">기상 시각</string>
+    <string name="sleep_waking">깬 시간</string>
+
+    <!-- Profile -->
+    <string name="activity_avg">평균걸음수</string>
+    <string name="activity_walk">걸음</string>
+    <string name="use_count">사용일</string>
+    <string name="birth">생일</string>
+    <string name="height">신장</string>
+    <string name="weight">체중</string>
+    <string name="unit">단위설정</string>
+    <string name="cm">Cm</string>
+    <string name="feet">feet</string>
+    <string name="kg">Kg</string>
+    <string name="lbs">lbs</string>
+    <string name="battery">배터리</string>
+    <string name="call_alarm">전화알림</string>
+    <string name="sms_alarm">문자알림</string>
+    <string name="device_con">기기 연결</string>
+    <string name="device_find">기기 찾기</string>
+    <string name="find">찾기</string>
+    <string name="kakao_alarm">카톡알림</string>
+    <string name="led_set">LED색상설정</string>
+    <string name="alarm_onoff">알람켜기</string>
+    <string name="clock">시간</string>
+    <string name="repeat">반복</string>
+    <string name="scanning">장치 검색중...</string> 
+    <string name="none_paired">페어링 된 장치가 없습니다.</string>
+    <string name="none_found">검색된 장치가 없습니다.</string>
+    <string name="title_paired_devices">페어링 된 장치들</string>
+    <string name="device_title1">사용가능한 기기</string>
+    <string name="device_title2">사용하고 싶은 Hercules 밴드의 시리얼 넘버를 터치하세요.</string>
+    <string name="device_title3">헤라클레스 밴드 등록이 완료되었습니다.</string>
+    <string name="button_scan">장치 스캔</string>
+    <string name="bt_title">블루투스</string>
+    <string name="bt_state_init">초기화 중...</string>
+    <string name="bt_state_wait">대기중.. (우측 상단 아이콘으로 수동 검색)</string>
+    <string name="bt_state_connect">연결중...</string>
+    <string name="bt_state_connected">연결됨</string>
+    <string name="bt_state_error">error</string>
+    <string name="bt_not_enabled_leaving">블루투스가 꺼져 있습니다. 폰의 Settings 에서 블루투스를 활성화 하세요.</string>
+    <string name="bt_cmd_sending_error">전송 실패</string>
+    <string name="bt_ble_not_supported">이 기기는 BLE를 지원하지 않습니다. 앱을 종료합니다.</string>
+
+    <!-- Support -->
+    <string name="device">기기</string>
+    <string name="firmware_version">펌웨어 버전</string>
+    <string name="firmware_update">펌웨어 업데이트</string>
+    <string name="account">계정</string>
+    <string name="account_drop">회원탈퇴</string>
+    <string name="account_drop_success">탈퇴가 완료되었습니다</string>
+    <string name="account_user_is_not">해당 아이디의 유저가 존재하지 않습니다.</string>
+    <string name="account_pw_not_match">비밀번호가 일치하지 않습니다.</string>
+    <string name="account_invalid_device_address">유효한 디바이스주소가 아닙니다.</string>
+    <string name="account_db_error">데이터베이스 에러.</string>
+    <string name="account_drop_fail">회원 탈퇴 실패.</string>
+    <string name="account_drop_question">탈퇴하시겠습니까?</string>
+    <string name="network_connect_fail">네트워크 신호가 약하거나, \n네트워크가 연결 되어 있지 않습니다. </string>
+    <!-- alert 경고 메세지 -->
+    <string name="same_id">이미 사용중인 ID 입니다.</string>
+    <string name="Invalid_user_id">잘못된 형식의 ID 입니다.</string>
+    <string name="unsame_pw">비밀번호를 확인하세요.</string>
+    <string name="caution">경고</string>
+    
+    <string name="insert_chk">을(를) 정확히 입력하세요(특수문자, 공백 입력 불가)</string>
+    <string name="validate">잘못된 형식입니다.</string>
+    <string name="validate_msg">(공백, 특수문자, 한글 입력 불가)</string>
+    <string name="validate_length_msg">(영문 포함 세글자 이상)</string>
+    <string name="set">확인</string>
+    
+    <!-- alaram -->
+    <string name="alaram_time_title">시간 설정</string>
+    <string name="alaram_date_everyday_msg">매일</string>
+    <string name="alaram_date_weekday_msg">평일</string>
+    <string name="alaram_date_weekend_msg">주말</string>
+    <string name="alaram_date_mon_day">월요일</string>
+    <string name="alaram_date_tue_day">화요일</string>
+    <string name="alaram_date_wed_day">수요일</string>
+    <string name="alaram_date_thu_day">목요일</string>
+    <string name="alaram_date_fri_day">금요일</string>
+    <string name="alaram_date_sat_day">토요일</string>
+    <string name="alaram_date_sun_day">일요일</string>
+    <string name="alaram_dialog_title">알람</string>
+    <string name="alaram_remove_dialog_title">알람 삭제</string>
+    <string name="alaram_remove_dialog_msg">선택하신 알람을 삭제하시겠습니까?</string>
+    <string name="alaram_time_chk">저장되어 있는 시간입니다. 다시 설정해 주십시오.</string>
+    
+    <!-- ota -->
+    <string name="ota_file_list_none">업데이트 할 항목이 없습니다.</string>
+    <string name="ota_delay">OTA 준비중 입니다. 잠시만 기다려 주세요</string>
+    <string name="ota_i2c_error_title">I2C Parameter Error</string>
+    <string name="ota_i2c_error_msg">Invalid I2C device address.</string>
+    <string name="ota_block_error_title">Invalid block size</string>
+    <string name="ota_block_error_msg">The block size cannot be zero.</string>
+    
+    
+    <string name="poilcy_txt">
+       1.	수집하는 개인정보의 항목 및 수집방법
+		\n&#160;&#160;&#160;가.	수집하는 개인정보의 항목
+		\n&#160;&#160;&#160;PAYCO 회원가입, 원활한 고객상담, 각종 서비스의 제공을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+		\n&#160;&#160;&#160;- 이메일주소 또는 휴대폰번호(PAYCO ID), 비밀번호
+		\n&#160;&#160;&#160;&#160;&#160;서비스 이용과정에서 아래와 같은 정보가 생성되어 수집될 수 있습니다.
+		\n&#160;&#160;&#160;- IP Address, 쿠키, 방문 일시, 서비스 이용 기록, 불량 이용 기록, 모바일 서비스 이용시 단말기 정보(단말기 모델, 이동통신사 정보, 하드웨어 ID, 광고 ID, 서비스 이용에 대한 기본 통계), 이용자 단말기 내 설치된 어플리케이션 정보(앱 설치/실행시각 포함), 결제기록
+		\n&#160;&#160;&#160;나.	개인정보 수집방법
+		\n&#160;&#160;&#160;회사는 다음과 같은 방법으로 개인정보를 수집합니다.
+		\n&#160;&#160;&#160;&#160;&#160;- 홈페이지, 모바일 기기, 서면양식, 팩스, 전화, 상담 게시판, 이메일, 이벤트 응모, 배송요청
+		\n&#160;&#160;&#160;&#160;&#160;- 협력회사로부터의 제공
+		\n&#160;&#160;&#160;&#160;&#160;- 생성정보 수집 툴을 통한 수집
+		\n&#160;&#160;&#160;또한, 회사는 서비스 이용 도중 추가적인 정보를 수집할 수 있으며, 이 경우 별도의 개인정보 수집 및 이용 동의를 받습니다.
+		\n2.	개인정보의 수집 및 이용목적
+		\n&#160;&#160;&#160;회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.
+		\n&#160;&#160;&#160;가.	서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산
+		\n&#160;&#160;&#160;컨텐츠 제공, 물품배송 또는 청구서 등 발송, 본인인증, 구매 및 요금 결제, 요금추심
+		\n&#160;&#160;&#160;나.	회원관리
+		\n&#160;&#160;&#160;회원제 서비스 제공, 개인식별, 불량회원(이용약관 위반에 따라 이용제한 또는 계약 해지된 회원)의 부정 이용방지와 비인가 사용방지, 가입의사 확인, 가입 및 가입횟수 제한, 만18세 미만 아동 개인정보 수집 시 법정 대리인 동의여부 확인, 추후 법정 대리인 본인확인, 분쟁 조정을 위한 기록보존, 불만처리 등 민원처리, 고지사항 전달
+		\n3.	개인정보의 보유 및 이용기간
+		\n&#160;&#160;&#160;이용자의 개인정보는 원칙적으로 개인정보의 수집 및 이용목적이 달성되면 지체 없이 파기합니다. 단, 회사는 개인정보 도용 등으로 인한 원치않는 회원탈퇴 등에 대비하기 위하여 회원탈퇴 요청 후, 7일간 개인정보를 보유합니다. 또한 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존하며, 그 외 다른 목적으로는 절대 사용하지 않습니다.
+		\n&#160;&#160;&#160;가.	회사 내부 방침에 의한 정보보유 사유
+		\n&#160;&#160;&#160;나.	관련법령에 의한 정보보유 사유
+		\n&#160;&#160;&#160;상법, 전자상거래 등에서의 소비자보호에 관한 법률 등 관계법령의 규정에 의하여 보존할 필요가 있는 경우 회사는 관계법령에서 정한 일정한 기간 동안 회원정보를 보관합니다. 이 경우 회사는 보관하는 정보를 그 보관의 목적으로만 이용하며 보존기간은 아래와 같습니다.
+    </string>
+    
+<!--     <string name="insert_name">이름</string> -->
+<!--     <string name="insert_name_chk">이름을 정확히 입력하세요.</string> -->
+<!--     <string name="insert_id">ID를 입력하세요</string> -->
+<!--     <string name="insert_pw">비밀번호를 입력하세요.</string> -->
+<!--     <string name="insert_pw_c">비밀번호 확인을 입력하세요.</string> -->
+<!--     <string name="insert_agree">약관에 동의를 해야합니다.</string> -->
+<!--     <string name="insert_birth_chk">생년월일을 정확히 입력하세요.</string> -->
+<!--     <string name="insert_tall_chk">키를 정확히 입력하세요.</string> -->
+<!--     <string name="insert_weight_chk">몸무게를 정확히 입력하세요.</string> -->
+</resources>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <HorizontalScrollView
+        android:id="@+id/graph_view"
+        android:layout_width="fill_parent"
+        android:layout_height="232dp"
+        android:background="@drawable/element_bg_sleep_wide"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp" >
+
+        <RelativeLayout
+            android:id="@+id/graph_view2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:id="@+id/ichart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/view"
+                android:layout_marginTop="60dp"
+                android:gravity="bottom" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:background="#00FF00" />
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/relative"
+        android:layout_width="fill_parent"
+        android:layout_height="329dp"
+        android:layout_gravity="top"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="52dp" />
+
+        <!-- Text : 수면시간, 숙면 , 얕은 잠 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingEnd="40dp"
+            android:paddingStart="40dp" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="left"
+                android:text="@string/sleep_h"
+                android:textColor="@color/gray1"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="@string/sleep_deep"
+                android:textColor="@color/gray1"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="right"
+                android:text="@string/sleep_low"
+                android:textColor="@color/gray1"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/element_360_divider" >
+        </LinearLayout>
+        <!-- Data: 수면시간, 숙면 , 얕은 잠 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingEnd="40dp"
+            android:paddingStart="40dp" >
+
+            <TextView
+                android:id="@+id/sleep_h"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="left"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/sleep_deep"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/sleep_low"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="right"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="34dp" />
+        <!-- Text : 잠든 시간, 깬 시간, 깨어있는 시간 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingEnd="40dp"
+            android:paddingStart="40dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="left" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sleep_start"
+                    android:textColor="@color/gray1"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@+id/sleep_time_edit"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/element_edit_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sleep_wakeup"
+                    android:textColor="@color/gray1"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@+id/wake_time_edit"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/element_edit_icon" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="right"
+                android:text="@string/sleep_waking"
+                android:textColor="@color/gray1"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/element_360_divider" >
+        </LinearLayout>
+        <!-- Data : 잠든 시간, 깬 시간, 깨어있는 시간 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingEnd="40dp"
+            android:paddingStart="40dp" >
+
+            <TextView
+                android:id="@+id/sleep_start"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="left"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/sleep_wakeup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/sleep_waking"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="right"
+                android:textColor="@color/gray2"
+                android:textSize="14sp" />
+        </LinearLayout>
+        
+        
+         <Space
+            android:layout_width="wrap_content"
+            android:layout_height="108dp" />
+         
+         <ImageButton 
+             android:id="@+id/activity_today_btn"
+             android:layout_width="32dp"
+             android:layout_height="32dp"
+             android:src="@drawable/element_sleep_act"
+             android:background="@android:color/transparent"
+             android:layout_gravity="center"/>
+         
+    </LinearLayout>
+
+</LinearLayout>

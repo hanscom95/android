@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_motion_chart"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="se.com.band.motion.MotionChartActivity"
+    tools:showIn="@layout/activity_motion_chart">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                app:tabIndicatorColor="@color/today"
+                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                android:layout_marginLeft="@dimen/motion_side"
+                android:layout_marginRight="@dimen/motion_side" >
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="day"/>
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="week" />
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="month" />
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="year" />
+            </android.support.design.widget.TabLayout>
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/chart_pager"
+                android:layout_width="match_parent"
+                android:layout_height="221dp"
+                android:paddingTop="@dimen/motion_side"
+                android:paddingLeft="@dimen/motion_side"
+                android:paddingRight="@dimen/motion_side"
+                android:layout_below="@+id/tabLayout"
+                android:layout_alignParentStart="true">
+
+            </android.support.v4.view.ViewPager>
+
+            <RelativeLayout
+                android:id="@+id/chart_credits_layout"
+                android:layout_width="match_parent"
+                android:background="@color/chart_credits_bg"
+                android:layout_below="@+id/chart_pager"
+                android:layout_alignParentStart="true"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/push_up_layout"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="26dp">
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        app:srcCompat="@color/chart_non_activation_text"
+                        android:id="@+id/push_up_credit_view"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:text="push up"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/chart_credits_push_up_text"
+                        android:textSize="@dimen/mo_credits_text"
+                        app:font="Regular.otf"
+                        android:textColor="@color/chart_non_activation_text"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/push_up_credit_view"
+                        android:layout_width="98dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sit_up_layout"
+                    android:layout_alignTop="@+id/push_up_layout"
+                    android:layout_toEndOf="@+id/push_up_layout">
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        app:srcCompat="@color/chart_non_activation_text"
+                        android:id="@+id/sit_up_credit_view"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:text="sit up"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/chart_credits_sit_up_text"
+                        android:textSize="@dimen/mo_credits_text"
+                        app:font="Regular.otf"
+                        android:textColor="@color/chart_non_activation_text"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/sit_up_credit_view" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/butterfly_layout"
+                    android:layout_alignTop="@+id/sit_up_layout"
+                    android:layout_toEndOf="@+id/sit_up_layout">
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        app:srcCompat="@color/chart_non_activation_text"
+                        android:id="@+id/butterfly_credit_view"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:text="butterfly"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/chart_credits_butterfly_text"
+                        android:textSize="@dimen/mo_credits_text"
+                        app:font="Regular.otf"
+                        android:textColor="@color/chart_non_activation_text"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/butterfly_credit_view" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/shoulder_press_layout"
+                    android:layout_below="@+id/push_up_layout"
+                    android:layout_alignStart="@+id/push_up_layout"
+                    android:layout_marginTop="13dp">
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        app:srcCompat="@color/chart_non_activation_text"
+                        android:id="@+id/shoulder_press_credit_view"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:text="shoulder press"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/chart_credits_shoulder_press_text"
+                        android:textSize="@dimen/mo_credits_text"
+                        app:font="Regular.otf"
+                        android:textColor="@color/chart_non_activation_text"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/shoulder_press_credit_view" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/biceps_curl_layout"
+                    android:layout_below="@+id/sit_up_layout"
+                    android:layout_alignStart="@+id/sit_up_layout"
+                    android:layout_marginTop="13dp">
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        app:srcCompat="@color/chart_non_activation_text"
+                        android:id="@+id/biceps_curl_credit_view"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:text="biceps curl"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/chart_credits_biceps_curl_text"
+                        android:textSize="@dimen/mo_credits_text"
+                        app:font="Regular.otf"
+                        android:textColor="@color/chart_non_activation_text"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/biceps_curl_credit_view" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/kettlebell_layout"
+                    android:layout_below="@+id/butterfly_layout"
+                    android:layout_alignStart="@+id/butterfly_layout"
+                    android:layout_marginTop="13dp">
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        app:srcCompat="@color/chart_non_activation_text"
+                        android:id="@+id/kettlebell_credit_view"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:text="kettlebell swing"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/chart_credits_kettlebell_text"
+                        android:textSize="@dimen/mo_credits_text"
+                        app:font="Regular.otf"
+                        android:textColor="@color/chart_non_activation_text"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/kettlebell_credit_view" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/squat_layout"
+                    android:layout_below="@+id/shoulder_press_layout"
+                    android:layout_alignStart="@+id/shoulder_press_layout"
+                    android:layout_marginTop="13dp">
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        app:srcCompat="@color/chart_non_activation_text"
+                        android:id="@+id/squat_credit_view"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:text="squat"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/chart_credits_squat_text"
+                        android:textSize="@dimen/mo_credits_text"
+                        app:font="Regular.otf"
+                        android:textColor="@color/chart_non_activation_text"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/squat_credit_view" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bench_layout"
+                    android:layout_below="@+id/biceps_curl_layout"
+                    android:layout_alignStart="@+id/biceps_curl_layout"
+                    android:layout_marginTop="13dp">
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        app:srcCompat="@color/chart_non_activation_text"
+                        android:id="@+id/bench_credit_view"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:text="bench kickback"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/chart_credits_bench_text"
+                        android:textSize="@dimen/mo_credits_text"
+                        app:font="Regular.otf"
+                        android:textColor="@color/chart_non_activation_text"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/bench_credit_view" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cable_row_layout"
+                    android:layout_below="@+id/kettlebell_layout"
+                    android:layout_alignStart="@+id/kettlebell_layout"
+                    android:layout_marginTop="13dp">
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        app:srcCompat="@color/chart_non_activation_text"
+                        android:id="@+id/cable_row_credit_view"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:text="seated cable row"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/chart_credits_cable_row_text"
+                        android:textSize="@dimen/mo_credits_text"
+                        app:font="Regular.otf"
+                        android:textColor="@color/chart_non_activation_text"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/cable_row_credit_view" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dumbell_layout"
+                    android:layout_below="@+id/squat_layout"
+                    android:layout_alignStart="@+id/squat_layout"
+                    android:layout_marginTop="13dp">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:text="seated dumbell triceps press"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/chart_credits_dumbell_text"
+                        android:textSize="@dimen/mo_credits_text"
+                        app:font="Regular.otf"
+                        android:textColor="@color/chart_non_activation_text"
+                        android:layout_toEndOf="@+id/dumbell_credit_view"
+                        android:layout_alignParentTop="true" />
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        app:srcCompat="@color/chart_non_activation_text"
+                        android:id="@+id/dumbell_credit_view"
+                        android:layout_marginRight="3dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="2dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/alternate_layout"
+                    android:layout_below="@+id/bench_layout"
+                    android:layout_alignStart="@+id/bench_layout"
+                    android:layout_marginTop="13dp">
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        app:srcCompat="@color/chart_non_activation_text"
+                        android:id="@+id/alternate_credit_view"
+                        android:layout_centerVertical="false"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginTop="2dp" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:text="alternate deltoid raise"
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/chart_credits_alternate_text"
+                        android:textSize="@dimen/mo_credits_text"
+                        app:font="Regular.otf"
+                        android:textColor="@color/chart_non_activation_text"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/alternate_credit_view" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/info"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/chart_credits_layout"
+                android:paddingLeft="@dimen/motion_side"
+                android:paddingRight="@dimen/motion_side"
+                android:background="@color/motion_bg">
+
+
+                <de.morrox.fontinator.FontTextView
+                    android:text="daily average score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/info_title"
+                    android:textSize="18sp"
+                    app:font="Regular.otf"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="@dimen/info_title_interval"
+                    android:layout_marginBottom="@dimen/info_title_interval"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:layout_marginRight="@dimen/info_inner_interval"
+                        android:paddingTop="@dimen/info_text_interval"
+                        android:paddingLeft="@dimen/motion_info_box_interval"
+                        android:paddingBottom="@dimen/info_text_interval"
+                        android:background="@mipmap/mo_green_box">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="1270"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/motion_count"
+                            android:textSize="35sp"
+                            android:fontFamily="sans-serif"
+                            app:font="Extra_Condensed_Semibold.otf"
+                            android:textColor="@android:color/white" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/motion_count_text"
+                            android:layout_marginLeft="@dimen/info_inner_interval"
+                            android:textSize="14sp"
+                            app:font="Light_Italic.otf"
+                            android:textColor="@android:color/white"
+                            android:layout_below="@+id/motion_count" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:layout_marginRight="@dimen/info_inner_interval"
+                        android:paddingTop="@dimen/info_text_interval"
+                        android:paddingLeft="@dimen/motion_info_box_interval"
+                        android:paddingBottom="@dimen/info_text_interval"
+                        android:background="@mipmap/mo_green_box">
+
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="275"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/motion_cal"
+                            android:textSize="35sp"
+                            app:font="Extra_Condensed_Semibold.otf"
+                            android:textColor="@android:color/white" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="kcal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/motion_cal_text"
+                            android:layout_marginLeft="@dimen/info_inner_interval"
+                            android:textSize="14sp"
+                            app:font="Light_Italic.otf"
+                            android:textColor="@android:color/white"
+                            android:layout_below="@+id/motion_cal" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:layout_marginRight="@dimen/info_inner_interval"
+                        android:paddingTop="@dimen/info_text_interval"
+                        android:paddingLeft="@dimen/motion_info_box_interval"
+                        android:paddingBottom="@dimen/info_text_interval"
+                        android:background="@mipmap/mo_green_box">
+
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="01:45"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/motion_time"
+                            android:textSize="35sp"
+                            app:font="Extra_Condensed_Semibold.otf"
+                            android:textColor="@android:color/white" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:text="hrs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/motion_time_text"
+                            android:layout_marginLeft="@dimen/info_inner_interval"
+                            android:textSize="14sp"
+                            app:font="Light_Italic.otf"
+                            android:textColor="@android:color/white"
+                            android:layout_below="@+id/motion_time" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

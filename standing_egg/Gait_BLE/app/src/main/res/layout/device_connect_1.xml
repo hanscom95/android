@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/conn_txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:text="device find"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/conn_txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/conn_txt1"
+        android:layout_centerHorizontal="true"
+        android:text="device connected2"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_below="@+id/conn_txt2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/progress_color2" />
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="160dp"
+        android:layout_alignBottom="@+id/progressBar1"
+        android:layout_alignLeft="@+id/progressBar1"
+        android:layout_alignRight="@+id/progressBar1"
+        android:layout_alignTop="@+id/progressBar1"
+        android:padding="35dp" />
+
+    <TextView
+        android:id="@+id/conn_q_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="67dp"
+        android:text="Do you want to register your Device?"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/btn_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/conn_q_txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="53dp"
+        android:orientation="horizontal" 
+        android:visibility="invisible">
+
+        <Button
+            android:id="@+id/no_btn"
+            android:layout_width="95dp"
+            android:layout_height="43dp"
+            android:text="Previous"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" >
+        </Button>
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/yes_btn"
+            android:layout_width="95dp"
+            android:layout_height="43dp"
+            android:background="@android:color/holo_red_light"
+            android:text="NEXT"
+            android:textColor="@color/white"
+            android:textSize="14sp" >
+        </Button>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@drawable/background">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.nulana.NChart.NChartView
+            android:id="@+id/surface"
+            android:layout_height="0dp"
+            android:layout_width="fill_parent"
+            android:layout_weight="6"/>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:id="@+id/scrollView">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="20dp">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/chartSizeRelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_background"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="@dimen/metrial_interval">
+                        <RadioGroup
+                            android:id="@+id/chartSizeRadioGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10m"
+                                android:id="@+id/chartSizeRadio1"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginRight="10dp"
+                                android:checked="true" />
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="20m"
+                                android:id="@+id/chartSizeRadio1_1"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginRight="10dp"
+                                android:checked="false" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="60m"
+                                android:id="@+id/chartSizeRadio2"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/chartSizeRadio1"
+                                android:layout_toEndOf="@+id/chartSizeRadio1"
+                                android:layout_marginRight="10dp"
+                                android:checked="false" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="150m"
+                                android:id="@+id/chartSizeRadio3"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/chartSizeRadio2"
+                                android:layout_toEndOf="@+id/chartSizeRadio2"
+                                android:layout_marginRight="10dp"
+                                android:checked="false" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="600m"
+                                android:id="@+id/chartSizeRadio4"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/chartSizeRadio3"
+                                android:layout_toEndOf="@+id/chartSizeRadio3"
+                                android:layout_marginRight="10dp"
+                                android:checked="false" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1500m"
+                                android:id="@+id/chartSizeRadio5"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/chartSizeRadio4"
+                                android:layout_toEndOf="@+id/chartSizeRadio4"
+                                android:layout_marginRight="10dp"
+                                android:checked="false" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="dynamic"
+                                android:id="@+id/chartSizeRadio6"
+                                android:checked="false"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/chartSizeRadio5"
+                                android:layout_toEndOf="@+id/chartSizeRadio5"
+                                android:layout_marginRight="10dp" />
+                        </RadioGroup>
+
+                        <Button
+                            android:text="View Change"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/viewButton"
+                            android:layout_toEndOf="@+id/chartSizeRadioGroup" />
+                    </RelativeLayout>
+                </HorizontalScrollView>
+
+                <RelativeLayout
+                    android:id="@+id/stepRelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/text_background"
+                    android:padding="@dimen/metrial_interval">
+                    <com.se.gait.font.AltRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Step"
+                        android:id="@+id/stepText"
+                        android:textSize="@dimen/metrial_title_font"
+                        android:textColor="@color/metrial"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.se.gait.font.AltBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="0"
+                        android:textSize="@dimen/metrial_number_font"
+                        android:textColor="@color/metrial"
+                        android:textStyle="bold"
+                        android:id="@+id/stepCountText"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/stepsText" />
+
+                    <com.se.gait.font.AltLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="steps"
+                        android:textSize="@dimen/metrial_unit_font"
+                        android:textColor="@color/metrial"
+                        android:id="@+id/stepsText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/distanceRelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_background"
+                    android:layout_marginTop="10dp"
+                    android:padding="@dimen/metrial_interval">
+
+                    <com.se.gait.font.AltRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Distance"
+                        android:textColor="@color/metrial"
+                        android:textSize="@dimen/metrial_title_font"
+                        android:id="@+id/disText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.se.gait.font.AltBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="0"
+                        android:textColor="@color/metrial"
+                        android:textSize="@dimen/metrial_number_font"
+                        android:textStyle="bold"
+                        android:id="@+id/distanceText"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/meterText" />
+
+                    <com.se.gait.font.AltLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="meter"
+                        android:textColor="@color/metrial"
+                        android:textSize="@dimen/metrial_unit_font"
+                        android:id="@+id/meterText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/motionRelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_background"
+                    android:layout_marginTop="10dp"
+                    android:padding="@dimen/metrial_interval">
+
+                    <com.se.gait.font.AltRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Motion"
+                        android:textSize="@dimen/metrial_title_font"
+                        android:textColor="@color/metrial"
+                        android:id="@+id/moText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.se.gait.font.AltBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Standing"
+                        android:textSize="@dimen/metrial_number_font"
+                        android:textColor="@color/metrial"
+                        android:textStyle="bold"
+                        android:id="@+id/motionText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="@dimen/metrial_number_interval" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/xAxisRelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_background"
+                    android:layout_marginTop="10dp"
+                    android:padding="@dimen/metrial_interval">
+
+                    <com.se.gait.font.AltRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="X-axis"
+                        android:textSize="@dimen/metrial_title_font"
+                        android:textColor="@color/metrial"
+                        android:id="@+id/xAxisText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.se.gait.font.AltBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="0.000"
+                        android:textSize="@dimen/metrial_number_font"
+                        android:textColor="@color/metrial"
+                        android:textStyle="bold"
+                        android:id="@+id/xText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="@dimen/metrial_number_interval" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/yAxisRelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_background"
+                    android:layout_marginTop="10dp"
+                    android:padding="@dimen/metrial_interval">
+
+                    <com.se.gait.font.AltRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Y-axis"
+                        android:textSize="@dimen/metrial_title_font"
+                        android:textColor="@color/metrial"
+                        android:id="@+id/yAxisText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.se.gait.font.AltBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="0.000"
+                        android:textSize="@dimen/metrial_number_font"
+                        android:textColor="@color/metrial"
+                        android:textStyle="bold"
+                        android:id="@+id/yText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="@dimen/metrial_number_interval" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/zAxisRelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_background"
+                    android:layout_marginTop="10dp"
+                    android:padding="@dimen/metrial_interval">
+
+                    <com.se.gait.font.AltRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Z-axis"
+                        android:textSize="@dimen/metrial_title_font"
+                        android:textColor="@color/metrial"
+                        android:id="@+id/zAxisText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.se.gait.font.AltBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="0.000"
+                        android:textSize="@dimen/metrial_number_font"
+                        android:textColor="@color/metrial"
+                        android:textStyle="bold"
+                        android:id="@+id/zText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="@dimen/metrial_number_interval" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/errorRateAxisRelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_background"
+                    android:layout_marginTop="10dp"
+                    android:padding="@dimen/metrial_interval">
+
+                    <com.se.gait.font.AltRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="error Rate"
+                        android:textSize="@dimen/metrial_title_font"
+                        android:textColor="@color/metrial"
+                        android:id="@+id/errorRateText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.se.gait.font.AltBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="0.000"
+                        android:textSize="@dimen/metrial_number_font"
+                        android:textColor="@color/metrial"
+                        android:textStyle="bold"
+                        android:id="@+id/errorPercentageText"
+                        android:layout_toLeftOf="@+id/percentageText"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"/>
+
+                    <com.se.gait.font.AltLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="%"
+                        android:textColor="@color/metrial"
+                        android:textSize="@dimen/metrial_unit_font"
+                        android:id="@+id/percentageText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="30dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/errorXRelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_background"
+                    android:layout_marginTop="10dp"
+                    android:padding="@dimen/metrial_interval">
+
+                    <com.se.gait.font.AltRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="errorX"
+                        android:textSize="@dimen/metrial_title_font"
+                        android:textColor="@color/metrial"
+                        android:id="@+id/eXText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.se.gait.font.AltBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="0.000"
+                        android:textSize="@dimen/metrial_number_font"
+                        android:textColor="@color/metrial"
+                        android:textStyle="bold"
+                        android:id="@+id/errorXText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="@dimen/metrial_number_interval" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/errorYRelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_background"
+                    android:layout_marginTop="10dp"
+                    android:padding="@dimen/metrial_interval">
+
+                    <com.se.gait.font.AltRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="errorY"
+                        android:textSize="@dimen/metrial_title_font"
+                        android:textColor="@color/metrial"
+                        android:id="@+id/eYText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.se.gait.font.AltBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="0.000"
+                        android:textSize="@dimen/metrial_number_font"
+                        android:textColor="@color/metrial"
+                        android:textStyle="bold"
+                        android:id="@+id/errorYText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="@dimen/metrial_number_interval" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/errorZRelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_background"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp">
+
+                    <com.se.gait.font.AltRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="errorZ"
+                        android:textSize="@dimen/metrial_title_font"
+                        android:textColor="@color/metrial"
+                        android:id="@+id/zZText"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <com.se.gait.font.AltBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="0.000"
+                        android:textStyle="bold"
+                        android:id="@+id/errorZText"
+                        android:textSize="@dimen/metrial_number_font"
+                        android:textColor="@color/metrial"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="@dimen/metrial_number_interval" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollImg"
+                android:background="@drawable/scroll_background"
+                android:orientation="horizontal" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:weightSum="1">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/wifiButton"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/selector_btn_connect_wifi"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/clearButton"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/selector_btn_clear"/>
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone"
+                    android:id="@+id/sampleButton" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_option"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="se.com.band.option.OptionActivity"
+    tools:showIn="@layout/activity_option"
+    android:background="@mipmap/option_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="3"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:paddingBottom="2.5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp">
+
+            <de.morrox.fontinator.FontButton
+                android:id="@+id/search_device_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/option_search_device"
+                android:textSize="14sp"
+                android:textColor="@color/option_bg"
+                app:font="Semibold.otf"
+                android:background="@drawable/toggle_option_button"
+                android:layout_marginRight="2.5dp" />
+
+            <de.morrox.fontinator.FontButton
+                android:id="@+id/battery_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/option_battery"
+                android:textSize="14sp"
+                android:textColor="@color/option_bg"
+                app:font="Semibold.otf"
+                android:background="@drawable/toggle_option_button"
+                android:layout_marginLeft="2.5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:paddingBottom="2.5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2.5dp">
+
+            <de.morrox.fontinator.FontButton
+                android:id="@+id/alarm_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/option_alarm"
+                android:textSize="14sp"
+                android:textColor="@color/option_bg"
+                app:font="Semibold.otf"
+                android:background="@drawable/toggle_option_button"
+                android:layout_marginRight="2.5dp" />
+
+            <de.morrox.fontinator.FontButton
+                android:id="@+id/notification_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/option_notification"
+                android:textSize="14sp"
+                android:textColor="@color/option_bg"
+                app:font="Semibold.otf"
+                android:background="@drawable/toggle_option_button"
+                android:layout_marginLeft="2.5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2.5dp"
+            android:paddingLeft="5dp">
+
+            <de.morrox.fontinator.FontButton
+                android:id="@+id/ota_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/option_ota"
+                android:textSize="14sp"
+                android:textColor="@color/option_bg"
+                app:font="Semibold.otf"
+                android:background="@drawable/toggle_option_button"
+                android:layout_marginRight="2.5dp" />
+
+            <de.morrox.fontinator.FontButton
+                android:id="@+id/unregister_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/option_unregister"
+                android:textSize="14sp"
+                android:textColor="@color/option_bg"
+                app:font="Semibold.otf"
+                android:background="@drawable/toggle_option_button"
+                android:layout_marginLeft="2.5dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

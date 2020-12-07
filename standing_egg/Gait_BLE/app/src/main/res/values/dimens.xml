@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="metrial_title_font">24dp</dimen>
+    <dimen name="metrial_number_font">20dp</dimen>
+    <dimen name="metrial_unit_font">16dp</dimen>
+
+    <dimen name="metrial_number_interval">50dp</dimen>
+    <dimen name="metrial_interval">12dp</dimen>
+</resources>

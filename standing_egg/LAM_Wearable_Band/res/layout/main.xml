@@ -1,0 +1,96 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/frame2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:visibility="gone" >
+
+        <!-- status bar : display connection info -->
+
+        <LinearLayout
+            style="@style/AppTheme.ConnectionInfoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/status_title"
+                android:layout_width="wrap_content"
+                android:layout_height="20dip"
+                android:layout_margin="3dip" />
+
+            <TextView
+                android:id="@+id/status_text"
+                style="@style/AppTheme.ConnectionInfoText"
+                android:layout_width="match_parent"
+                android:layout_height="20dip"
+                android:layout_margin="3dip" />
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="308dp"
+            android:layout_gravity="top"
+            tools:context=".MainActivity" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="308dp"
+            android:background="@android:color/transparent"
+            android:paddingBottom="12dp"
+            android:paddingTop="284dp" 
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/main_pager"
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:src="@drawable/element_swipe_icon_1" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            android:divider="@android:color/transparent" >
+        </ListView>
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/navi_list"
+        android:layout_width="277dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="start"
+    	android:background="@drawable/element_menu_bar_y"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp" />
+     <ListView
+        android:id="@+id/navi_list_2"
+        android:layout_width="277dp"
+        android:layout_height="fill_parent"
+        android:layout_gravity="start"
+    	android:background="@drawable/element_menu_bar_y"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp" />
+
+</android.support.v4.widget.DrawerLayout>

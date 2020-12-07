@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chart_top_msg"
+        android:layout_marginLeft="@dimen/info_text_interval"
+        android:layout_marginRight="@dimen/info_text_interval">
+
+        <de.morrox.fontinator.FontTextView
+            android:text="count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chart_axis_text"
+            android:textSize="12sp"
+            app:font="Light_Italic.otf"
+            android:textColor="@color/chart_axis_title"
+            android:layout_weight="1" />
+
+
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/chart_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/chart_top_msg" />
+
+</RelativeLayout>

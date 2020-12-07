@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:background="@drawable/main_background">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:layout_above="@+id/activity_button">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="*">
+            <TableRow
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="10dp">
+                <LinearLayout
+                    android:id="@+id/pushup_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/pushup"
+                    android:gravity="center_horizontal"
+                    android:layout_marginRight="@dimen/table_interval">
+                    <TextView
+                        android:id="@+id/pushup_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/table_interval"
+                        android:text="0"
+                        android:textSize="25sp"
+                        android:textColor="@color/white"
+                        android:textStyle="normal|bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/situp_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/situp"
+                    android:gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/table_interval"
+                    android:layout_marginRight="@dimen/table_interval">
+                    <TextView
+                        android:id="@+id/situp_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/table_interval"
+                        android:text="0"
+                        android:textSize="25sp"
+                        android:textColor="@color/white"
+                        android:textStyle="normal|bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/butterfly_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/butterfly"
+                    android:gravity="center_horizontal"
+                    android:layout_marginLeft="5dp">
+                    <TextView
+                        android:id="@+id/butterfly_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="0"
+                        android:textSize="25sp"
+                        android:textColor="@color/white"
+                        android:textStyle="normal|bold" />
+                </LinearLayout>
+            </TableRow>
+
+
+            <TableRow
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="10dp">
+                <LinearLayout
+                    android:id="@+id/biceps_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bicepscurl"
+                    android:gravity="center_horizontal"
+                    android:layout_marginRight="@dimen/table_interval">
+                    <TextView
+                        android:id="@+id/biceps_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="0"
+                        android:textSize="25sp"
+                        android:textColor="@color/white"
+                        android:textStyle="normal|bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/loading_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/loading"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/table_interval"
+                    android:layout_marginRight="@dimen/table_interval">
+                    <RelativeLayout
+                        android:id="@+id/progress_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        tools:visibility="invisible">
+                        <ProgressBar
+                            style="?android:attr/progressBarStyleLarge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/progressBar" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/sample_count_text"
+                            android:textColor="@color/metrial"
+                            android:textSize="10dp"
+                            android:text="0"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:id="@+id/motion_analyzing">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/motion_text"
+                            android:textColor="@color/metrial"
+                            android:textSize="10dp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/bench_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/benchkickback"
+                    android:gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/table_interval">
+                    <TextView
+                        android:id="@+id/bench_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="0"
+                        android:textSize="25sp"
+                        android:textColor="@color/white"
+                        android:textStyle="normal|bold" />
+                </LinearLayout>
+            </TableRow>
+
+
+            <TableRow
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="10dp">
+                <LinearLayout
+                    android:id="@+id/shoulder_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shoulder_press"
+                    android:gravity="center_horizontal"
+                    android:layout_marginRight="@dimen/table_interval">
+                    <TextView
+                        android:id="@+id/shoulder_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="0"
+                        android:textSize="25sp"
+                        android:textColor="@color/white"
+                        android:textStyle="normal|bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/kettlebell_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/kettlebell_swing"
+                    android:gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/table_interval"
+                    android:layout_marginRight="@dimen/table_interval">
+                    <TextView
+                        android:id="@+id/kettlebell_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="0"
+                        android:textSize="25sp"
+                        android:textColor="@color/white"
+                        android:textStyle="normal|bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/squat_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/squat"
+                    android:gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/table_interval">
+                    <TextView
+                        android:id="@+id/squat_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="0"
+                        android:textSize="25sp"
+                        android:textColor="@color/white"
+                        android:textStyle="normal|bold" />
+                </LinearLayout>
+            </TableRow>
+
+
+            <TableRow
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="10dp">
+                <LinearLayout
+                    android:id="@+id/seated_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/seatedcablerow"
+                    android:gravity="center_horizontal"
+                    android:layout_marginRight="@dimen/table_interval">
+                    <TextView
+                        android:id="@+id/seated_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="0"
+                        android:textSize="25sp"
+                        android:textColor="@color/white"
+                        android:textStyle="normal|bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dumbell_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/seateddumbell"
+                    android:gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/table_interval"
+                    android:layout_marginRight="@dimen/table_interval">
+                    <TextView
+                        android:id="@+id/dumbell_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="0"
+                        android:textSize="25sp"
+                        android:textColor="@color/white"
+                        android:textStyle="normal|bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/alternate_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/alternate_deltoid_raise"
+                    android:gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/table_interval">
+                    <TextView
+                        android:id="@+id/alternate_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="0"
+                        android:textSize="25sp"
+                        android:textColor="@color/white"
+                        android:textStyle="normal|bold" />
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:id="@+id/activity_button"
+        android:background="@drawable/selector_btn_bar_activity"/>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rights_reserved"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/imageView"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

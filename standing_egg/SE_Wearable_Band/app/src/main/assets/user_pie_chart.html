@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>pie chart</title>
+    <style type="text/css">
+        #container rect.highcharts-background {fill : transparent;}
+        #container .highcharts-series path {stroke-width : 0;}
+    </style>
+
+
+    <script type="text/javascript" src="file:///android_asset/jquery.min.js"></script>
+    <script type="text/javascript">
+
+
+
+
+        function setChartData1(data1) {
+            var chart = $('#container').highcharts();
+
+            var colors = Highcharts.getOptions().colors,
+            categories = ['USER1'],
+            data = [{
+                y: parseInt(data1),
+                color: colors[0],
+                drilldown: {
+                    name: 'USER1',
+                    categories: ['USER1'],
+                    data: [parseInt(data1)],
+                    color: colors[0]
+                }
+            }],
+            i,j,
+            browserData = [],
+            versionsData = [],
+            dataLen = data.length,
+            drillDataLen;
+
+
+            // Build the data arrays
+            for (i = 0; i < dataLen; i += 1) {
+                // add browser data
+                browserData.push({
+                    name: '',
+                    y: data[i].y,
+                    color: data[i].color
+                });
+
+                // add version data
+                drillDataLen = data[i].drilldown.data.length;
+                for (j = 0; j < drillDataLen; j += 1) {
+                    versionsData.push({
+                        name: data[i].drilldown.categories[j],
+                        y: data[i].drilldown.data[j],
+                        color: data[i].color
+                    });
+                }
+            }
+
+            chart.series[0].setData(browserData, true);
+            chart.series[1].setData(versionsData, true);
+        }
+
+        function setChartData2(data1, data2) {
+            var chart = $('#container').highcharts();
+
+            var colors = Highcharts.getOptions().colors,
+            categories = ['USER1', 'USER2'],
+            data = [{
+                y: parseInt(data1),
+                color: colors[0],
+                drilldown: {
+                    name: 'USER1',
+                    categories: ['USER1'],
+                    data: [parseInt(data1)],
+                    color: colors[0]
+                }
+            }, {
+                y: parseInt(data2),
+                color: colors[1],
+                drilldown: {
+                    name: 'USER2',
+                    categories: ['USER2'],
+                    data: [parseInt(data2)],
+                    color: colors[1]
+                }
+            }],
+            i,j,
+            browserData = [],
+            versionsData = [],
+            dataLen = data.length,
+            drillDataLen;
+
+
+            // Build the data arrays
+            for (i = 0; i < dataLen; i += 1) {
+                // add browser data
+                browserData.push({
+                    name: '',
+                    y: data[i].y,
+                    color: data[i].color
+                });
+
+                // add version data
+                drillDataLen = data[i].drilldown.data.length;
+                for (j = 0; j < drillDataLen; j += 1) {
+                    versionsData.push({
+                        name: data[i].drilldown.categories[j],
+                        y: data[i].drilldown.data[j],
+                        color: data[i].color
+                    });
+                }
+            }
+
+            chart.series[0].setData(browserData, true);
+            chart.series[1].setData(versionsData, true);
+        }
+
+        function setChartData3(data1, data2, data3) {
+            var chart = $('#container').highcharts();
+
+            var colors = Highcharts.getOptions().colors,
+            categories = ['USER1', 'USER2', 'USER3'],
+            data = [{
+                y: parseInt(data1),
+                color: colors[0],
+                drilldown: {
+                    name: 'USER1',
+                    categories: ['USER1'],
+                    data: [parseInt(data1)],
+                    color: colors[0]
+                }
+            }, {
+                y: parseInt(data2),
+                color: colors[1],
+                drilldown: {
+                    name: 'USER2',
+                    categories: ['USER2'],
+                    data: [parseInt(data2)],
+                    color: colors[1]
+                }
+            }, {
+                y: parseInt(data3),
+                color: colors[2],
+                drilldown: {
+                    name: 'USER3',
+                    categories: ['USER3'],
+                    data: [parseInt(data3)],
+                    color: colors[2]
+                }
+            }],
+            i,j,
+            browserData = [],
+            versionsData = [],
+            dataLen = data.length,
+            drillDataLen;
+
+
+            // Build the data arrays
+            for (i = 0; i < dataLen; i += 1) {
+                // add browser data
+                browserData.push({
+                    name: '',
+                    y: data[i].y,
+                    color: data[i].color
+                });
+
+                // add version data
+                drillDataLen = data[i].drilldown.data.length;
+                for (j = 0; j < drillDataLen; j += 1) {
+                    versionsData.push({
+                        name: data[i].drilldown.categories[j],
+                        y: data[i].drilldown.data[j],
+                        color: data[i].color
+                    });
+                }
+            }
+
+            chart.series[0].setData(browserData, true);
+            chart.series[1].setData(versionsData, true);
+        }
+
+
+
+        $(function () {
+            Highcharts.setOptions({
+                colors: ["#F7C9C9", "#163B99", "#A6D8DD"]
+            });
+
+            // Create the chart
+            $('#container').highcharts({
+                chart: {
+                    type: 'pie'
+                },
+                title: {
+                    text : ""
+                },
+                credits : {
+                    enabled: false
+                },
+                legend: {
+                    enabled: false
+                },
+                exporting: {
+                    enabled: false
+                },
+                yAxis: {
+                    title: {
+                        text: 'Total percent market share'
+                    }
+                },
+                plotOptions: {
+                    pie: {
+                        shadow: false,
+                        center: ['50%', '50%']
+                    }
+                },
+                tooltip: {
+                    enabled: false
+                },
+                series: [{
+                        name: 'Round',
+                        //data: browserData,
+                        size: '68%',
+                        innerSize: '74%',
+                        dataLabels: {
+                            enabled: false
+                        }
+                    }, {
+                        name: 'Count',
+                        //data: versionsData,
+                        size: '90%',
+                        innerSize: '78%',
+                        dataLabels: {
+                            distance: -100,
+                            formatter: function () {
+                                // display only if larger than 1
+                                return this.y > 1 ? '<b style="font-size: large; font-weight: bold;">' + this.percentage.toFixed(2) + '%</b>  <br/> <b>' + this.y +'<b/> step': null;
+                            }
+                        }
+                    }]
+            });
+
+            $('#container rect').attr('fill', 'transparent');
+        });
+
+    </script>
+</head>
+<body>
+<script src="file:///android_asset/highcharts.js"></script>
+<script src="file:///android_asset/exporting.js"></script>
+
+<div id="container" style="min-width: 310px; height: 490px; margin: 0 auto;"></div>
+
+</body>
+</html>

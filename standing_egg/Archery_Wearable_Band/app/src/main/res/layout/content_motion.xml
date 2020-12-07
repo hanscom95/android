@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:sl="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_motion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/motions_content"
+    android:paddingRight="@dimen/motions_content_right"
+    android:paddingTop="@dimen/motions_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="se.com.band.motion.MotionActivity"
+    tools:showIn="@layout/activity_motion">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="*"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/motion_box_bottom_interval">
+
+            <RelativeLayout
+                android:id="@+id/push_up_layout"
+                android:layout_width="match_parent"
+                android:background="@mipmap/mo_white_box"
+                android:layout_marginRight="@dimen/motion_box_right_interval"
+                android:layout_height="wrap_content">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/push_up_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="push up\n "
+                    app:font="Regular.otf"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/motion_text_start_interval"
+                    android:layout_marginTop="@dimen/motion_text_top_interval"
+                    android:textSize="12sp"
+                    android:lineSpacingMultiplier="0.7" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/push_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    app:font="Extra_Condensed_Regular.otf"
+                    android:textSize="24sp"
+                    android:layout_below="@+id/push_up_text"
+                    android:layout_marginTop="@dimen/motion_value_top_interval"
+                    android:layout_alignStart="@+id/push_up_text" />
+
+                <ImageView
+                    android:layout_width="@dimen/motion_image_size"
+                    android:layout_height="@dimen/motion_image_size"
+                    app:srcCompat="@mipmap/push_up"
+                    android:id="@+id/push_up_img"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/sit_up_layout"
+                android:layout_width="match_parent"
+                android:background="@mipmap/mo_white_box"
+                android:layout_marginRight="@dimen/motion_box_right_interval"
+                android:layout_height="match_parent">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/sit_up_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="sit up\n "
+                    app:font="Regular.otf"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/motion_text_start_interval"
+                    android:layout_marginTop="@dimen/motion_text_top_interval"
+                    android:textSize="12sp"
+                    android:lineSpacingMultiplier="0.7" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/sit_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    app:font="Extra_Condensed_Regular.otf"
+                    android:textSize="24sp"
+                    android:layout_below="@+id/sit_up_text"
+                    android:layout_marginTop="@dimen/motion_value_top_interval"
+                    android:layout_alignStart="@+id/sit_up_text" />
+
+                <ImageView
+                    android:layout_width="@dimen/motion_image_size"
+                    android:layout_height="@dimen/motion_image_size"
+                    app:srcCompat="@mipmap/sit_up"
+                    android:id="@+id/sit_up_img"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/butterfly_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/mo_white_box">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/butterfly_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="butterfly\n "
+                    app:font="Regular.otf"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/motion_text_start_interval"
+                    android:layout_marginTop="@dimen/motion_text_top_interval"
+                    android:textSize="12sp"
+                    android:lineSpacingMultiplier="0.7" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/butterfly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    app:font="Extra_Condensed_Regular.otf"
+                    android:textSize="24sp"
+                    android:layout_below="@+id/butterfly_text"
+                    android:layout_marginTop="@dimen/motion_value_top_interval"
+                    android:layout_alignStart="@+id/butterfly_text" />
+
+                <ImageView
+                    android:layout_width="@dimen/motion_image_size"
+                    android:layout_height="@dimen/motion_image_size"
+                    app:srcCompat="@mipmap/butterfly"
+                    android:id="@+id/butterfly_img"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/motion_box_bottom_interval">
+
+            <RelativeLayout
+                android:id="@+id/biceps_curl_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/mo_white_box"
+                android:layout_marginRight="@dimen/motion_box_right_interval">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/biceps_curl_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="biceps curl\n "
+                    app:font="Regular.otf"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/motion_text_start_interval"
+                    android:layout_marginTop="@dimen/motion_text_top_interval"
+                    android:textSize="12sp"
+                    android:lineSpacingMultiplier="0.7" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/biceps_curl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    app:font="Extra_Condensed_Regular.otf"
+                    android:textSize="24sp"
+                    android:layout_below="@+id/biceps_curl_text"
+                    android:layout_marginTop="@dimen/motion_value_top_interval"
+                    android:layout_alignStart="@+id/biceps_curl_text" />
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    app:srcCompat="@mipmap/biceps_curl"
+                    android:id="@+id/biceps_curl_img"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/mo_grey_box"
+                android:layout_marginRight="@dimen/motion_box_right_interval">
+                <com.gelitenight.waveview.library.WaveView
+                    android:id="@+id/total_wave"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="7dp" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="75"
+                    app:font="Extra_Condensed_Regular.otf"
+                    android:textSize="30sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/total_text"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="@dimen/motion_total_bottom_interval" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/motion_percent_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="%"
+                    app:font="Extra_Condensed_Bold.otf"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white"
+                    android:layout_alignBaseline="@+id/total"
+                    android:layout_alignBottom="@+id/total"
+                    android:layout_toEndOf="@+id/total" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/total_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="total\npercentage"
+                    app:font="Regular.otf"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/motion_text_start_interval"
+                    android:layout_marginTop="@dimen/motion_text_top_interval"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/white"
+                    android:lineSpacingMultiplier="0.7"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/shoulder_press_layout"
+                android:layout_width="match_parent"
+                android:background="@mipmap/mo_white_box"
+                android:layout_height="match_parent">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/shoulder_press_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="shoulder\npress"
+                    app:font="Regular.otf"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/motion_text_start_interval"
+                    android:layout_marginTop="@dimen/motion_text_top_interval"
+                    android:textSize="12sp"
+                    android:lineSpacingMultiplier="0.7" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/shoulder_press"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    app:font="Extra_Condensed_Regular.otf"
+                    android:textSize="24sp"
+                    android:layout_below="@+id/shoulder_press_text"
+                    android:layout_marginTop="@dimen/motion_value_shot_top_interval"
+                    android:layout_alignStart="@+id/shoulder_press_text" />
+
+                <ImageView
+                    android:layout_width="@dimen/motion_image_size"
+                    android:layout_height="@dimen/motion_image_size"
+                    app:srcCompat="@mipmap/shoulder_press"
+                    android:id="@+id/shoulder_press_img"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"/>
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/motion_box_bottom_interval">
+
+            <RelativeLayout
+                android:id="@+id/bench_kickback_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/mo_white_box"
+                android:layout_marginRight="@dimen/motion_box_right_interval">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/bench_kickback_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="bench\nkickback"
+                    app:font="Regular.otf"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/motion_text_start_interval"
+                    android:layout_marginTop="@dimen/motion_text_top_interval"
+                    android:textSize="12sp"
+                    android:lineSpacingMultiplier="0.7" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/bench_kickback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    app:font="Extra_Condensed_Regular.otf"
+                    android:textSize="24sp"
+                    android:layout_below="@+id/bench_kickback_text"
+                    android:layout_marginTop="@dimen/motion_value_shot_top_interval"
+                    android:layout_alignStart="@+id/bench_kickback_text" />
+
+                <ImageView
+                    android:layout_width="@dimen/motion_image_size"
+                    android:layout_height="@dimen/motion_image_size"
+                    app:srcCompat="@mipmap/bench_kickback"
+                    android:id="@+id/bench_kickback_img"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/squat_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/mo_white_box"
+                android:layout_marginRight="@dimen/motion_box_right_interval">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/squat_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="squat\n "
+                    app:font="Regular.otf"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/motion_text_start_interval"
+                    android:layout_marginTop="@dimen/motion_text_top_interval"
+                    android:textSize="12sp"
+                    android:lineSpacingMultiplier="0.7" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/squat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    app:font="Extra_Condensed_Regular.otf"
+                    android:textSize="24sp"
+                    android:layout_below="@+id/squat_text"
+                    android:layout_marginTop="@dimen/motion_value_top_interval"
+                    android:layout_alignStart="@+id/squat_text" />
+
+                <ImageView
+                    android:layout_width="@dimen/motion_image_size"
+                    android:layout_height="@dimen/motion_image_size"
+                    app:srcCompat="@mipmap/squat"
+                    android:id="@+id/squat_img"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/kettlebell_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/mo_white_box">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/kettlebell_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="kettlebell\nswing"
+                    app:font="Regular.otf"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/motion_text_start_interval"
+                    android:layout_marginTop="@dimen/motion_text_top_interval"
+                    android:textSize="12sp"
+                    android:lineSpacingMultiplier="0.7" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/kettlebell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    app:font="Extra_Condensed_Regular.otf"
+                    android:textSize="24sp"
+                    android:layout_below="@+id/kettlebell_text"
+                    android:layout_marginTop="@dimen/motion_value_shot_top_interval"
+                    android:layout_alignStart="@+id/kettlebell_text" />
+
+                <ImageView
+                    android:layout_width="@dimen/motion_image_size"
+                    android:layout_height="@dimen/motion_image_size"
+                    app:srcCompat="@mipmap/kettlebell"
+                    android:id="@+id/kettlebell_img"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/motions_content">
+
+            <RelativeLayout
+                android:id="@+id/seated_cable_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/mo_white_box"
+                android:layout_marginRight="@dimen/motion_box_right_interval">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/seated_cable_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="seated cable\nrow"
+                    app:font="Regular.otf"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/motion_text_start_interval"
+                    android:layout_marginTop="@dimen/motion_text_top_interval"
+                    android:textSize="12sp"
+                    android:lineSpacingMultiplier="0.7" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/seated_cable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    app:font="Extra_Condensed_Regular.otf"
+                    android:textSize="24sp"
+                    android:layout_below="@+id/seated_cable_text"
+                    android:layout_marginTop="@dimen/motion_value_shot_top_interval"
+                    android:layout_alignStart="@+id/seated_cable_text" />
+
+                <ImageView
+                    android:layout_width="@dimen/motion_image_size"
+                    android:layout_height="@dimen/motion_image_size"
+                    app:srcCompat="@mipmap/seated_cable"
+                    android:id="@+id/seated_cable_img"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/seated_dumbell_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/mo_white_box"
+                android:layout_marginRight="@dimen/motion_box_right_interval">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/seated_dumbell_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="seated dumbell\ntriceps press"
+                    app:font="Regular.otf"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/motion_text_start_interval"
+                    android:layout_marginTop="@dimen/motion_text_top_interval"
+                    android:textSize="12sp"
+                    android:lineSpacingMultiplier="0.7" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/seated_dumbell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    app:font="Extra_Condensed_Regular.otf"
+                    android:textSize="24sp"
+                    android:layout_below="@+id/seated_dumbell_text"
+                    android:layout_marginTop="@dimen/motion_value_shot_top_interval"
+                    android:layout_alignStart="@+id/seated_dumbell_text" />
+
+                <ImageView
+                    android:layout_width="@dimen/motion_image_size"
+                    android:layout_height="@dimen/motion_image_size"
+                    app:srcCompat="@mipmap/seated_dumbell"
+                    android:id="@+id/seated_dumbell_img"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/alternate_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/mo_white_box">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/alternate_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="alternate\ndeltoid raise"
+                    app:font="Regular.otf"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/motion_text_start_interval"
+                    android:layout_marginTop="@dimen/motion_text_top_interval"
+                    android:textSize="12sp"
+                    android:lineSpacingMultiplier="0.7" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/alternate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    app:font="Extra_Condensed_Regular.otf"
+                    android:textSize="24sp"
+                    android:layout_below="@+id/alternate_text"
+                    android:layout_marginTop="@dimen/motion_value_shot_top_interval"
+                    android:layout_alignStart="@+id/alternate_text" />
+
+                <ImageView
+                    android:layout_width="@dimen/motion_image_size"
+                    android:layout_height="@dimen/motion_image_size"
+                    app:srcCompat="@mipmap/alternate"
+                    android:id="@+id/alternate_img"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/element_cf_bg"
+    android:orientation="vertical"
+    android:gravity="center_vertical|center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/join_name"
+            style="@style/MY.EditText.Style"
+            android:layout_width="600dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:hint="@string/name_hint"
+            android:inputType="textPersonName"
+            android:nextFocusDown="@+id/user_birth"
+            android:layout_marginBottom="@dimen/user_option" />
+
+        <RelativeLayout
+            android:layout_width="600dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:background="@drawable/element_box_hex_white"
+            android:layout_marginBottom="@dimen/user_option">
+
+            <TextView
+                android:id="@+id/user_gender_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="30dp"
+                android:text="@string/gender"
+                android:textColor="@color/gray2"
+                android:textSize="12sp" />
+
+            <RadioGroup
+                android:id="@+id/user_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_marginLeft="5dp"
+                android:checkedButton="@+id/offer"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true">
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="70dp"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="MALE"
+                    android:textColor="@drawable/toggle_widget_background" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:text="I"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp"
+                    android:gravity="center_vertical" />
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="70dp"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="FEMALE"
+                    android:textColor="@drawable/toggle_widget_background" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/user_birth"
+            android:layout_width="600dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="@drawable/element_box_hex_white"
+            android:gravity="center_vertical"
+            android:hint="@string/birth"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:nextFocusDown="@+id/user_tall"
+            android:onClick="dateCalendar"
+            android:paddingLeft="@dimen/edit_txt_padding_left"
+            android:paddingRight="@dimen/edit_txt_padding_left"
+            android:textColor="@color/gray2"
+            android:textSize="@dimen/intro_font_size"
+            android:layout_marginBottom="@dimen/user_option" />
+
+        <RelativeLayout
+            android:layout_width="600dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/user_option">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/user_tall"
+                android:layout_centerVertical="true"
+                android:paddingLeft="30dp"
+                android:text="@string/tall"
+                android:textColor="@color/gray2"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/user_tall"
+                style="@style/MY.EditText.Style"
+                android:layout_width="600dp"
+                android:layout_height="60dp"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/height_unit"
+                android:paddingLeft="85dp"
+                android:text="170"
+                android:textColor="@color/gray2" />
+            <!-- android:hint="신장" -->
+
+            <Spinner
+                android:id="@+id/height_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_alignRight="@+id/user_tall"
+                android:background="@android:color/transparent"
+                android:nextFocusDown="@+id/user_weight"
+                android:paddingRight="30dp"  />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="600dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/user_option">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/user_weight"
+                android:layout_centerVertical="true"
+                android:paddingLeft="30dp"
+                android:text="@string/weight_bar"
+                android:textColor="@color/gray2"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/user_weight"
+                style="@style/MY.EditText.Style"
+                android:layout_width="600dp"
+                android:layout_height="60dp"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/weight_unit"
+                android:paddingLeft="85dp" />
+            <!-- android:hint="체중" -->
+
+            <Spinner
+                android:id="@+id/weight_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_alignRight="@+id/user_weight"
+                android:background="@android:color/transparent"
+                android:paddingRight="30dp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="600dp"
+            android:layout_height="60dp"
+            android:background="@drawable/toggle_widget_button"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/intro_font_size" />
+    </LinearLayout>
+
+</LinearLayout>

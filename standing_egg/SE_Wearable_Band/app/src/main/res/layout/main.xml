@@ -1,0 +1,401 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/frame_loading"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@drawable/element_activity_bg">
+
+        <!-- status bar : display connection info -->
+
+        <LinearLayout
+            style="@style/AppTheme.ConnectionInfoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/status_title"
+                android:layout_width="wrap_content"
+                android:layout_height="20dip"
+                android:layout_margin="3dip" />
+
+            <TextView
+                android:id="@+id/status_text"
+                style="@style/AppTheme.ConnectionInfoText"
+                android:layout_width="match_parent"
+                android:layout_height="20dip"
+                android:layout_margin="3dip" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:weightSum="3"
+                android:layout_marginTop="50dp">
+
+                <ImageView
+                    android:id="@+id/main_pager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:src="@drawable/element_swipe_icon_1"
+                    android:visibility="gone"/>
+
+                <RadioGroup
+                    android:id="@+id/act_pager_radio_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:weightSum="2"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@+id/pager_radio"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/element_view_pager_left">
+
+                    <RadioButton
+                        android:id="@+id/warking_pager"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="1dp"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="Walking"
+                        android:textSize="@dimen/tab_text_size"
+                        android:textColor="@drawable/toggle_widget_pager"
+                        android:textStyle="bold" />
+                    <RadioButton
+                        android:id="@+id/running_pager"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginTop="1dp"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="Running"
+                        android:textSize="@dimen/tab_text_size"
+                        android:textColor="@drawable/toggle_widget_pager"
+                        android:checked="false" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:context=".MainActivity"
+                android:layout_marginTop="50dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/frame_motion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@drawable/element_motion_bg">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/motion_pager_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:src="@drawable/element_swipe_icon_1"
+                    android:visibility="gone"/>
+
+                <RadioGroup
+                    android:id="@+id/motion_pager_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@+id/motion_pager_radio"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/element_view_pager_left"
+                    android:visibility="invisible">
+
+                    <RadioButton
+                        android:id="@+id/hammer_pager"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="Biceps-Curl"
+                        android:textSize="@dimen/tab_text_size"
+                        android:textColor="@drawable/toggle_widget_pager"
+                        android:textStyle="bold" />
+                    <RadioButton
+                        android:id="@+id/shoulder_pager"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="Shoulder-curl"
+                        android:textSize="@dimen/tab_text_size"
+                        android:textColor="@drawable/toggle_widget_pager"
+                        android:checked="false" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager_motion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:context=".MainActivity"
+                android:layout_marginTop="30dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chart 들어가는 부분!!!"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total distance 들어가는 부분!!!"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Step 들어가는 부분!!!"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calorie 들어가는 부분!!!"/>
+        </LinearLayout>
+    </FrameLayout>
+<!--
+
+    <RelativeLayout
+        android:id="@+id/menu_drawer"
+        android:layout_width="277dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:weightSum="6"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageViewIcon1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/menu_activity_tracking"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <ImageView
+                android:id="@+id/imageViewIcon2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/menu_motion_tracking"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <ImageView
+                android:id="@+id/imageViewIcon3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/menu_gait_tracking"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <ImageView
+                android:id="@+id/imageViewIcon4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/menu_heart_rate"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <ImageView
+                android:id="@+id/imageViewIcon5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/menu_sensor_data"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <ImageView
+                android:id="@+id/imageViewIcon6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/menu_user_option"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/menu_profile"
+            android:layout_width="fill_parent"
+            android:layout_height="90dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:minHeight="?android:attr/listPreferredItemHeightSmall" >
+
+            <ImageView
+                android:id="@+id/menu_profile_img"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:background="@android:color/transparent"
+                android:paddingEnd="10dp"
+                android:paddingStart="16dp"
+                android:src="@drawable/profile_icon_female" />
+
+            <TextView
+                android:id="@+id/menu_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_toEndOf="@+id/menu_profile_img"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:minHeight="?android:attr/listPreferredItemHeight"
+                android:paddingEnd="@dimen/navi_e"
+                android:paddingStart="@dimen/navi_s"
+                android:textAppearance="@style/ListFonts"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/navi_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/white"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/logout_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/menu_under_logout"
+            android:minHeight="?android:attr/listPreferredItemHeightSmall" 
+            android:paddingTop="5dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/logout_ico"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/transparent"
+                android:paddingEnd="10dp"
+                android:paddingStart="25dp"
+                android:src="@drawable/element_menu_logout" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/logout_ico"
+                android:background="@android:color/transparent"
+                android:paddingEnd="@dimen/navi_e"
+                android:paddingStart="@dimen/navi_s"
+                android:text="@string/logout"
+                android:textAppearance="@style/ListFonts"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </RelativeLayout>-->
+
+</android.support.v4.widget.DrawerLayout>
