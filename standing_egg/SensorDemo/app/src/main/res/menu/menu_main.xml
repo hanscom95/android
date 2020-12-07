@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="demo.sensors.se.com.ssdemo.MainActivity"
+    android:icon="@drawable/expander_open_holo_dark">
+
+    <item
+        android:id="@+id/action_stop"
+        android:orderInCategory="100"
+        android:title="Stopped"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_vr"
+        android:orderInCategory="105"
+        android:title="WIFI Virtual Gyro"
+        app:showAsAction="never"  />
+    <item
+        android:id="@+id/action_6axis"
+        android:orderInCategory="106"
+        android:title="WIFI 6-axis"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_9axis"
+        android:orderInCategory="107"
+        android:title="WIFI 9-axis"
+        app:showAsAction="never"  />
+    <item
+        android:id="@+id/action_fixed"
+        android:orderInCategory="108"
+        android:title="Fixed Rotation"
+        app:showAsAction="never"  />
+
+
+</menu>

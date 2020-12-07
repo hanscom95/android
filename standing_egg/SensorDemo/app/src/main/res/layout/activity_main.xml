@@ -1,0 +1,1253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+   <!-- <fragment
+        android:id="@+id/fragment_load"
+        class="demo.sensors.se.com.ssdemo.FragmentOne"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_load" />-->
+
+
+
+
+    <!--android:name="android.support.v4.app.Fragment"-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/container">
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/filter_coef_wrapper"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:background="?attr/colorPrimary"-->
+                    <!--android:paddingTop="30dp">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:padding="10dp"-->
+                        <!--android:text="@string/filter" />-->
+
+                    <!--<SeekBar-->
+                        <!--android:id="@+id/filter_coef"-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:indeterminate="false"-->
+                        <!--android:padding="10dp" />-->
+                <!--</LinearLayout>-->
+
+
+
+
+
+
+            <!--graph View -->
+            <!--graph View -->
+            <!--graph View -->
+            <!--graph View -->
+            <!--graph View -->
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/graph_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/chartLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="500dp"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/RealTimelayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/RealTimelayout2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/RealTimelayout3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/checkLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal" >
+
+                            <CheckBox
+                                android:id="@+id/intervalCheckBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="18dp"
+                                android:text="Interval"
+                                android:textSize="15dp" />
+
+                            <CheckBox
+                                android:id="@+id/sgaCheckBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="18dp"
+                                android:checked="true"
+                                android:text="Accel"
+                                android:textColor="@color/sga"
+                                android:textSize="15dp" />
+
+                            <CheckBox
+                                android:id="@+id/bma250CheckBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="18dp"
+                                android:checked="true"
+                                android:text="Gyro"
+                                android:textColor="@color/bma"
+                                android:textSize="15dp" />
+
+                            <CheckBox
+                                android:id="@+id/lis331dlhCheckBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="18dp"
+                                android:checked="true"
+                                android:text="Mag"
+                                android:textColor="@color/lis"
+                                android:textSize="15dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/textLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone" >
+
+                            <LinearLayout
+                                android:id="@+id/sgaLayout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="horizontal" >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Accel"
+                                        android:textColor="@color/sga"
+                                        android:textSize="15dp"
+                                        android:visibility="visible" />
+
+                                    <TextView
+                                        android:id="@+id/Texttest01"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#000000"
+                                        android:textSize="15dp"
+                                        android:visibility="visible" />
+
+                                    <TextView
+                                        android:id="@+id/Texttest02"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#000000"
+                                        android:textSize="15dp"
+                                        android:visibility="visible" />
+
+                                    <TextView
+                                        android:id="@+id/Texttest03"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#000000"
+                                        android:textSize="15dp"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/bmaLayout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="horizontal" >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Gyro"
+                                        android:textColor="@color/bma"
+                                        android:textSize="15dp"
+                                        android:visibility="visible" />
+
+                                    <TextView
+                                        android:id="@+id/Texttest07"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#000000"
+                                        android:textSize="15dp"
+                                        android:visibility="visible" />
+
+                                    <TextView
+                                        android:id="@+id/Texttest08"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#000000"
+                                        android:textSize="15dp"
+                                        android:visibility="visible" />
+
+                                    <TextView
+                                        android:id="@+id/Texttest09"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#000000"
+                                        android:textSize="15dp"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lisLayout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="horizontal" >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Mag"
+                                        android:textColor="@color/lis"
+                                        android:textSize="15dp"
+                                        android:visibility="visible" />
+
+                                    <TextView
+                                        android:id="@+id/Texttest13"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#000000"
+                                        android:textSize="15dp"
+                                        android:visibility="visible" />
+
+                                    <TextView
+                                        android:id="@+id/Texttest14"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#000000"
+                                        android:textSize="15dp"
+                                        android:visibility="visible" />
+
+                                    <TextView
+                                        android:id="@+id/Texttest15"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#000000"
+                                        android:textSize="15dp"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tiltLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+
+                        <TableLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/table_bg"
+                            android:padding="8dp" >
+
+                            <TableRow
+                                android:id="@+id/tableRow0"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/table_row_bg" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_span="5"
+                                    android:background="@drawable/table_cell_top_last_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="20dp"
+                                    android:paddingTop="10dp"
+                                    android:text="Tilt(degree)"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp" />
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tableRow1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/table_row_bg" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_cell_top_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="@color/sga"
+                                    android:textSize="30dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_cell_top_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="20dp"
+                                    android:paddingTop="10dp"
+                                    android:text="SGA100"
+                                    android:textColor="@color/sga"
+                                    android:textSize="30dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_cell_top_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="20dp"
+                                    android:paddingTop="10dp"
+                                    android:text="BMA150"
+                                    android:textColor="@color/bma"
+                                    android:textSize="30dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_cell_top_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="20dp"
+                                    android:paddingTop="10dp"
+                                    android:text="ITG3200"
+                                    android:textColor="@color/lis"
+                                    android:textSize="30dp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_cell_top_last_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingTop="10dp"
+                                    android:text="AK8975"
+                                    android:textColor="@color/mpu"
+                                    android:textSize="30dp"
+                                    android:visibility="visible" />
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tableRow2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/table_row_bg" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_left_cell_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingTop="10dp"
+                                    android:text="X-axis"
+                                    android:textColor="#000000"
+                                    android:textSize="30dp" />
+
+                                <TextView
+                                    android:id="@+id/Texttest04"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_cell_sga_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/Texttest10"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_cell_bma_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/Texttest16"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_cell_lis_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/Texttest22"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_cell_mpu_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible" />
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tableRow3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/table_row_bg" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_left_cell_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingTop="10dp"
+                                    android:text="Y-axis"
+                                    android:textColor="#000000"
+                                    android:textSize="30dp" />
+
+                                <TextView
+                                    android:id="@+id/Texttest05"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_cell_sga_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/Texttest11"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_cell_bma_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/Texttest17"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_cell_lis_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/Texttest23"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_cell_mpu_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible" />
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tableRow4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/table_row_last_bg" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_left_cell_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingTop="10dp"
+                                    android:text="Z-axis"
+                                    android:textColor="#000000"
+                                    android:textSize="30dp" />
+
+                                <TextView
+                                    android:id="@+id/Texttest06"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_cell_sga_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/Texttest12"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_cell_bma_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/Texttest18"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_cell_lis_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/Texttest24"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_cell_mpu_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible" />
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
+            <!-- Noise Graph -->
+            <!-- Noise Graph -->
+            <!-- Noise Graph -->
+            <!-- Noise Graph -->
+            <!-- Noise Graph -->
+            <!-- Noise Graph -->
+                <RelativeLayout
+                    android:id="@+id/noise_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+
+
+                    <LinearLayout
+                        android:id="@+id/noise_chartLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dip"
+                        android:layout_marginTop="20dip"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/noise_RealTimelayout"
+                            android:layout_gravity="center_horizontal" >
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginTop="10dip"
+                            android:orientation="vertical" >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="25dp"
+                                android:text="(ug/√Hz)"
+                                android:visibility="visible" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginTop="140dp"
+                                android:orientation="horizontal" >
+
+                                <View
+                                    android:layout_width="20dp"
+                                    android:layout_height="3dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginTop="15dp"
+                                    android:background="@color/sga" />
+
+                                <TextView
+                                    android:id="@+id/noise_Sga"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="SGA100"
+                                    android:textColor="@color/sga"
+                                    android:textSize="25dp"
+                                    android:visibility="visible" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:orientation="horizontal" >
+
+                                <View
+                                    android:layout_width="20dp"
+                                    android:layout_height="3dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginTop="15dp"
+                                    android:background="@color/bma" />
+
+                                <TextView
+                                    android:id="@+id/noise_bma"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="BMA150"
+                                    android:textColor="@color/bma"
+                                    android:textSize="25dp"
+                                    android:visibility="visible" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:orientation="horizontal" >
+
+                                <View
+                                    android:layout_width="20dp"
+                                    android:layout_height="3dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginTop="15dp"
+                                    android:background="@color/lis" />
+
+                                <TextView
+                                    android:id="@+id/noise_Lis"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ITG3200"
+                                    android:textColor="@color/lis"
+                                    android:textSize="25dp"
+                                    android:visibility="visible" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+                                <View
+                                    android:layout_width="20dp"
+                                    android:layout_height="3dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginTop="15dp"
+                                    android:background="@color/mpu" />
+
+                                <TextView
+                                    android:id="@+id/noise_Mpu"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="AK8975"
+                                    android:textColor="@color/mpu"
+                                    android:textSize="25dp"
+                                    android:visibility="visible" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/noise_noiseLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+                        <TableLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/table_bg"
+                            android:padding="8dp" >
+
+                            <TableRow
+                                android:id="@+id/noise_tableRow0"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/table_row_bg" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_span="5"
+                                    android:background="@drawable/table_cell_top_last_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="20dp"
+                                    android:paddingTop="10dp"
+                                    android:text="Noise Density(ug/√Hz)"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/noise_tableRow1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/table_row_bg" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_cell_top_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="@color/sga"
+                                    android:textSize="30dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/sga"
+                                    android:textSize="30dp"
+                                    android:text="SGA100"
+                                    android:background="@drawable/table_cell_top_bg"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="20dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/bma"
+                                    android:textSize="30dp"
+                                    android:text="BMA150"
+                                    android:background="@drawable/table_cell_top_bg"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="20dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/lis"
+                                    android:textSize="30dp"
+                                    android:text="ITG3200"
+                                    android:visibility="visible"
+                                    android:background="@drawable/table_cell_top_bg"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="20dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_cell_top_last_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingTop="10dp"
+                                    android:text="AK8975"
+                                    android:textColor="@color/mpu"
+                                    android:textSize="30dp"
+                                    android:visibility="visible" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/noise_tableRow2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/table_row_bg" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_left_cell_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingTop="10dp"
+                                    android:text="X-axis"
+                                    android:textColor="#000000"
+                                    android:textSize="30dp" />
+
+                                <TextView
+                                    android:id="@+id/noise_Texttest04"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_cell_sga_bg"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/noise_Texttest10"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible"
+                                    android:background="@drawable/table_cell_bma_bg"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp" />
+                                <TextView
+                                    android:id="@+id/noise_Texttest16"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible"
+                                    android:background="@drawable/table_cell_lis_bg"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp" />
+
+                                <TextView
+                                    android:id="@+id/noise_Texttest22"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:background="@drawable/table_cell_mpu_bg"
+                                    android:visibility="visible"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp" />
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/noise_tableRow3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/table_row_bg" >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#000000"
+                                    android:textSize="30dp"
+                                    android:text="Y-axis"
+                                    android:background="@drawable/table_left_cell_bg"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="30dp" />
+
+                                <TextView
+                                    android:id="@+id/noise_Texttest05"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible"
+                                    android:background="@drawable/table_cell_sga_bg"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp" />
+
+                                <TextView
+                                    android:id="@+id/noise_Texttest11"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible"
+                                    android:background="@drawable/table_cell_bma_bg"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp" />
+
+                                <TextView
+                                    android:id="@+id/noise_Texttest17"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible"
+                                    android:background="@drawable/table_cell_lis_bg"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp" />
+
+                                <TextView
+                                    android:id="@+id/noise_Texttest23"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible"
+                                    android:background="@drawable/table_cell_mpu_bg"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/noise_tableRow4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/table_row_last_bg" >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#000000"
+                                    android:textSize="30dp"
+                                    android:text="Z-axis"
+                                    android:background="@drawable/table_left_cell_bg"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="30dp" />
+
+                                <TextView
+                                    android:id="@+id/noise_Texttest06"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/table_cell_sga_bg"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/noise_Texttest12"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible"
+                                    android:background="@drawable/table_cell_bma_bg"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp" />
+
+                                <TextView
+                                    android:id="@+id/noise_Texttest18"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible"
+                                    android:background="@drawable/table_cell_lis_bg"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp" />
+
+                                <TextView
+                                    android:id="@+id/noise_Texttest24"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp"
+                                    android:visibility="visible"
+                                    android:background="@drawable/table_cell_mpu_bg"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="30dp" />
+                            </TableRow>
+                        </TableLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="horizontal" >
+
+                        <Button
+                            android:id="@+id/noise_bt_ok2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="Noise Density"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+
+
+
+
+
+                </RelativeLayout>
+
+
+
+
+
+
+                <ScrollView
+                    android:id="@+id/listingScrollView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="50"
+                    android:background="@android:color/black"
+                    android:fadeScrollbars="false"
+                    android:fillViewport="true"
+                    android:scrollbars="vertical"
+                    android:visibility="gone">
+
+                    <HorizontalScrollView
+                        android:id="@+id/listingHorizontalScrollView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:fadeScrollbars="false"
+                        android:fillViewport="true">
+
+                        <TextView
+                            android:id="@+id/console1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:background="@android:color/white"
+                            android:paddingLeft="5dp"
+                            android:singleLine="false"
+                            android:text="@string/welcome"
+                            android:textSize="14sp"
+                            android:typeface="monospace"
+                            android:visibility="visible"
+                            tools:context=".MainActivity" />
+                    </HorizontalScrollView>
+                </ScrollView>
+
+                <TextView
+                    android:id="@+id/console3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/black"
+                    android:paddingLeft="5dp"
+                    android:singleLine="false"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:typeface="monospace"
+                    android:visibility="gone"  />
+
+                <TextView
+                    android:id="@+id/console4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/black"
+                    android:paddingLeft="5dp"
+                    android:singleLine="false"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:typeface="monospace"
+                    android:visibility="gone"  />
+
+                <TextView
+                    android:id="@+id/console2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/black"
+                    android:paddingLeft="5dp"
+                    android:singleLine="false"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:typeface="monospace"
+                    android:visibility="gone"  />
+
+                <LinearLayout
+                    android:id="@+id/graphicFrame"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <android.opengl.GLSurfaceView
+                        android:id="@+id/pcb_glview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:visibility="gone" />
+
+                    <android.opengl.GLSurfaceView
+                        android:id="@+id/room_glview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/textlog"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:text="  "
+                    />
+        </FrameLayout>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/main_cor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:background="@android:color/black">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connect Start"
+            android:padding="5dp"
+            android:id="@+id/start"
+            android:background="?attr/colorPrimary"
+            android:textColor="@android:color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="106dp" />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/menu_drawer" />
+
+</android.support.v4.widget.DrawerLayout>

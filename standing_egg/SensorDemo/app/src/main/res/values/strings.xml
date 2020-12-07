@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Standing Egg</string>
+    <string name="action_cube">3D Cube</string>
+    <string name="action_panorama">Panorama</string>
+    <string name="action_log">Logging</string>
+    <string name="filter">filter</string>
+    <string name="crash_toast_text">crash~~~</string>
+    <string name="log_tag">SE Sensor </string>
+
+
+    <string name="defaultOutputFile">DemoLog.txt</string>
+
+
+    <string name="wificheck">Check Wifi Connection.</string>
+    <string name="servercheck">Check Server Connection.</string>
+
+    <string name="zeroedLabel">Zeroed</string>
+
+    <string name="welcome">Application log entries will be shown in this pane.\n</string>
+</resources>
