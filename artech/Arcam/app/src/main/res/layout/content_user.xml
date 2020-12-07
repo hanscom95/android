@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_user"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:adjustViewBounds="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@mipmap/bg_blue"
+    tools:context="artech.com.arcam.info.UserActivity"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_user">
+    <RelativeLayout
+        android:id="@+id/username_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_user"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"/>
+
+        <de.morrox.fontinator.FontEditText
+            android:id="@+id/username_text"
+            android:layout_width="515dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:hint="@string/signup_username"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingLeft="50dp"
+            android:maxLength="255"
+            android:singleLine="true"
+            android:theme="@style/SignupEditTextTheme"
+            android:textSize="24sp"
+            android:textColor="@color/whitefont"
+            android:textColorHint="@color/skybluefont"
+            app:font="NotoSansCJKkr_Regular.otf" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/password_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/username_layout"
+        android:layout_marginTop="-10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_lock"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"/>
+
+        <de.morrox.fontinator.FontEditText
+            android:id="@+id/password_text"
+            android:layout_width="515dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:hint="@string/signup_password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:paddingLeft="50dp"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:theme="@style/SignupEditTextTheme"
+            android:textSize="24sp"
+            android:textColor="@color/whitefont"
+            android:textColorHint="@color/skybluefont"
+            app:font="NotoSansCJKkr_Regular.otf" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/location_team_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_layout"
+        android:layout_alignStart="@+id/password_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp">
+        <RelativeLayout
+            android:id="@+id/national_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/national_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:popupBackground="@color/whitebg"
+                android:background="@mipmap/btn_inactive"
+                android:prompt="@string/signup_location"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/national_spinner"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:src="@mipmap/ic_move"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/team_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/national_layout"
+            android:layout_toRightOf="@+id/national_layout"
+            android:layout_marginBottom="-8dp">
+
+            <de.morrox.fontinator.FontEditText
+                android:id="@+id/team_text"
+                android:layout_width="251dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:hint="@string/signup_team"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="28dp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="12dp"
+                android:singleLine="true"
+                android:textColor="@color/whitefont"
+                android:textColorHint="@color/skybluefont"
+                android:textSize="24sp"
+                android:theme="@style/SignupEditTextTheme"
+                app:font="NotoSansCJKkr_Regular.otf" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/sex_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/location_team_layout"
+        android:layout_alignStart="@+id/location_team_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp">
+
+        <de.morrox.fontinator.FontButton
+            android:id="@+id/male_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/btn_inactive"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="@string/signup_male_button"
+            android:textColor="@color/skybluefont"
+            android:textSize="22sp"
+            android:textAllCaps="false"
+            app:font="NotoSansCJKkr_Regular.otf"/>
+
+        <de.morrox.fontinator.FontButton
+            android:id="@+id/female_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/btn_inactive"
+            android:layout_toRightOf="@+id/male_button"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="@string/signup_female_button"
+            android:textColor="@color/skybluefont"
+            android:textSize="22sp"
+            android:textAllCaps="false"
+            app:font="NotoSansCJKkr_Regular.otf"/>
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/email_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/sex_layout"
+        android:layout_marginTop="0dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_mail"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"/>
+
+        <de.morrox.fontinator.FontEditText
+            android:id="@+id/user_email_text"
+            android:layout_width="515dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:hint="@string/signup_email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:paddingLeft="50dp"
+            android:maxLength="50"
+            android:singleLine="true"
+            android:theme="@style/SignupEditTextTheme"
+            android:textSize="24sp"
+            android:textColor="@color/whitefont"
+            android:textColorHint="@color/skybluefont"
+            app:font="NotoSansCJKkr_Regular.otf" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/camera_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/email_layout"
+        android:layout_marginTop="0dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_camera"
+            android:tint="@color/whitebg"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"/>
+
+        <de.morrox.fontinator.FontEditText
+            android:id="@+id/camera_text"
+            android:layout_width="515dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:hint="@string/signup_camera"
+            android:inputType="textUri"
+            android:maxLines="1"
+            android:paddingLeft="50dp"
+            android:maxLength="50"
+            android:singleLine="true"
+            android:theme="@style/SignupEditTextTheme"
+            android:textSize="24sp"
+            android:textColor="@color/whitefont"
+            android:textColorHint="@color/skybluefont"
+            app:font="NotoSansCJKkr_Regular.otf" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:layout_below="@id/camera_layout">
+
+        <de.morrox.fontinator.FontButton
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/btn_before"
+            android:paddingBottom="10dp"
+            android:text="@string/cancel_button"
+            android:textAllCaps="false"
+            android:textColor="@color/bluegrayfont"
+            android:textSize="30sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+
+        <de.morrox.fontinator.FontButton
+            android:id="@+id/insert_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/cancel_button"
+            android:background="@mipmap/btn_next"
+            android:paddingBottom="10dp"
+            android:text="@string/save_button"
+            android:textAllCaps="false"
+            android:textColor="@color/whitefont"
+            android:textSize="30sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+    </RelativeLayout>
+
+
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/signup_version_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:includeFontPadding="false"
+        android:text="@string/app_version"
+        android:textColor="@color/whitebluefont"
+        android:textSize="16sp"
+        app:font="Roboto_Thin.otf" />
+</RelativeLayout>

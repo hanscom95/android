@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.semi.business.BusinessMainActivity"
+    tools:showIn="@layout/activity_business_main">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bar_black"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/bar_black"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/business_title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/business_title_text"
+                    android:fontFamily="@font/bmdohyeon" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="16.8dp">
+                <ImageView
+                    android:id="@+id/app_bar_menu_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_menu"/>
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar_layout"
+        android:layout_above="@+id/bottom_layout">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/nav_padding_bottom">
+            <RelativeLayout
+                android:id="@+id/first_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/business_first_button_layout_margin_top">
+
+                <Button
+                    android:id="@+id/main_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/business_main_button"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@mipmap/ic_userhome"
+                    android:drawablePadding="@dimen/business_ic_text_interval_padding"
+                    android:paddingLeft="@dimen/business_ic_padding_button"
+                    android:fontFamily="@font/notosanscjkkr_medium"
+                    android:text="@string/business_main_text"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/business_button" />
+
+                <Button
+                    android:id="@+id/product_insert_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/main_button"
+                    android:layout_marginLeft="@dimen/business_top_button_margin_top"
+                    android:background="@drawable/business_product_insert_button"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@mipmap/ic_register"
+                    android:drawablePadding="@dimen/business_product_ic_text_interval_padding"
+                    android:paddingLeft="@dimen/business_product_ic_padding_button"
+                    android:fontFamily="@font/notosanscjkkr_medium"
+                    android:text="@string/business_product_insert"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/business_button" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/second_layout"
+                android:layout_width="@dimen/business_second_box_width"
+                android:layout_height="@dimen/business_second_box_height"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/first_layout"
+                android:layout_marginTop="@dimen/business_second_button_layout_margin_top"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/hourglass_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/business_img_layout_margin_left"
+                    android:background="@mipmap/img_hourglass">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_hourglass"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/hourglass_layout"
+                    android:layout_marginLeft="@dimen/business_text_layout_margin_left"
+                    android:layout_centerVertical="true">
+                    <TextView
+                        android:id="@+id/waiting_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/business_deposit_waiting_text"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/business_texts"
+                        android:fontFamily="@font/notosanscjkkr_regular" />
+                    <TextView
+                        android:id="@+id/new_order_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/waiting_text"
+                        android:layout_marginTop="@dimen/business_text_interval_layout_margin_top"
+                        android:includeFontPadding="false"
+                        android:text="@string/business_new_order"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/business_texts"
+                        android:fontFamily="@font/notosanscjkkr_regular" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/first_refresh_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/business_refresh_layout_margin_right"
+                    android:src="@mipmap/ic_refresh"/>
+
+                <RelativeLayout
+                    android:id="@+id/case_value_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/business_right_text_layout_margin_right"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/first_refresh_img">
+
+                    <TextView
+                        android:id="@+id/waiting_value_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/business_case_value_text"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/business_texts" />
+
+                    <TextView
+                        android:id="@+id/new_order_value_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/waiting_value_text"
+                        android:layout_marginTop="@dimen/business_text_interval_layout_margin_top"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/business_case_value_text"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/business_texts" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="3dp"
+                    android:layout_toStartOf="@+id/case_value_layout">
+
+                    <TextView
+                        android:id="@+id/waiting_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="0"
+                        android:textColor="@color/lavender"
+                        android:textSize="@dimen/business_texts" />
+
+                    <TextView
+                        android:id="@+id/new_order_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/waiting_value"
+                        android:layout_marginTop="@dimen/business_text_interval_layout_margin_top"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="0"
+                        android:textColor="@color/lavender"
+                        android:textSize="@dimen/business_texts" />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/white_three"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white_three"/>
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white_three"/>
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white_three"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/third_layout"
+                android:layout_width="@dimen/business_third_box_width"
+                android:layout_height="@dimen/business_third_box_height"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/second_layout"
+                android:layout_marginTop="@dimen/business_third_layout_margin_top"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/cancel_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/business_img_layout_margin_left"
+                    android:background="@mipmap/img_sale_cancel">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_sale_cancel"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/cancel_layout"
+                    android:layout_marginLeft="@dimen/business_text_layout_margin_left"
+                    android:layout_centerVertical="true">
+                    <TextView
+                        android:id="@+id/cancel_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/business_cancel_order"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/business_texts"
+                        android:fontFamily="@font/notosanscjkkr_regular" />
+                    <TextView
+                        android:id="@+id/sale_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cancel_text"
+                        android:layout_marginTop="@dimen/business_text_interval_layout_margin_top"
+                        android:includeFontPadding="false"
+                        android:text="@string/business_sale"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/business_texts"
+                        android:fontFamily="@font/notosanscjkkr_regular" />
+                    <TextView
+                        android:id="@+id/sale_complete_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sale_text"
+                        android:layout_marginTop="@dimen/business_text_interval_layout_margin_top"
+                        android:includeFontPadding="false"
+                        android:text="@string/business_sale_complete"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/business_texts"
+                        android:fontFamily="@font/notosanscjkkr_regular" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/second_refresh_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/business_refresh_layout_margin_right"
+                    android:src="@mipmap/ic_refresh"/>
+
+                <RelativeLayout
+                    android:id="@+id/second_case_value_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/business_right_text_layout_margin_right"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/second_refresh_img">
+
+                    <TextView
+                        android:id="@+id/cancel_value_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/business_case_value_text"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/business_texts" />
+
+                    <TextView
+                        android:id="@+id/sale_value_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cancel_value_text"
+                        android:layout_marginTop="@dimen/business_text_interval_layout_margin_top"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/business_case_value_text"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/business_texts" />
+
+                    <TextView
+                        android:id="@+id/sale_complete_value_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sale_value_text"
+                        android:layout_marginTop="@dimen/business_text_interval_layout_margin_top"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/business_case_value_text"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/business_texts" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="3dp"
+                    android:layout_toStartOf="@+id/second_case_value_layout">
+
+                    <TextView
+                        android:id="@+id/cancel_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="0"
+                        android:textColor="@color/cancel"
+                        android:textSize="@dimen/business_texts" />
+
+                    <TextView
+                        android:id="@+id/sale_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cancel_value"
+                        android:layout_marginTop="@dimen/business_text_interval_layout_margin_top"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="0"
+                        android:textColor="@color/cancel"
+                        android:textSize="@dimen/business_texts" />
+
+                    <TextView
+                        android:id="@+id/sale_complete_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sale_value"
+                        android:layout_marginTop="@dimen/business_text_interval_layout_margin_top"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="0"
+                        android:textColor="@color/cancel"
+                        android:textSize="@dimen/business_texts" />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/white_three"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white_three"/>
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white_three"/>
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white_three"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fourth_layout"
+                android:layout_width="@dimen/business_fourth_box_width"
+                android:layout_height="@dimen/business_fourth_box_height"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/third_layout"
+                android:layout_marginTop="@dimen/business_fourth_layout_margin_top"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/money_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/business_img_layout_margin_left"
+                    android:background="@mipmap/img_money">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_money"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/money_layout"
+                    android:layout_marginLeft="@dimen/business_text_layout_margin_left"
+                    android:layout_centerVertical="true">
+                    <RelativeLayout
+                        android:id="@+id/calculate_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/calculate_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/business_calculate"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/business_texts"
+                            android:fontFamily="@font/notosanscjkkr_regular" />
+                        <TextView
+                            android:id="@+id/calculate_date_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/calculate_text"
+                            android:layout_marginTop="3.5dp"
+                            android:includeFontPadding="false"
+                            android:text="0000.00.00 ~ 0000.00.00"
+                            android:textColor="@android:color/black"
+                            android:textSize="10.5sp"
+                            android:fontFamily="@font/notosanscjkkr_regular" />
+
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/reserves_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/calculate_layout"
+                        android:layout_marginTop="@dimen/business_text_interval_layout_margin_top"
+                        android:includeFontPadding="false"
+                        android:text="@string/business_reserves"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/business_texts"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/third_refresh_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/business_refresh_layout_margin_right"
+                    android:src="@mipmap/ic_refresh"/>
+
+                <RelativeLayout
+                    android:id="@+id/third_money_value_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/business_right_text_layout_margin_right"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/third_refresh_img">
+
+                    <TextView
+                        android:id="@+id/calculate_value_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/business_money_value_text"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/business_texts" />
+
+                    <TextView
+                        android:id="@+id/reserves_value_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/calculate_value_text"
+                        android:layout_marginTop="@dimen/business_text_interval_layout_margin_top"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/business_case_value_text"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/business_texts"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="3dp"
+                    android:layout_toStartOf="@+id/third_money_value_layout">
+
+                    <TextView
+                        android:id="@+id/calculate_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="0"
+                        android:textColor="@color/money"
+                        android:textSize="@dimen/business_texts" />
+
+                    <TextView
+                        android:id="@+id/reserves_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/calculate_value"
+                        android:layout_marginTop="@dimen/business_text_interval_layout_margin_top"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="0"
+                        android:textColor="@color/money"
+                        android:textSize="@dimen/business_texts"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/white_three"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white_three"/>
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white_three"/>
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white_three"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/second_button_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/first_layout"
+                android:layout_marginTop="16.3dp"
+                android:background="@mipmap/btn_mainbox_1_press">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30.3dp"
+                    android:background="@mipmap/img_hourglass">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_hourglass"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:text="업체정보관리"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/notosanscjkkr_regular" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/third_button_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/second_button_layout"
+                android:layout_marginTop="16dp"
+                android:background="@mipmap/btn_mainbox_2_press">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30.3dp"
+                    android:background="@mipmap/img_sale_cancel">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_filetext_press"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:text="상품관리"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/notosanscjkkr_regular" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/banner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/third_button_layout"
+                android:layout_marginTop="@dimen/business_banner_margin_top">
+                <ImageView
+                    android:id="@+id/banner_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/img_appbanner" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fifth_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/banner_layout"
+                android:layout_marginTop="@dimen/business_fifth_margin_top"
+                android:layout_centerHorizontal="true">
+                <RelativeLayout
+                    android:id="@+id/fifth_first_layout"
+                    android:layout_width="@dimen/business_fifth_first_box_width"
+                    android:layout_height="@dimen/business_fifth_first_box_height"
+                    android:background="@color/white">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true">
+                        <ImageView
+                            android:id="@+id/product_manage_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/business_fifth_img_margin_top"
+                            android:src="@mipmap/ic_box"/>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/product_manage_img"
+                            android:layout_alignStart="@+id/product_manage_img"
+                            android:layout_marginBottom="@dimen/business_fifth_text_margin_top"
+                            android:layout_marginStart="@dimen/business_fifth_text_margin_top"
+                            android:background="@mipmap/ic_sign">
+                            <TextView
+                                android:id="@+id/business_contact_us_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:includeFontPadding="false"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/business_notice_value"
+                                android:fontFamily="@font/notosanscjkkr_regular" />
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/business_contact_us_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/product_manage_img"
+                            android:layout_marginTop="@dimen/business_fifth_img_margin_top"
+                            android:includeFontPadding="false"
+                            android:text="@string/business_contact_us"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/business_texts"
+                            android:fontFamily="@font/notosanscjkkr_medium" />
+                    </RelativeLayout>
+
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:background="@color/white_three"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/white_three"/>
+                    <View
+                        android:layout_width="0.3dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white_three"/>
+                    <View
+                        android:layout_width="0.3dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/white_three"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/fifth_second_layout"
+                    android:layout_width="@dimen/business_fifth_first_box_width"
+                    android:layout_height="@dimen/business_fifth_first_box_height"
+                    android:layout_toRightOf="@+id/fifth_first_layout"
+                    android:background="@color/white">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true">
+                        <ImageView
+                            android:id="@+id/product_user_contact_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/business_fifth_img_margin_top"
+                            android:src="@mipmap/ic_headphones"/>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/product_user_contact_img"
+                            android:layout_alignStart="@+id/product_user_contact_img"
+                            android:layout_marginBottom="@dimen/business_fifth_text_margin_top"
+                            android:layout_marginStart="@dimen/business_fifth_text_margin_top"
+                            android:background="@mipmap/ic_sign">
+                            <TextView
+                                android:id="@+id/business_user_contact_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:includeFontPadding="false"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/business_notice_value"
+                                android:fontFamily="@font/notosanscjkkr_regular" />
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/business_user_contact_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/product_user_contact_img"
+                            android:layout_marginTop="@dimen/business_fifth_img_margin_top"
+                            android:includeFontPadding="false"
+                            android:text="@string/business_user_contact"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/business_texts"
+                            android:fontFamily="@font/notosanscjkkr_medium" />
+                    </RelativeLayout>
+
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:background="@color/white_three"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/white_three"/>
+                    <View
+                        android:layout_width="0.3dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white_three"/>
+                    <View
+                        android:layout_width="0.3dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/white_three"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sixth_layout"
+                android:layout_width="@dimen/business_sixth_box_width"
+                android:layout_height="@dimen/business_sixth_box_height"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/fifth_layout"
+                android:layout_marginTop="@dimen/business_sixth_layout_margin_top"
+                android:background="@color/white">
+
+
+                <TextView
+                    android:id="@+id/notice_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15.3dp"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/notosanscjkkr_medium"
+                    android:includeFontPadding="false"
+                    android:text="@string/business_notice"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/business_title_text" />
+
+                <ImageView
+                    android:id="@+id/sixth_refresh_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="12.5dp"
+                    android:layout_marginRight="16dp"
+                    android:src="@mipmap/ic_refresh"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/notice_title_text"
+                    android:layout_below="@+id/notice_title_text"
+                    android:layout_marginTop="14.5dp">
+
+                    <ImageView
+                        android:id="@+id/notice_value_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/important"
+                        android:layout_centerVertical="true"/>
+                    <TextView
+                        android:id="@+id/notice_value_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/notice_value_img"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2dp"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="[일반]낚시앱 세미 스마트스토어 오픈...   2018.01.01"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/business_title_text" />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/white_three"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white_three"/>
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white_three"/>
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white_three"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/seventh_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sixth_layout"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="19.8dp"
+                android:background="@mipmap/btn_top">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/img_top" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/eighth_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seventh_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="19.5dp"
+                android:paddingLeft="15.5dp"
+                android:paddingRight="17.8dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/eighth_first_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="18.8dp">
+
+                    <RelativeLayout
+                        android:id="@+id/eighth_second_first_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/linebox_terms">
+
+                        <TextView
+                            android:id="@+id/terms_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/notosanscjkkr_regular"
+                            android:includeFontPadding="false"
+                            android:text="이용약관"
+                            android:textColor="@color/greyish"
+                            android:textSize="8.9sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/eighth_second_second_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.5dp"
+                        android:layout_toRightOf="@+id/eighth_second_first_layout"
+                        android:background="@mipmap/linebox_terms">
+
+                        <TextView
+                            android:id="@+id/individual_terms_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/notosanscjkkr_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="개인정보\n처리방침"
+                            android:textColor="@color/greyish"
+                            android:textSize="8.9sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/eighth_second_third_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.5dp"
+                        android:layout_toRightOf="@+id/eighth_second_second_layout"
+                        android:background="@mipmap/linebox_terms">
+
+                        <TextView
+                            android:id="@+id/electronic_finance_terms_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/notosanscjkkr_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="전자금융\n거래이용약관"
+                            android:textColor="@color/greyish"
+                            android:textSize="8.9sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/eighth_second_fourth_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.5dp"
+                        android:layout_toRightOf="@+id/eighth_second_third_layout"
+                        android:background="@mipmap/linebox_terms">
+
+                        <TextView
+                            android:id="@+id/location_terms_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/notosanscjkkr_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="위치정보\n이용약관"
+                            android:textColor="@color/greyish"
+                            android:textSize="8.9sp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/eighth_second_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/eighth_first_layout"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/terms_detail_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosanscjkkr_bold"
+                        android:includeFontPadding="false"
+                        android:text="(주)알텍"
+                        android:textColor="@color/grey"
+                        android:textSize="9sp" />
+
+                    <TextView
+                        android:id="@+id/company_info_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/terms_detail_text"
+                        android:fontFamily="@font/notosanscjkkr_bold"
+                        android:includeFontPadding="false"
+                        android:text="대표이사: 유한철\n사업자등록번호: 224-88-00394\n메일: artech5545@naver.com\n고객센터: 070-8676-1662\n주소: 경기도 용인시 수지구 신수로 767 분당수지유타워 지식산업센터\n호스팅서비스제공자: 알텍\n전자금융분쟁처리 Tel: 070-8676-1662 Fax: 070-8668-1880\n\n세미는 통신판매중개자이며 통신판매의 당사자가 아닙니다.\n따라서 세미는 상품거래정보 및 거래에 대한 책임을 지지 않습니다."
+                        android:textColor="@color/grey"
+                        android:textSize="9sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="@dimen/business_bottom_nav_height"
+                android:layout_below="@+id/sixth_layout"/>
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <View
+            android:id="@+id/line_view"
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="@color/warm_grey"/>
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_view"
+            app:itemBackground="@color/light_grey"
+            app:itemIconTint="@drawable/business_bottom_nav_button"
+            app:itemTextColor="@drawable/business_bottom_nav_button"
+            app:menu="@menu/business_navigation" />
+    </RelativeLayout>
+</RelativeLayout>

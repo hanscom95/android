@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Rangking</string>
+    <string name="crash_toast_text">Crash Report Send</string>
+</resources>

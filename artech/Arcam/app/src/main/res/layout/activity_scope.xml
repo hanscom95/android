@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/app_bar_scope"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer"
+        android:background="@android:color/white">
+    </android.support.design.widget.NavigationView>
+
+    <!--<android.support.design.widget.NavigationView
+        android:id="@+id/nav_right_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:fitsSystemWindows="true"
+        android:background="@android:color/black">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/menu_setting_layout"
+                android:layout_width="324dp"
+                android:layout_height="59dp"
+                android:layout_marginTop="22dp"
+                android:paddingLeft="46dp"
+                android:background="@color/greybox">
+                <ImageView
+                    android:id="@+id/menu_setting_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_setting2"/>
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/menu_setting_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:layout_marginLeft="26dp"
+                    android:layout_toRightOf="@+id/menu_setting_img"
+                    android:layout_toEndOf="@+id/menu_setting_img"
+                    android:layout_alignBottom="@+id/menu_setting_img"
+                    android:text="@string/menu_right_setting"
+                    android:textColor="@color/whitefont"
+                    android:textSize="16sp"
+                    app:font="Roboto_Regular.otf" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/line_setting"/>
+            <RelativeLayout
+                android:id="@+id/menu_mymenu_layout"
+                android:layout_width="324dp"
+                android:layout_height="59dp"
+                android:paddingLeft="46dp"
+                android:background="@color/blackline">
+                <ImageView
+                    android:id="@+id/menu_mymenu_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_mymenu"/>
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/menu_mymenu_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:layout_marginLeft="24dp"
+                    android:layout_toRightOf="@+id/menu_mymenu_img"
+                    android:layout_toEndOf="@+id/menu_mymenu_img"
+                    android:layout_alignBottom="@+id/menu_mymenu_img"
+                    android:text="@string/menu_right_mymenu"
+                    android:textColor="@color/whitefont"
+                    android:textSize="16sp"
+                    app:font="Roboto_Regular.otf" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="33dp"
+                    android:src="@mipmap/ic_keyboard_arrow_down"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/line_setting"/>
+            <RelativeLayout
+                android:id="@+id/menu_infoupdate_layout"
+                android:layout_width="324dp"
+                android:layout_height="59dp"
+                android:paddingLeft="46dp"
+                android:background="@color/greybox">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/menu_infoupdate_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:layout_marginLeft="48dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/menu_right_infoupdate"
+                    android:textColor="@color/whitefont"
+                    android:textSize="16sp"
+                    app:font="Roboto_Regular.otf" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/line_setting"/>
+            <RelativeLayout
+                android:id="@+id/menu_registraion_layout"
+                android:layout_width="324dp"
+                android:layout_height="59dp"
+                android:paddingLeft="46dp"
+                android:background="@color/greybox">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/menu_registraion_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:layout_marginLeft="48dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/menu_right_registraion"
+                    android:textColor="@color/whitefont"
+                    android:textSize="16sp"
+                    app:font="Roboto_Regular.otf" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/line_setting"/>
+            <RelativeLayout
+                android:id="@+id/menu_system_layout"
+                android:layout_width="324dp"
+                android:layout_height="59dp"
+                android:paddingLeft="46dp"
+                android:background="@color/blackline">
+                <ImageView
+                    android:id="@+id/menu_system_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_system"/>
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/menu_system_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:layout_marginLeft="26dp"
+                    android:layout_toRightOf="@+id/menu_system_img"
+                    android:layout_toEndOf="@+id/menu_system_img"
+                    android:layout_alignBottom="@+id/menu_system_img"
+                    android:text="@string/menu_right_system"
+                    android:textColor="@color/whitefont"
+                    android:textSize="16sp"
+                    app:font="Roboto_Regular.otf" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="33dp"
+                    android:src="@mipmap/ic_keyboard_arrow_down"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/line_setting"/>
+            <RelativeLayout
+                android:id="@+id/menu_service_layout"
+                android:layout_width="324dp"
+                android:layout_height="59dp"
+                android:paddingLeft="46dp"
+                android:background="@color/greybox">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/menu_service_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:layout_marginLeft="48dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/menu_right_service"
+                    android:textColor="@color/whitefont"
+                    android:textSize="16sp"
+                    app:font="Roboto_Regular.otf" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/line_setting"/>
+            <RelativeLayout
+                android:id="@+id/menu_report_layout"
+                android:layout_width="324dp"
+                android:layout_height="59dp"
+                android:paddingLeft="46dp"
+                android:background="@color/greybox">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/menu_report_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:layout_marginLeft="48dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/menu_right_report"
+                    android:textColor="@color/whitefont"
+                    android:textSize="16sp"
+                    app:font="Roboto_Regular.otf" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/line_setting"/>
+            <RelativeLayout
+                android:id="@+id/menu_about_layout"
+                android:layout_width="324dp"
+                android:layout_height="59dp"
+                android:paddingLeft="46dp"
+                android:background="@color/blackline">
+                <ImageView
+                    android:id="@+id/menu_about_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_company"/>
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/menu_about_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:layout_marginLeft="26dp"
+                    android:layout_toRightOf="@+id/menu_about_img"
+                    android:layout_toEndOf="@+id/menu_about_img"
+                    android:layout_alignBottom="@+id/menu_about_img"
+                    android:text="@string/menu_right_about"
+                    android:textColor="@color/whitefont"
+                    android:textSize="16sp"
+                    app:font="Roboto_Regular.otf" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="33dp"
+                    android:src="@mipmap/ic_keyboard_arrow_down"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/line_setting"/>
+            <RelativeLayout
+                android:id="@+id/menu_privacy_layout"
+                android:layout_width="324dp"
+                android:layout_height="59dp"
+                android:paddingLeft="46dp"
+                android:background="@color/greybox">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/menu_privacy_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:layout_marginLeft="48dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/menu_right_privacy"
+                    android:textColor="@color/whitefont"
+                    android:textSize="16sp"
+                    app:font="Roboto_Regular.otf" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/line_setting"/>
+            <RelativeLayout
+                android:id="@+id/menu_terms_service_layout"
+                android:layout_width="324dp"
+                android:layout_height="59dp"
+                android:paddingLeft="46dp"
+                android:background="@color/greybox">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/menu_terms_service_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:layout_marginLeft="48dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/menu_right_terms_service"
+                    android:textColor="@color/whitefont"
+                    android:textSize="16sp"
+                    app:font="Roboto_Regular.otf" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/line_setting"/>
+            <RelativeLayout
+                android:id="@+id/menu_logout_layout"
+                android:layout_width="324dp"
+                android:layout_height="59dp"
+                android:paddingLeft="46dp"
+                android:background="@color/blackline">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/menu_logout_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:layout_marginLeft="48dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/menu_right_logout"
+                    android:textColor="@color/whitefont"
+                    android:textSize="16sp"
+                    app:font="Roboto_Regular.otf" />
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.design.widget.NavigationView>-->
+
+</android.support.v4.widget.DrawerLayout>

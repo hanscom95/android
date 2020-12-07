@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.semi.normal.TalkWriteActivity"
+    tools:showIn="@layout/activity_talk_write"
+    android:background="@mipmap/bg_white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/first_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/notice_first_layout"
+                android:layout_width="match_parent"
+                android:layout_height="34.5dp">
+                <TextView
+                    android:id="@+id/notice_first_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.8dp"
+                    android:text="게시판을 선택해주세요."/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:rotation="90"
+                    android:src="@mipmap/chevron_right"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/input_line" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/notice_second_layout"
+                android:layout_width="match_parent"
+                android:layout_height="34.5dp"
+                android:layout_below="@+id/notice_first_layout"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/notice_second_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.8dp"
+                    android:text="게시판을 선택해주세요."/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:rotation="270"
+                    android:src="@mipmap/chevron_right"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/input_line" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/second_layout"
+            android:layout_width="match_parent"
+            android:layout_height="41.5sp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/first_layout">
+
+            <EditText
+                android:id="@+id/title_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:hint="제목을 입력해주세요"
+                android:gravity="left|center_vertical"
+                android:background="@null"
+                android:inputType="text|textMultiLine"
+                android:maxLength="50"
+                android:textColorHint="@color/greyish"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:fontFamily="@font/nanumgothic" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/input_line"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/second_loc_layout"
+            android:layout_width="match_parent"
+            android:layout_height="41.5sp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/second_layout">
+
+            <EditText
+                android:id="@+id/location_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:hint="위치를 입력해주세요"
+                android:gravity="left|center_vertical"
+                android:background="@null"
+                android:inputType="text|textMultiLine"
+                android:maxLength="50"
+                android:textColorHint="@color/greyish"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:fontFamily="@font/nanumgothic" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/input_line"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/third_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/second_loc_layout"
+            android:layout_above="@+id/fourth_layout">
+
+            <EditText
+                android:id="@+id/value_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:includeFontPadding="false"
+                android:hint="개인정보 및 중복게시글이 포함된 경우 삭제됩니다."
+                android:gravity="left|top"
+                android:background="@null"
+                android:inputType="text|textMultiLine"
+                android:maxLength="255"
+                android:textColorHint="@color/greyish"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:fontFamily="@font/nanumgothic" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/input_line"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/fourth_layout"
+            android:layout_width="match_parent"
+            android:layout_height="54.3dp"
+            android:layout_alignParentBottom="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15.5dp"
+                android:includeFontPadding="false"
+                android:text="게시물에 추가"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+            <ImageView
+                android:id="@+id/photo_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:src="@mipmap/ic_photo_3_c"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

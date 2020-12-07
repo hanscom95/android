@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="category">
+        <item>카테고리 선택</item>
+        <item>새상품</item>
+        <item>땡처리(핫딜)</item>
+        <item>재입고</item>
+        <!--<item>새상품</item>
+        <item>땡처리</item>
+        <item>재입고</item>
+        <item>1+1 특가</item>
+        <item>기타</item>-->
+    </string-array>
+
+    <string-array name="sale">
+        <item>선택</item>
+        <item>10%</item>
+        <item>20%</item>
+        <item>30%</item>
+        <item>40%</item>
+        <item>50%</item>
+    </string-array>
+
+    <string-array name="sale_unit1">
+        <item>선택</item>
+        <item>상자</item>
+        <item>통</item>
+    </string-array>
+
+    <string-array name="sale_unit2">
+        <item>선택</item>
+        <item>마리</item>
+        <item>갯수</item>
+        <item>그램</item>
+        <item>없음</item>
+    </string-array>
+
+    <string-array name="product_management_sort">
+        <item>최신순</item>
+        <item>구매순</item>
+        <item>인기순</item>
+    </string-array>
+
+    <string-array name="bank_code">
+        <item></item>
+        <item>국민은행</item>
+        <item>제일은행</item>
+        <item>경남은행</item>
+        <item>광주은행</item>
+        <item>기업은행</item>
+        <item>농협은행</item>
+        <item>대구은행</item>
+        <item>부산은행</item>
+        <item>산업은행</item>
+        <item>새마을금고</item>
+        <item>수협</item>
+        <item>신한은행</item>
+        <item>신협</item>
+        <item>씨티은행</item>
+        <item>외환은행</item>
+        <item>우리은행</item>
+        <item>우체국</item>
+        <item>전북은행</item>
+        <item>축협</item>
+        <item>카카오뱅크</item>
+        <item>케이뱅크</item>
+        <item>하나은행</item>
+    </string-array>
+
+    <string-array name="question">
+        <item>광고문의</item>
+        <item>가맹점 입점문의</item>
+        <item>회원정보</item>
+        <item>기타</item>
+    </string-array>
+
+    <string-array name="question_reply">
+        <item>연락처</item>
+        <item>이메일</item>
+    </string-array>
+</resources>

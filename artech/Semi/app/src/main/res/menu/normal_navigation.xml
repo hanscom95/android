@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@mipmap/ic_normal_uhome_nonpress"
+        android:title="@string/normal_home"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/navigation_basket"
+        android:icon="@mipmap/ic_menu_press"
+        android:title="@string/normal_basket"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/navigation_favorites"
+        android:icon="@mipmap/ic_heart_nonpress"
+        android:title="@string/normal_favorites"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/navigation_my_info"
+        android:icon="@mipmap/ic_normal_user_nonpress"
+        android:title="@string/normal_my_info"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/navigation_more"
+        android:icon="@mipmap/ic_normal_dots_3_nonpress"
+        android:title="@string/normal_more"
+        app:showAsAction="ifRoom" />
+
+</menu>

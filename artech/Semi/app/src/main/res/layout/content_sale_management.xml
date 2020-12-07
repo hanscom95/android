@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.semi.business.SaleManagementActivity"
+    tools:showIn="@layout/activity_sale_management"
+    android:background="@mipmap/bg_whitegray"
+    android:paddingBottom="@dimen/nav_padding_bottom">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/lavender"
+        app:tabIndicatorHeight="0.8dp">
+        <android.support.design.widget.TabItem
+            android:id="@+id/new_order_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="신규주문"/>
+        <android.support.design.widget.TabItem
+            android:id="@+id/ordering_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="판매중"/>
+        <android.support.design.widget.TabItem
+            android:id="@+id/sale_sucess_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="판매완료"/>
+        <android.support.design.widget.TabItem
+            android:id="@+id/cancel_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="취소요청"/>
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_below="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</RelativeLayout>

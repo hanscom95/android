@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<de.morrox.fontinator.FontCheckedTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="?android:attr/spinnerDropDownItemStyle"
+    android:id="@+id/list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ellipsize="marquee"
+    android:singleLine="true"
+    android:textColor="@color/bluegrayfont"
+    android:textSize="18sp"
+    app:font="NotoSansCJKkr_Regular.otf"/>
+

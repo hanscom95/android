@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/second_one_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:id="@+id/second_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28.33dp"
+            android:src="@mipmap/guide_img2"
+            android:layout_centerHorizontal="true" />
+        <RelativeLayout
+            android:id="@+id/second_text_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/second_img"
+            android:layout_marginTop="6dp"
+            android:layout_centerHorizontal="true">
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/second_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:text="@string/guide_second_text"
+                android:textSize="40sp"
+                android:textColor="@color/guide_text"
+                app:font="NotoSansCJKkr_Bold.otf" />
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/second_en_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/second_text"
+                android:layout_alignBottom="@+id/second_text"
+                android:layout_marginLeft="10dp"
+                android:text="@string/guide_second_en_text"
+                android:textSize="24sp"
+                android:textColor="@color/guide_grey"
+                app:font="NotoSansCJKkr_Bold.otf" />
+        </RelativeLayout>
+        <de.morrox.fontinator.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/second_text_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-0dp"
+            android:text="@string/guide_second_detail_text"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            app:font="NotoSansCJKkr_Medium.otf" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/second_two_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30.33dp"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout">
+            <ImageView
+                android:id="@+id/second_two_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/guide_img2_1" />
+            <RelativeLayout
+                android:id="@+id/second_two_text_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/second_two_img"
+                android:layout_marginTop="16dp">
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/second_two_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/guide_second_one_text"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/white"
+                    app:font="NotoSansCJKkr_Bold.otf" />
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/second_two_en_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/second_two_text"
+                    android:layout_alignBottom="@+id/second_two_text"
+                    android:layout_marginLeft="13dp"
+                    android:text="@string/guide_second_one_en_text"
+                    android:textSize="24sp"
+                    android:textColor="@color/guide_grey"
+                    app:font="NotoSansCJKkr_Bold.otf" />
+            </RelativeLayout>
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/second_two_detail_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/second_two_text_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-28dp"
+                android:text="@string/guide_second_one_detail_text"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:font="NotoSansCJKkr_Medium.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/relativeLayout"
+            android:layout_marginLeft="13dp">
+            <ImageView
+                android:id="@+id/third_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/guide_img2_2" />
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/third_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/third_img"
+                android:layout_marginTop="16dp"
+                android:text="@string/guide_second_two_text"
+                android:textSize="24sp"
+                android:textColor="@android:color/white"
+                app:font="NotoSansCJKkr_Bold.otf" />
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/fontTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/third_text"
+                android:layout_marginTop="-28dp"
+                android:text="@string/guide_second_two_detail_text"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:font="NotoSansCJKkr_Medium.otf" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

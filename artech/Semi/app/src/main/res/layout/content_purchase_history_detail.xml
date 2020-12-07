@@ -1,0 +1,1130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.semi.normal.PurchaseHistoryDetailActivity"
+    tools:showIn="@layout/activity_purchase_history_detail">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/first_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <RelativeLayout
+                android:id="@+id/phone_layout"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/info_layout">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true">
+                    <ImageView
+                        android:id="@+id/phone_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_call"/>
+                    <TextView
+                        android:id="@+id/phone_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/phone_img"
+                        android:layout_marginLeft="5.3dp"
+                        android:includeFontPadding="false"
+                        android:text="업체통화"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/notosanscjkkr_regular" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/info_layout"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true">
+                    <ImageView
+                        android:id="@+id/info_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_article"/>
+                    <TextView
+                        android:id="@+id/info_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/info_img"
+                        android:layout_marginLeft="6.5dp"
+                        android:includeFontPadding="false"
+                        android:text="업체정보"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/notosanscjkkr_regular" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/refund_layout"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/info_layout">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true">
+                    <ImageView
+                        android:id="@+id/refund_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_trash"/>
+                    <TextView
+                        android:id="@+id/refund_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/refund_img"
+                        android:layout_marginLeft="5.3dp"
+                        android:includeFontPadding="false"
+                        android:text="환불요청"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/notosanscjkkr_regular" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/info_layout"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="9dp"
+                android:background="@color/input_line"/>
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/info_layout"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="9dp"
+                android:background="@color/input_line"/>
+        </RelativeLayout>
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/first_layout">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/second_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:background="@mipmap/bg_whitegray">
+                    <artech.com.semi.utility.RoundRectCornerImageView
+                        android:id="@+id/main_img"
+                        android:layout_width="144.3dp"
+                        android:layout_height="138.3dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/third_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/second_layout"
+                    android:paddingLeft="16.8dp"
+                    android:paddingRight="16.5dp">
+                    <TextView
+                        android:id="@+id/title_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:includeFontPadding="false"
+                        android:text="title"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/nanumgothic" />
+                    <TextView
+                        android:id="@+id/price_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_text"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="9.3dp"
+                        android:includeFontPadding="false"
+                        android:text="0,000원"
+                        android:textColor="@android:color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/nanumgothic" />
+                    <RelativeLayout
+                        android:id="@+id/reservation_first_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        android:layout_below="@+id/price_text"
+                        android:layout_marginTop="20dp">
+                        <TextView
+                            android:id="@+id/reservation_date_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="예약날짜"
+                            android:textColor="@color/greyish"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/notosanscjkkr_medium" />
+                        <TextView
+                            android:id="@+id/reservation_date_value_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:includeFontPadding="false"
+                            android:text="0000년 00월 00일"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/nanumgothic" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/reservation_second_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        android:layout_below="@+id/reservation_first_layout">
+                        <TextView
+                            android:id="@+id/reservation_time_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="예약시간"
+                            android:textColor="@color/greyish"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/notosanscjkkr_medium" />
+                        <TextView
+                            android:id="@+id/reservation_time_value_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:includeFontPadding="false"
+                            android:text="오후 00:00"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/nanumgothic" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/reservation_third_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        android:layout_below="@+id/reservation_second_layout">
+                        <TextView
+                            android:id="@+id/reservation_name_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="예약자"
+                            android:textColor="@color/greyish"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/notosanscjkkr_medium" />
+                        <TextView
+                            android:id="@+id/reservation_name_value_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:includeFontPadding="false"
+                            android:text="홍길동"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/nanumgothic" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/reservation_fourth_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        android:layout_below="@+id/reservation_third_layout">
+                        <TextView
+                            android:id="@+id/reservation_amount_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="수량"
+                            android:textColor="@color/greyish"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/notosanscjkkr_medium" />
+                        <TextView
+                            android:id="@+id/reservation_amount_value_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:includeFontPadding="false"
+                            android:text="0개"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/nanumgothic" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/reservation_fifth_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        android:layout_below="@+id/reservation_fourth_layout">
+                        <TextView
+                            android:id="@+id/reservation_order_number_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="주문번호"
+                            android:textColor="@color/greyish"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/notosanscjkkr_medium" />
+                        <TextView
+                            android:id="@+id/reservation_order_number_value_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:includeFontPadding="false"
+                            android:text="00000000"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/nanumgothic" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/reservation_sixth_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        android:layout_below="@+id/reservation_fifth_layout">
+                        <TextView
+                            android:id="@+id/reservation_shop_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="교환처"
+                            android:textColor="@color/greyish"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/notosanscjkkr_medium" />
+                        <TextView
+                            android:id="@+id/reservation_shop_value_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:includeFontPadding="false"
+                            android:text="낚시방"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/nanumgothic" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/reservation_seventh_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        android:layout_below="@+id/reservation_sixth_layout">
+                        <TextView
+                            android:id="@+id/reservation_order_date_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="구매일"
+                            android:textColor="@color/greyish"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/notosanscjkkr_medium" />
+                        <TextView
+                            android:id="@+id/reservation_order_date_value_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:includeFontPadding="false"
+                            android:text="0000년 00월 00일"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/nanumgothic" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/reservation_eighth_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        android:layout_below="@+id/reservation_seventh_layout">
+                        <TextView
+                            android:id="@+id/reservation_status_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="상태"
+                            android:textColor="@color/greyish"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/notosanscjkkr_medium" />
+                        <TextView
+                            android:id="@+id/reservation_status_value_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:includeFontPadding="false"
+                            android:text="사용안함"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/nanumgothic" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/reservation_vbank_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        android:layout_below="@+id/reservation_eighth_layout"
+                        android:visibility="gone">
+                        <TextView
+                            android:id="@+id/reservation_vbank_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="은행"
+                            android:textColor="@color/greyish"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/notosanscjkkr_medium" />
+                        <TextView
+                            android:id="@+id/reservation_vbank_value_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:includeFontPadding="false"
+                            android:text="은행"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/nanumgothic" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/reservation_vbank_account_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        android:layout_below="@+id/reservation_vbank_layout"
+                        android:visibility="gone">
+                        <TextView
+                            android:id="@+id/reservation_vbank_account_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="계좌번호"
+                            android:textColor="@color/greyish"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/notosanscjkkr_medium" />
+                        <TextView
+                            android:id="@+id/reservation_vbank_account_value_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:includeFontPadding="false"
+                            android:textIsSelectable="true"
+                            android:text="000000"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/nanumgothic" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/reservation_ninth_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        android:layout_below="@+id/reservation_vbank_account_layout"
+                        android:visibility="gone">
+                        <TextView
+                            android:id="@+id/reservation_center_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="고객센터"
+                            android:textColor="@color/greyish"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/notosanscjkkr_medium" />
+                        <TextView
+                            android:id="@+id/reservation_one_to_one_text"
+                            android:layout_width="84.3dp"
+                            android:layout_height="28.5dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:background="@mipmap/btn_qna"
+                            android:text="1:1 문의하기"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/nanumgothic" />
+                        <TextView
+                            android:id="@+id/reservation_center_value_text"
+                            android:layout_width="84.3dp"
+                            android:layout_height="28.5dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/reservation_one_to_one_text"
+                            android:layout_marginRight="5.8dp"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:background="@mipmap/btn_qna"
+                            android:text="자주찾는질문"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/nanumgothic" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_below="@id/reservation_first_layout"
+                        android:background="@color/input_line" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_below="@id/reservation_second_layout"
+                        android:background="@color/input_line" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_below="@id/reservation_third_layout"
+                        android:background="@color/input_line" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_below="@id/reservation_fourth_layout"
+                        android:background="@color/input_line" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_below="@id/reservation_fifth_layout"
+                        android:background="@color/input_line" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_below="@id/reservation_sixth_layout"
+                        android:background="@color/input_line" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_below="@id/reservation_seventh_layout"
+                        android:background="@color/input_line" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_below="@id/reservation_eighth_layout"
+                        android:background="@color/input_line" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_below="@id/reservation_vbank_layout"
+                        android:background="@color/input_line" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_below="@id/reservation_vbank_account_layout"
+                        android:background="@color/input_line" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_below="@id/reservation_ninth_layout"
+                        android:background="@color/input_line" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fourth_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/third_layout"
+                    android:layout_marginTop="16.3dp">
+                    <Button
+                        android:id="@+id/success_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="상품 수령 완료"
+                        android:textSize="13sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/nanumgothic"
+                        android:background="@mipmap/btn_paymentprocessor"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/fifth_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fourth_layout"
+                    android:layout_marginTop="16.5dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/notice_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="27dp"
+                        android:layout_marginLeft="16dp"
+                        android:includeFontPadding="false"
+                        android:text="유의사항"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/nanumgothic" />
+
+                    <RelativeLayout
+                        android:id="@+id/notice_detail_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/notice_text"
+                        android:layout_alignLeft="@+id/notice_text"
+                        android:layout_marginTop="23dp">
+
+                        <RelativeLayout
+                            android:id="@+id/notice_first_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/first_dot_img"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tint="@color/greyish"
+                                android:src="@mipmap/dot_green"/>
+
+                            <TextView
+                                android:id="@+id/notice_first_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/first_dot_img"
+                                android:layout_marginLeft="8.8dp"
+                                android:includeFontPadding="false"
+                                android:text="제품이 미끼 상품일 경우, 직접수령을 원칙으로 하며\n다른 배송의 형태일 경우 당사와 판매회원은\n이로 인하여 발생된 손해에 대하여\n책임을 지지 않습니다."
+                                android:textColor="@color/light_black"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/nanumgothic" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/notice_second_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/notice_first_layout"
+                            android:layout_marginTop="17dp">
+
+                            <ImageView
+                                android:id="@+id/second_dot_img"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tint="@color/greyish"
+                                android:src="@mipmap/dot_green"/>
+
+                            <TextView
+                                android:id="@+id/notice_second_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/second_dot_img"
+                                android:layout_marginLeft="8.8dp"
+                                android:includeFontPadding="false"
+                                android:text="제품 수령시 : 제품 상태 확인 (이상 발견 시 교환)"
+                                android:textColor="@color/light_black"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/nanumgothic" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/notice_third_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/notice_second_layout"
+                            android:layout_marginTop="17dp">
+
+                            <ImageView
+                                android:id="@+id/third_dot_img"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tint="@color/greyish"
+                                android:src="@mipmap/dot_green"/>
+
+                            <TextView
+                                android:id="@+id/notice_third_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/third_dot_img"
+                                android:layout_marginLeft="8.8dp"
+                                android:includeFontPadding="false"
+                                android:text="결제 시 바우처를 제시해 주시면 됩니다."
+                                android:textColor="@color/light_black"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/nanumgothic" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/notice_fourth_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/notice_third_layout"
+                            android:layout_marginTop="17dp">
+
+                            <ImageView
+                                android:id="@+id/fourth_dot_img"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tint="@color/greyish"
+                                android:src="@mipmap/dot_green"/>
+
+                            <TextView
+                                android:id="@+id/notice_fourth_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/fourth_dot_img"
+                                android:layout_marginLeft="8.8dp"
+                                android:includeFontPadding="false"
+                                android:text="매장 상황에 따라 제품 판매여부가 상이할 수 있습니다."
+                                android:textColor="@color/light_black"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/nanumgothic" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/notice_fifth_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/notice_fourth_layout"
+                            android:layout_marginTop="17dp">
+
+                            <ImageView
+                                android:id="@+id/fifth_dot_img"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tint="@color/greyish"
+                                android:src="@mipmap/dot_green"/>
+
+                            <TextView
+                                android:id="@+id/notice_fifth_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/fifth_dot_img"
+                                android:layout_marginLeft="8.8dp"
+                                android:includeFontPadding="false"
+                                android:text="바우처 사용 시 가격 변동, 리뉴얼/단종 등이 될 수 있습니다."
+                                android:textColor="@color/light_black"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/nanumgothic" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/notice_sixth_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/notice_fifth_layout"
+                            android:layout_marginTop="17dp"
+                            android:layout_marginBottom="17dp">
+
+                            <ImageView
+                                android:id="@+id/sixth_dot_img"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tint="@color/greyish"
+                                android:src="@mipmap/dot_green"/>
+
+                            <TextView
+                                android:id="@+id/notice_sixth_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/sixth_dot_img"
+                                android:layout_marginLeft="8.8dp"
+                                android:includeFontPadding="false"
+                                android:text="이 경우 동일 금액의 타 상품으로교환이 가능하며, 구매하시고자\n하는 제품이 해당 금액보다 높을 경우 초과금액 결제 후 교환이\n가능합니다."
+                                android:textColor="@color/light_black"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/nanumgothic" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sixth_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fifth_layout"
+                    android:layout_marginTop="16.5dp"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:id="@+id/sixth_first_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/terms_main_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="22dp"
+                            android:layout_marginLeft="14dp"
+                            android:layout_marginBottom="21.8dp"
+                            android:includeFontPadding="false"
+                            android:text="교환, 반품, 취소 규정"
+                            android:textSize="13sp"
+                            android:textColor="@color/greyish_brown"
+                            android:fontFamily="@font/nanumgothic"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="17dp"
+                            android:tint="@color/greyish_brown"
+                            android:rotation="90"
+                            android:src="@mipmap/chevron_right_2"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:background="@color/input_line"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:layout_below="@+id/terms_main_text"
+                            android:background="@color/input_line"/>
+
+                    </RelativeLayout>
+
+                    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                        android:id="@+id/expandableLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        app:ael_expanded="false"
+                        app:ael_duration="500"
+                        app:ael_interpolator="bounce"
+                        app:ael_orientation="vertical">
+                        <RelativeLayout
+                            android:id="@+id/terms_title_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/terms_detail_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="22dp"
+                                android:layout_marginLeft="14dp"
+                                android:layout_marginBottom="21.8dp"
+                                android:includeFontPadding="false"
+                                android:text="교환, 반품, 취소 규정"
+                                android:textSize="13sp"
+                                android:textColor="@color/greyish_brown"
+                                android:fontFamily="@font/nanumgothic"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="17dp"
+                                android:tint="@color/greyish_brown"
+                                android:rotation="270"
+                                android:src="@mipmap/chevron_right_2"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/terms_title_layout"
+                            android:layout_marginTop="18.8dp">
+
+                            <TextView
+                                android:id="@+id/changing_impossible_title_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:includeFontPadding="false"
+                                android:text="교환 및 반품이 불가능한 경우"
+                                android:textSize="12sp"
+                                android:textColor="@color/dark_green"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/notosanscjkkr_medium"/>
+                            <TextView
+                                android:id="@+id/changing_impossible_contents_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/changing_impossible_title_text"
+                                android:layout_marginTop="13.8dp"
+                                android:layout_marginLeft="27.3dp"
+                                android:includeFontPadding="false"
+                                android:text="택배기사님의 부재, 폐문 등\n택배사고 시 발생되는 분쟁에는 불가\n\n수취인 정보를 잘못 기재해 상품이 미 배송된 경우\n\n교환 및 반품된 상품이 협의내용과 다를 경우\n\n단, 미끼상품은 제품특성상 생물이기 때문에 직접수령을\n원칙으로 하며, 수령 후 단순변심에 의한 경우는\n교환 및 반품이 불가합니다."
+                                android:textSize="12sp"
+                                android:textColor="@color/greyish_brown"
+                                android:fontFamily="@font/notosanscjkkr_medium"/>
+
+                            <TextView
+                                android:id="@+id/changing_possible_title_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="18.8dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_below="@+id/changing_impossible_contents_text"
+                                android:includeFontPadding="false"
+                                android:text="교환 및 반품이 불가능한 경우"
+                                android:textSize="12sp"
+                                android:textColor="@color/dark_green"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/notosanscjkkr_medium"/>
+                            <TextView
+                                android:id="@+id/changing_possible_contents_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/changing_possible_title_text"
+                                android:layout_marginTop="13.8dp"
+                                android:layout_marginLeft="27.3dp"
+                                android:includeFontPadding="false"
+                                android:text="받으신 상품 품질상 이상이나 문제가 있는 경우\n\n판매자의 실수로 상품이 오 발송 된 경우\n\n배송시 지정택배사의 실수로 제품이 손상된 경우"
+                                android:textSize="12sp"
+                                android:textColor="@color/greyish_brown"
+                                android:fontFamily="@font/notosanscjkkr_medium"/>
+
+                            <TextView
+                                android:id="@+id/changing_rule_title_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="18.8dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_below="@+id/changing_possible_contents_text"
+                                android:includeFontPadding="false"
+                                android:text="취소 및 환불 규정"
+                                android:textSize="12sp"
+                                android:textColor="@color/dark_green"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/notosanscjkkr_medium"/>
+                            <TextView
+                                android:id="@+id/changing_rule_contents_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/changing_rule_title_text"
+                                android:layout_marginTop="13.8dp"
+                                android:layout_marginLeft="27.3dp"
+                                android:includeFontPadding="false"
+                                android:text="수령예정일 기준 7일~3일 전 : 100% 환불\n\n수령예정일 기준 1일전 : 80% 환불\n\n수령예정일 당일 및 No-show : 환불불가"
+                                android:textSize="12sp"
+                                android:textColor="@color/greyish_brown"
+                                android:fontFamily="@font/notosanscjkkr_medium"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:layout_below="@+id/changing_rule_contents_text" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:background="@color/input_line"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/input_line"/>
+
+                    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/seventh_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:layout_below="@+id/sixth_layout"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white">
+                    <ImageView
+                        android:id="@+id/mistake_img"
+                        android:layout_width="16.3dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16.5dp"
+                        android:src="@mipmap/ic_guide_nonpress"/>
+
+                    <TextView
+                        android:id="@+id/mistake_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/mistake_img"
+                        android:layout_marginLeft="4.5dp"
+                        android:includeFontPadding="false"
+                        android:text="업체 정보가 잘못됐나요?"
+                        android:textColor="@color/black"
+                        android:textSize="10.5sp"
+                        android:fontFamily="@font/nanumgothic" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:background="@color/input_line"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/input_line"/>
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/eighth_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seventh_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="22.3dp">
+
+                    <RelativeLayout
+                        android:id="@+id/eighth_second_first_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/linebox_terms">
+
+                        <TextView
+                            android:id="@+id/terms_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/notosanscjkkr_regular"
+                            android:includeFontPadding="false"
+                            android:text="이용약관"
+                            android:textColor="@color/greyish"
+                            android:textSize="8.9sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/eighth_second_second_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.5dp"
+                        android:layout_toRightOf="@+id/eighth_second_first_layout"
+                        android:background="@mipmap/linebox_terms">
+
+                        <TextView
+                            android:id="@+id/individual_terms_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/notosanscjkkr_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="개인정보\n처리방침"
+                            android:textColor="@color/greyish"
+                            android:textSize="8.9sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/eighth_second_third_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.5dp"
+                        android:layout_toRightOf="@+id/eighth_second_second_layout"
+                        android:background="@mipmap/linebox_terms">
+
+                        <TextView
+                            android:id="@+id/electronic_finance_terms_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/notosanscjkkr_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="전자금융\n거래이용약관"
+                            android:textColor="@color/greyish"
+                            android:textSize="8.9sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/eighth_second_fourth_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.5dp"
+                        android:layout_toRightOf="@+id/eighth_second_third_layout"
+                        android:background="@mipmap/linebox_terms">
+
+                        <TextView
+                            android:id="@+id/location_terms_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/notosanscjkkr_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="위치정보\n이용약관"
+                            android:textColor="@color/greyish"
+                            android:textSize="8.9sp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/company_etc_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/eighth_layout"
+                    android:layout_below="@+id/eighth_layout"
+                    android:layout_marginTop="16dp"
+                    android:includeFontPadding="false"
+                    android:text="(주)알텍은 통신판매중개자로서 통신판매의 당사자가 아니며,\n상품의 예약, 이용 및 환불 등과 관련된 의무와 책임은 각 판매자에게 있습니다."
+                    android:textColor="@color/greyish"
+                    android:textSize="9sp"
+                    android:fontFamily="@font/nanumgothic" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_below="@+id/company_etc_text"/>
+            </RelativeLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.manager.MainActivity"
+    tools:showIn="@layout/app_bar_main"
+    tools:layout_editor_absoluteY="89dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:src="@mipmap/logo_main"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintTop_creator="1"
+        android:id="@+id/imageView2" />
+
+    <RelativeLayout
+        android:id="@+id/guide_button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:background="@mipmap/btn1_education"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_archery_white"
+            android:clickable="false"
+            android:layout_marginTop="33dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/education_image" />
+
+        <de.morrox.fontinator.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_below="@+id/education_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+            android:clickable="false"
+            android:text="단체교육 및 주의사항"
+            android:textSize="32sp"
+            android:textColor="@android:color/white"
+            app:font="NotoSansCJKkr_Medium.otf"
+            android:id="@+id/education_first_text" />
+
+        <de.morrox.fontinator.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:clickable="false"
+            android:text="안전하고 즐거운 양궁게임을 위한\n안내입니다. 꼭 지켜주세요."
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            app:font="NotoSansCJKkr_Medium.otf"
+            android:layout_below="@+id/education_first_text"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ranking_button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:background="@mipmap/btn2_ranking"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/guide_button_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.822">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_rank_white"
+            android:clickable="false"
+            android:layout_marginTop="59dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/ranking_img" />
+
+        <de.morrox.fontinator.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_below="@+id/ranking_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+            android:clickable="false"
+            android:text="랭킹"
+            android:textSize="32sp"
+            android:textColor="@android:color/white"
+            app:font="NotoSansCJKkr_Medium.otf"
+            android:id="@+id/ranking_text" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tournament_button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:background="@mipmap/btn2_ranking"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/guide_button_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.821"
+        android:layout_marginLeft="381dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_tournament_white"
+            android:clickable="false"
+            android:layout_marginTop="59dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tournament_img" />
+
+        <de.morrox.fontinator.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_below="@+id/tournament_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+            android:clickable="false"
+            android:text="토너먼트"
+            android:textSize="32sp"
+            android:textColor="@android:color/white"
+            app:font="NotoSansCJKkr_Medium.otf"
+            android:id="@+id/tournament_text" />
+
+    </RelativeLayout>
+
+
+    <de.morrox.fontinator.FontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:gravity="center"
+        android:clickable="false"
+        android:text="@string/app_version"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        app:font="NotoSansCJKkr_Medium.otf"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</android.support.constraint.ConstraintLayout>

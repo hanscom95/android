@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/product_select_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:includeFontPadding="false"
+        android:text="상품 선택하기"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:fontFamily="@font/notosanscjkkr_regular"/>
+
+    <ImageView
+        android:id="@+id/close_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="17.3dp"
+        android:src="@mipmap/ic_close"/>
+
+    <RelativeLayout
+        android:id="@+id/item_detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:layout_marginTop="17.5dp"
+        android:layout_below="@+id/product_select_title"
+        android:background="#fafafa">
+        <TextView
+            android:id="@+id/product_contents_text"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14.8dp"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:text="미끼 혼무시 가나다라마바사\n아자차카타파하"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nanumgothic"/>
+
+        <RelativeLayout
+            android:id="@+id/item_price_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16.3dp">
+
+
+            <TextView
+                android:id="@+id/item_discount_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:textSize="9sp"
+                android:textColor="@color/light_red"
+                android:text="00% 할인"
+                android:textStyle="bold"
+                android:fontFamily="@font/nanumgothic"/>
+
+            <TextView
+                android:id="@+id/item_price_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/item_discount_text"
+                android:layout_marginLeft="8.5dp"
+                android:includeFontPadding="false"
+                android:textSize="16.3sp"
+                android:textColor="@color/black"
+                android:text="0,000원"
+                android:textStyle="bold"
+                android:fontFamily="@font/nanumgothic"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/item_default_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2.5dp"
+            android:layout_alignRight="@+id/item_price_layout"
+            android:layout_above="@+id/item_price_layout">
+
+            <TextView
+                android:id="@+id/item_default_price_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:textSize="12sp"
+                android:textColor="@color/grey"
+                android:text="0,000원"
+                android:fontFamily="@font/nanumgothic"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dp"
+                android:layout_centerVertical="true"
+                android:layout_alignLeft="@+id/item_default_price_text"
+                android:layout_alignRight="@+id/item_default_price_text"
+                android:background="@color/grey"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/item_value_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_detail_layout"
+        android:layout_marginTop="28.3dp">
+
+        <TextView
+            android:id="@+id/item_value_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:includeFontPadding="false"
+            android:text="수량선택"
+            android:textColor="@color/black"
+            android:textSize="16.3sp"
+            android:fontFamily="@font/nanumgothic"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/item_value_title_text"
+            android:layout_marginTop="10dp">
+            <ImageView
+                android:id="@+id/minus_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_minus_nonpress"/>
+
+            <TextView
+                android:id="@+id/item_value_text"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/minus_img"
+                android:layout_marginLeft="66.5dp"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="22.5sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/nanumgothic"/>
+            <ImageView
+                android:id="@+id/plus_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/item_value_text"
+                android:layout_marginLeft="65.5dp"
+                android:src="@mipmap/ic_plus_press"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/buying_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_value_layout"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="20.8dp"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/btn_paymentprocessor"
+        android:text="구매하기"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/nanumgothic"/>
+</RelativeLayout>

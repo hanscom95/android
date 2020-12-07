@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.semi.normal.PrivacyActivity"
+    tools:showIn="@layout/activity_privacy"
+    android:background="@color/white">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8.5dp"
+        android:layout_marginRight="8.5dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:id="@+id/privacy_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="@string/privacy_use"
+            android:textSize="12sp"
+            android:textColor="@color/greyish"
+            android:fontFamily="@font/nanumgothic"/>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/guide8_one_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/guide8_one_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img16_sight" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="58dp"
+            android:layout_below="@+id/guide8_one_img"
+            android:layout_centerHorizontal="true">
+            <de.morrox.fontinator.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@string/guide_six_text"
+                android:textSize="36sp"
+                android:textColor="@android:color/white"
+                app:font="NotoSansCJKkr_Medium.otf" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

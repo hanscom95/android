@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="31.67dp">
+
+    <ImageView
+        android:id="@+id/sixth_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/guide_img6"
+        android:layout_centerHorizontal="true" />
+    <RelativeLayout
+        android:id="@+id/sixth_text_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sixth_img"
+        android:layout_centerHorizontal="true">
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/sixth_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:text="@string/guide_sixth_text"
+            android:textSize="40sp"
+            android:textColor="@color/guide_text"
+            app:font="NotoSansCJKkr_Bold.otf" />
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/sixth_en_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/sixth_text"
+            android:layout_alignBottom="@+id/sixth_text"
+            android:layout_marginLeft="13dp"
+            android:text="@string/guide_sixth_en_text"
+            android:textSize="24sp"
+            android:textColor="@color/guide_grey"
+            app:font="NotoSansCJKkr_Bold.otf" />
+    </RelativeLayout>
+    <de.morrox.fontinator.FontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sixth_text_layout"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="-0dp"
+        android:text="@string/guide_sixth_detail_text"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        app:font="NotoSansCJKkr_Medium.otf" />
+</RelativeLayout>

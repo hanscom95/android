@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:drawable="@drawable/board_regular_state_two"
+        android:state_checked="true"
+        android:state_pressed="true" />
+    <item
+        android:drawable="@drawable/board_rectangle_selecotr_two"
+        android:state_pressed="true" />
+    <item
+        android:drawable="@drawable/board_rectangle_selecotr_two"
+        android:state_checked="true" />
+    <item
+        android:drawable="@drawable/board_regular_state_two" />
+</selector>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:drawable="@mipmap/ic_w_wind_four_press" android:state_checked="false" />
+    <item android:state_checked="true">
+        <bitmap android:src="@mipmap/ic_w_wind_four_press" android:tint="@color/bluebg"/>
+    </item>
+    <item android:drawable="@mipmap/ic_w_wind_four_press" />
+</selector>

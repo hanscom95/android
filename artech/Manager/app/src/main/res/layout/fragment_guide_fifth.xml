@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/guide_fifth_1_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/img_stance3"
+        android:layout_marginTop="41dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <ImageView
+        android:id="@+id/guide_fifth_1_shadow_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/shadowbox"
+        android:layout_alignBottom="@+id/guide_fifth_1_img"
+        android:layout_centerHorizontal="true" />
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/guide_fifth_1_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/guide_fifth_1_shadow_img"
+        android:layout_alignLeft="@+id/guide_fifth_1_shadow_img"
+        android:layout_marginLeft="18dp"
+        android:includeFontPadding="false"
+        android:gravity="left"
+        android:text="@string/guide_fifth_1_title"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:font="NotoSansCJKkr_Medium.otf" />
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/guide_fifth_1_contents_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/guide_fifth_1_title_text"
+        android:layout_below="@+id/guide_fifth_1_title_text"
+        android:includeFontPadding="false"
+        android:gravity="left"
+        android:text="@string/guide_fifth_1_contents"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:font="NotoSansCJKkr_Medium.otf" />
+
+    <ImageView
+        android:id="@+id/guide_fifth_2_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/img_stance4"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/guide_fifth_1_img"
+        android:layout_centerHorizontal="true" />
+    <ImageView
+        android:id="@+id/guide_fifth_2_shadow_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/shadowbox"
+        android:layout_alignBottom="@+id/guide_fifth_2_img"
+        android:layout_centerHorizontal="true" />
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/guide_fifth_2_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/guide_fifth_2_shadow_img"
+        android:layout_alignLeft="@+id/guide_fifth_2_shadow_img"
+        android:layout_marginLeft="18dp"
+        android:includeFontPadding="false"
+        android:gravity="left"
+        android:text="@string/guide_fifth_2_title"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:font="NotoSansCJKkr_Medium.otf" />
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/guide_fifth_2_contents_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/guide_fifth_2_title_text"
+        android:layout_below="@+id/guide_fifth_2_title_text"
+        android:includeFontPadding="false"
+        android:gravity="left"
+        android:text="@string/guide_fifth_2_contents"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:font="NotoSansCJKkr_Medium.otf" />
+</RelativeLayout>

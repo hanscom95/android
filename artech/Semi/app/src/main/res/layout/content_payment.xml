@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.semi.normal.PaymentActivity"
+    tools:showIn="@layout/activity_payment"
+    android:background="@mipmap/bg_white"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <RelativeLayout
+                android:id="@+id/first_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18.8dp"
+                android:layout_marginLeft="18.3dp">
+                <TextView
+                    android:id="@+id/date_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="수령 날짜 및 시간 선택"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/notosanscjkkr_bold" />
+
+                <RelativeLayout
+                    android:id="@+id/date_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/date_title_text"
+                    android:layout_marginTop="10dp"
+                    android:background="@mipmap/box_date">
+
+                    <TextView
+                        android:id="@+id/date_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="18dp"
+                        android:includeFontPadding="false"
+                        android:text="날짜"
+                        android:textColor="@color/soft_grey"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/notosanscjkkr_medium" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/date_text"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:id="@+id/month_date_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="00.00"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/nanumgothic" />
+
+                        <View
+                            android:id="@+id/date_line_view"
+                            android:layout_width="0.8dp"
+                            android:layout_height="12.3dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/month_date_text"
+                            android:layout_marginLeft="10.3dp"
+                            android:background="@color/soft_grey"/>
+                        <TextView
+                            android:id="@+id/day_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/date_line_view"
+                            android:layout_marginLeft="9.8dp"
+                            android:includeFontPadding="false"
+                            android:text="요일"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/nanumgothic" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/time_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/date_layout"
+                    android:layout_alignTop="@+id/date_layout"
+                    android:layout_marginLeft="3.5dp"
+                    android:background="@mipmap/box_time">
+
+                    <TextView
+                        android:id="@+id/time_title_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="18dp"
+                        android:includeFontPadding="false"
+                        android:text="시간"
+                        android:textColor="@color/soft_grey"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/notosanscjkkr_medium" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/time_title_text"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:id="@+id/half_day_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="오전"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/nanumgothic" />
+
+                        <View
+                            android:id="@+id/time_line_view"
+                            android:layout_width="0.8dp"
+                            android:layout_height="12.3dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/half_day_text"
+                            android:layout_marginLeft="13dp"
+                            android:background="@color/soft_grey"/>
+                        <TextView
+                            android:id="@+id/time_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/time_line_view"
+                            android:layout_marginLeft="11.5dp"
+                            android:includeFontPadding="false"
+                            android:text="00:00"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/nanumgothic" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/first_line"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_below="@+id/first_layout"
+                android:layout_marginTop="16dp"
+                android:background="@color/menu_gray"/>
+
+            <RelativeLayout
+                android:id="@+id/second_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first_line"
+                android:layout_marginTop="19dp"
+                android:layout_marginLeft="18.3dp">
+                <TextView
+                    android:id="@+id/booker_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="구매자 정보"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/notosanscjkkr_bold" />
+
+                <RelativeLayout
+                    android:id="@+id/booker_name_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/booker_title_text"
+                    android:layout_marginTop="18.8dp">
+
+                    <TextView
+                        android:id="@+id/booker_name_title_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="구매자 이름"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/nanumgothic" />
+
+                    <RelativeLayout
+                        android:layout_width="318dp"
+                        android:layout_height="41.3dp"
+                        android:layout_below="@+id/booker_name_title_text"
+                        android:layout_marginTop="7.3dp"
+                        android:background="@mipmap/box_input">
+                        <EditText
+                            android:id="@+id/booker_name_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="17.5dp"
+                            android:paddingRight="17.5dp"
+                            android:includeFontPadding="false"
+                            android:background="@null"
+                            android:inputType="text"
+                            android:hint="구매자명을 입력해주세요."
+                            android:textColorHint="@color/warm_grey"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/nanumgothic" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/booker_phone_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/booker_name_layout"
+                    android:layout_marginTop="22.3dp">
+
+                    <TextView
+                        android:id="@+id/booker_phone_title_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="휴대폰 번호"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/nanumgothic" />
+
+                    <RelativeLayout
+                        android:layout_width="318dp"
+                        android:layout_height="41.3dp"
+                        android:layout_below="@+id/booker_phone_title_text"
+                        android:layout_marginTop="7.3dp"
+                        android:background="@mipmap/box_input">
+                        <EditText
+                            android:id="@+id/booker_phone_edit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="17.5dp"
+                            android:paddingRight="17.5dp"
+                            android:includeFontPadding="false"
+                            android:background="@null"
+                            android:inputType="phone"
+                            android:textColorHint="@color/warm_grey"
+                            android:hint="휴대폰 번호를 입력하세요.(예시:01012345678)"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:maxLength="11"
+                            android:fontFamily="@font/nanumgothic" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/third_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/second_layout"
+                android:layout_marginTop="36.5dp"
+                android:background="@mipmap/discountbox">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="8.8dp"
+                    android:paddingBottom="8.5dp">
+                    <RelativeLayout
+                        android:id="@+id/discount_coupon_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/img_couponbox">
+                        <TextView
+                            android:id="@+id/discount_coupon_title_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12.3dp"
+                            android:layout_marginLeft="13.5dp"
+                            android:includeFontPadding="false"
+                            android:text="할인 쿠폰"
+                            android:textColor="@color/black"
+                            android:textSize="14.4sp"
+                            android:fontFamily="@font/notosanscjkkr_medium" />
+
+                        <RelativeLayout
+                            android:id="@+id/coupon_value_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/discount_coupon_title_text"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="13.5dp">
+                            <TextView
+                                android:id="@+id/coupon_title_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:includeFontPadding="false"
+                                android:text="보유 쿠폰"
+                                android:textColor="@color/warm_grey"
+                                android:textSize="12.1sp"
+                                android:fontFamily="@font/notosanscjkkr_regular" />
+
+                            <View
+                                android:id="@+id/coupon_line"
+                                android:layout_width="1dp"
+                                android:layout_height="11dp"
+                                android:layout_toRightOf="@+id/coupon_title_text"
+                                android:layout_marginLeft="14.8dp"
+                                android:layout_centerVertical="true"
+                                android:background="@color/warm_grey"/>
+
+                            <TextView
+                                android:id="@+id/coupon_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/coupon_line"
+                                android:layout_marginLeft="64dp"
+                                android:includeFontPadding="false"
+                                android:text="0매"
+                                android:textColor="@color/greenblue"
+                                android:textSize="14.5sp"
+                                android:fontFamily="@font/notosanscjkkr_regular" />
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/coupon_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/coupon_value_layout"
+                            android:layout_marginTop="9dp"
+                            android:layout_marginBottom="4.8dp"
+                            android:background="@mipmap/box_use_press"
+                            android:text="사용하기"
+                            android:textColor="@color/greenblue"
+                            android:textSize="14.5sp"
+                            android:fontFamily="@font/notosanscjkkr_regular" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/point_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/img_couponbox"
+                        android:layout_toRightOf="@+id/discount_coupon_layout"
+                        android:layout_marginLeft="4.8dp">
+                        <TextView
+                            android:id="@+id/point_title_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12.3dp"
+                            android:layout_marginLeft="13.5dp"
+                            android:includeFontPadding="false"
+                            android:text="적립금 사용"
+                            android:textColor="@color/black"
+                            android:textSize="14.4sp"
+                            android:fontFamily="@font/notosanscjkkr_medium" />
+
+                        <RelativeLayout
+                            android:id="@+id/point_value_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/point_title_text"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="13.5dp">
+                            <TextView
+                                android:id="@+id/point_value_title_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:includeFontPadding="false"
+                                android:text="보유 포인트"
+                                android:textColor="@color/warm_grey"
+                                android:textSize="12.1sp"
+                                android:fontFamily="@font/notosanscjkkr_regular" />
+
+                            <View
+                                android:id="@+id/point_line"
+                                android:layout_width="1dp"
+                                android:layout_height="11dp"
+                                android:layout_toRightOf="@+id/point_value_title_text"
+                                android:layout_marginLeft="19.5dp"
+                                android:layout_centerVertical="true"
+                                android:background="@color/warm_grey"/>
+
+                            <TextView
+                                android:id="@+id/point_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/point_line"
+                                android:layout_marginLeft="46.8dp"
+                                android:includeFontPadding="false"
+                                android:text="0P"
+                                android:textColor="@color/greenblue"
+                                android:textSize="14.5sp"
+                                android:fontFamily="@font/notosanscjkkr_regular" />
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/point_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/point_value_layout"
+                            android:layout_marginTop="9dp"
+                            android:layout_marginBottom="4.8dp"
+                            android:background="@mipmap/box_use_press"
+                            android:text="사용하기"
+                            android:textColor="@color/greenblue"
+                            android:textSize="14.5sp"
+                            android:fontFamily="@font/notosanscjkkr_regular" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/fourth_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/third_layout"
+                android:layout_marginTop="29dp"
+                android:layout_marginLeft="18.3dp">
+                <TextView
+                    android:id="@+id/payment_info_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="결제 정보"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/notosanscjkkr_bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="18.3dp"
+                    android:layout_marginTop="18.8dp"
+                    android:layout_below="@+id/payment_info_text">
+
+                    <RelativeLayout
+                        android:id="@+id/payment_info_first_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/reservation_amount_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="구매금액"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/nanumgothic" />
+
+                        <TextView
+                            android:id="@+id/reservation_amount_value_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:textStyle="bold"
+                            android:text="0원"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/nanumgothic" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/payment_info_second_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/payment_info_first_layout"
+                        android:layout_marginTop="20dp">
+                        <TextView
+                            android:id="@+id/discount_amount_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="할인금액"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/nanumgothic" />
+
+                        <TextView
+                            android:id="@+id/discount_amount_value_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:textStyle="bold"
+                            android:text="0원"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/nanumgothic" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/payment_info_third_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/payment_info_second_layout"
+                        android:layout_marginTop="25.3dp">
+                        <TextView
+                            android:id="@+id/total_amount_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="총 결제금액"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/nanumgothic" />
+                        <TextView
+                            android:id="@+id/vat_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/total_amount_text"
+                            android:layout_alignBottom="@+id/total_amount_text"
+                            android:layout_marginLeft="4.8dp"
+                            android:includeFontPadding="false"
+                            android:text="(VAT포함)"
+                            android:textColor="@color/black"
+                            android:textSize="9sp"
+                            android:fontFamily="@font/nanumgothic" />
+
+                        <TextView
+                            android:id="@+id/total_amount_value_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:textStyle="bold"
+                            android:text="0원"
+                            android:textColor="@color/light_red"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/nanumgothic" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/second_line"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_below="@+id/fourth_layout"
+                android:layout_marginTop="20.5dp"
+                android:background="@color/menu_gray"/>
+
+            <RelativeLayout
+                android:id="@+id/fifth_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/second_line"
+                android:layout_marginTop="25.3dp"
+                android:layout_marginLeft="18.3dp">
+                <TextView
+                    android:id="@+id/payment_method_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="결제 수단"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/notosanscjkkr_bold" />
+
+                <CheckBox
+                    android:id="@+id/un_bank_book_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/payment_method_text"
+                    android:layout_marginTop="20.3dp"
+                    android:background="@drawable/payment_method_button"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="무통장 입금"
+                    android:textSize="13sp"
+                    android:textColor="@drawable/payment_method_text_color"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nanumgothic"/>
+
+                <CheckBox
+                    android:id="@+id/credit_card_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/un_bank_book_checkbox"
+                    android:layout_marginTop="19dp"
+                    android:background="@drawable/payment_method_button"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="신용카드"
+                    android:textSize="13sp"
+                    android:textColor="@drawable/payment_method_text_color"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nanumgothic"/>
+
+                <CheckBox
+                    android:id="@+id/mobile_billing_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/credit_card_checkbox"
+                    android:layout_marginTop="19dp"
+                    android:background="@drawable/payment_method_button"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="휴대폰 결제"
+                    android:textSize="13sp"
+                    android:textColor="@drawable/payment_method_text_color"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nanumgothic"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/sixth_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fifth_layout"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="18.3dp">
+                <TextView
+                    android:id="@+id/benefits_guide_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="혜택 안내"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/notosanscjkkr_bold" />
+
+
+                <TextView
+                    android:id="@+id/un_bank_book_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/benefits_guide_text"
+                    android:layout_marginTop="12.5dp"
+                    android:includeFontPadding="false"
+                    android:text="· 무통장 입금"
+                    android:textColor="@color/warm_grey"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nanumgothic" />
+
+                <TextView
+                    android:id="@+id/un_bank_book_detail_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/un_bank_book_text"
+                    android:layout_marginTop="6.3dp"
+                    android:layout_marginLeft="10.2dp"
+                    android:includeFontPadding="false"
+                    android:text="5만원 이상 결제시 5천원 선착순 페이백"
+                    android:textColor="@color/warm_grey"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/nanumgothic" />
+
+
+                <TextView
+                    android:id="@+id/credit_card_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/un_bank_book_detail_text"
+                    android:layout_marginTop="19dp"
+                    android:includeFontPadding="false"
+                    android:text="· 신용카드"
+                    android:textColor="@color/warm_grey"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nanumgothic" />
+
+                <TextView
+                    android:id="@+id/credit_card_detail_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/credit_card_text"
+                    android:layout_marginTop="6.3dp"
+                    android:layout_marginLeft="10.2dp"
+                    android:includeFontPadding="false"
+                    android:text="5만원 이상부터 할부 가능하며, 사용실적 및 카드사 혜택에 따라 무이자 할부가 가능합니다."
+                    android:textColor="@color/warm_grey"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/nanumgothic" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/third_line"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_below="@+id/sixth_layout"
+                android:layout_marginTop="22dp"
+                android:background="@color/menu_gray"/>
+
+            <RelativeLayout
+                android:id="@+id/seventh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/third_line"
+                android:layout_marginTop="20.8dp"
+                android:layout_marginLeft="18.3dp"
+                android:layout_marginRight="18.3dp">
+
+                <RelativeLayout
+                    android:id="@+id/seventh_detail_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9.3dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white">
+                    <CheckBox
+                        android:id="@+id/terms_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginBottom="21.8dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_toLeftOf="@+id/terms_arrow_img"
+                        android:paddingLeft="9dp"
+                        android:buttonTint="@color/aqua_marine"
+                        android:includeFontPadding="false"
+                        android:text="이용 규정, 개인정보 수집 및 이용, 개인정보 제 3자 제공 동의(필수)"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/nanumgothic"/>
+
+                    <ImageView
+                        android:id="@+id/terms_arrow_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="17dp"
+                        android:tint="@color/greyish_brown"
+                        android:rotation="270"
+                        android:src="@mipmap/chevron_right_2"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:background="@color/input_line"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_below="@+id/terms_text"
+                        android:background="@color/input_line"/>
+
+                </RelativeLayout>
+
+                <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                    android:id="@+id/expandableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9.3dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    app:ael_expanded="false"
+                    app:ael_duration="500"
+                    app:ael_interpolator="bounce"
+                    app:ael_orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/expandable_first_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white">
+                        <CheckBox
+                            android:id="@+id/first_terms_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="22dp"
+                            android:layout_marginLeft="14dp"
+                            android:layout_marginBottom="21.8dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_toLeftOf="@+id/first_arrow_img"
+                            android:paddingLeft="9dp"
+                            android:buttonTint="@color/aqua_marine"
+                            android:includeFontPadding="false"
+                            android:text="이용 규정, 개인정보 수집 및 이용, 개인정보 제 3자 제공 동의(필수)"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/nanumgothic"/>
+
+                        <ImageView
+                            android:id="@+id/first_arrow_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="17dp"
+                            android:tint="@color/greyish_brown"
+                            android:rotation="90"
+                            android:src="@mipmap/chevron_right_2"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:background="@color/input_line"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:layout_below="@+id/first_terms_text"
+                            android:background="@color/input_line"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/expandable_second_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/expandable_first_layout"
+                        android:background="@color/white">
+                        <CheckBox
+                            android:id="@+id/second_terms_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginLeft="43dp"
+                            android:layout_marginBottom="11dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_toLeftOf="@+id/second_arrow_img"
+                            android:paddingLeft="9dp"
+                            android:buttonTint="@color/aqua_marine"
+                            android:includeFontPadding="false"
+                            android:text="이용 규칙 및 취소/환불규정 동의"
+                            android:textSize="9sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/nanumgothic"/>
+
+                        <ImageView
+                            android:id="@+id/second_arrow_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="17dp"
+                            android:tint="@color/greyish_brown"
+                            android:rotation="270"
+                            android:src="@mipmap/chevron_right_2"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:background="@color/input_line"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:layout_below="@+id/second_terms_text"
+                            android:background="@color/input_line"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/expandable_third_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/expandable_second_layout"
+                        android:background="@color/white">
+                        <CheckBox
+                            android:id="@+id/third_terms_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginLeft="43dp"
+                            android:layout_marginBottom="11dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_toLeftOf="@+id/third_arrow_img"
+                            android:paddingLeft="9dp"
+                            android:buttonTint="@color/aqua_marine"
+                            android:includeFontPadding="false"
+                            android:text="개인정보 수집 및 이용 동의"
+                            android:textSize="9sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/nanumgothic"/>
+
+                        <ImageView
+                            android:id="@+id/third_arrow_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="17dp"
+                            android:tint="@color/greyish_brown"
+                            android:rotation="270"
+                            android:src="@mipmap/chevron_right_2"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:background="@color/input_line"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:layout_below="@+id/third_terms_text"
+                            android:background="@color/input_line"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/expandable_fourth_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/expandable_third_layout"
+                        android:background="@color/white">
+                        <CheckBox
+                            android:id="@+id/fourth_terms_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginLeft="43dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginBottom="11dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_toLeftOf="@+id/fourth_arrow_img"
+                            android:paddingLeft="9dp"
+                            android:buttonTint="@color/aqua_marine"
+                            android:includeFontPadding="false"
+                            android:text="개인정보 제 3자 제공 동의"
+                            android:textSize="9sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/nanumgothic"/>
+
+                        <ImageView
+                            android:id="@+id/fourth_arrow_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="17dp"
+                            android:tint="@color/greyish_brown"
+                            android:rotation="270"
+                            android:src="@mipmap/chevron_right_2"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:background="@color/input_line"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:layout_below="@+id/fourth_terms_text"
+                            android:background="@color/input_line"/>
+
+                    </RelativeLayout>
+                </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/eighth_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seventh_layout"
+                android:layout_marginTop="18.5dp"
+                android:layout_marginLeft="18.3dp"
+                android:layout_marginRight="18.3dp"
+                android:layout_marginBottom="130dp">
+
+                <TextView
+                    android:id="@+id/payment_terms_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="(주)알텍은 통신판매중개자로서 통신판매의 당사자가 아니며.\n상품의 예약, 이용 및 환불 등과 관련된 의무와 책임은 각 판매자에게 있습니다."
+                    android:textColor="@color/warm_grey"
+                    android:textSize="9sp"
+                    android:fontFamily="@font/nanumgothic" />
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/payment_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/eighth_layout"
+                android:layout_marginTop="25.5dp"
+                android:layout_marginBottom="41.5dp"
+                android:background="@mipmap/btn_paymentprocessor"
+                android:text="결제하기"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="@font/nanumgothic"/>
+        </RelativeLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

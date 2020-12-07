@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#4083ff</color>
+
+
+    <color name="guideTitle">#da5455</color>
+    <color name="guideInfoTitle">#312e2c</color>
+    <color name="guideInfoContents">#000000</color>
+
+
+    <color name="groupTitle">#f43636</color>
+
+
+    <color name="black">#000000</color>
+    <color name="grey">#D1D3D4</color>
+    <color name="red">#DD001B</color>
+    <color name="yellow">#ffd400</color>
+    <color name="blue">#1DC5FF</color>
+
+
+
+    <color name="scaleTitleText">#a9a9a9</color>
+    <color name="scaleTitle">#312e2c</color>
+    <color name="scaleStatusBar">#008664</color>
+
+
+
+    <color name="emailPopupText">#ffff</color>
+    <color name="emailEditHintText">#acacac</color>
+</resources>

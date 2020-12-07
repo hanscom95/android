@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_guide"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="artech.com.fivics.guide.GuideActivity"
+    android:background="@mipmap/terms_bg"
+    android:adjustViewBounds="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/line_bottom_layout">
+
+        <RelativeLayout
+            android:id="@+id/guide_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="40.67dp">
+
+            <ImageView
+                android:id="@+id/guide_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:src="@mipmap/logo_small" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/guide_step_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/guide_logo"
+                android:layout_marginLeft="14dp"
+                android:layout_toEndOf="@+id/guide_logo"
+                android:text="@string/step2_text"
+                android:textColor="@color/guide_text"
+                android:textSize="24sp"
+                app:font="NotoSansCJKkr_Bold.otf" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/guide_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/guide_step_text"
+                android:layout_toEndOf="@+id/guide_step_text"
+                android:text="@string/guide_title"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                app:font="NotoSansCJKkr_Medium.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/guide_title_layout"
+            android:layout_marginTop="30dp">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/guide_viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/line_bottom_layout"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="28.67dp">
+
+
+        <RelativeLayout
+            android:id="@+id/before_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/before_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="38dp"
+                android:src="@mipmap/ic_arrow_back_grayblue" />
+
+            <de.morrox.fontinator.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_toEndOf="@+id/before_img"
+                android:text="@string/before_button"
+                android:textSize="24sp"
+                app:font="NotoSansCJKkr_Bold.otf"
+                android:textColor="@color/guide_grey" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/next_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:text="@string/next_button"
+                android:textSize="24sp"
+                app:font="NotoSansCJKkr_Bold.otf"
+                android:textColor="@color/prohibition_text" />
+
+            <ImageView
+                android:id="@+id/next_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="38dp"
+                android:layout_toEndOf="@+id/next_button"
+                android:src="@mipmap/ic_arrow_next_red" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/line_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="87.33dp">
+
+        <ImageView
+            android:id="@+id/step_number_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/guide_number1" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/next_step_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="40dp"
+        android:src="@mipmap/img_quickmenu3"
+        android:visibility="invisible" />
+</RelativeLayout>

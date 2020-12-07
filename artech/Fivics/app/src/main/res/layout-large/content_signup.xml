@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_signup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="artech.com.fivics.LoginActivity"
+    android:background="@mipmap/terms_bg"
+    android:adjustViewBounds="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="50dp">
+
+            <ImageView
+                android:id="@+id/prohibition_logo"
+                android:layout_width="220dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:src="@mipmap/logo_small" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/prohibition_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/prohibition_logo"
+                android:layout_marginLeft="18dp"
+                android:layout_toEndOf="@+id/prohibition_logo"
+                android:includeFontPadding="false"
+                android:text="@string/signup_title"
+                android:textColor="@android:color/white"
+                android:textSize="40sp"
+                app:font="NotoSansCJKkr_Medium.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="205.33dp">
+
+            <RelativeLayout
+                android:id="@+id/nonmember_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="464dp">
+
+                <ImageView
+                    android:id="@+id/nonmember_img"
+                    android:layout_width="332.67dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/btn_signup_off" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/nonmember_img"
+                    android:layout_centerHorizontal="true">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/nonmember_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_above="@+id/nonmember_detail_text"
+                        android:layout_marginBottom="-16.67dp"
+                        android:shadowColor="#cf1d1d"
+                        android:shadowDx="0.0"
+                        android:shadowDy="0.0"
+                        android:shadowRadius="1.0"
+                        android:text="@string/signup_nonmember"
+                        android:textColor="@android:color/white"
+                        android:textSize="46.67sp"
+                        app:font="roboto_bold.otf"/>
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/nonmember_detail_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/signup_nonmember_detail"
+                        android:textColor="@color/signup_member_detail_text"
+                        android:textSize="24sp"
+                        app:font="NotoSansCJKkr_Regular.otf" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/member_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="332.67dp"
+                android:layout_toEndOf="@+id/nonmember_layout">
+
+                <ImageView
+                    android:id="@+id/member_img"
+                    android:layout_width="332.67dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/btn_signup_off" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/member_img"
+                    android:layout_centerHorizontal="true">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/member_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/member_detail_text"
+                        android:layout_marginBottom="-16.67dp"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/signup_member"
+                        android:textColor="@android:color/white"
+                        android:textSize="46.67sp"
+                        app:font="roboto_bold.otf" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/member_detail_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/signup_member_detail"
+                        android:textColor="@color/signup_member_detail_text"
+                        android:textSize="24sp"
+                        app:font="NotoSansCJKkr_Regular.otf" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="58dp">
+
+
+        <RelativeLayout
+            android:id="@+id/before_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/before_img"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="57dp"
+                android:src="@mipmap/ic_arrow_back_white" />
+
+            <de.morrox.fontinator.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_toEndOf="@+id/before_img"
+                android:text="@string/before_button"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                app:font="NotoSansCJKkr_Bold.otf" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/next_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:text="@string/next_button"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                app:font="NotoSansCJKkr_Bold.otf" />
+
+            <ImageView
+                android:id="@+id/next_img"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="57dp"
+                android:layout_toEndOf="@+id/next_button"
+                android:src="@mipmap/ic_arrow_next_white" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="151.33dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ic_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="2.67dp"
+                android:src="@mipmap/ic_circle_gray" />
+
+            <ImageView
+                android:id="@+id/ic_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="1.67dp"
+                android:src="@mipmap/ic_circle_lightblue" />
+
+            <ImageView
+                android:id="@+id/ic_third"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="2.67dp"
+                android:src="@mipmap/ic_circle_gray" />
+
+            <ImageView
+                android:id="@+id/ic_fourth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="2.67dp"
+                android:src="@mipmap/ic_circle_gray" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

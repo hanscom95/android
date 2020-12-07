@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="artech.com.semi.normal.ProductManagementActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RadioGroup
+                android:id="@+id/product_management_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13.8dp"
+                android:layout_marginLeft="14.3dp"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/total_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/normal_product_management_best_radio_button"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:checked="true"
+                    android:layout_margin="5dp"
+                    android:text="전체"
+                    android:textColor="@drawable/normal_product_management_best_radio_text"
+                    android:textSize="12sp"/>
+                <RadioButton
+                    android:id="@+id/top_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/normal_product_management_best_radio_button"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:text="TOP10"
+                    android:textColor="@drawable/normal_product_management_best_radio_text"
+                    android:textSize="12sp"/>
+                <RadioButton
+                    android:id="@+id/freshness_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/normal_product_management_best_radio_button"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_margin="5dp"
+                    android:text="신선도"
+                    android:textColor="@drawable/normal_product_management_best_radio_text"
+                    android:textSize="12sp"/>
+            </RadioGroup>
+
+            <RelativeLayout
+                android:id="@+id/top_banner_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/vector_smart_object"
+                android:layout_below="@+id/product_management_radio_group"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/top_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="74.3dp"
+                    android:layout_marginLeft="25.3dp"
+                    android:src="@mipmap/top_invalid_name"/>
+
+                <TextView
+                    android:id="@+id/top_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/top_img"
+                    android:layout_below="@+id/top_img"
+                    android:layout_marginTop="13.5dp"
+                    android:includeFontPadding="false"
+                    android:textSize="10.5sp"
+                    android:textColor="@color/white"
+                    android:text="가장 많이 찾는! 인기많은 미끼를 확인해보세요~"
+                    android:fontFamily="@font/nanumgothic"/>
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top_banner_layout"
+                android:layout_marginTop="10dp"
+                android:scrollbars="vertical"/>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+    <RelativeLayout
+        android:id="@+id/not_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/non_cancel_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:includeFontPadding="false"
+            android:textSize="@dimen/sale_cancel_non_text"
+            android:textColor="@color/warm_grey"
+            android:text="신규주문이 없습니다."
+            android:fontFamily="@font/nanumgothic"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/non_cancel_text"
+            android:layout_marginBottom="@dimen/sale_cancel_non_img_margin_bottom"
+            android:src="@mipmap/ic_none"/>
+    </RelativeLayout>
+</RelativeLayout>

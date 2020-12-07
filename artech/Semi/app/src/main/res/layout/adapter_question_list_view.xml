@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/item_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.8dp"
+            android:includeFontPadding="false"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:text="Title"
+            android:fontFamily="@font/notosanscjkkr_regular"/>
+
+        <ImageView
+            android:id="@+id/arrow_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:rotation="270"
+            android:src="@mipmap/chevron_right_2"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/input_line"/>
+    </RelativeLayout>
+
+    <com.github.aakira.expandablelayout.ExpandableLinearLayout
+        android:id="@+id/expandableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_layout"
+        android:orientation="vertical"
+        app:ael_duration="400"
+        app:ael_expanded="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.3dp"
+            android:layout_marginLeft="17.5dp"
+            android:layout_marginRight="14.5dp"
+            android:layout_marginBottom="10.3dp"
+            android:background="@mipmap/box_answer">
+            <TextView
+                android:id="@+id/item_contents_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="18.8dp"
+                android:layout_marginRight="18.5dp"
+                android:includeFontPadding="false"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:text="contents"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+            <TextView
+                android:id="@+id/item_date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_contents_text"
+                android:layout_marginTop="19.5dp"
+                android:layout_marginLeft="18.8dp"
+                android:layout_marginBottom="15.8dp"
+                android:includeFontPadding="false"
+                android:textSize="11.5sp"
+                android:textColor="@color/black"
+                android:text="Update 0000.00.00"
+                android:fontFamily="@font/nanumgothic"/>
+
+        </RelativeLayout>
+    </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">ARTIMER</string>
+
+    <string name="shoot_off">SHOOT OFF</string>
+    <string name="language">语言</string>
+    <string name="info">应用程序信息</string>
+
+    <string name="please_choose">选择</string>
+
+    <string name="number_of_firing">发射数</string>
+
+    <string name="arrow3">3发</string>
+    <string name="arrow6">6发</string>
+
+
+    <string name="time2">2分</string>
+    <string name="time4">4分</string>
+
+    <string name="time">发射时间</string>
+
+
+    <string name="round_text">局</string>
+    <string name="round">局</string>
+
+    <string name="payback_time">回收时间</string>
+
+    <string name="payback_time5">1分</string>
+    <string name="payback_time10">2分</string>
+    <string name="payback_time15">3分</string>
+    <string name="payback_time20">4分</string>
+
+
+
+    <string name="user_detail">发射数\n时间\n局\n回收时间 等等.</string>
+    <string name="user_setting">自定义</string>
+
+    <string name="user_info">使用方法</string>
+    <string name="user_info_text">可按顺序选择画面上的菜单\n可选择用户指定增加.</string>
+
+
+    <string name="confirm">确认</string>
+
+
+    <string name="option">选项</string>
+
+
+    <string name="be_prepared">准备发射.</string>
+
+    <string name="min">分</string>
+    <string name="sec">秒</string>
+
+    <string name="thank_you">谢谢.</string>
+
+    <string name="no_choice">你有未选择的项目.</string>
+    <string name="waiting_message">准备发射.</string>
+    <string name="frequency_message">请回收弓箭.</string>
+    <string name="time_end_message">发布时间已结束. 请把箭头拿出来.</string>
+    <string name="command_messages">%1$s 钟内发射箭.</string>
+
+
+
+    <string name="speaker">声音</string>
+    <string name="font_color">文字颜色</string>
+    <string name="background">背景</string>
+
+
+    <string name="info_version">version</string>
+    <string name="info_company">Company</string>
+    <string name="info_product">Product</string>
+    <string name="info_homepage">Homepage</string>
+    <string name="info_reserved">Korea ARTECH All rights reserved</string>
+    <string name="info_copyright">Coptyright ⓒ2018 Artech.co.,ltd, All rights reserved.</string>
+
+
+</resources>

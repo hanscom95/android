@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/guide_four_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/first_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:src="@mipmap/img8_setup" />
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/third_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_alignBottom="@+id/first_img"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="6dp"
+            android:text="@string/guide_six_title"
+            android:textSize="36sp"
+            android:textColor="@android:color/white"
+            app:font="NotoSansCJKkr_Medium.otf" />
+        <de.morrox.fontinator.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first_img"
+            android:layout_marginTop="41dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/guide_six_text"
+            android:textSize="36sp"
+            android:textColor="@android:color/white"
+            app:font="NotoSansCJKkr_Medium.otf" />
+    </RelativeLayout>
+</RelativeLayout>

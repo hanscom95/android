@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.semi.normal.ProductDetailActivity"
+    tools:showIn="@layout/activity_product_detail">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/first_layout"
+                android:layout_width="match_parent"
+                android:layout_height="230dp">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/banner_view_flipper"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+                <TextView
+                    android:id="@+id/banner_page_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16.3dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:includeFontPadding="false"
+                    android:text="1/1"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nanumgothic"
+                    android:visibility="invisible"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/second_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first_layout"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.3dp"
+                    android:layout_marginTop="20.3dp"
+                    android:layout_marginBottom="19.8dp"
+                    android:includeFontPadding="false"
+                    android:text="title"
+                    android:textColor="@color/black"
+                    android:textSize="16.3sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nanumgothic" />
+
+                <TextView
+                    android:id="@+id/price_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="18.8dp"
+                    android:includeFontPadding="false"
+                    android:text="0,000원"
+                    android:textColor="@color/black"
+                    android:textSize="16.3sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nanumgothic" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_below="@+id/title_text"
+                    android:background="@color/input_line"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/shop_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/second_layout"
+                android:background="@color/light_grey">
+
+                <RelativeLayout
+                    android:layout_width="328.3dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="14.5dp"
+                    android:layout_marginBottom="14.5dp"
+                    android:background="@mipmap/rounded_rectangle">
+                    <TextView
+                        android:id="@+id/shop_info_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="17.5dp"
+                        android:layout_marginLeft="24.5dp"
+                        android:layout_marginRight="24.5dp"
+                        android:includeFontPadding="false"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:text="* 업체정보 : 알낚시방"
+                        android:textSize="12sp"
+                        android:textColor="@color/greyish_brown"
+                        android:fontFamily="@font/notosanscjkkr_regular"/>
+                    <TextView
+                        android:id="@+id/shop_address_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/shop_info_text"
+                        android:layout_marginLeft="24.5dp"
+                        android:layout_marginRight="24.5dp"
+                        android:layout_marginTop="6dp"
+                        android:includeFontPadding="false"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:text="* 업체주소 : 알낚시방"
+                        android:textSize="12sp"
+                        android:textColor="@color/greyish_brown"
+                        android:fontFamily="@font/notosanscjkkr_regular"/>
+                    <TextView
+                        android:id="@+id/shop_call_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/shop_address_text"
+                        android:layout_marginLeft="24.5dp"
+                        android:layout_marginTop="6dp"
+                        android:includeFontPadding="false"
+                        android:text="* 업체문의 : 000-000-000"
+                        android:textSize="12sp"
+                        android:textColor="@color/greyish_brown"
+                        android:fontFamily="@font/notosanscjkkr_regular"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shop_layout"
+                android:layout_marginTop="8.5dp"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/black"
+                app:tabIndicatorHeight="0.8dp">
+                <android.support.design.widget.TabItem
+                    android:id="@+id/new_order_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="상품설명"/>
+                <!--<android.support.design.widget.TabItem
+                    android:id="@+id/sale_sucess_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="구매정보"/>-->
+                <android.support.design.widget.TabItem
+                    android:id="@+id/cancel_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="후기/문의"/>
+            </android.support.design.widget.TabLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/container"
+                android:layout_below="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"/>
+
+            <RelativeLayout
+                android:id="@+id/third_layout"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_below="@+id/container"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+                <ImageView
+                    android:id="@+id/mistake_img"
+                    android:layout_width="16.3dp"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16.5dp"
+                    android:src="@mipmap/ic_guide_nonpress"/>
+
+                <TextView
+                    android:id="@+id/mistake_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/mistake_img"
+                    android:layout_marginLeft="4.5dp"
+                    android:includeFontPadding="false"
+                    android:text="업체 정보가 잘못됐나요?"
+                    android:textColor="@color/black"
+                    android:textSize="10.5sp"
+                    android:fontFamily="@font/nanumgothic" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/input_line"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/input_line"/>
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/fourth_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/third_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="22.3dp">
+
+                <RelativeLayout
+                    android:id="@+id/ninth_second_first_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/linebox_terms">
+
+                    <TextView
+                        android:id="@+id/terms_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="이용약관"
+                        android:textColor="@color/greyish"
+                        android:textSize="8.9sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ninth_second_second_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.5dp"
+                    android:layout_toRightOf="@+id/ninth_second_first_layout"
+                    android:background="@mipmap/linebox_terms">
+
+                    <TextView
+                        android:id="@+id/individual_terms_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="개인정보\n처리방침"
+                        android:textColor="@color/greyish"
+                        android:textSize="8.9sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ninth_second_third_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.5dp"
+                    android:layout_toRightOf="@+id/ninth_second_second_layout"
+                    android:background="@mipmap/linebox_terms">
+
+                    <TextView
+                        android:id="@+id/electronic_finance_terms_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="전자금융\n거래이용약관"
+                        android:textColor="@color/greyish"
+                        android:textSize="8.9sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ninth_second_fourth_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.5dp"
+                    android:layout_toRightOf="@+id/ninth_second_third_layout"
+                    android:background="@mipmap/linebox_terms">
+
+                    <TextView
+                        android:id="@+id/location_terms_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="위치정보\n이용약관"
+                        android:textColor="@color/greyish"
+                        android:textSize="8.9sp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/company_etc_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/fourth_layout"
+                android:layout_below="@+id/fourth_layout"
+                android:layout_marginTop="16dp"
+                android:includeFontPadding="false"
+                android:text="(주)알텍은 통신판매중개자로서 통신판매의 당사자가 아니며,\n상품의 예약, 이용 및 환불 등과 관련된 의무와 책임은 각 판매자에게 있습니다."
+                android:textColor="@color/greyish"
+                android:textSize="9sp"
+                android:fontFamily="@font/nanumgothic" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@+id/company_etc_text"/>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="19.5dp">
+
+        <RelativeLayout
+            android:id="@+id/review_img_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.5dp">
+
+            <artech.com.semi.utility.CircleImageView
+                android:id="@+id/first_circle_Img"
+                android:layout_width="34.5dp"
+                android:layout_height="34.5dp"
+                android:layout_centerVertical="true"/>
+
+            <artech.com.semi.utility.CircleImageView
+                android:id="@+id/second_circle_Img"
+                android:layout_width="34.5dp"
+                android:layout_height="34.5dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/first_circle_Img"
+                android:layout_marginLeft="10dp"/>
+
+            <artech.com.semi.utility.CircleImageView
+                android:id="@+id/third_circle_Img"
+                android:layout_width="34.5dp"
+                android:layout_height="34.5dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/second_circle_Img"
+                android:layout_marginLeft="10dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/coupon_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/review_img_layout"
+            android:background="@mipmap/popupline"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/coupon_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:text="지금 구매하면 오픈기념 할인쿠폰 지급!"
+                android:textColor="@color/greenblue"
+                android:textSize="13sp"
+                android:fontFamily="@font/nanumgothic" />
+        </RelativeLayout>
+        <Button
+            android:id="@+id/buying_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/coupon_layout"
+            android:layout_marginTop="8.5dp"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/btn_paymentprocessor"
+            android:text="전화하기"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nanumgothic"/>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

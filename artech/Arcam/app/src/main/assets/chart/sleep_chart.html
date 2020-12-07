@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>sleep chart</title>
+    <style type="text/css">
+        #container rect.highcharts-background {fill : transparent;}
+    </style>
+
+
+    <script type="text/javascript" src="file:///android_asset/chart/jquery.min.js"></script>
+    <script type="text/javascript">
+        function setChartData(data1, data2, categories) {
+            var chart = $('#container').highcharts();
+
+            chart.xAxis[0].setCategories(categories,true);
+            chart.series[0].setData(data1, true);
+            chart.series[1].setData(data2, true);
+        }
+
+
+        $(function () {
+            Highcharts.setOptions({
+                chart: {
+                    style: {
+                        fontFamily: 'file:///android_asset/fonts/NotoSansCJKkr_Regular.otf'
+                    }
+                },
+                colors: ["#5329D6", "#FFDD71"]
+            });
+
+             $('#container').highcharts({
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text : ""
+                },
+                tooltip: {
+                    enabled: false
+                },
+                credits : {
+                    enabled: false
+                },
+                xAxis: {
+                    title: {
+                        text: ''
+                    },
+                    tickWidth: 0
+                    //gridLineWidth: 1,
+                    //categories: ['0','1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
+                    //    '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23']
+                    //categories: ['2', '4', '6', '8', '10',
+                    //    '12', '14', '16', '18', '20', '22', '24']
+                },
+                yAxis: {
+                    title: {
+                        text: ''
+                    },
+                    labels: {
+                        format: '{value: .,0f}',
+                        align: 'right',
+                        x: 0,
+                        y: -2
+                    },
+                    opposite: true,
+                    min: 0
+                },
+                legend: {
+                    enabled: false
+                },
+                exporting: {
+                    enabled: false
+                },
+                plotOptions: {
+                    column:{
+                        pointPadding: 0.35,
+                        borderWidth: 0
+                    },
+                    series: {
+                        stacking: 'normal'
+                    }
+                },
+                series: [{
+                    name: 'deep',
+                    events: {
+                        click: function (event) {
+                            var str = event.point.category;
+                            window.android.callBackChart(str);
+                        }
+                    }
+                    //data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+                },{
+                    name: 'light',
+                    events: {
+                        click: function (event) {
+                            var str = event.point.category;
+                            window.android.callBackChart(str);
+                        }
+                    }
+                    //data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+                }]
+            });
+            $('#container rect').attr('fill', 'transparent');
+        });
+
+    </script>
+</head>
+<body>
+<script src="file:///android_asset/chart/highcharts.js"></script>
+<script src="file:///android_asset/chart/exporting.js"></script>
+
+<div id="container" style="min-width: 280px; height: 132px; margin: 0;"></div>
+
+</body>
+</html>

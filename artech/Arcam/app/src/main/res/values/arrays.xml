@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="riser">
+        <item>--</item>
+        <item>fivics</item>
+        <item>krossen</item>
+        <item>hoyt</item>
+        <item>Win&amp;Win</item>
+        <item>MK</item>
+        <item>samick</item>
+        <item>kaya</item>
+        <item>cartel</item>
+        <item>gillo</item>
+        <item>pse</item>
+        <item>spirarelli</item>
+        <item>kap</item>
+        <item>@string/detail_input_hint</item>
+    </string-array>
+
+    <string-array name="riser_inch">
+        <item>--</item>
+        <item>25 inch</item>
+        <item>27 inch</item>
+        <item>@string/detail_input_hint</item>
+    </string-array>
+
+
+
+    <string-array name="limbs">
+        <item>--</item>
+        <item>fivics</item>
+        <item>krossen</item>
+        <item>hoyt</item>
+        <item>Win&amp;Win</item>
+        <item>MK</item>
+        <item>samick</item>
+        <item>kaya</item>
+        <item>cartel</item>
+        <item>gillo</item>
+        <item>pse</item>
+        <item>kap</item>
+        <item>@string/detail_input_hint</item>
+    </string-array>
+
+    <string-array name="limbs_inch">
+        <item>--</item>
+        <item>66 inch</item>
+        <item>68 inch</item>
+        <item>70 inch</item>
+        <item>@string/detail_input_hint</item>
+    </string-array>
+
+    <string-array name="limbs_pound">
+        <item>@string/detail_input_hint</item>
+    </string-array>
+
+
+    <string-array name="stabilizer">
+        <item>--</item>
+        <item>fivics</item>
+        <item>krossen</item>
+        <item>hoyt</item>
+        <item>Win&amp;Win</item>
+        <item>doinker</item>
+        <item>kaya</item>
+        <item>fuse</item>
+        <item>easton</item>
+        <item>cartel</item>
+        <item>gillo</item>
+        <item>spirarelli</item>
+        <item>sf</item>
+        <item>pse</item>
+        <item>kap</item>
+        <item>@string/detail_input_hint</item>
+    </string-array>
+
+
+    <string-array name="fingertab">
+        <item>--</item>
+        <item>fivics</item>
+        <item>krossen</item>
+        <item>aae </item>
+        <item>Win&amp;Win</item>
+        <item>angel</item>
+        <item>cartel</item>
+        <item>easton</item>
+        <item>decut</item>
+        <item>kap</item>
+        <item>kaya</item>
+        <item>@string/detail_input_hint</item>
+    </string-array>
+
+
+    <string-array name="sight">
+        <item>--</item>
+        <item>fivics</item>
+        <item>krossen</item>
+        <item>axcel</item>
+        <item>hoyt</item>
+        <item>shibuya</item>
+        <item>sure-loc</item>
+        <item>Win&amp;Win</item>
+        <item>cbe</item>
+        <item>apex gear</item>
+        <item>decut</item>
+        <item>elite</item>
+        <item>fuse</item>
+        <item>pse</item>
+        <item>spot-hogg</item>
+        <item>@string/detail_input_hint</item>
+    </string-array>
+
+
+    <string-array name="cushionplunger">
+        <item>--</item>
+        <item>fivics</item>
+        <item>krossen</item>
+        <item>beiter</item>
+        <item>shibuya</item>
+        <item>Win&amp;Win</item>
+        <item>cartel</item>
+        <item>sf</item>
+        <item>kap</item>
+        <item>@string/detail_input_hint</item>
+    </string-array>
+
+
+    <string-array name="rest">
+        <item>--</item>
+        <item>fivics</item>
+        <item>krossen</item>
+        <item>hoyt</item>
+        <item>Win&amp;Win</item>
+        <item>easton</item>
+        <item>beiter</item>
+        <item>shibuya</item>
+        <item>aae</item>
+        <item>cartel</item>
+        <item>@string/detail_input_hint</item>
+    </string-array>
+
+
+    <string-array name="arrow">
+        <item>--</item>
+        <item>fivics</item>
+        <item>easton</item>
+        <item>carbon-express</item>
+        <item>gold tip</item>
+        <item>victory</item>
+        <item>beman</item>
+        <item>Win&amp;Win</item>
+        <item>cartel</item>
+        <item>@string/detail_input_hint</item>
+    </string-array>
+
+
+    <string-array name="longstaff_inch">
+        <item>--</item>
+        <item>26 inch</item>
+        <item>28 inch</item>
+        <item>30 inch</item>
+        <item>@string/detail_input_hint</item>
+    </string-array>
+
+    <string-array name="sidestabi_inch">
+        <item>--</item>
+        <item>8 inch</item>
+        <item>9 inch</item>
+        <item>10 inch</item>
+        <item>12 inch</item>
+        <item>@string/detail_input_hint</item>
+    </string-array>
+
+    <string-array name="distance">
+        <item>18m</item>
+        <item>30m</item>
+        <item>50m</item>
+        <item>70m</item>
+    </string-array>
+
+    <string-array name="month">
+        <item>Month</item>
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+</resources>

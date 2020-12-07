@@ -1,0 +1,1596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_score_board"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="61.33dp"
+        android:layout_height="61.33dp"
+        android:background="@mipmap/round_ing"
+        android:layout_marginRight="36dp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/score_board_layout">
+
+        <de.morrox.fontinator.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/score_round_text"
+            android:gravity="center"
+            android:maxLength="2"
+            android:selectAllOnFocus="true"
+            android:includeFontPadding="false"
+            android:text="1R"
+            android:textColor="@android:color/white"
+            android:textSize="26.67sp"
+            app:font="NotoSansCJKkr_Bold.otf" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/score_board_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/score1_layout"
+            android:layout_width="71.33dp"
+            android:layout_height="73.33dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="2.5dp"
+            android:layout_marginRight="2.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_archery_score_board">
+
+            <ImageView
+                android:id="@+id/score1_circle1"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score1_circle2"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score1_circle1"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score1_circle3"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score1_circle1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score1_circle4"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score1_circle1"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score1_circle5"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score1_circle3"
+                android:layout_alignTop="@+id/score1_circle4"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score1_circle6"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/score1_circle4"
+                android:layout_marginBottom="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score1_circle7"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score1_circle6"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score1_circle8"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score1_circle5"
+                android:layout_alignTop="@+id/score1_circle7"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/score_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:selectAllOnFocus="true"
+                android:text=""
+                android:textColor="@color/archery_black"
+                android:textSize="26.67sp"
+                app:font="NotoSansCJKkr_Light.otf" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/score2_layout"
+            android:layout_width="71.33dp"
+            android:layout_height="73.33dp"
+            android:layout_marginLeft="2.5dp"
+            android:layout_marginRight="2.5dp"
+            android:layout_toEndOf="@+id/score1_layout"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_archery_score_board_two">
+
+            <ImageView
+                android:id="@+id/score2_circle1"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score2_circle2"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score2_circle1"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score2_circle3"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score2_circle1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score2_circle4"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score2_circle1"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score2_circle5"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score2_circle3"
+                android:layout_alignTop="@+id/score2_circle4"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score2_circle6"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/score2_circle4"
+                android:layout_marginBottom="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score2_circle7"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score2_circle6"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score2_circle8"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score2_circle5"
+                android:layout_alignTop="@+id/score2_circle7"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/score2_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:selectAllOnFocus="true"
+                android:text=""
+                android:textColor="@color/archery_black"
+                android:textSize="26.67sp"
+                app:font="NotoSansCJKkr_Light.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/score3_layout"
+            android:layout_width="71.33dp"
+            android:layout_height="73.33dp"
+            android:layout_marginLeft="2.5dp"
+            android:layout_marginRight="2.5dp"
+            android:layout_toEndOf="@+id/score2_layout"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_archery_score_board">
+
+            <ImageView
+                android:id="@+id/score3_circle1"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score3_circle2"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score3_circle1"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score3_circle3"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score3_circle1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score3_circle4"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score3_circle1"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score3_circle5"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score3_circle3"
+                android:layout_alignTop="@+id/score3_circle4"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score3_circle6"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/score3_circle4"
+                android:layout_marginBottom="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score3_circle7"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score3_circle6"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score3_circle8"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score3_circle5"
+                android:layout_alignTop="@+id/score3_circle7"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/score3_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:selectAllOnFocus="true"
+                android:text=""
+                android:textColor="@color/archery_black"
+                android:textSize="26.67sp"
+                app:font="NotoSansCJKkr_Light.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/score4_layout"
+            android:layout_width="71.33dp"
+            android:layout_height="73.33dp"
+            android:layout_marginLeft="2.5dp"
+            android:layout_marginRight="2.5dp"
+            android:layout_toEndOf="@+id/score3_layout"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_archery_score_board_two">
+
+            <ImageView
+                android:id="@+id/score4_circle1"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score4_circle2"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score4_circle1"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score4_circle3"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score4_circle1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score4_circle4"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score4_circle1"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score4_circle5"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score4_circle3"
+                android:layout_alignTop="@+id/score4_circle4"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score4_circle6"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/score4_circle4"
+                android:layout_marginBottom="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score4_circle7"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score4_circle6"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score4_circle8"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score4_circle5"
+                android:layout_alignTop="@+id/score4_circle7"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/score4_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:selectAllOnFocus="true"
+                android:text=""
+                android:textColor="@color/archery_black"
+                android:textSize="26.67sp"
+                app:font="NotoSansCJKkr_Light.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/score5_layout"
+            android:layout_width="71.33dp"
+            android:layout_height="73.33dp"
+            android:layout_marginLeft="2.5dp"
+            android:layout_toEndOf="@+id/score4_layout"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_archery_score_board">
+
+            <ImageView
+                android:id="@+id/score5_circle1"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score5_circle2"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score5_circle1"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score5_circle3"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score5_circle1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score5_circle4"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score5_circle1"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score5_circle5"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score5_circle3"
+                android:layout_alignTop="@+id/score5_circle4"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score5_circle6"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/score5_circle4"
+                android:layout_marginBottom="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score5_circle7"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score5_circle6"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score5_circle8"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score5_circle5"
+                android:layout_alignTop="@+id/score5_circle7"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/score5_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:selectAllOnFocus="true"
+                android:text=""
+                android:textColor="@color/archery_black"
+                android:textSize="26.67sp"
+                app:font="NotoSansCJKkr_Light.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/score6_layout"
+            android:layout_width="71.33dp"
+            android:layout_height="73.33dp"
+            android:layout_below="@+id/score1_layout"
+            android:layout_marginBottom="2.5dp"
+            android:layout_marginRight="2.5dp"
+            android:layout_marginTop="2.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_archery_score_board">
+
+            <ImageView
+                android:id="@+id/score6_circle1"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score6_circle2"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score6_circle1"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score6_circle3"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score6_circle1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score6_circle4"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score6_circle1"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score6_circle5"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score6_circle3"
+                android:layout_alignTop="@+id/score6_circle4"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score6_circle6"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/score6_circle4"
+                android:layout_marginBottom="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score6_circle7"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score6_circle6"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score6_circle8"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score6_circle5"
+                android:layout_alignTop="@+id/score6_circle7"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/score6_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:selectAllOnFocus="true"
+                android:text=""
+                android:textColor="@color/archery_black"
+                android:textSize="26.67sp"
+                app:font="NotoSansCJKkr_Light.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/score7_layout"
+            android:layout_width="71.33dp"
+            android:layout_height="73.33dp"
+            android:layout_alignBottom="@+id/score6_layout"
+            android:layout_marginLeft="2.5dp"
+            android:layout_marginRight="2.5dp"
+            android:layout_toEndOf="@+id/score6_layout"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_archery_score_board_two">
+
+            <ImageView
+                android:id="@+id/score7_circle1"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score7_circle2"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score7_circle1"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score7_circle3"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score7_circle1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score7_circle4"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score7_circle1"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score7_circle5"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score7_circle3"
+                android:layout_alignTop="@+id/score7_circle4"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score7_circle6"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/score7_circle4"
+                android:layout_marginBottom="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score7_circle7"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score7_circle6"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score7_circle8"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score7_circle5"
+                android:layout_alignTop="@+id/score7_circle7"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/score7_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:selectAllOnFocus="true"
+                android:text=""
+                android:textColor="@color/archery_black"
+                android:textSize="26.67sp"
+                app:font="NotoSansCJKkr_Light.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/score8_layout"
+            android:layout_width="71.33dp"
+            android:layout_height="73.33dp"
+            android:layout_alignBottom="@+id/score7_layout"
+            android:layout_marginLeft="2.5dp"
+            android:layout_marginRight="2.5dp"
+            android:layout_toEndOf="@+id/score7_layout"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_archery_score_board">
+
+            <ImageView
+                android:id="@+id/score8_circle1"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score8_circle2"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score8_circle1"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score8_circle3"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score8_circle1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score8_circle4"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score8_circle1"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score8_circle5"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score8_circle3"
+                android:layout_alignTop="@+id/score8_circle4"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score8_circle6"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/score8_circle4"
+                android:layout_marginBottom="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score8_circle7"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score8_circle6"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score8_circle8"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score8_circle5"
+                android:layout_alignTop="@+id/score8_circle7"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/score8_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:selectAllOnFocus="true"
+                android:text=""
+                android:textColor="@color/archery_black"
+                android:textSize="26.67sp"
+                app:font="NotoSansCJKkr_Light.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/score9_layout"
+            android:layout_width="71.33dp"
+            android:layout_height="73.33dp"
+            android:layout_alignBottom="@+id/score8_layout"
+            android:layout_marginLeft="2.5dp"
+            android:layout_marginRight="2.5dp"
+            android:layout_toEndOf="@+id/score8_layout"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_archery_score_board_two">
+
+            <ImageView
+                android:id="@+id/score9_circle1"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score9_circle2"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score9_circle1"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score9_circle3"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score9_circle1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score9_circle4"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score9_circle1"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score9_circle5"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score9_circle3"
+                android:layout_alignTop="@+id/score9_circle4"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score9_circle6"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/score9_circle4"
+                android:layout_marginBottom="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score9_circle7"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score9_circle6"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score9_circle8"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score9_circle5"
+                android:layout_alignTop="@+id/score9_circle7"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/score9_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:selectAllOnFocus="true"
+                android:text=""
+                android:textColor="@color/archery_black"
+                android:textSize="26.67sp"
+                app:font="NotoSansCJKkr_Light.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/score10_layout"
+            android:layout_width="71.33dp"
+            android:layout_height="73.33dp"
+            android:layout_alignBottom="@+id/score9_layout"
+            android:layout_marginLeft="2.5dp"
+            android:layout_marginTop="2.5dp"
+            android:layout_toEndOf="@+id/score9_layout"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_archery_score_board">
+
+            <ImageView
+                android:id="@+id/score10_circle1"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score10_circle2"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score10_circle1"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score10_circle3"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score10_circle1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score10_circle4"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score10_circle1"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score10_circle5"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score10_circle3"
+                android:layout_alignTop="@+id/score10_circle4"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score10_circle6"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/score10_circle4"
+                android:layout_marginBottom="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score10_circle7"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score10_circle6"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score10_circle8"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score10_circle5"
+                android:layout_alignTop="@+id/score10_circle7"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/score10_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:selectAllOnFocus="true"
+                android:text=""
+                android:textColor="@color/archery_black"
+                android:textSize="26.67sp"
+                app:font="NotoSansCJKkr_Light.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/score11_layout"
+            android:layout_width="71.33dp"
+            android:layout_height="73.33dp"
+            android:layout_below="@+id/score6_layout"
+            android:layout_marginRight="2.5dp"
+            android:layout_marginTop="2.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_archery_score_board">
+
+            <ImageView
+                android:id="@+id/score11_circle1"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score11_circle2"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score11_circle1"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score11_circle3"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score11_circle1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score11_circle4"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score11_circle1"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score11_circle5"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score11_circle3"
+                android:layout_alignTop="@+id/score11_circle4"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score11_circle6"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/score11_circle4"
+                android:layout_marginBottom="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score11_circle7"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score11_circle6"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score11_circle8"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score11_circle5"
+                android:layout_alignTop="@+id/score11_circle7"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/score11_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:selectAllOnFocus="true"
+                android:text=""
+                android:textColor="@color/archery_black"
+                android:textSize="26.67sp"
+                app:font="NotoSansCJKkr_Light.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/score12_layout"
+            android:layout_width="71.33dp"
+            android:layout_height="73.33dp"
+            android:layout_alignBottom="@+id/score11_layout"
+            android:layout_marginLeft="2.5dp"
+            android:layout_marginRight="2.5dp"
+            android:layout_toEndOf="@+id/score11_layout"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_archery_score_board_two">
+
+            <ImageView
+                android:id="@+id/score12_circle1"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score12_circle2"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score12_circle1"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score12_circle3"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score12_circle1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score12_circle4"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score12_circle1"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score12_circle5"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score12_circle3"
+                android:layout_alignTop="@+id/score12_circle4"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score12_circle6"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/score12_circle4"
+                android:layout_marginBottom="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score12_circle7"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score12_circle6"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score12_circle8"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score12_circle5"
+                android:layout_alignTop="@+id/score12_circle7"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/score12_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:selectAllOnFocus="true"
+                android:text=""
+                android:textColor="@color/archery_black"
+                android:textSize="26.67sp"
+                app:font="NotoSansCJKkr_Light.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/score13_layout"
+            android:layout_width="71.33dp"
+            android:layout_height="73.33dp"
+            android:layout_alignBottom="@+id/score12_layout"
+            android:layout_marginLeft="2.5dp"
+            android:layout_marginRight="2.5dp"
+            android:layout_toEndOf="@+id/score12_layout"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_archery_score_board">
+
+            <ImageView
+                android:id="@+id/score13_circle1"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score13_circle2"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score13_circle1"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score13_circle3"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score13_circle1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score13_circle4"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score13_circle1"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score13_circle5"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score13_circle3"
+                android:layout_alignTop="@+id/score13_circle4"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score13_circle6"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/score13_circle4"
+                android:layout_marginBottom="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score13_circle7"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score13_circle6"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score13_circle8"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score13_circle5"
+                android:layout_alignTop="@+id/score13_circle7"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/score13_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:selectAllOnFocus="true"
+                android:text=""
+                android:textColor="@color/archery_black"
+                android:textSize="26.67sp"
+                app:font="NotoSansCJKkr_Light.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/score14_layout"
+            android:layout_width="71.33dp"
+            android:layout_height="73.33dp"
+            android:layout_alignBottom="@+id/score13_layout"
+            android:layout_marginLeft="2.5dp"
+            android:layout_marginRight="2.5dp"
+            android:layout_toEndOf="@+id/score13_layout"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_archery_score_board_two">
+
+            <ImageView
+                android:id="@+id/score14_circle1"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score14_circle2"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score14_circle1"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score14_circle3"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score14_circle1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score14_circle4"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score14_circle1"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score14_circle5"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score14_circle3"
+                android:layout_alignTop="@+id/score14_circle4"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score14_circle6"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/score14_circle4"
+                android:layout_marginBottom="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score14_circle7"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score14_circle6"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score14_circle8"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score14_circle5"
+                android:layout_alignTop="@+id/score14_circle7"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/score14_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:selectAllOnFocus="true"
+                android:text=""
+                android:textColor="@color/archery_black"
+                android:textSize="26.67sp"
+                app:font="NotoSansCJKkr_Light.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/score15_layout"
+            android:layout_width="71.33dp"
+            android:layout_height="73.33dp"
+            android:layout_alignBottom="@+id/score14_layout"
+            android:layout_marginLeft="2.5dp"
+            android:layout_toEndOf="@+id/score14_layout"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_archery_score_board">
+
+            <ImageView
+                android:id="@+id/score15_circle1"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score15_circle2"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score15_circle1"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score15_circle3"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score15_circle1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score15_circle4"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score15_circle1"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score15_circle5"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score15_circle3"
+                android:layout_alignTop="@+id/score15_circle4"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score15_circle6"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/score15_circle4"
+                android:layout_marginBottom="10dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score15_circle7"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@+id/score15_circle6"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <ImageView
+                android:id="@+id/score15_circle8"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignStart="@+id/score15_circle5"
+                android:layout_alignTop="@+id/score15_circle7"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/acrchery_circle" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/score15_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:selectAllOnFocus="true"
+                android:text=""
+                android:textColor="@color/archery_black"
+                android:textSize="26.67sp"
+                app:font="NotoSansCJKkr_Light.otf" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

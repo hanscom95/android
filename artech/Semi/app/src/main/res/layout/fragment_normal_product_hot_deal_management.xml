@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="artech.com.semi.normal.ProductManagementActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/hot_deal_banner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <RelativeLayout
+                    android:id="@+id/hot_deal_contents_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="14.5dp"
+                        android:src="@mipmap/hot_deal_invalid_name"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/banner_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/hot_deal_contents_layout"
+                    android:layout_marginTop="17.8dp"
+                    android:background="@mipmap/hotdealbanner">
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hot_deal_banner_layout"
+                android:layout_marginTop="10dp"
+                android:scrollbars="vertical"/>
+            </RelativeLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/not_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/non_cancel_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:includeFontPadding="false"
+            android:textSize="@dimen/sale_cancel_non_text"
+            android:textColor="@color/warm_grey"
+            android:text="신규주문이 없습니다."
+            android:fontFamily="@font/nanumgothic"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/non_cancel_text"
+            android:layout_marginBottom="@dimen/sale_cancel_non_img_margin_bottom"
+            android:src="@mipmap/ic_none"/>
+    </RelativeLayout>
+</RelativeLayout>

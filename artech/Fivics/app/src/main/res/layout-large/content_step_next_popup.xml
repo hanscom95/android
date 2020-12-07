@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_step_finish"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="1190dp"
+    android:minHeight="595dp"
+    android:background="@mipmap/popup_keypad"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="173dp">
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/first_finish_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="화살을 회수하신 후 다음 라운드를 진행해 주세요."
+            android:textColor="@android:color/white"
+            android:textSize="48sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+
+        <!--<de.morrox.fontinator.FontTextView
+            android:id="@+id/second_finish_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/first_finish_text"
+            android:background="@null"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="화살을 회수하신 후 다음 라운드를 진행해 주세요."
+            android:textColor="@android:color/white"
+            android:textSize="48sp"
+            app:font="NotoSansCJKkr_Medium.otf" />-->
+
+        <de.morrox.fontinator.FontEditText
+            android:id="@+id/third_finish_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first_finish_text"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:backgroundTint="@android:color/white"
+            android:hint="(직원 비밀번호 입력)"
+            android:imeOptions="flagNoExtractUi"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:textSize="48sp"
+            android:inputType="numberPassword"
+            app:font="NotoSansCJKkr_Medium.otf" />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="62dp">
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/finish_round_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="66dp"
+            android:layout_marginBottom="51.33dp"
+            android:background="@null"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="취소"
+            android:textColor="@color/archery_popup_button_text"
+            android:textSize="48sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/next_round_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="66dp"
+            android:layout_marginBottom="51.33dp"
+            android:includeFontPadding="false"
+            android:background="@null"
+            android:gravity="center"
+            android:text="다음 라운드"
+            android:textColor="@color/archery_popup_button_text"
+            android:textSize="48sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">manager</string>
+    <string name="app_version">v 0.0.0.1</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="guide_activity">주의사항 및 이용방법</string>
+    <string name="group_activity">체험하기</string>
+    <string name="scale_activity">체점하기</string>
+    <string name="booking_activity">예약관리</string>
+    <string name="tournament_activity">토너먼트</string>
+    <string name="admin_activity">관리자</string>
+
+    <string name="guide_title">STEP1. 주의사항</string>
+    <string name="guide_step2_1_title">체스트가드 착용</string>
+    <string name="guide_step2_2_title">암가드 착용</string>
+    <string name="guide_step2_3_title">준비자세 1-스탠스(STANCE)</string>
+    <string name="guide_step2_4_title">발사준비 2-셋업(SETUP)</string>
+    <string name="guide_step2_5_title">3-당기기(DRAWING)</string>
+    <string name="guide_step2_6_title">4-조준(AIMING)</string>
+    <string name="guide_step2_7_title">5-발사(SHOOTING)</string>
+    <string name="guide_step2_8_title">6-발사 후 자세(FOLLOW THROUGH)</string>
+    <string name="guide_step2_9_title">7-조준기 세팅</string>
+    <string name="guide_step2_10_title">8-화살 뽑기</string>
+    <string name="guide_first_title">음주양궁불가</string>
+    <string name="guide_first_contents">체스트(가슴)가드는 선택사항이지만\n안전을 위해 착용하는 것이 좋습니다.</string>
+    <string name="guide_second_title">어디서나 화살조심!!</string>
+    <string name="guide_second_contents">암가드는 안전을 위해\n의무적으로 착용하셔야 합니다.</string>
+    <string name="guide_third_title">화살뽑을땐 조심~\n부상위험있어요!!</string>
+    <string name="guide_third_contents">바닥의 발모양에 맞춰 양발을\n11자 모양으로 서서 레스트 안착, 노킹을\n한 후 활을 쏠 자세를 취한다.</string>
+    <string name="guide_fourth_title">화살없이 쏘지마세요!!</string>
+    <string name="guide_fourth_contents">다음과 같이 양발을 어깨넓이로\n벌려 11자 모양으로 서주세요.</string>
+    <string name="guide_fifth_1_title">레스트(Rest) 안착</string>
+    <string name="guide_fifth_1_contents">활을 왼쪽에 사진과 같이 위치한 부분에\n화살을 걸친다.</string>
+    <string name="guide_fifth_2_title">노킹(Nocking)</string>
+    <string name="guide_fifth_2_contents">활줄의 금속링 사이에 화살 끝부분(노크)를\n딸깍 소리가 나도록 끝까지 꽂는다.</string>
+    <string name="guide_sixth_title">단계별 동작에 따라 활을\n쏠 준비를 한다.</string>
+    <string name="guide_sixth_contents">단계별 동작에 따라\n활을 쏠 준비를 한다.</string>
+    <string name="guide_seventh_1_title">후킹(Hooking)</string>
+    <string name="guide_seventh_1_contents">활줄을 오른쪽 세손가락의 첫번째 마디\n부분만 건다.</string>
+    <string name="guide_seventh_2_title">그립(Grip)</string>
+    <string name="guide_seventh_2_contents">활의 움푹 파인 부분에 왼손 손바닥을 밀착시켜\n가볍게 잡는다.</string>
+    <string name="guide_eighth_1_title">팔돌리기</string>
+    <string name="guide_eighth_1_contents">활을 잡은 팔을 곱게 편 상태에서 팔꿈치가 왼쪽을 향하도록\n팔을 돌려준다.</string>
+    <string name="guide_ninth_contents">몸은 정면을 보고\n얼굴만 표적방향으로 돌리고\n왼팔은 표적방향으로 뻗어주고\n오른팔은 반대방향으로\n양팔이 평행을 유지하며 당긴다.</string>
+    <string name="guide_tenth_contents">활을 당겨 사진과 같이 자세를\n고정한 상태로 조준한다.</string>
+    <string name="guide_eleventh_1_title">앵커(Anchor)</string>
+    <string name="guide_eleventh_1_contents">활을 당겨 오른손은 턱밑에 붙이고 활줄을\n코와 입술 중앙에 밀착한다.</string>
+    <string name="guide_eleventh_2_title">조준(Aiming)</string>
+    <string name="guide_eleventh_2_contents">오른쪽 눈으로 조준기의 사이트핀을\n타켓의 노란색 중앙에 맞춘다.</string>
+    <string name="guide_twelve_contents">조준이 되면\n당기고 있던 세 손가락을\n동시에 부드럽게 놔준다.</string>
+    <string name="guide_thirteen_contents">슈팅 후 왼팔은 표적방향\n오른팔은 표적 반대방향으로\n향한다.</string>
+    <string name="guide_fourteen_contents">표적의 중앙부분을 기준으로\n화살이 모이는 방향으로 조준기핀을\n욺긴다.</string>
+    <string name="guide_sixteen_contents">화살을 짧게 잡고 몸에서 가까운\n화살부터 한발씩 뽑아야 합니다.</string>
+
+
+
+    <string name="group_name_title">단체명</string>
+    <string name="group_name_edit_hint">입력해주세요.</string>
+    <string name="group_name_edit_ime_text">완료</string>
+    <string name="group_people_number_title">인원수</string>
+    <string name="group_team_number_title">조(그룹)수</string>
+</resources>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:sl="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/team_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:includeFontPadding="false"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background = "@drawable/regular_state"
+        android:text="1조"
+        android:textSize="24sp"
+        app:font="NotoSansCJKkr_Medium.otf"
+        android:textColor="@android:color/black"/>
+
+    <RelativeLayout
+        android:id="@+id/name_text_layout"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/team_text"
+        android:layout_centerVertical="true"
+        android:background = "@drawable/regular_state">
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/name_text"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:includeFontPadding="false"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            app:font="NotoSansCJKkr_Medium.otf"
+            android:background="@null"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/score_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/name_text_layout"
+        android:layout_alignTop="@+id/name_text_layout"
+        android:layout_toRightOf="@+id/name_text_layout"
+        android:background="@drawable/regular_state"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/circle_1"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/white_circle"
+            android:gravity="center|center_vertical"
+            android:includeFontPadding="false"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/circle_2"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/circle_1"
+            android:background="@drawable/white_circle"
+            android:gravity="center|center_vertical"
+            android:includeFontPadding="false"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/circle_3"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/circle_2"
+            android:background="@drawable/white_circle"
+            android:gravity="center|center_vertical"
+            android:includeFontPadding="false"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/circle_4"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/circle_3"
+            android:background="@drawable/white_circle"
+            android:gravity="center|center_vertical"
+            android:includeFontPadding="false"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/circle_5"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/circle_4"
+            android:background="@drawable/white_circle"
+            android:gravity="center|center_vertical"
+            android:includeFontPadding="false"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/circle_6"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/circle_5"
+            android:background="@drawable/white_circle"
+            android:gravity="center|center_vertical"
+            android:includeFontPadding="false"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/circle_7"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/circle_6"
+            android:background="@drawable/white_circle"
+            android:gravity="center|center_vertical"
+            android:includeFontPadding="false"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/circle_8"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/circle_7"
+            android:background="@drawable/white_circle"
+            android:gravity="center|center_vertical"
+            android:includeFontPadding="false"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/circle_9"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/circle_8"
+            android:background="@drawable/white_circle"
+            android:gravity="center|center_vertical"
+            android:includeFontPadding="false"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/circle_10"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/circle_9"
+            android:background="@drawable/white_circle"
+            android:gravity="center|center_vertical"
+            android:includeFontPadding="false"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+
+    </RelativeLayout>
+
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/total_text"
+        android:layout_width="81dp"
+        android:layout_height="68dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/score_layout"
+        android:includeFontPadding="false"
+        android:gravity="center"
+        android:background = "@drawable/regular_state"
+        android:text="0"
+        android:textSize="24sp"
+        app:font="NotoSansCJKkr_Medium.otf"
+        android:textColor="@android:color/black"/>
+
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/ranking_text"
+        android:layout_width="73dp"
+        android:layout_height="68dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/total_text"
+        android:includeFontPadding="false"
+        android:gravity="center"
+        android:background = "@drawable/regular_state"
+        android:text="0"
+        android:textSize="24sp"
+        app:font="NotoSansCJKkr_Medium.otf"
+        android:textColor="@android:color/black"/>
+
+</RelativeLayout>

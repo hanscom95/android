@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "688411808147",
+    "firebase_url": "https://semi-f5f49.firebaseio.com",
+    "project_id": "semi-f5f49",
+    "storage_bucket": "semi-f5f49.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688411808147:android:affd5c69748bae2f",
+        "android_client_info": {
+          "package_name": "artech.com.semi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "688411808147-1c1h5nvm5scn2firlonehf4o263vh2d2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "artech.com.semi",
+            "certificate_hash": "f33f06b7fea94ce713bd5944a5c10132b704f242"
+          }
+        },
+        {
+          "client_id": "688411808147-32644udbq0ultdt6nb6pghl9pgppv23f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXAexXv4WyGGmzBNbhoBDO4mcGBOKcsbk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "688411808147-32644udbq0ultdt6nb6pghl9pgppv23f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

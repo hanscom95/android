@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.semi.normal.ReviewActivity"
+    tools:showIn="@layout/activity_review">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/first_layout"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="7.3dp"
+            android:background="@color/white">
+            <TextView
+                android:id="@+id/review_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16.5dp"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:text="리뷰"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+            <TextView
+                android:id="@+id/review_value_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/review_text"
+                android:layout_marginLeft="3dp"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:text="0"
+                android:textSize="12sp"
+                android:textColor="@color/warm_grey"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/input_line" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/first_layout"
+            android:layout_above="@+id/bottom_layout"
+            android:background="@color/white">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="106.8dp"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+                android:id="@+id/review_write_layout"
+                android:layout_width="match_parent"
+                android:layout_height="54dp">
+                <TextView
+                    android:id="@+id/review_write_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:text="리뷰 작성하기"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/notosanscjkkr_bold"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_layout"
+                android:layout_width="match_parent"
+                android:layout_height="52.8dp"
+                android:layout_below="@+id/review_write_layout">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true">
+                        <ImageView
+                            android:id="@+id/favorites_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/ic_img_favorite_2_heart_nonpress"/>
+
+                        <TextView
+                            android:id="@+id/favorites_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/favorites_img"
+                            android:layout_marginLeft="4.8dp"
+                            android:includeFontPadding="false"
+                            android:textSize="12sp"
+                            android:textColor="@color/greyish_brown"
+                            android:text="0"
+                            android:fontFamily="@font/nanumgothic"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true">
+                        <ImageView
+                            android:id="@+id/write_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/ic_review_2"/>
+
+                        <TextView
+                            android:id="@+id/write_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/write_img"
+                            android:layout_marginLeft="4.8dp"
+                            android:includeFontPadding="false"
+                            android:textSize="12sp"
+                            android:textColor="@color/greyish_brown"
+                            android:text="0"
+                            android:fontFamily="@font/nanumgothic"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/input_line" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/input_line"
+                android:layout_below="@+id/review_write_layout"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line" />
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

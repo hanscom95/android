@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="7.5dp">
+
+    <RelativeLayout
+        android:id="@+id/first_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/product_best_layout"
+            android:layout_width="155.5dp"
+            android:layout_height="157dp">
+            <ImageView
+                android:id="@+id/item_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@mipmap/imgbox_2"/>
+            <RelativeLayout
+                android:id="@+id/discount_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12.8dp"
+                android:background="@mipmap/img_ribbon">
+
+                <TextView
+                    android:id="@+id/discount_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6.8dp"
+                    android:layout_centerHorizontal="true"
+                    android:includeFontPadding="false"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    android:text="00%"
+                    android:fontFamily="@font/notosanscjkkr_bold"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/item_title_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/product_best_layout"
+            android:layout_alignRight="@+id/product_best_layout"
+            android:layout_marginTop="13.8dp"
+            android:layout_below="@+id/product_best_layout">
+            <TextView
+                android:id="@+id/item_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:text="Title"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:fontFamily="@font/nanumgothic"/>
+            <TextView
+                android:id="@+id/item_status_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/item_title_text"
+                android:layout_marginLeft="5dp"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:text="판매중"
+                android:textColor="@android:color/white"
+                android:textSize="9sp"
+                android:fontFamily="@font/notosanscjkkr_regular"
+                android:background="@mipmap/img_state_ing" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/item_status_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_title_layout"
+            android:layout_alignLeft="@+id/item_title_layout"
+            android:layout_marginTop="5dp"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="판매중"
+            android:textColor="@android:color/white"
+            android:textSize="9sp"
+            android:fontFamily="@font/notosanscjkkr_regular"
+            android:background="@mipmap/img_state_ing" />
+
+        <RelativeLayout
+            android:id="@+id/item_default_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/product_best_layout"
+            android:layout_below="@+id/item_title_layout"
+            android:layout_marginTop="7dp">
+
+            <TextView
+                android:id="@+id/item_default_price_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:textSize="12sp"
+                android:textColor="@color/grey"
+                android:text="0,000원"
+                android:fontFamily="@font/nanumgothic"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dp"
+                android:layout_centerVertical="true"
+                android:layout_alignLeft="@+id/item_default_price_text"
+                android:layout_alignRight="@+id/item_default_price_text"
+                android:background="@color/grey"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_default_layout"
+            android:layout_alignRight="@+id/product_best_layout"
+            android:layout_marginTop="3.5dp">
+            <TextView
+                android:id="@+id/price_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:text="0원"
+                android:fontFamily="@font/notosanscjkkr_bold"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

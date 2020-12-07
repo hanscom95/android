@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/first_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/item_img"
+            android:layout_width="63.5dp"
+            android:layout_height="59.8dp"
+            android:layout_centerVertical="true"
+            android:background="@color/black"
+            android:scaleType="fitXY"/>
+
+
+        <TextView
+            android:id="@+id/item_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/item_img"
+            android:layout_marginLeft="14.8dp"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:text="title"
+            android:textStyle="bold"
+            android:fontFamily="@font/nanumgothic"/>
+
+        <RelativeLayout
+            android:id="@+id/order_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_name_text"
+            android:layout_alignLeft="@+id/item_name_text"
+            android:layout_marginTop="11dp">
+            <TextView
+                android:id="@+id/order_number_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:textSize="9sp"
+                android:textColor="@color/warm_grey"
+                android:text="주문번호 : 0000000000"
+                android:fontFamily="@font/nanumgothic"/>
+            <TextView
+                android:id="@+id/order_status_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/order_number_text"
+                android:layout_marginLeft="5.5dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:background="@color/warm_grey"
+                android:textSize="9sp"
+                android:textColor="@color/white"
+                android:text="주문상태"
+                android:textStyle="bold"
+                android:fontFamily="@font/nanumgothic"/>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/item_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/order_layout"
+            android:layout_below="@+id/order_layout"
+            android:layout_marginTop="6.5dp"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textSize="9sp"
+            android:textColor="@color/warm_grey"
+            android:text="주문시간 : 0000-00-00 00:00:00"
+            android:fontFamily="@font/nanumgothic"/>
+
+        <ImageView
+            android:id="@+id/right_arrow_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16.3dp"
+            android:src="@mipmap/chevron_right_2"/>
+    </RelativeLayout>
+</RelativeLayout>

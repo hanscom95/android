@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.semi.normal.PaymentSuccessActivity"
+    tools:showIn="@layout/activity_payment_success">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17.5dp"
+                android:layout_marginTop="12dp">
+                <ImageView
+                    android:id="@+id/app_bar_close_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_close_white"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/first_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="22.3dp"
+                android:src="@mipmap/ic_checkmark"/>
+
+            <RelativeLayout
+                android:id="@+id/first_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="17.8dp">
+                <TextView
+                    android:id="@+id/payment_success_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:includeFontPadding="false"
+                    android:text="결제완료"
+                    android:textColor="@android:color/white"
+                    android:textSize="19.9sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nanumgothic" />
+                <TextView
+                    android:id="@+id/payment_success_detail_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/payment_success_text"
+                    android:layout_marginTop="7.8dp"
+                    android:includeFontPadding="false"
+                    android:text="마이정보 > 결제내역에서 보실 수 있습니다."
+                    android:textColor="@android:color/white"
+                    android:textSize="12.9sp"
+                    android:fontFamily="@font/notosanscjkkr_regular" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/second_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="31.8dp"
+                android:background="@mipmap/img_receipt">
+                <RelativeLayout
+                    android:id="@+id/second_first_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23.8dp"
+                    android:layout_marginLeft="29dp">
+                    <TextView
+                        android:id="@+id/date_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:includeFontPadding="false"
+                        android:text="2018-08-08"
+                        android:textColor="@color/greyish"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/nanumgothic" />
+
+
+                    <View
+                        android:id="@+id/date_line"
+                        android:layout_width="0.8dp"
+                        android:layout_height="12dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/date_text"
+                        android:layout_marginLeft="7.3dp"
+                        android:background="@color/white_three" />
+                    <TextView
+                        android:id="@+id/time_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/date_line"
+                        android:layout_marginLeft="6.8dp"
+                        android:layout_centerVertical="true"
+                        android:includeFontPadding="false"
+                        android:text="10:50"
+                        android:textColor="@color/greyish"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/nanumgothic" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/second_second_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/second_first_layout"
+                    android:layout_alignLeft="@+id/second_first_layout"
+                    android:layout_marginTop="20.5dp">
+                    <TextView
+                        android:id="@+id/title_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="염장 혼무시 참갯지렁이"
+                        android:textColor="@color/black"
+                        android:textSize="19.9sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/nanumgothic" />
+                    <TextView
+                        android:id="@+id/price_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_text"
+                        android:includeFontPadding="false"
+                        android:text="6,300원"
+                        android:textColor="@color/black"
+                        android:textSize="25.1sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/nanumgothic" />
+                </RelativeLayout>
+
+
+                <View
+                    android:id="@+id/middle_line"
+                    android:layout_width="264.3dp"
+                    android:layout_height="0.8dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/second_second_layout"
+                    android:layout_marginTop="21dp"
+                    android:background="@color/greyish" />
+
+                <RelativeLayout
+                    android:id="@+id/second_third_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/middle_line"
+                    android:layout_alignLeft="@+id/second_first_layout"
+                    android:layout_marginTop="21dp">
+
+                    <RelativeLayout
+                        android:id="@+id/second_third_company_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/company_title_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="낚시방"
+                            android:textColor="@color/warm_grey"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/notosanscjkkr_regular" />
+
+                        <TextView
+                            android:id="@+id/company_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/company_title_text"
+                            android:layout_marginTop="7.3dp"
+                            android:includeFontPadding="false"
+                            android:text="레드펄스"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/notosanscjkkr_regular" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/second_third_booker_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/second_third_company_layout"
+                        android:layout_marginTop="14.5dp">
+                        <TextView
+                            android:id="@+id/booker_title_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="예약자/수량"
+                            android:textColor="@color/warm_grey"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/notosanscjkkr_regular" />
+
+                        <TextView
+                            android:id="@+id/booker_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/booker_title_text"
+                            android:layout_marginTop="7.3dp"
+                            android:includeFontPadding="false"
+                            android:text="홍길동 / 3개"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/notosanscjkkr_regular" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/second_third_booker_date_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/second_third_booker_layout"
+                        android:layout_marginTop="14.5dp">
+                        <TextView
+                            android:id="@+id/booker_date_title_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="예약 날짜/시간"
+                            android:textColor="@color/warm_grey"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/notosanscjkkr_regular" />
+
+                        <TextView
+                            android:id="@+id/booker_date_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/booker_date_title_text"
+                            android:layout_marginTop="7.3dp"
+                            android:includeFontPadding="false"
+                            android:text="2018-08-11(토) / 오전 10:00"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/notosanscjkkr_regular" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/second_third_order_number_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/second_third_booker_date_layout"
+                        android:layout_marginTop="14.5dp">
+                        <TextView
+                            android:id="@+id/order_number_title_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="주문번호"
+                            android:textColor="@color/warm_grey"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/notosanscjkkr_regular" />
+
+                        <TextView
+                            android:id="@+id/order_number_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/order_number_title_text"
+                            android:layout_marginTop="7.3dp"
+                            android:includeFontPadding="false"
+                            android:text="201808081050001"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/notosanscjkkr_regular" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/second_third_vbank_name_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/second_third_order_number_layout"
+                        android:layout_marginTop="14.5dp"
+                        android:visibility="gone">
+                        <TextView
+                            android:id="@+id/vbank_name_title_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="입금은행"
+                            android:textColor="@color/warm_grey"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/notosanscjkkr_regular" />
+
+                        <TextView
+                            android:id="@+id/vbank_name_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/vbank_name_title_text"
+                            android:layout_marginTop="7.3dp"
+                            android:includeFontPadding="false"
+                            android:text="농협"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/notosanscjkkr_regular" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/second_third_vbank_account_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/second_third_vbank_name_layout"
+                        android:layout_marginTop="14.5dp"
+                        android:visibility="gone">
+                        <TextView
+                            android:id="@+id/vbank_account_title_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="가상계좌"
+                            android:textColor="@color/warm_grey"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/notosanscjkkr_regular" />
+
+                        <TextView
+                            android:id="@+id/vbank_account_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/vbank_account_title_text"
+                            android:layout_marginTop="7.3dp"
+                            android:includeFontPadding="false"
+                            android:textIsSelectable="true"
+                            android:text="0000000000000"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/notosanscjkkr_regular" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/product_receive_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/second_third_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="54.3dp"
+                    android:layout_marginBottom="38.3dp">
+                    <Button
+                        android:id="@+id/product_receive_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="상품 수령 예정"
+                        android:textColor="@color/warm_grey"
+                        android:textSize="13.1sp"
+                        android:fontFamily="@font/nanumgothic"
+                        android:background="@mipmap/btn_beforeuse"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

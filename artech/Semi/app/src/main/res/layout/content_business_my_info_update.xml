@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.semi.business.MyInfoUpdateActivity"
+    tools:showIn="@layout/activity_business_my_info_update">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24.3dp">
+
+            <RelativeLayout
+                android:id="@+id/main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+                <RelativeLayout
+                    android:id="@+id/profile_layout"
+                    android:layout_width="66.8dp"
+                    android:layout_height="66.8dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20.3dp">
+
+                    <artech.com.semi.utility.CircleImageView
+                        android:id="@+id/img_thumbnail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/img_profilephoto"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:src="@mipmap/ic_camera_2"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.5dp"
+                    android:layout_marginRight="17.8dp"
+                    android:layout_below="@+id/profile_layout"
+                    android:layout_marginTop="10dp">
+                    <RelativeLayout
+                        android:id="@+id/first_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/nickname_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="닉네임"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/nanumgothic"/>
+
+                        <EditText
+                            android:id="@+id/nickname_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/nickname_text"
+                            android:layout_marginTop="12dp"
+                            android:background="@mipmap/box_info_2"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:hint="닉네임을 입력해주세요."
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:maxLength="255"
+                            android:singleLine="true"
+                            android:gravity="left|center"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@color/warm_grey"
+                            android:fontFamily="@font/nanumgothic"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/second_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/first_layout"
+                        android:layout_marginTop="21.3dp">
+                        <TextView
+                            android:id="@+id/email_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="이메일"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/nanumgothic"/>
+
+                        <EditText
+                            android:id="@+id/email_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/email_text"
+                            android:layout_marginTop="12dp"
+                            android:background="@mipmap/box_info_2"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:hint="이메일을 입력해주세요."
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:maxLength="255"
+                            android:singleLine="true"
+                            android:gravity="left|center"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@color/warm_grey"
+                            android:fontFamily="@font/nanumgothic"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/third_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/second_layout"
+                        android:layout_marginTop="21.3dp">
+                        <TextView
+                            android:id="@+id/password_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="비밀번호"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/nanumgothic"/>
+
+                        <EditText
+                            android:id="@+id/password_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/password_text"
+                            android:layout_marginTop="12dp"
+                            android:background="@mipmap/box_info_2"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:hint="8~20자 이내"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:maxLength="20"
+                            android:singleLine="true"
+                            android:gravity="left|center"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@color/warm_grey"
+                            android:fontFamily="@font/nanumgothic"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/fourth_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/third_layout"
+                        android:layout_marginTop="21.3dp"
+                        android:layout_marginBottom="32dp">
+                        <TextView
+                            android:id="@+id/password_check_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="비밀번호 확인"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/nanumgothic"/>
+
+                        <EditText
+                            android:id="@+id/password_check_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/password_check_text"
+                            android:layout_marginTop="12dp"
+                            android:background="@mipmap/box_info_2"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:hint="8~20자 이내"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:maxLength="20"
+                            android:singleLine="true"
+                            android:gravity="left|center"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@color/warm_grey"
+                            android:fontFamily="@font/nanumgothic"/>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/bottom_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_layout"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10.5dp"
+                android:layout_marginBottom="24.3dp"
+                android:layout_marginRight="16dp">
+                <TextView
+                    android:id="@+id/logout_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:text="로그아웃"
+                    android:textColor="@color/warm_grey"
+                    android:textSize="9sp"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/nanumgothic" />
+
+                <TextView
+                    android:id="@+id/withdrawal_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/bottom_center_line"
+                    android:layout_marginLeft="7dp"
+                    android:includeFontPadding="false"
+                    android:text="회원탈퇴"
+                    android:textColor="@color/warm_grey"
+                    android:textSize="9sp"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/nanumgothic" />
+
+                <View
+                    android:id="@+id/bottom_center_line"
+                    android:layout_width="1dp"
+                    android:layout_height="8.5dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@+id/logout_text"
+                    android:layout_centerVertical="true"
+                    android:background="@color/input_line"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>

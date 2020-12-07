@@ -1,0 +1,104 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "artech.com.semi"
+        minSdkVersion 24
+        targetSdkVersion 26
+        versionCode 14
+        versionName "2.4"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            ext.enableCrashlytics = false
+        }
+    }
+
+    flavorDimensions "stage", "mode"
+    productFlavors {
+        dev {
+            dimension "stage"
+            minSdkVersion 21
+            aaptOptions.cruncherEnabled = false
+            resConfigs "ko", "xxxhdpi"
+        }
+        prd {
+            dimension "stage"
+            versionCode new Date().format('yyMMddHHmm').toInteger()
+        }
+
+
+        free {
+            dimension "mode"
+            applicationIdSuffix ".free"
+        }
+        paid {
+            dimension "mode"
+            applicationIdSuffix ".paid"
+        }
+    }
+    android.variantFilter { variant ->
+        def buildName = variant.buildType.name;
+        def flavorName = variant.getFlavors().get(0).name;
+
+        if (flavorName == 'dev' && buildName == 'release'
+                || flavorName == 'prd' && buildName == 'debug') {
+            variant.setIgnore(true);
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:support-v4:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation 'com.android.support:multidex:1.0.+'
+//    implementation 'com.amazonaws:aws-android-sdk-pinpoint:2.6.0'
+//    implementation 'com.amazonaws:aws-android-sdk-core:2.6.0'
+//    implementation('com.amazonaws:aws-android-sdk-auth-core:2.6.0@aar') { transitive = true }
+//    implementation('com.amazonaws:aws-android-sdk-mobile-client:2.6.7@aar') { transitive = true }
+//    implementation 'com.amazonaws:aws-android-sdk-s3:2.6.+'
+//    implementation 'com.amazonaws:aws-android-sdk-cognito:2.6.+'
+    implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation 'com.google.firebase:firebase-messaging:17.3.2'
+    //noinspection GradleCompatible
+    implementation 'com.google.android.gms:play-services-maps:15.0.1'
+    implementation 'com.google.maps.android:android-maps-utils:0.5+'
+    implementation 'com.google.android.gms:play-services:12.0.1'
+    implementation 'com.mcxiaoke.volley:library:1.0.19'
+    implementation 'com.squareup.picasso:picasso:2.3.2'
+    implementation group: 'com.kakao.sdk', name: 'usermgmt', version: project.KAKAO_SDK_VERSION
+    implementation group: 'com.kakao.sdk', name: 'kakaolink', version: project.KAKAO_SDK_VERSION
+    implementation 'com.naver.nid:naveridlogin-android-sdk:4.2.0'
+//    implementation 'com.naver.maps.open:naver-map-api:2.1.3@aar'
+    implementation files('libs/naver_map_api_2.1.3.aar')
+    //compile files('libs/naveridlogin_android_sdk_4.2.0.aar')
+    implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
+    implementation 'com.github.aakira:expandable-layout:1.6.0@aar'
+}
+
+//apply plugin: 'com.google.gms.google-services'

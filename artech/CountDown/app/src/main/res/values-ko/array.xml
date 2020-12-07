@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="language">
+        <item>한국어</item>
+        <item>ENGLISH</item>
+        <item>日本語</item>
+        <item>中文</item>
+    </string-array>
+
+    <string-array name="shoot_off">
+        <item>20초</item>
+        <item>40초</item>
+        <item>1분</item>
+    </string-array>
+</resources>

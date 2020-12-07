@@ -1,0 +1,1813 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.arcam.record.RecordActivity"
+    tools:showIn="@layout/app_bar_record">
+
+    <RelativeLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="1113dp"
+        android:layout_height="595dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@mipmap/tab1">
+
+        <RelativeLayout
+            android:id="@+id/tab_one_layout"
+            android:layout_width="365dp"
+            android:layout_height="57dp">
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/tab_one_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:includeFontPadding="false"
+                android:clickable="false"
+                android:text="@string/record_training_diary"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:font="NotoSansCJKkr_Regular.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tab_two_layout"
+            android:layout_width="365dp"
+            android:layout_height="57dp"
+            android:layout_toEndOf="@+id/tab_one_layout"
+            android:layout_marginLeft="9dp"
+            android:background="@mipmap/tab_btn_non">
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/tab_two_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:includeFontPadding="false"
+                android:clickable="false"
+                android:text="@string/record_environmental"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:font="NotoSansCJKkr_Regular.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tab_three_layout"
+            android:layout_width="365dp"
+            android:layout_height="57dp"
+            android:layout_toEndOf="@+id/tab_two_layout"
+            android:layout_marginLeft="9dp"
+            android:background="@mipmap/tab_btn_non">
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/tab_three_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:includeFontPadding="false"
+                android:clickable="false"
+                android:text="@string/record_score_distribution"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:font="NotoSansCJKkr_Regular.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tab1_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tab_one_layout"
+            android:visibility="visible">
+
+
+            <de.morrox.fontinator.FontEditText
+                android:id="@+id/tab_one_edit_text"
+                android:layout_width="1083dp"
+                android:layout_height="370dp"
+                android:layout_marginTop="15dp"
+                android:gravity="left|top"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="20dp"
+                android:paddingLeft="15dp"
+                android:background="@drawable/record_tab1_regular_state"
+                android:visibility="gone"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:font="NotoSansCJKkr_Regular.otf"/>
+
+            <RelativeLayout
+                android:id="@+id/tab_one_record_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/tab1_date_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+                    <Spinner
+                        android:id="@+id/tab1_year_spinner"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:background="@mipmap/btn_category"
+                        android:popupBackground="@color/whitebg" />
+                    <Spinner
+                        android:id="@+id/tab1_month_spinner"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/tab1_year_spinner"
+                        android:layout_marginLeft="22dp"
+                        android:paddingLeft="10dp"
+                        android:background="@mipmap/btn_category"
+                        android:popupBackground="@color/whitebg"
+                        android:entries="@array/month" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="309dp"
+                    android:layout_below="@+id/tab1_date_layout"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingBottom="8dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/record_tab1_list_regular_state">
+
+                    <RelativeLayout
+                        android:id="@+id/tab1_list_title_layout"
+                        android:layout_width="1000dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/table_regular_state">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/date_title_text"
+                            android:layout_width="210dp"
+                            android:layout_height="45dp"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="@string/record_tab2_table_date_title"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            app:font="NotoSansCJKkr_Medium.otf" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="45dp"
+                            android:layout_toEndOf="@+id/date_title_text"
+                            android:layout_toRightOf="@+id/date_title_text"
+                            android:background="@color/whitegray"/>
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/score_title_text"
+                            android:layout_width="100dp"
+                            android:layout_height="45dp"
+                            android:layout_alignBottom="@+id/date_title_text"
+                            android:layout_toEndOf="@+id/date_title_text"
+                            android:layout_toRightOf="@+id/date_title_text"
+                            android:layout_toLeftOf="@+id/tuning_info_title_text"
+                            android:layout_toStartOf="@+id/tuning_info_title_text"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="@string/record_tab2_table_score_title"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            app:font="NotoSansCJKkr_Medium.otf" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="45dp"
+                            android:layout_toEndOf="@+id/score_title_text"
+                            android:layout_toRightOf="@+id/score_title_text"
+                            android:background="@color/whitegray"/>
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tuning_info_title_text"
+                            android:layout_width="250dp"
+                            android:layout_height="45dp"
+                            android:layout_alignBottom="@+id/date_title_text"
+                            android:layout_toLeftOf="@+id/environment_title_text"
+                            android:layout_toStartOf="@+id/environment_title_text"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="@string/record_tab2_table_tuning_info_title"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            app:font="NotoSansCJKkr_Medium.otf" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="45dp"
+                            android:layout_toEndOf="@+id/tuning_info_title_text"
+                            android:layout_toRightOf="@+id/tuning_info_title_text"
+                            android:background="@color/whitegray"/>
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/environment_title_text"
+                            android:layout_width="250dp"
+                            android:layout_height="45dp"
+                            android:layout_alignBottom="@+id/date_title_text"
+                            android:layout_toLeftOf="@+id/comment_title_text"
+                            android:layout_toStartOf="@+id/comment_title_text"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="@string/record_tab2_table_environment_title"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            app:font="NotoSansCJKkr_Medium.otf" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="45dp"
+                            android:layout_toEndOf="@+id/environment_title_text"
+                            android:layout_toRightOf="@+id/environment_title_text"
+                            android:background="@color/whitegray"/>
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/comment_title_text"
+                            android:layout_width="190dp"
+                            android:layout_height="45dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="@string/record_tab2_table_comment_title"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            app:font="NotoSansCJKkr_Medium.otf" />
+
+                    </RelativeLayout>
+
+                    <ListView
+                        android:id="@+id/tab1_record_list_view"
+                        android:layout_width="1000dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/tab1_list_title_layout"
+                        android:layout_alignStart="@+id/tab1_list_title_layout"
+                        android:layout_below="@+id/tab1_list_title_layout"
+                        android:divider="@null"
+                        android:dividerHeight="0dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="10dp">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/tab1_best_point_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/record_tab1_best_title_text"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    app:font="NotoSansCJKkr_Bold.otf" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/tab1_information_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tab1_best_point_text"
+                    android:layout_alignTop="@+id/tab1_best_point_text"
+                    android:layout_marginLeft="79dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/record_tab1_information_text"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    app:font="NotoSansCJKkr_Bold.otf" />
+
+                <RelativeLayout
+                    android:id="@+id/score_layout"
+                    android:layout_width="207dp"
+                    android:layout_height="85dp"
+                    android:background="@mipmap/box_score"
+                    android:layout_below="@+id/tab1_best_point_text"
+                    android:layout_marginTop="10dp">
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/tab1_score_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:includeFontPadding="false"
+                        android:text="0"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp"
+                        app:font="NotoSansCJKkr_Regular.otf" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/date_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/score_layout"
+                    android:layout_alignTop="@+id/score_layout"
+                    android:layout_marginLeft="6dp"
+                    android:background="@mipmap/box_date">
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/tab1_date_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="45dp"
+                        android:layout_centerVertical="true"
+                        android:includeFontPadding="false"
+                        android:text="2017-11-10 (FRI)"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        app:font="NotoSansCJKkr_Regular.otf" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tab1_weather_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/date_layout"
+                    android:layout_toEndOf="@+id/date_layout"
+                    android:layout_marginLeft="2dp"
+                    android:background="@mipmap/box_detail3">
+                    <ImageView
+                        android:id="@+id/tab1_weather_img"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/ic_sunny_white"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tab1_wind_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tab1_weather_layout"
+                    android:layout_toEndOf="@+id/tab1_weather_layout"
+                    android:layout_marginLeft="2dp"
+                    android:background="@mipmap/box_detail3">
+                    <ImageView
+                        android:id="@+id/tab1_wind_img"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/ic_wind_one_white"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tab1_distance_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tab1_wind_layout"
+                    android:layout_toEndOf="@+id/tab1_wind_layout"
+                    android:layout_marginLeft="2dp"
+                    android:background="@mipmap/box_detail3">
+                    <ImageView
+                        android:id="@+id/tab1_distance_img"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/ic_18msc_press"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/record_tuning_box_first_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignStart="@+id/date_layout"
+                    android:layout_below="@+id/date_layout"
+                    android:background="@mipmap/box_tuning3">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/tab1_brace_high_text"
+                        android:layout_width="148dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:includeFontPadding="false"
+                        android:gravity="center"
+                        android:text="@string/record_brace_high"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        app:font="NotoSansCJKkr_Regular.otf" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/tab1_brace_high_value_text"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:layout_toEndOf="@+id/tab1_brace_high_text"
+                        android:includeFontPadding="false"
+                        android:text="000"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        app:font="NotoSansCJKkr_Regular.otf" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/record_tuning_box_second_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/record_tuning_box_first_layout"
+                    android:layout_toEndOf="@+id/record_tuning_box_first_layout"
+                    android:layout_marginLeft="2dp"
+                    android:background="@mipmap/box_tuning3">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/tab1_tiller_high_text"
+                        android:layout_width="148dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:includeFontPadding="false"
+                        android:paddingLeft="21dp"
+                        android:text="@string/record_tiller_high"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        app:font="NotoSansCJKkr_Regular.otf" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/tab1_tiller_high_value_text"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:layout_toEndOf="@+id/tab1_tiller_high_text"
+                        android:includeFontPadding="false"
+                        android:text="000"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        app:font="NotoSansCJKkr_Regular.otf" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/record_tuning_box_third_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/record_tuning_box_second_layout"
+                    android:layout_toEndOf="@+id/record_tuning_box_second_layout"
+                    android:layout_marginLeft="2dp"
+                    android:background="@mipmap/box_tuning3">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/tab1_nocking_point_text"
+                        android:layout_width="148dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:includeFontPadding="false"
+                        android:paddingLeft="6dp"
+                        android:text="@string/record_nocking_point"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        app:font="NotoSansCJKkr_Regular.otf" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/tab1_nocking_point_value_text"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:layout_toEndOf="@+id/tab1_nocking_point_text"
+                        android:includeFontPadding="false"
+                        android:text="000"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        app:font="NotoSansCJKkr_Regular.otf" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tab1_button_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_alignBottom="@+id/record_tuning_box_third_layout"
+                    android:layout_toEndOf="@+id/record_tuning_box_third_layout"
+                    android:layout_centerVertical="true">
+
+                    <de.morrox.fontinator.FontButton
+                        android:id="@+id/tab1_list_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/toggle_record_tab1_button"
+                        android:button="@android:color/transparent"
+                        android:text="@string/record_tab1_list"
+                        android:textColor="@color/whitefont"
+                        android:textSize="24sp"
+                        app:font="NotoSansCJKkr_Bold.otf" />
+
+                    <de.morrox.fontinator.FontButton
+                        android:id="@+id/tab1_save_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/tab1_list_button"
+                        android:layout_marginLeft="6dp"
+                        android:background="@drawable/toggle_record_tab1_button"
+                        android:button="@android:color/transparent"
+                        android:text="@string/record_tab1_save"
+                        android:textColor="@color/whitefont"
+                        android:textSize="24sp"
+                        app:font="NotoSansCJKkr_Bold.otf" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tab1_button_update_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_alignBottom="@+id/record_tuning_box_third_layout"
+                    android:layout_toEndOf="@+id/record_tuning_box_third_layout"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone">
+
+                    <de.morrox.fontinator.FontButton
+                        android:id="@+id/tab1_modify_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/toggle_record_tab1_button"
+                        android:button="@android:color/transparent"
+                        android:text="@string/record_tab1_modify"
+                        android:textColor="@color/whitefont"
+                        android:textSize="24sp"
+                        app:font="NotoSansCJKkr_Bold.otf" />
+
+                    <de.morrox.fontinator.FontButton
+                        android:id="@+id/tab1_delete_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/tab1_modify_button"
+                        android:layout_marginLeft="6dp"
+                        android:background="@drawable/toggle_record_tab1_button"
+                        android:button="@android:color/transparent"
+                        android:text="@string/record_tab1_delete"
+                        android:textColor="@color/whitefont"
+                        android:textSize="24sp"
+                        app:font="NotoSansCJKkr_Bold.otf" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tab2_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tab_one_layout"
+            android:visibility="gone">
+
+
+            <RadioGroup
+                android:id="@+id/record_tab2_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/weather_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/record_tab2_weather_radio_button"
+                    android:checked="true"/>
+                <RadioButton
+                    android:id="@+id/wind_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/record_tab2_wind_radio_button" />
+                <RadioButton
+                    android:id="@+id/distance_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/record_tab2_distance_radio_button" />
+            </RadioGroup>
+
+
+            <RadioGroup
+                android:id="@+id/tab2_weather_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/record_tab2_radio_group"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="26dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+                <RadioButton
+                    android:id="@+id/sunny_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/record_tab2_weather_sunny_radio_button"/>
+                <RadioButton
+                    android:id="@+id/cloud_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="29dp"
+                    android:button="@drawable/record_tab2_weather_cloud_radio_button" />
+                <RadioButton
+                    android:id="@+id/fog_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:button="@drawable/record_tab2_weather_fog_radio_button" />
+                <RadioButton
+                    android:id="@+id/typhoon_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="37dp"
+                    android:button="@drawable/record_tab2_weather_typhoon_radio_button" />
+                <RadioButton
+                    android:id="@+id/rain_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="42dp"
+                    android:button="@drawable/record_tab2_weather_rain_radio_button" />
+                <RadioButton
+                    android:id="@+id/snow_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="41dp"
+                    android:button="@drawable/record_tab2_weather_snow_radio_button" />
+            </RadioGroup>
+
+
+            <RadioGroup
+                android:id="@+id/tab2_wind_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/record_tab2_radio_group"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+                <RadioButton
+                    android:id="@+id/wind_zero_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/record_tab2_wind_zero_radio_button" />
+                <RadioButton
+                    android:id="@+id/wind_one_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="33dp"
+                    android:button="@drawable/record_tab2_wind_one_radio_button" />
+                <RadioButton
+                    android:id="@+id/wind_two_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:button="@drawable/record_tab2_wind_two_radio_button" />
+                <RadioButton
+                    android:id="@+id/wind_three_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="33dp"
+                    android:button="@drawable/record_tab2_wind_three_radio_button" />
+                <RadioButton
+                    android:id="@+id/wind_four_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:button="@drawable/record_tab2_wind_four_radio_button" />
+            </RadioGroup>
+
+
+
+            <RadioGroup
+                android:id="@+id/tab2_distance_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/record_tab2_radio_group"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="26dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+                <RadioButton
+                    android:id="@+id/distance_18m_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/record_tab2_distance_18m_radio_button" />
+                <RadioButton
+                    android:id="@+id/distance_30m_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="44dp"
+                    android:button="@drawable/record_tab2_distance_30m_radio_button" />
+                <RadioButton
+                    android:id="@+id/distance_50m_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="44dp"
+                    android:button="@drawable/record_tab2_distance_50m_radio_button" />
+                <RadioButton
+                    android:id="@+id/distance_70m_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="43dp"
+                    android:button="@drawable/record_tab2_distance_70m_radio_button" />
+            </RadioGroup>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/record_tab2_radio_group"
+                android:layout_marginTop="100dp">
+
+                <RelativeLayout
+                    android:id="@+id/tab2_first_layout"
+                    android:layout_width="546dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="38dp">
+
+                    <RelativeLayout
+                        android:id="@+id/tab2_date_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true">
+                        <Spinner
+                            android:id="@+id/tab2_year_spinner"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:background="@mipmap/btn_category"
+                            android:popupBackground="@color/whitebg" />
+                        <Spinner
+                            android:id="@+id/tab2_month_spinner"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:layout_toEndOf="@+id/tab2_year_spinner"
+                            android:layout_marginLeft="22dp"
+                            android:background="@mipmap/btn_category"
+                            android:popupBackground="@color/whitebg" />
+                    </RelativeLayout>
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/tab2_chart_no_search_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tab2_date_layout"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="100dp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/record_chart_no_search_text"
+                        android:textColor="@color/grayfont"
+                        android:textSize="24sp"
+                        app:font="NotoSansCJKkr_Regular.otf" />
+
+                    <WebView
+                        android:id="@+id/tab2_chart_webview"
+                        android:layout_width="match_parent"
+                        android:layout_height="239dp"
+                        android:layout_below="@+id/tab2_date_layout"
+                        android:layout_marginTop="20dp"></WebView>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/tab2_second_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tab2_first_layout"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginLeft="72dp">
+                    <RelativeLayout
+                        android:id="@+id/tab2_score_box_layout"
+                        android:layout_width="220dp"
+                        android:layout_height="142dp"
+                        android:background="@mipmap/btn_bestscore">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true">
+                            <de.morrox.fontinator.FontTextView
+                                android:id="@+id/tab2_second_score_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="@string/record_tab2_score_text"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                app:font="NotoSansCJKkr_Regular.otf" />
+                            <de.morrox.fontinator.FontTextView
+                                android:id="@+id/tab2_second_score_value_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tab2_second_score_text"
+                                android:gravity="center"
+                                android:layout_marginTop="14dp"
+                                android:layout_centerHorizontal="true"
+                                android:includeFontPadding="false"
+                                android:text="0"
+                                android:textColor="@android:color/white"
+                                android:textSize="48sp"
+                                app:font="NotoSansCJKkr_Regular.otf" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/tab2_value_box_layout"
+                        android:layout_width="220dp"
+                        android:layout_height="142dp"
+                        android:layout_toEndOf="@+id/tab2_score_box_layout"
+                        android:background="@mipmap/btn_tuning">
+                        <RelativeLayout
+                            android:id="@+id/record_tab2_tuning_box_first_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="47dp">
+
+                            <de.morrox.fontinator.FontTextView
+                                android:id="@+id/tab2_brace_high_text"
+                                android:layout_width="130dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:layout_centerVertical="true"
+                                android:includeFontPadding="false"
+                                android:paddingLeft="21dp"
+                                android:text="@string/record_brace_high"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                app:font="NotoSansCJKkr_Regular.otf" />
+
+                            <de.morrox.fontinator.FontTextView
+                                android:id="@+id/tab2_brace_high_value_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:layout_toEndOf="@+id/tab2_brace_high_text"
+                                android:includeFontPadding="false"
+                                android:text="000"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                app:font="NotoSansCJKkr_Regular.otf" />
+
+                            <View
+                                android:layout_width="130dp"
+                                android:layout_height="1dp"
+                                android:background="@color/whitegray"
+                                android:visibility="gone"/>
+                            <View
+                                android:layout_width="130dp"
+                                android:layout_height="1dp"
+                                android:layout_below="@+id/tab2_brace_high_text"
+                                android:background="@color/whitegray"
+                                android:visibility="gone"/>
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/whitegray"
+                                android:visibility="gone"/>
+                        </RelativeLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/record_tab2_tuning_box_first_layout"
+                            android:background="@color/whitegray"
+                            android:visibility="gone"/>
+
+
+                        <RelativeLayout
+                            android:id="@+id/record_tab2_tuning_box_second_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="47dp"
+                            android:layout_below="@+id/record_tab2_tuning_box_first_layout">
+
+                            <de.morrox.fontinator.FontTextView
+                                android:id="@+id/tab2_tiller_high_text"
+                                android:layout_width="130dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:layout_centerVertical="true"
+                                android:includeFontPadding="false"
+                                android:paddingLeft="21dp"
+                                android:text="@string/record_tiller_high"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                app:font="NotoSansCJKkr_Regular.otf" />
+
+                            <de.morrox.fontinator.FontTextView
+                                android:id="@+id/tab2_tiller_high_value_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:layout_toEndOf="@+id/tab2_tiller_high_text"
+                                android:includeFontPadding="false"
+                                android:text="000"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                app:font="NotoSansCJKkr_Regular.otf" />
+
+                            <View
+                                android:layout_width="130dp"
+                                android:layout_height="1dp"
+                                android:background="@color/whitegray"
+                                android:visibility="gone"/>
+                            <View
+                                android:layout_width="130dp"
+                                android:layout_height="1dp"
+                                android:layout_below="@+id/tab2_tiller_high_text"
+                                android:background="@color/whitegray"
+                                android:visibility="gone"/>
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/whitegray"
+                                android:visibility="gone"/>
+                        </RelativeLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/record_tab2_tuning_box_second_layout"
+                            android:background="@color/whitegray"
+                            android:visibility="gone"/>
+
+
+                        <RelativeLayout
+                            android:id="@+id/record_tab2_tuning_box_third_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_below="@+id/record_tab2_tuning_box_second_layout">
+
+                            <de.morrox.fontinator.FontTextView
+                                android:id="@+id/tab2_nocking_point_text"
+                                android:layout_width="130dp"
+                                android:layout_height="46dp"
+                                android:gravity="center_vertical"
+                                android:layout_centerVertical="true"
+                                android:includeFontPadding="false"
+                                android:paddingLeft="21dp"
+                                android:text="@string/record_nocking_point"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                app:font="NotoSansCJKkr_Regular.otf" />
+
+                            <de.morrox.fontinator.FontTextView
+                                android:id="@+id/tab2_nocking_point_value_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:layout_toEndOf="@+id/tab2_nocking_point_text"
+                                android:text="000"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                app:font="NotoSansCJKkr_Regular.otf" />
+
+                            <View
+                                android:layout_width="130dp"
+                                android:layout_height="1dp"
+                                android:background="@color/whitegray"
+                                android:visibility="gone"/>
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/whitegray"
+                                android:visibility="gone"/>
+                        </RelativeLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/record_tab2_tuning_box_third_layout"
+                            android:background="@color/whitegray"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/tab2_wind_box_layout"
+                        android:layout_width="220dp"
+                        android:layout_height="142dp"
+                        android:layout_below="@+id/tab2_score_box_layout"
+                        android:background="@mipmap/btn_wind">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true">
+                            <de.morrox.fontinator.FontTextView
+                                android:id="@+id/tab2_second_wind_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="@string/record_tab2_wind_text"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                app:font="NotoSansCJKkr_Regular.otf" />
+                            <ImageView
+                                android:id="@+id/tab2_second_wind_img"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tab2_second_wind_text"
+                                android:layout_marginTop="14dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@mipmap/ic_w_wind_one_press"/>
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/tab2_distance_box_layout"
+                        android:layout_width="220dp"
+                        android:layout_height="142dp"
+                        android:layout_toEndOf="@+id/tab2_wind_box_layout"
+                        android:layout_below="@+id/tab2_value_box_layout"
+                        android:background="@mipmap/btn_distance">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true">
+                            <de.morrox.fontinator.FontTextView
+                                android:id="@+id/tab2_second_distance_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="@string/record_tab2_distance_text"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                app:font="NotoSansCJKkr_Regular.otf" />
+                            <de.morrox.fontinator.FontTextView
+                                android:id="@+id/tab2_second_distance_value_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tab2_second_distance_text"
+                                android:layout_marginTop="14dp"
+                                android:layout_centerHorizontal="true"
+                                android:includeFontPadding="false"
+                                android:text="18m"
+                                android:textColor="@android:color/white"
+                                android:textSize="22sp"
+                                app:font="NotoSansCJKkr_Regular.otf" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/tab2_second_layout_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/tab2_wind_box_layout"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/record_tab2_layout_text"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        app:font="NotoSansCJKkr_Regular.otf" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tab3_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tab_one_layout"
+            android:visibility="gone">
+            <RelativeLayout
+                android:id="@+id/tab3_date_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp">
+                <Spinner
+                    android:id="@+id/tab3_year_spinner"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:background="@mipmap/btn_category"
+                    android:popupBackground="@color/whitebg" />
+                <Spinner
+                    android:id="@+id/tab3_month_spinner"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:layout_toEndOf="@+id/tab3_year_spinner"
+                    android:layout_marginLeft="22dp"
+                    android:background="@mipmap/btn_category"
+                    android:popupBackground="@color/whitebg" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tab3_first_layout"
+                android:layout_width="454dp"
+                android:layout_height="347dp"
+                android:layout_below="@+id/tab3_date_layout"
+                android:layout_marginTop="52dp"
+                android:layout_marginLeft="77dp">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/tab3_chart_no_search_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/record_chart_no_search_text"
+                    android:textColor="@color/grayfont"
+                    android:textSize="24sp"
+                    app:font="NotoSansCJKkr_Regular.otf" />
+
+                <WebView
+                    android:id="@+id/tab3_chart_webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></WebView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tab3_second_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tab3_date_layout"
+                android:layout_toEndOf="@+id/tab3_first_layout"
+                android:layout_marginTop="91dp"
+                android:layout_marginLeft="120dp">
+
+                <RelativeLayout
+                    android:id="@+id/tab3_table_first_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/record_tab3_x10_score_layout"
+                        android:layout_width="185dp"
+                        android:layout_height="42dp">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_x10_text"
+                            android:layout_width="103dp"
+                            android:layout_height="40dp"
+                            android:background="@color/lightgray"
+                            android:gravity="center"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="x-10"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_x10_value_text"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:layout_toEndOf="@+id/tab3_x10_text"
+                            android:includeFontPadding="false"
+                            android:text="%"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/tab3_x10_text"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/tab3_x10_value_text"
+                            android:background="@color/whitegray"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/record_tab3_10_score_layout"
+                        android:layout_width="185dp"
+                        android:layout_height="42dp"
+                        android:layout_below="@+id/record_tab3_x10_score_layout"
+                        android:layout_marginTop="2dp">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_10_text"
+                            android:layout_width="103dp"
+                            android:layout_height="40dp"
+                            android:background="@color/lightgray"
+                            android:gravity="center"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="10"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_10_value_text"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:layout_toEndOf="@+id/tab3_10_text"
+                            android:includeFontPadding="false"
+                            android:text="%"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/tab3_10_text"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/tab3_10_value_text"
+                            android:background="@color/whitegray"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/record_tab3_9_score_layout"
+                        android:layout_width="185dp"
+                        android:layout_height="42dp"
+                        android:layout_below="@+id/record_tab3_10_score_layout"
+                        android:layout_marginTop="2dp">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_9_text"
+                            android:layout_width="103dp"
+                            android:layout_height="40dp"
+                            android:background="@color/lightgray"
+                            android:gravity="center"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="9"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_9_value_text"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:layout_toEndOf="@+id/tab3_9_text"
+                            android:includeFontPadding="false"
+                            android:text="%"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/tab3_9_text"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/tab3_9_value_text"
+                            android:background="@color/whitegray"/>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/record_tab3_8_score_layout"
+                        android:layout_width="185dp"
+                        android:layout_height="42dp"
+                        android:layout_below="@+id/record_tab3_9_score_layout"
+                        android:layout_marginTop="2dp">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_8_text"
+                            android:layout_width="103dp"
+                            android:layout_height="40dp"
+                            android:background="@color/lightgray"
+                            android:gravity="center"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="8"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_8_value_text"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:layout_toEndOf="@+id/tab3_8_text"
+                            android:includeFontPadding="false"
+                            android:text="%"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/tab3_8_text"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/tab3_8_value_text"
+                            android:background="@color/whitegray"/>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/record_tab3_7_score_layout"
+                        android:layout_width="185dp"
+                        android:layout_height="42dp"
+                        android:layout_below="@+id/record_tab3_8_score_layout"
+                        android:layout_marginTop="2dp">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_7_text"
+                            android:layout_width="103dp"
+                            android:layout_height="40dp"
+                            android:background="@color/lightgray"
+                            android:gravity="center"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="7"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_7_value_text"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:layout_toEndOf="@+id/tab3_7_text"
+                            android:includeFontPadding="false"
+                            android:text="%"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/tab3_7_text"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/tab3_7_value_text"
+                            android:background="@color/whitegray"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/record_tab3_6_score_layout"
+                        android:layout_width="185dp"
+                        android:layout_height="42dp"
+                        android:layout_below="@+id/record_tab3_7_score_layout"
+                        android:layout_marginTop="2dp">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_6_text"
+                            android:layout_width="103dp"
+                            android:layout_height="40dp"
+                            android:background="@color/lightgray"
+                            android:gravity="center"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="6"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_6_value_text"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:layout_toEndOf="@+id/tab3_6_text"
+                            android:includeFontPadding="false"
+                            android:text="%"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/tab3_6_text"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/tab3_6_value_text"
+                            android:background="@color/whitegray"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tab3_table_second_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tab3_table_first_line"
+                    android:layout_marginLeft="3dp">
+
+                    <RelativeLayout
+                        android:id="@+id/record_tab3_5_score_layout"
+                        android:layout_width="185dp"
+                        android:layout_height="42dp">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_5_text"
+                            android:layout_width="103dp"
+                            android:layout_height="40dp"
+                            android:background="@color/lightgray"
+                            android:gravity="center"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="5"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_5_value_text"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:layout_toEndOf="@+id/tab3_5_text"
+                            android:includeFontPadding="false"
+                            android:text="%"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/tab3_5_text"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/tab3_5_value_text"
+                            android:background="@color/whitegray"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/record_tab3_4_score_layout"
+                        android:layout_width="185dp"
+                        android:layout_height="42dp"
+                        android:layout_below="@+id/record_tab3_5_score_layout"
+                        android:layout_marginTop="2dp">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_4_text"
+                            android:layout_width="103dp"
+                            android:layout_height="40dp"
+                            android:background="@color/lightgray"
+                            android:gravity="center"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="4"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_4_value_text"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:layout_toEndOf="@+id/tab3_4_text"
+                            android:includeFontPadding="false"
+                            android:text="%"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/tab3_4_text"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/tab3_4_value_text"
+                            android:background="@color/whitegray"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/record_tab3_3_score_layout"
+                        android:layout_width="185dp"
+                        android:layout_height="42dp"
+                        android:layout_below="@+id/record_tab3_4_score_layout"
+                        android:layout_marginTop="2dp">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_3_text"
+                            android:layout_width="103dp"
+                            android:layout_height="40dp"
+                            android:background="@color/lightgray"
+                            android:gravity="center"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="3"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_3_value_text"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:layout_toEndOf="@+id/tab3_3_text"
+                            android:includeFontPadding="false"
+                            android:text="%"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/tab3_3_text"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/tab3_3_value_text"
+                            android:background="@color/whitegray"/>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/record_tab3_2_score_layout"
+                        android:layout_width="185dp"
+                        android:layout_height="42dp"
+                        android:layout_below="@+id/record_tab3_3_score_layout"
+                        android:layout_marginTop="2dp">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_2_text"
+                            android:layout_width="103dp"
+                            android:layout_height="40dp"
+                            android:background="@color/lightgray"
+                            android:gravity="center"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="2"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_2_value_text"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:layout_toEndOf="@+id/tab3_2_text"
+                            android:includeFontPadding="false"
+                            android:text="%"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/tab3_2_text"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/tab3_2_value_text"
+                            android:background="@color/whitegray"/>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/record_tab3_1_score_layout"
+                        android:layout_width="185dp"
+                        android:layout_height="42dp"
+                        android:layout_below="@+id/record_tab3_2_score_layout"
+                        android:layout_marginTop="2dp">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_1_text"
+                            android:layout_width="103dp"
+                            android:layout_height="40dp"
+                            android:background="@color/lightgray"
+                            android:gravity="center"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="1"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_1_value_text"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:layout_toEndOf="@+id/tab3_1_text"
+                            android:includeFontPadding="false"
+                            android:text="%"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/tab3_1_text"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/tab3_1_value_text"
+                            android:background="@color/whitegray"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/record_tab3_0_score_layout"
+                        android:layout_width="185dp"
+                        android:layout_height="42dp"
+                        android:layout_below="@+id/record_tab3_1_score_layout"
+                        android:layout_marginTop="2dp">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_0_text"
+                            android:layout_width="103dp"
+                            android:layout_height="40dp"
+                            android:background="@color/lightgray"
+                            android:gravity="center"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="0(miss)"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/tab3_0_value_text"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:layout_toEndOf="@+id/tab3_0_text"
+                            android:includeFontPadding="false"
+                            android:text="%"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/tab3_0_text"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/whitegray"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/tab3_0_value_text"
+                            android:background="@color/whitegray"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/main_version_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:includeFontPadding="false"
+        android:text="@string/app_version"
+        android:textColor="@color/bluegrayfont"
+        android:textSize="16sp"
+        app:font="Roboto_Thin.otf"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</RelativeLayout>

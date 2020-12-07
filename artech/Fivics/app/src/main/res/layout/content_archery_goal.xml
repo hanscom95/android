@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_archery_goal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@mipmap/popup_keypad">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="65.33dp"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentTop="true">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/archery_goal_nine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/toggle_archery_number_nine_button"
+                    android:button="@android:color/transparent"/>
+                <CheckBox
+                    android:id="@+id/archery_goal_ten"
+                    android:gravity="center"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/toggle_archery_number_ten_button"
+                    android:button="@android:color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <CheckBox
+                    android:id="@+id/archery_goal_full_scale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/toggle_archery_number_ten_x_button"
+                    android:button="@android:color/transparent"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/archery_goal_six"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/toggle_archery_number_six_button"
+                    android:button="@android:color/transparent"/>
+                <CheckBox
+                    android:id="@+id/archery_goal_seven"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/toggle_archery_number_seven_button"
+                    android:button="@android:color/transparent"/>
+                <CheckBox
+                    android:id="@+id/archery_goal_eight"
+                    android:gravity="center"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/toggle_archery_number_eight_button"
+                    android:button="@android:color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/archery_goal_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/toggle_archery_number_three_button"
+                    android:button="@android:color/transparent"/>
+                <CheckBox
+                    android:id="@+id/archery_goal_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/toggle_archery_number_four_button"
+                    android:button="@android:color/transparent" />
+                <CheckBox
+                    android:id="@+id/archery_goal_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/toggle_archery_number_five_button"
+                    android:button="@android:color/transparent"/>
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/archery_goal_zero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="3dp"
+                android:background="@drawable/toggle_archery_number_miss_button"
+                android:button="@android:color/transparent" />
+            <CheckBox
+                android:id="@+id/archery_goal_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="3dp"
+                android:background="@drawable/toggle_archery_number_one_button"
+                android:button="@android:color/transparent"/>
+            <CheckBox
+                android:id="@+id/archery_goal_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="3dp"
+                android:background="@drawable/toggle_archery_number_two_button"
+                android:button="@android:color/transparent"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="52dp"
+        android:layout_marginTop="52.67dp">
+
+        <RelativeLayout
+            android:id="@+id/direction_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/up_left_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/toggle_archery_arrow_up_left_button"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/up_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_margin="3dp"
+                android:layout_toEndOf="@+id/up_left_checkbox"
+                android:background="@drawable/toggle_archery_arrow_up_button"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/up_right_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_margin="3dp"
+                android:layout_toEndOf="@+id/up_checkbox"
+                android:background="@drawable/toggle_archery_arrow_up_right_button"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/left_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/up_left_checkbox"
+                android:layout_margin="3dp"
+                android:background="@drawable/toggle_archery_arrow_left_button"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/right_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/up_right_checkbox"
+                android:layout_margin="3dp"
+                android:layout_toEndOf="@+id/up_checkbox"
+                android:background="@drawable/toggle_archery_arrow_right_button"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/down_left_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/left_checkbox"
+                android:layout_margin="3dp"
+                android:background="@drawable/toggle_archery_arrow_down_left_button"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/down_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/right_checkbox"
+                android:layout_margin="3dp"
+                android:layout_toEndOf="@+id/down_left_checkbox"
+                android:background="@drawable/toggle_archery_arrow_down_button"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/down_right_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/right_checkbox"
+                android:layout_margin="3dp"
+                android:layout_toEndOf="@+id/down_checkbox"
+                android:background="@drawable/toggle_archery_arrow_down_right_button"
+                android:button="@null" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="51.33dp">
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/cancel_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="138.67dp"
+            android:background="@null"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/cancel_button"
+            android:textColor="@color/archery_popup_button_text"
+            android:textSize="26.67sp"
+            app:font="NotoSansCJKkr_Bold.otf"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/confirm_text" />
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/confirm_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="51.33dp"
+            android:layout_marginRight="66dp"
+            android:background="@null"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/confirm_button"
+            android:textColor="@color/archery_popup_button_text"
+            android:textSize="26.67sp"
+            app:font="NotoSansCJKkr_Bold.otf" />
+    </RelativeLayout>
+
+</RelativeLayout>

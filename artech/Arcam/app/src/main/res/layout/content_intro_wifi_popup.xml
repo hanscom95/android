@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_intro_wifi_popup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/popup_warning"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/popup_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="10dp"
+            android:src="@mipmap/warningicon" />
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/popup_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/popup_img"
+            android:layout_marginLeft="15dp"
+            android:paddingBottom="10dp"
+            android:text="@string/intro_wifi_popup"
+            android:textColor="@color/yellowfont"
+            android:textSize="20sp"
+            app:font="NotoSansCJKkr_Regular.otf" />
+    </RelativeLayout>
+
+</RelativeLayout>

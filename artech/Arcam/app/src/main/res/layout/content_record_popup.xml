@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_record_popup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="801dp"
+    android:minHeight="467dp"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+        <RelativeLayout
+            android:id="@+id/first_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/brace_high_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:clickable="false"
+                android:text="@string/record_brace_high"
+                android:textColor="@color/bluegrayfont"
+                android:textSize="14sp"
+                app:font="NotoSansCJKkr_Regular.otf" />
+
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/tiller_high_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/brace_high_edittext"
+                android:layout_marginTop="13dp"
+                android:clickable="false"
+                android:includeFontPadding="false"
+                android:text="@string/record_tiller_high"
+                android:textColor="@color/bluegrayfont"
+                android:textSize="14sp"
+                app:font="NotoSansCJKkr_Regular.otf" />
+
+            <de.morrox.fontinator.FontEditText
+                android:id="@+id/brace_high_edittext"
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/brace_high_text"
+                android:layout_marginTop="34dp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/bluegray2font"
+                android:textSize="14sp"
+                android:theme="@style/RecordEditTextTheme"
+                app:font="NotoSansCJKkr_Regular.otf" />
+
+            <de.morrox.fontinator.FontEditText
+                android:id="@+id/tiller_high_edittext"
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tiller_high_text"
+                android:layout_marginTop="34dp"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/bluegray2font"
+                android:textSize="14sp"
+                android:theme="@style/RecordEditTextTheme"
+                app:font="NotoSansCJKkr_Regular.otf" />
+
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/nocking_point_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tiller_high_edittext"
+                android:layout_marginTop="21dp"
+                android:includeFontPadding="false"
+                android:clickable="false"
+                android:text="@string/record_nocking_point"
+                android:textColor="@color/bluegrayfont"
+                android:textSize="14sp"
+                app:font="NotoSansCJKkr_Regular.otf" />
+            <de.morrox.fontinator.FontEditText
+                android:id="@+id/nocking_point_edittext"
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nocking_point_text"
+                android:layout_marginTop="34dp"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/bluegray2font"
+                android:textSize="14sp"
+                android:theme="@style/RecordEditTextTheme"
+                app:font="NotoSansCJKkr_Regular.otf" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/second_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/first_layout"
+            android:layout_marginLeft="20dp">
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/weather_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:clickable="false"
+                android:text="@string/record_weather"
+                android:textColor="@color/bluegrayfont"
+                android:textSize="14sp"
+                app:font="NotoSansCJKkr_Regular.otf" />
+            <RelativeLayout
+                android:id="@+id/weather_layout"
+                android:layout_width="149dp"
+                android:layout_height="68dp"
+                android:layout_below="@+id/weather_text">
+
+                <ImageView
+                    android:id="@+id/weather_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_above="@+id/weather_line_view"
+                    android:layout_marginBottom="6dp"
+                    android:src="@mipmap/ic_sunny_press"/>
+
+                <View
+                    android:id="@+id/weather_line_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/bluegray2font" />
+            </RelativeLayout>
+
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/wind_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/weather_layout"
+                android:layout_marginTop="18dp"
+                android:clickable="false"
+                android:includeFontPadding="false"
+                android:text="@string/record_wind"
+                android:textColor="@color/bluegrayfont"
+                android:textSize="14sp"
+                app:font="NotoSansCJKkr_Regular.otf" />
+            <RelativeLayout
+                android:id="@+id/wind_layout"
+                android:layout_width="149dp"
+                android:layout_height="69dp"
+                android:layout_below="@+id/wind_text">
+
+                <ImageView
+                    android:id="@+id/wind_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_above="@+id/wind_line_view"
+                    android:layout_marginBottom="6dp"
+                    android:src="@mipmap/ic_wind_zero_press"/>
+
+                <View
+                    android:id="@+id/wind_line_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/bluegray2font" />
+            </RelativeLayout>
+
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/distance_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wind_layout"
+                android:layout_marginTop="27dp"
+                android:clickable="false"
+                android:includeFontPadding="false"
+                android:text="@string/record_distance"
+                android:textColor="@color/bluegrayfont"
+                android:textSize="14sp"
+                app:font="NotoSansCJKkr_Regular.otf" />
+            <RelativeLayout
+                android:id="@+id/distance_layout"
+                android:layout_width="149dp"
+                android:layout_height="69dp"
+                android:layout_below="@+id/distance_text">
+
+                <ImageView
+                    android:id="@+id/distance_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_above="@+id/distance_line_view"
+                    android:layout_marginBottom="6dp"
+                    android:src="@mipmap/img_18m_press"/>
+
+                <View
+                    android:id="@+id/distance_line_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/bluegray2font" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/third_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/second_layout"
+            android:layout_marginLeft="46dp">
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/comment_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:clickable="false"
+                android:text="@string/record_comment"
+                android:textColor="@color/bluegrayfont"
+                android:textSize="14sp"
+                app:font="NotoSansCJKkr_Regular.otf" />
+
+            <de.morrox.fontinator.FontEditText
+                android:id="@+id/comment_edittext"
+                android:layout_width="230dp"
+                android:layout_height="280dp"
+                android:layout_below="@+id/comment_text"
+                android:layout_marginTop="12dp"
+                android:padding="5dp"
+                android:background="@drawable/record_board_regular_state"
+                android:includeFontPadding="false"
+                android:inputType="text"
+                android:gravity="top"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/bluegray2font"
+                android:textSize="14sp"
+                android:theme="@style/RecordEditTextTheme"
+                app:font="NotoSansCJKkr_Regular.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/first_layout"
+            android:layout_marginTop="40dp">
+            <de.morrox.fontinator.FontButton
+                android:id="@+id/cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/record_popup_button"
+                android:button="@android:color/transparent"
+                android:text="@string/record_popup_cancel"
+                android:textColor="@color/whitefont"
+                android:textSize="20sp"
+                app:font="NotoSansCJKkr_Bold.otf" />
+            <de.morrox.fontinator.FontButton
+                android:id="@+id/ok_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/cancel_button"
+                android:background="@drawable/record_popup_button"
+                android:button="@android:color/transparent"
+                android:text="@string/record_popup_ok"
+                android:textColor="@color/whitefont"
+                android:textSize="20sp"
+                app:font="NotoSansCJKkr_Bold.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/weather_radio_layout"
+            android:layout_width="330dp"
+            android:layout_height="64dp"
+            android:layout_alignTop="@+id/second_layout"
+            android:layout_marginTop="94dp"
+            android:layout_marginLeft="80dp"
+            android:background="@mipmap/img_selectbox2"
+            android:visibility="gone">
+
+            <RadioGroup
+                android:id="@+id/weather_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="12dp"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/sunny_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/record_popup_weather_sunny_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/cloud_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:button="@drawable/record_popup_weather_cloud_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/fog_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:button="@drawable/record_popup_weather_fog_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/typhoon_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="27dp"
+                    android:button="@drawable/record_popup_weather_typhoon_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/rain_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="29dp"
+                    android:button="@drawable/record_popup_weather_rain_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/snow_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:button="@drawable/record_popup_weather_snow_radio_button" />
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wind_radio_layout"
+            android:layout_width="330dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="198dp"
+            android:layout_marginLeft="80dp"
+            android:background="@mipmap/img_selectbox2"
+            android:visibility="gone">
+
+            <RadioGroup
+                android:id="@+id/wind_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="12dp"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/wind_zero_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/record_popup_wind_zero_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/wind_one_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="27dp"
+                    android:button="@drawable/record_popup_wind_one_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/wind_two_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="27dp"
+                    android:button="@drawable/record_popup_wind_two_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/wind_three_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="27dp"
+                    android:button="@drawable/record_popup_wind_three_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/wind_four_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="27dp"
+                    android:button="@drawable/record_popup_wind_four_radio_button" />
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/distance_radio_layout"
+            android:layout_width="330dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="315dp"
+            android:layout_marginLeft="80dp"
+            android:background="@mipmap/img_selectbox2"
+            android:visibility="gone">
+
+            <RadioGroup
+                android:id="@+id/distance_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="12dp"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <RadioButton
+                    android:id="@+id/distance_18m_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/record_popup_distance_18m_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/distance_30m_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="27dp"
+                    android:button="@drawable/record_popup_distance_30m_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/distance_50m_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="27dp"
+                    android:button="@drawable/record_popup_distance_50m_radio_button" />
+
+                <RadioButton
+                    android:id="@+id/distance_70m_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="27dp"
+                    android:button="@drawable/record_popup_distance_70m_radio_button" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

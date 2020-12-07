@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/guide_eighth_1_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/img_setup4"
+        android:layout_marginTop="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/guide_eighth_img_o_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/guide_eighth_1_img"
+        android:layout_marginTop="22dp"
+        android:includeFontPadding="false"
+        android:gravity="center"
+        android:text="(O)"
+        android:textColor="@color/red"
+        android:textSize="60sp"
+        app:font="NotoSansCJKkr_Bold.otf" />
+    <ImageView
+        android:id="@+id/guide_eighth_1_shadow_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/shadowbox"
+        android:layout_alignBottom="@+id/guide_eighth_1_img"
+        android:layout_centerHorizontal="true" />
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/guide_eighth_1_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/guide_eighth_1_shadow_img"
+        android:layout_alignLeft="@+id/guide_eighth_1_shadow_img"
+        android:layout_marginLeft="18dp"
+        android:includeFontPadding="false"
+        android:gravity="left"
+        android:text="@string/guide_eighth_1_title"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:font="NotoSansCJKkr_Medium.otf" />
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/guide_eighth_1_contents_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/guide_eighth_1_title_text"
+        android:layout_below="@+id/guide_eighth_1_title_text"
+        android:includeFontPadding="false"
+        android:gravity="left"
+        android:text="@string/guide_eighth_1_contents"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:font="NotoSansCJKkr_Medium.otf" />
+    
+    <ImageView
+        android:id="@+id/guide_eighth_2_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/img_setup5"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/guide_eighth_1_img"
+        android:layout_centerHorizontal="true" />
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/guide_eighth_img_x_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/guide_eighth_2_img"
+        android:layout_marginTop="42dp"
+        android:includeFontPadding="false"
+        android:gravity="center"
+        android:text="(X)"
+        android:textColor="@color/red"
+        android:textSize="60sp"
+        app:font="NotoSansCJKkr_Bold.otf" />
+</RelativeLayout>

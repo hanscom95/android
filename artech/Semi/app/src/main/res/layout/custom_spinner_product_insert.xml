@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custom_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_marginLeft="14dp"
+    android:layout_marginRight="30dp"
+    android:fontFamily="@font/notosanscjkkr_regular"
+    android:includeFontPadding="false"
+    android:text="카테고리 선택"
+    android:textColor="@color/black"
+    android:textSize="@dimen/business_texts" />

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFFFF</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#4083ff</color>
+
+
+    <color name="cobaltbluegrayfont">#55626e</color>
+    <color name="bluegrayfont">#8b9299</color>
+    <color name="bluegray2font">#e3e4e8</color>
+    <color name="yellowfont">#ffc14a</color>
+    <color name="skybluefont">#86bff8</color>
+    <color name="whitebluefont">#69b2fa</color>
+    <color name="whitefont">#ffffff</color>
+    <color name="lightbluefont">#1877b9</color>
+    <color name="blackgrayfont">#252627</color>
+    <color name="grayfont">#b2b2b2</color>
+    <color name="blueblackfont">#494d50</color>
+    <color name="blue2font">#57a4f2</color>
+
+
+
+    <color name="skyblueline">#86bff8</color>
+    <color name="whiteline">#ffffff</color>
+    <color name="blueline">#3f86ca</color>
+    <color name="blackline">#2f343a</color>
+    <color name="grayline">#b2b2b2</color>
+
+    <color name="whitebg">#ffffff</color>
+    <color name="bluebg">#3f86ca</color>
+
+
+    <color name="whitebox">#ffffff</color>
+    <color name="bluebox">#3576b8</color>
+
+
+    <color name="greybox">#1f2328</color>
+
+
+    <color name="lightgray">#f4f4f4</color>
+    <color name="whitegray">#cacaca</color>
+
+    <color name="whitegraybg">#f7f7f7</color>
+
+
+
+    <color name="whiteblue3font">#aae5fa</color>
+
+
+
+    <color name="archery_black">#000000</color>
+    <color name="archery_grey">#D1D3D4</color>
+    <color name="archery_red">#DD001B</color>
+    <color name="archery_yellow">#ffd000</color>
+    <color name="archery_blue">#1DC5FF</color>
+
+</resources>

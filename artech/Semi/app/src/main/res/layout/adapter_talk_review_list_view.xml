@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/first_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15.8dp"
+        android:layout_marginLeft="14.8dp"
+        android:layout_marginRight="16.8dp"
+        android:layout_marginBottom="13.5dp">
+        <RelativeLayout
+            android:id="@+id/item_first_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            
+            <artech.com.semi.utility.CircleImageView
+                android:id="@+id/item_profile"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/img_profilephoto"/>
+            
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/item_profile"
+                android:layout_marginLeft="10.8dp"
+                android:includeFontPadding="false"
+                android:ellipsize="end"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/notosanscjkkr_medium"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_more_vert"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/item_contents_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_first_layout"
+            android:maxWidth="200dp"
+            android:layout_marginTop="4.3dp"
+            android:layout_marginLeft="48.5dp"
+            android:lines="4"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/notosanscjkkr_medium"/>
+        
+        <RelativeLayout
+            android:id="@+id/item_bottom_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_contents_text"
+            android:layout_marginTop="23.8dp"
+            android:layout_marginLeft="48.5dp">
+            <TextView
+                android:id="@+id/item_detail_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textSize="10.5sp"
+                android:textColor="@color/warm_grey"
+                android:fontFamily="@font/nanumgothic"/>
+            <TextView
+                android:id="@+id/item_reply_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/item_detail_text"
+                android:includeFontPadding="false"
+                android:text="답글달기"
+                android:textSize="10.5sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/nanumgothic"/>
+        </RelativeLayout>
+
+        <CheckBox
+            android:id="@+id/thumb_up_checkbox"
+            android:layout_width="68.5dp"
+            android:layout_height="31.8dp"
+            android:layout_alignBottom="@+id/item_bottom_layout"
+            android:layout_alignParentRight="true"
+            android:button="@null"
+            android:background="@drawable/talk_review_thumb_up_checkbox"/>
+
+    </RelativeLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/input_line" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_below="@+id/first_layout"
+        android:background="@color/input_line" />
+</RelativeLayout>

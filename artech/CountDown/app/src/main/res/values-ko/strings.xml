@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">ARTIMER</string>
+    <string name="app_company">(주)알텍</string>
+
+    <string name="shoot_off">슛오프</string>
+    <string name="language">언어</string>
+    <string name="info">앱 정보</string>
+
+    <string name="please_choose">선택해주세요</string>
+
+    <string name="number_of_firing">발수</string>
+
+    <string name="arrow3">3발</string>
+    <string name="arrow6">6발</string>
+
+
+    <string name="time2">2분</string>
+    <string name="time4">4분</string>
+
+    <string name="time">슈팅타임</string>
+
+
+    <string name="round_text">라운드</string>
+    <string name="round">라운드</string>
+
+    <string name="payback_time">회수시간</string>
+
+    <string name="payback_time5">1분</string>
+    <string name="payback_time10">2분</string>
+    <string name="payback_time15">3분</string>
+    <string name="payback_time20">4분</string>
+
+
+
+    <string name="user_detail">발수\n타임\n라운드\n회수시간 등</string>
+    <string name="user_setting">사용자지정</string>
+
+    <string name="user_info">사용방법</string>
+    <string name="user_info_text">화면에 있는 메뉴를 순서대로 선택하거나\n사용자지정을 눌러 추가하실 수 있습니다.</string>
+
+
+    <string name="confirm">확인</string>
+
+
+    <string name="option">옵션</string>
+
+
+    <string name="be_prepared">발사준비</string>
+
+    <string name="min">분</string>
+    <string name="sec">초</string>
+
+    <string name="thank_you">수고하셨습니다.</string>
+
+    <string name="no_choice">선택되지 않은 항목이 있습니다.</string>
+    <string name="waiting_message">발사준비</string>
+    <string name="frequency_message">화살을 회수하세요.</string>
+    <string name="time_end_message">발사 시간이 종료 되었습니다. 화살을 회수해 주세요.</string>
+    <string name="command_messages">%1$s 동안 쏘세요.</string>
+
+
+
+    <string name="speaker">사운드</string>
+    <string name="font_color">글씨색</string>
+    <string name="background">배경색</string>
+
+
+
+    <string name="info_version">version</string>
+    <string name="info_company">상호</string>
+    <string name="info_product">제품명</string>
+    <string name="info_homepage">홈페이지</string>
+    <string name="info_reserved">대한민국 알텍 판권소유</string>
+    <string name="info_copyright">Coptyright ⓒ2018 Artech.co.,ltd, All rights reserved.</string>
+
+</resources>

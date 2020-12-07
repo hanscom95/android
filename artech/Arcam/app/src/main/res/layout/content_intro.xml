@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_intro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_intro"
+    android:adjustViewBounds="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="artech.com.arcam.login.IntroActivity">
+
+    <ImageView
+        android:id="@+id/intro_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/sb_logo_intro"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp" />
+
+
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/intro_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/intro_logo"
+        android:layout_marginTop="81dp"
+        android:includeFontPadding="false"
+        android:text="@string/intro_title"
+        android:textColor="@color/cobaltbluegrayfont"
+        android:textSize="40sp"
+        app:font="Roboto_Light.otf"/>
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/intro_sub_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/intro_title"
+        android:layout_marginTop="14dp"
+        android:includeFontPadding="false"
+        android:text="@string/intro_sub_title"
+        android:textColor="@color/cobaltbluegrayfont"
+        android:textSize="25sp"
+        app:font="Roboto_Thin.otf" />
+
+    <ImageView
+        android:id="@+id/intro_artech_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/wd_logo_intro"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/intro_sub_title"
+        android:layout_marginTop="154dp" />
+
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/intro_version_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:includeFontPadding="false"
+        android:text="@string/app_version"
+        android:textColor="@color/cobaltbluegrayfont"
+        android:textSize="16sp"
+        app:font="Roboto_Thin.otf" />
+</RelativeLayout>

@@ -1,0 +1,1367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:adjustViewBounds="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@mipmap/bg_blue"
+    tools:context="artech.com.arcam.login.SignUpActivity">
+
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/detail_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:includeFontPadding="false"
+        android:layout_marginTop="38dp"
+        android:text="@string/detail_title"
+        android:textColor="@color/whitefont"
+        android:textSize="48sp"
+        app:font="Roboto_Light.otf" />
+
+    <de.morrox.fontinator.FontButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="34dp"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@mipmap/ic_back"
+        android:background="@android:color/transparent"
+        android:includeFontPadding="false"
+        android:gravity="center_vertical"
+        android:textAllCaps="false"
+        android:text="@string/back_button"
+        android:textColor="@color/skybluefont"
+        android:textSize="14sp" />
+
+    <de.morrox.fontinator.FontButton
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="34dp"
+        android:drawableRight="@mipmap/btn_close"
+        android:background="@android:color/transparent"
+        android:includeFontPadding="false"
+        android:gravity="center_vertical"
+        android:textAllCaps="false"
+        android:text="@string/close_button"
+        android:textColor="@color/skybluefont"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:id="@+id/detail_sub_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detail_title_text"
+        android:layout_marginTop="15dp"
+        android:layout_alignStart="@+id/detail_layout"
+        android:layout_alignEnd="@+id/detail_layout">
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/sub_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_centerVertical="true"
+            android:text="@string/detail_sub_title"
+            android:textColor="@color/skybluefont"
+            android:textSize="20sp"
+            app:font="NotoSansCJKkr_Regular.otf" />
+
+
+        <de.morrox.fontinator.FontCheckBox
+            android:id="@+id/auto_save_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/detail_checkbox"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:text="@string/detail_auto_save"
+            android:textAllCaps="false"
+            android:textColor="@color/skybluefont"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/detail_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detail_sub_layout"
+        android:layout_marginTop="5dp"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true">
+
+        <ScrollView
+            android:id="@+id/detail_left_layout"
+            android:layout_width="602dp"
+            android:layout_height="411dp"
+            android:layout_marginRight="3dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/bluebox">
+
+                <RelativeLayout
+                    android:id="@+id/riser_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/riser_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="27dp"
+                        android:layout_marginTop="17dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_riser"
+                        android:textColor="@color/whitefont"
+                        android:textSize="22sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/riser_brand_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/riser_brand_spinner_layout"
+                        android:layout_marginRight="6dp"
+                        android:layout_toStartOf="@+id/riser_brand_spinner_layout"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_brand"
+                        android:textColor="@color/skybluefont"
+                        android:textSize="14sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <RelativeLayout
+                        android:id="@+id/riser_brand_spinner_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/riser_text"
+                        android:layout_toStartOf="@+id/riser_brand_edittext_layout"
+                        android:visibility="visible">
+
+                        <Spinner
+                            android:id="@+id/riser_brand_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/btn_contents_small"
+                            android:popupBackground="@color/whitebg"
+                            android:prompt="@string/detail_spinner_hint"
+                            android:entries="@array/riser" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@+id/riser_brand_spinner"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:src="@mipmap/ic_move" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/riser_brand_edittext_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/riser_brand_spinner_layout"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="-8dp"
+                        android:layout_marginRight="58dp"
+                        android:visibility="visible">
+
+                        <de.morrox.fontinator.FontEditText
+                            android:id="@+id/riser_brand_edittext"
+                            android:layout_width="177dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:hint="@string/detail_input_hint"
+                            android:includeFontPadding="false"
+                            android:inputType="text"
+                            android:lineSpacingExtra="12dp"
+                            android:maxLines="1"
+                            android:paddingLeft="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/whitefont"
+                            android:textColorHint="@color/skybluefont"
+                            android:textSize="24sp"
+                            android:theme="@style/SignupEditTextTheme"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+                    </RelativeLayout>
+
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/riser_inch_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/riser_inch_spinner_layout"
+                        android:layout_marginRight="6dp"
+                        android:layout_toStartOf="@+id/riser_inch_spinner_layout"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_inch"
+                        android:textColor="@color/skybluefont"
+                        android:textSize="14sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <RelativeLayout
+                        android:id="@+id/riser_inch_spinner_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/riser_brand_spinner_layout"
+                        android:layout_marginTop="10dp"
+                        android:layout_toStartOf="@+id/riser_inch_edittext_layout"
+                        android:visibility="visible">
+
+                        <Spinner
+                            android:id="@+id/riser_inch_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/btn_contents_small"
+                            android:popupBackground="@color/whitebg"
+                            android:prompt="@string/detail_spinner_hint"
+                            android:entries="@array/riser_inch" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@+id/riser_inch_spinner"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:src="@mipmap/ic_move" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/riser_inch_edittext_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/riser_inch_spinner_layout"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="-8dp"
+                        android:layout_marginRight="58dp"
+                        android:visibility="visible">
+
+                        <de.morrox.fontinator.FontEditText
+                            android:id="@+id/riser_inch_edittext"
+                            android:layout_width="177dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:hint="@string/detail_input_hint"
+                            android:includeFontPadding="false"
+                            android:inputType="text"
+                            android:lineSpacingExtra="12dp"
+                            android:maxLines="1"
+                            android:paddingLeft="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/whitefont"
+                            android:textColorHint="@color/skybluefont"
+                            android:textSize="24sp"
+                            android:theme="@style/SignupEditTextTheme"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/first_line_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_below="@+id/riser_layout"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/skyblueline" />
+
+                <RelativeLayout
+                    android:id="@+id/limbs_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/first_line_view">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/limbs_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="27dp"
+                        android:layout_marginTop="17dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_limbs"
+                        android:textColor="@color/whitefont"
+                        android:textSize="22sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/limbs_brand_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/limbs_brand_spinner_layout"
+                        android:layout_marginRight="6dp"
+                        android:layout_toStartOf="@+id/limbs_brand_spinner_layout"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_brand"
+                        android:textColor="@color/skybluefont"
+                        android:textSize="14sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <RelativeLayout
+                        android:id="@+id/limbs_brand_spinner_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/limbs_text"
+                        android:layout_toStartOf="@+id/limbs_brand_edittext_layout"
+                        android:visibility="visible">
+
+                        <Spinner
+                            android:id="@+id/limbs_brand_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/btn_contents_small"
+                            android:popupBackground="@color/whitebg"
+                            android:prompt="@string/detail_spinner_hint"
+                            android:entries="@array/limbs" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@+id/limbs_brand_spinner"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:src="@mipmap/ic_move" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/limbs_brand_edittext_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/limbs_brand_spinner_layout"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="-8dp"
+                        android:layout_marginRight="58dp"
+                        android:visibility="visible">
+
+                        <de.morrox.fontinator.FontEditText
+                            android:id="@+id/limbs_brand_edittext"
+                            android:layout_width="177dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:hint="@string/detail_input_hint"
+                            android:includeFontPadding="false"
+                            android:inputType="text"
+                            android:lineSpacingExtra="12dp"
+                            android:maxLines="1"
+                            android:paddingLeft="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/whitefont"
+                            android:textColorHint="@color/skybluefont"
+                            android:textSize="24sp"
+                            android:theme="@style/SignupEditTextTheme"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+                    </RelativeLayout>
+
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/limbs_inch_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/limbs_inch_spinner_layout"
+                        android:layout_marginRight="6dp"
+                        android:layout_toStartOf="@+id/limbs_inch_spinner_layout"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_inch"
+                        android:textColor="@color/skybluefont"
+                        android:textSize="14sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <RelativeLayout
+                        android:id="@+id/limbs_inch_spinner_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/limbs_brand_spinner_layout"
+                        android:layout_marginTop="10dp"
+                        android:layout_toStartOf="@+id/limbs_inch_edittext_layout"
+                        android:visibility="visible">
+
+                        <Spinner
+                            android:id="@+id/limbs_inch_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/btn_contents_small"
+                            android:popupBackground="@color/whitebg"
+                            android:prompt="@string/detail_spinner_hint"
+                            android:entries="@array/limbs_inch" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@+id/limbs_inch_spinner"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:src="@mipmap/ic_move" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/limbs_inch_edittext_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/limbs_inch_spinner_layout"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="-8dp"
+                        android:layout_marginRight="58dp"
+                        android:visibility="visible">
+
+                        <de.morrox.fontinator.FontEditText
+                            android:id="@+id/limbs_inch_edittext"
+                            android:layout_width="177dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:hint="@string/detail_input_hint"
+                            android:includeFontPadding="false"
+                            android:inputType="text"
+                            android:lineSpacingExtra="12dp"
+                            android:maxLines="1"
+                            android:paddingLeft="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/whitefont"
+                            android:textColorHint="@color/skybluefont"
+                            android:textSize="24sp"
+                            android:theme="@style/SignupEditTextTheme"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+                    </RelativeLayout>
+
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/limbs_pound_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/limbs_pound_edittext_layout"
+                        android:layout_marginRight="6dp"
+                        android:layout_toStartOf="@+id/limbs_pound_edittext_layout"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_pound"
+                        android:textColor="@color/skybluefont"
+                        android:textSize="14sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <RelativeLayout
+                        android:id="@+id/limbs_pound_edittext_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/limbs_inch_spinner_layout"
+                        android:layout_below="@+id/limbs_inch_spinner_layout"
+                        android:layout_marginBottom="-8dp"
+                        android:layout_marginTop="10dp"
+                        android:visibility="visible">
+
+                        <de.morrox.fontinator.FontEditText
+                            android:id="@+id/limbs_pound_edittext"
+                            android:layout_width="177dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:hint="@string/detail_input_hint"
+                            android:includeFontPadding="false"
+                            android:inputType="text"
+                            android:lineSpacingExtra="12dp"
+                            android:maxLines="1"
+                            android:paddingLeft="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/whitefont"
+                            android:textColorHint="@color/skybluefont"
+                            android:textSize="24sp"
+                            android:theme="@style/SignupEditTextTheme"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/second_line_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_below="@+id/limbs_layout"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/skyblueline" />
+
+                <RelativeLayout
+                    android:id="@+id/stabilizer_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/second_line_view">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/stabilizer_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="27dp"
+                        android:layout_marginTop="17dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_stabilizer"
+                        android:textColor="@color/whitefont"
+                        android:textSize="22sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/stabilizer_brand_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/stabilizer_brand_spinner_layout"
+                        android:layout_marginRight="6dp"
+                        android:layout_toStartOf="@+id/stabilizer_brand_spinner_layout"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_brand"
+                        android:textColor="@color/skybluefont"
+                        android:textSize="14sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <RelativeLayout
+                        android:id="@+id/stabilizer_brand_spinner_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/stabilizer_text"
+                        android:layout_toStartOf="@+id/stabilizer_brand_edittext_layout"
+                        android:visibility="visible">
+
+                        <Spinner
+                            android:id="@+id/stabilizer_brand_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/btn_contents_small"
+                            android:popupBackground="@color/whitebg"
+                            android:prompt="@string/detail_spinner_hint"
+                            android:entries="@array/stabilizer"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@+id/stabilizer_brand_spinner"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:src="@mipmap/ic_move" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/stabilizer_brand_edittext_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/stabilizer_brand_spinner_layout"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="-8dp"
+                        android:layout_marginRight="58dp"
+                        android:visibility="visible">
+
+                        <de.morrox.fontinator.FontEditText
+                            android:id="@+id/stabilizer_brand_edittext"
+                            android:layout_width="177dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:hint="@string/detail_input_hint"
+                            android:includeFontPadding="false"
+                            android:inputType="text"
+                            android:lineSpacingExtra="12dp"
+                            android:maxLines="1"
+                            android:paddingLeft="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/whitefont"
+                            android:textColorHint="@color/skybluefont"
+                            android:textSize="24sp"
+                            android:theme="@style/SignupEditTextTheme"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/third_line_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_below="@+id/stabilizer_layout"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/skyblueline" />
+
+                <RelativeLayout
+                    android:id="@+id/longstaff_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/third_line_view">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/longstaff_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="27dp"
+                        android:layout_marginTop="17dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_longstaff"
+                        android:textColor="@color/whitefont"
+                        android:textSize="22sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/longstaff_inch_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/longstaff_inch_spinner_layout"
+                        android:layout_marginRight="6dp"
+                        android:layout_toStartOf="@+id/longstaff_inch_spinner_layout"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_inch"
+                        android:textColor="@color/skybluefont"
+                        android:textSize="14sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <RelativeLayout
+                        android:id="@+id/longstaff_inch_spinner_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/longstaff_text"
+                        android:layout_toStartOf="@+id/longstaff_inch_edittext_layout"
+                        android:visibility="visible">
+
+                        <Spinner
+                            android:id="@+id/longstaff_inch_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/btn_contents_small"
+                            android:popupBackground="@color/whitebg"
+                            android:prompt="@string/detail_spinner_hint"
+                            android:entries="@array/longstaff_inch" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@+id/longstaff_inch_spinner"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:src="@mipmap/ic_move" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/longstaff_inch_edittext_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/longstaff_inch_spinner_layout"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="-8dp"
+                        android:layout_marginRight="58dp"
+                        android:visibility="visible">
+
+                        <de.morrox.fontinator.FontEditText
+                            android:id="@+id/longstaff_inch_edittext"
+                            android:layout_width="177dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:hint="@string/detail_input_hint"
+                            android:includeFontPadding="false"
+                            android:inputType="text"
+                            android:lineSpacingExtra="12dp"
+                            android:maxLines="1"
+                            android:paddingLeft="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/whitefont"
+                            android:textColorHint="@color/skybluefont"
+                            android:textSize="24sp"
+                            android:theme="@style/SignupEditTextTheme"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/fourh_line_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_below="@+id/longstaff_layout"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/skyblueline" />
+
+                <RelativeLayout
+                    android:id="@+id/sidestabi_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fourh_line_view"
+                    android:layout_marginBottom="35dp">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/sidestabi_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="27dp"
+                        android:layout_marginTop="17dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_sidestabi"
+                        android:textColor="@color/whitefont"
+                        android:textSize="22sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/sidestabi_inch_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/sidestabi_inch_spinner_layout"
+                        android:layout_marginRight="6dp"
+                        android:layout_toStartOf="@+id/sidestabi_inch_spinner_layout"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_inch"
+                        android:textColor="@color/skybluefont"
+                        android:textSize="14sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <RelativeLayout
+                        android:id="@+id/sidestabi_inch_spinner_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/sidestabi_text"
+                        android:layout_toStartOf="@+id/sidestabi_inch_edittext_layout"
+                        android:visibility="visible">
+
+                        <Spinner
+                            android:id="@+id/sidestabi_inch_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/btn_contents_small"
+                            android:popupBackground="@color/whitebg"
+                            android:prompt="@string/detail_spinner_hint"
+                            android:entries="@array/sidestabi_inch"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@+id/sidestabi_inch_spinner"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:src="@mipmap/ic_move" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/sidestabi_inch_edittext_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/sidestabi_inch_spinner_layout"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="-8dp"
+                        android:layout_marginRight="58dp"
+                        android:visibility="visible">
+
+                        <de.morrox.fontinator.FontEditText
+                            android:id="@+id/sidestabi_inch_edittext"
+                            android:layout_width="177dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:hint="@string/detail_input_hint"
+                            android:includeFontPadding="false"
+                            android:inputType="text"
+                            android:lineSpacingExtra="12dp"
+                            android:maxLines="1"
+                            android:paddingLeft="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/whitefont"
+                            android:textColorHint="@color/skybluefont"
+                            android:textSize="24sp"
+                            android:theme="@style/SignupEditTextTheme"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/detail_right_layout"
+            android:layout_width="602dp"
+            android:layout_height="411dp"
+            android:layout_marginRight="3dp"
+            android:layout_toRightOf="@+id/detail_left_layout">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bluebox">
+
+                <RelativeLayout
+                    android:id="@+id/fingertab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/fingertab_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="27dp"
+                        android:layout_marginTop="17dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_fingertab"
+                        android:textColor="@color/whitefont"
+                        android:textSize="22sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/fingertab_brand_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/fingertab_brand_spinner_layout"
+                        android:layout_marginRight="6dp"
+                        android:layout_toStartOf="@+id/fingertab_brand_spinner_layout"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_brand"
+                        android:textColor="@color/skybluefont"
+                        android:textSize="14sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <RelativeLayout
+                        android:id="@+id/fingertab_brand_spinner_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/fingertab_text"
+                        android:layout_toStartOf="@+id/fingertab_brand_edittext_layout"
+                        android:visibility="visible">
+
+                        <Spinner
+                            android:id="@+id/fingertab_brand_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/btn_contents_small"
+                            android:popupBackground="@color/whitebg"
+                            android:prompt="@string/detail_spinner_hint"
+                            android:entries="@array/fingertab" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@+id/fingertab_brand_spinner"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:src="@mipmap/ic_move" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/fingertab_brand_edittext_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/fingertab_brand_spinner_layout"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="-8dp"
+                        android:layout_marginRight="30dp"
+                        android:visibility="visible">
+
+                        <de.morrox.fontinator.FontEditText
+                            android:id="@+id/fingertab_brand_edittext"
+                            android:layout_width="177dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:hint="@string/detail_input_hint"
+                            android:includeFontPadding="false"
+                            android:inputType="text"
+                            android:lineSpacingExtra="12dp"
+                            android:maxLines="1"
+                            android:paddingLeft="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/whitefont"
+                            android:textColorHint="@color/skybluefont"
+                            android:textSize="24sp"
+                            android:theme="@style/SignupEditTextTheme"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/right_first_line_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_below="@+id/fingertab_layout"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/skyblueline" />
+
+                <RelativeLayout
+                    android:id="@+id/sight_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/right_first_line_view">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/sight_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="27dp"
+                        android:layout_marginTop="17dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_sight"
+                        android:textColor="@color/whitefont"
+                        android:textSize="22sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/sight_brand_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/sight_brand_spinner_layout"
+                        android:layout_marginRight="6dp"
+                        android:layout_toStartOf="@+id/sight_brand_spinner_layout"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_brand"
+                        android:textColor="@color/skybluefont"
+                        android:textSize="14sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <RelativeLayout
+                        android:id="@+id/sight_brand_spinner_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/sight_text"
+                        android:layout_toStartOf="@+id/sight_brand_edittext_layout"
+                        android:visibility="visible">
+
+                        <Spinner
+                            android:id="@+id/sight_brand_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/btn_contents_small"
+                            android:popupBackground="@color/whitebg"
+                            android:prompt="@string/detail_spinner_hint"
+                            android:entries="@array/sight"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@+id/sight_brand_spinner"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:src="@mipmap/ic_move" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/sight_brand_edittext_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/sight_brand_spinner_layout"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="-8dp"
+                        android:layout_marginRight="30dp"
+                        android:visibility="visible">
+
+                        <de.morrox.fontinator.FontEditText
+                            android:id="@+id/sight_brand_edittext"
+                            android:layout_width="177dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:hint="@string/detail_input_hint"
+                            android:includeFontPadding="false"
+                            android:inputType="text"
+                            android:lineSpacingExtra="12dp"
+                            android:maxLines="1"
+                            android:paddingLeft="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/whitefont"
+                            android:textColorHint="@color/skybluefont"
+                            android:textSize="24sp"
+                            android:theme="@style/SignupEditTextTheme"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/right_second_line_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_below="@+id/sight_layout"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/skyblueline" />
+
+                <RelativeLayout
+                    android:id="@+id/cushionplunger_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/right_second_line_view">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/cushionplunger_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="27dp"
+                        android:layout_marginTop="17dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_cushionplunger"
+                        android:textColor="@color/whitefont"
+                        android:textSize="22sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/cushionplunger_brand_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/cushionplunger_brand_spinner_layout"
+                        android:layout_marginRight="6dp"
+                        android:layout_toStartOf="@+id/cushionplunger_brand_spinner_layout"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_brand"
+                        android:textColor="@color/skybluefont"
+                        android:textSize="14sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <RelativeLayout
+                        android:id="@+id/cushionplunger_brand_spinner_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/cushionplunger_text"
+                        android:layout_toStartOf="@+id/cushionplunger_brand_edittext_layout"
+                        android:visibility="visible">
+
+                        <Spinner
+                            android:id="@+id/cushionplunger_brand_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/btn_contents_small"
+                            android:popupBackground="@color/whitebg"
+                            android:prompt="@string/detail_spinner_hint"
+                            android:entries="@array/cushionplunger" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@+id/cushionplunger_brand_spinner"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:src="@mipmap/ic_move" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cushionplunger_brand_edittext_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/cushionplunger_brand_spinner_layout"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="-8dp"
+                        android:layout_marginRight="30dp"
+                        android:visibility="visible">
+
+                        <de.morrox.fontinator.FontEditText
+                            android:id="@+id/cushionplunger_brand_edittext"
+                            android:layout_width="177dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:hint="@string/detail_input_hint"
+                            android:includeFontPadding="false"
+                            android:inputType="text"
+                            android:lineSpacingExtra="12dp"
+                            android:maxLines="1"
+                            android:paddingLeft="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/whitefont"
+                            android:textColorHint="@color/skybluefont"
+                            android:textSize="24sp"
+                            android:theme="@style/SignupEditTextTheme"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/right_third_line_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_below="@+id/cushionplunger_layout"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/skyblueline" />
+
+                <RelativeLayout
+                    android:id="@+id/rest_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/right_third_line_view">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/rest_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="27dp"
+                        android:layout_marginTop="17dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_rest"
+                        android:textColor="@color/whitefont"
+                        android:textSize="22sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/rest_brand_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/rest_brand_spinner_layout"
+                        android:layout_marginRight="6dp"
+                        android:layout_toStartOf="@+id/rest_brand_spinner_layout"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_brand"
+                        android:textColor="@color/skybluefont"
+                        android:textSize="14sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <RelativeLayout
+                        android:id="@+id/rest_brand_spinner_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/rest_text"
+                        android:layout_toStartOf="@+id/rest_brand_edittext_layout"
+                        android:visibility="visible">
+
+                        <Spinner
+                            android:id="@+id/rest_brand_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/btn_contents_small"
+                            android:popupBackground="@color/whitebg"
+                            android:prompt="@string/detail_spinner_hint"
+                            android:entries="@array/rest" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@+id/rest_brand_spinner"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:src="@mipmap/ic_move" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rest_brand_edittext_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/rest_brand_spinner_layout"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="-8dp"
+                        android:layout_marginRight="30dp"
+                        android:visibility="visible">
+
+                        <de.morrox.fontinator.FontEditText
+                            android:id="@+id/rest_brand_edittext"
+                            android:layout_width="177dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:hint="@string/detail_input_hint"
+                            android:includeFontPadding="false"
+                            android:inputType="text"
+                            android:lineSpacingExtra="12dp"
+                            android:maxLines="1"
+                            android:paddingLeft="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/whitefont"
+                            android:textColorHint="@color/skybluefont"
+                            android:textSize="24sp"
+                            android:theme="@style/SignupEditTextTheme"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/right_fourh_line_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_below="@+id/rest_layout"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/skyblueline" />
+
+                <RelativeLayout
+                    android:id="@+id/arrow_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/right_fourh_line_view"
+                    android:layout_marginBottom="35dp">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/arrow_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="27dp"
+                        android:layout_marginTop="17dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_arrow"
+                        android:textColor="@color/whitefont"
+                        android:textSize="22sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/arrow_brand_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/arrow_brand_spinner_layout"
+                        android:layout_marginRight="6dp"
+                        android:layout_toStartOf="@+id/arrow_brand_spinner_layout"
+                        android:includeFontPadding="false"
+                        android:text="@string/detail_brand"
+                        android:textColor="@color/skybluefont"
+                        android:textSize="14sp"
+                        app:font="NotoSansCJKkr_Light.otf" />
+
+                    <RelativeLayout
+                        android:id="@+id/arrow_brand_spinner_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/arrow_text"
+                        android:layout_toStartOf="@+id/arrow_brand_edittext_layout"
+                        android:visibility="visible">
+
+                        <Spinner
+                            android:id="@+id/arrow_brand_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/btn_contents_small"
+                            android:popupBackground="@color/whitebg"
+                            android:prompt="@string/detail_spinner_hint"
+                            android:entries="@array/arrow" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@+id/arrow_brand_spinner"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:src="@mipmap/ic_move" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/arrow_brand_edittext_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/arrow_brand_spinner_layout"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="-8dp"
+                        android:layout_marginRight="30dp"
+                        android:visibility="visible">
+
+                        <de.morrox.fontinator.FontEditText
+                            android:id="@+id/arrow_brand_edittext"
+                            android:layout_width="177dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:hint="@string/detail_input_hint"
+                            android:includeFontPadding="false"
+                            android:inputType="text"
+                            android:lineSpacingExtra="12dp"
+                            android:maxLines="1"
+                            android:paddingLeft="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/whitefont"
+                            android:textColorHint="@color/skybluefont"
+                            android:textSize="24sp"
+                            android:theme="@style/SignupEditTextTheme"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/detail_button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentBottom="true">
+
+        <de.morrox.fontinator.FontButton
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/btn_before"
+            android:paddingBottom="10dp"
+            android:text="@string/cancel_button"
+            android:textAllCaps="false"
+            android:textColor="@color/bluegrayfont"
+            android:textSize="30sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+
+        <de.morrox.fontinator.FontButton
+            android:id="@+id/insert_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/cancel_button"
+            android:background="@mipmap/btn_next"
+            android:paddingBottom="10dp"
+            android:text="@string/insert_button"
+            android:textAllCaps="false"
+            android:textColor="@color/whitefont"
+            android:textSize="30sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+
+        <de.morrox.fontinator.FontButton
+            android:id="@+id/skip_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/insert_button"
+            android:background="@mipmap/btn_skip"
+            android:paddingBottom="15dp"
+            android:text="@string/skip_button"
+            android:textAllCaps="false"
+            android:textColor="@color/bluegrayfont"
+            android:textSize="30sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+    </RelativeLayout>
+
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/detail_version_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:includeFontPadding="false"
+        android:text="@string/app_version"
+        android:textColor="@color/whitebluefont"
+        android:textSize="16sp"
+        app:font="Roboto_Thin.otf" />
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/first_layout"
+        android:layout_width="match_parent"
+        android:layout_height="101.3dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/item_img"
+            android:layout_width="146.8dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:scaleType="fitXY"/>
+
+
+
+        <RelativeLayout
+            android:id="@+id/item_title_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/item_img"
+            android:layout_marginLeft="13.5dp"
+            android:layout_marginTop="15.5dp">
+
+            <ImageView
+                android:id="@+id/item_ranking_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/img_vip"/>
+
+            <TextView
+                android:id="@+id/item_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/item_ranking_img"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:text="낚시방"
+                android:textStyle="bold"
+                android:fontFamily="@font/nanumgothic"/>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/item_contents_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/item_title_layout"
+            android:layout_below="@+id/item_title_layout"
+            android:layout_marginTop="8.5dp"
+            android:includeFontPadding="false"
+            android:textSize="12sp"
+            android:textColor="@color/warm_grey"
+            android:text="낚시용품/미끼"
+            android:textStyle="bold"
+            android:fontFamily="@font/nanumgothic"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_autologin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:adjustViewBounds="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@mipmap/bg_blue"
+    tools:context="artech.com.arcam.login.AutoLoginActivity">
+
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/app_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="99dp"
+        android:includeFontPadding="false"
+        android:text="@string/app_name"
+        android:textColor="@color/whitefont"
+        android:textSize="48sp"
+        app:font="Roboto_Light.otf" />
+
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/welcom_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/app_name_text"
+        android:layout_marginTop="8dp"
+        android:includeFontPadding="false"
+        android:text="@string/autologin_welcom"
+        android:textColor="@color/skybluefont"
+        android:textSize="30sp"
+        app:font="NotoSansCJKkr_Medium.otf" />
+
+    <ImageView
+        android:id="@+id/profile_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/welcom_text"
+        android:layout_marginTop="59dp"
+        android:src="@mipmap/img_profile"/>
+
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/profile_img"
+        android:layout_marginTop="15dp"
+        android:includeFontPadding="false"
+        android:text="VIVA-Arcam"
+        android:textColor="@color/whitefont"
+        android:textSize="30sp"
+        app:font="Roboto_Regular.otf" />
+
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/auto_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/name_text"
+        android:layout_marginTop="12dp"
+        android:includeFontPadding="false"
+        android:text="@string/autologin_auto_text"
+        android:textColor="@color/skybluefont"
+        android:textSize="20sp"
+        app:font="NotoSansCJKkr_Medium.otf" />
+
+    <de.morrox.fontinator.FontButton
+        android:id="@+id/start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/auto_text"
+        android:layout_marginTop="37dp"
+        android:paddingBottom="10dp"
+        android:includeFontPadding="false"
+        android:background="@mipmap/btn_start"
+        android:textAllCaps="false"
+        android:text="@string/autologin_start"
+        android:textColor="@color/whitefont"
+        android:textSize="30sp"
+        app:font="NotoSansCJKkr_Medium.otf" />
+
+
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/autologin_version_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:includeFontPadding="false"
+        android:text="@string/app_version"
+        android:textColor="@color/whitebluefont"
+        android:textSize="16sp"
+        app:font="Roboto_Thin.otf" />
+</RelativeLayout>

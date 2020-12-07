@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">세상에모든미끼</string>
+    <string name="kakao_app_key">cd160b0283b6816a2311d7466736ccdc</string>
+    <string name="facebook_app_id">1851696348463929</string>
+    <string name="naver_client_key">n4MZunQRR8wghUZ_aoq4</string>
+    <!--<string name="google_api_key">AIzaSyDLBtEdHGqKeJ8nkeoZZY7-hWqLKatJpyg</string>-->
+    <string name="google_api_key">AIzaSyCXAexXv4WyGGmzBNbhoBDO4mcGBOKcsbk</string>
+    <string name="fb_login_protocol_scheme">fb1851696348463929</string>
+
+
+</resources>

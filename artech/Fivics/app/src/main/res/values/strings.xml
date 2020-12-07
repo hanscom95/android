@@ -1,0 +1,287 @@
+<resources>
+    <string name="app_name">슈팅존</string>
+    <string name="app_version">v 1.0.0.1</string>
+
+    <string name="title_activity_progress">Activity</string>
+    <string name="title_activity_number">NumberActivity</string>
+    <string name="title_activity_sleep">SleepActivity</string>
+    <string name="title_activity_heart">HeartActivity</string>
+    <string name="title_activity_motion">MotionActivity</string>
+    <string name="title_activity_test_tab">TestTabActivity</string>
+    <string name="title_activity_account">AccountActivity</string>
+    <string name="title_activity_notification">NotificationActivity</string>
+    <string name="title_activity_chart">ChartActivity</string>
+    <string name="title_activity_tab">TabActivity</string>
+    <string name="title_activity_main_menu">MainMenuActivity</string>
+    <string name="title_activity_device_connect">DeviceConnectActivity</string>
+    <string name="title_activity_goal">GoalActivity</string>
+    <string name="title_activity_unregister">UnregisterActivity</string>
+    <string name="title_activity_goal_setting">GoalSettingActivity</string>
+    <string name="title_activity_option">OptionActivity</string>
+    <string name="title_activity_hello">HelloActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Id</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This id is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing id
+        completions."
+    </string>
+
+    <string name="today">today</string>
+    <string name="sleep_text">last night</string>
+    <string name="heart_text">last check</string>
+
+
+    <string name="id">Id</string>
+    <string name="pw">Pw</string>
+    <string name="name">Name</string>
+    <string name="birth">Birth</string>
+    <string name="email">Email</string>
+    <string name="tall">Tall</string>
+    <string name="weight">Weight</string>
+    <string name="gender">Gender</string>
+    <string name="age">Age</string>
+    <string name="hand">Hand</string>
+
+    <string name="female_button">female</string>
+    <string name="male_button">male</string>
+
+
+
+    <string name="record">Record</string>
+    <string name="stop">Stop</string>
+    <string name="description_info">Info</string>
+    <string name="permission_request">This sample needs permission for camera and audio recording.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="title_activity_battery">BatteryActivity</string>
+    <string name="title_activity_ota">OtaActivity</string>
+
+    <string name="archery_camera_text">Do not move before you start.</string>
+
+    <string name="title_activity_archery_fullscreen">ArcheryFullscreenActivity</string>
+
+    <string name="terms_title">슈팅존 이용약관</string>
+    <string name="terms_info">회원약관 제 1 장 총칙&#10; 제 1 조 (목적)&#10; 이 약관은 ㈜알텍(이하 \'회사\')이 제공하는 교육서비스(이하 \'서비스\')의 이용조건 및 절차에 관한 사항을 규정함을 목적으로 합니다.&#10; 제 2조 (용어 정의) 이 약관에서 사용하는 용어는 다음과 같습니다.&#10; 가. \'회원\'이라 함은 서비스를 제공받기 위해 회사가 인정하는 절차를 통해 가입하여 아이디(ID)를 부여 받은 자를 말합니다.&#10; 나. \'아이디(ID)\'라 함은 가입회원의 식별과 회원의 서비스 이용을 위해 고객이 선정하고 회사가 부여하는 문자와 숫자의 조합을 말합니다.&#10; 다. \'암호\'라 함은 회원이 부여받은 아이디(ID)와 일치된 회원임을 확인하고 회원의 권익보호를 위하여 회원이 선정한 문자와 숫자의 조합을 말합니다.&#10; 이 약관에서 사용하는 용어의 정의는 제1항에서 정하는 것을 제외하고는 관계법령 및 서비스 이용안내에서 정하는 바에 따릅니다.&#10;&#10; 제 3 조 (약관외 적용범위) 이 약관은 회사가 제공하는 서비스 이용에 관한 안내(이하 \'서비스 이용안내\')와 함께 적용합니다.&#10; 이 약관에 명시되지 않은 사항에 대해서는 관계법령 및 서비스 이용안내에 따릅니다.&#10; 제 2 장 이용계약 제 4조 (서비스의 종류) 서비스의 종류와 내용은 서비스 이용안내에서 정하는 바에 따릅니다.&#10; 제 5조 (이용계약의 성립) 이용계약은 본 약관에 동의한 고객이 회사 소정의 이용신청서를 온라인 또는 회사가 정하는 방법으로 신청, 회사의 승낙에 의하여 성립합니다.&#10; 이용계약은 아이디(ID) 단위로 체결됩니다.&#10; 제 1항의 규정에 의해 고객이 이용신청을 할 때에는 회사가 정한 필수입력 사항을 입력하여야 합니다.&#10; 회사는 고객의 이용신청이 다음 각 호에 해당하는 경우 그 신청에 대한 승낙을 제한 또는 유보할 수 있습니다.&#10; 가. 성명이 실명이 아닐 경우 나. 허위 주민등록번호를 기재했을 경우 다. 선량한 풍속, 기타 사회질서를 해 할 목적으로 신청한 경우 라. 이용신청서의 내용을 허위로 기재하였거나 허위서류를 첨부하였을 경우 마. 회사의 업무수행상 또는 기술상 지장이 있는 경우 바. 기타 이용신청고객의 귀책사유로 이용승낙이 곤란한 경우 제 6조 (약관의 동의) 회원이 등록절차를 거처 동의 버튼을 누름으로써 본 약관에 동의한 것으로 간주합니다. 제 3 장 계약당사자의 의무 제 7조 (회사의 의무) 회사는 법령 및 본 약관에서 금하는 행위를 하지 않으며, 지속적이고 안정적으로 서비스를 제공하기 위해서 노력합니다. 회사는 서비스 제공과 관련해 알고 있는 회원의 개인정보를 본인의 승낙없이 제3자에게 누설하거나 배포하지 않습니다. 단, 법률에 의한 국가기관의 요구나 수사상의 목적, 개인을 식별할 수 없는 인구통계학적 자료로는 제공될 수 있습니다. 회사는 회원이 제기하는 의견이나 불만이 정당하다고 인정되면 즉시 처리합니다. 다만, 즉시 처리가 곤란할 경우에는 회원에게 그 사유와 일정을 통보하여야 합니다. 회사는 회원이 안전하게 서비스를 이용할 수 있도록 회원의 개인정보 및 신용정보 보호를 위한 보안시스템을 구축합니다. 회사는 지속적이고 안정적인 서비스를 제공하기 위하여 설비에 장애가 있거나 망실된 때에는 이를 지체없이 수리 또는 복구합니다. 다만, 천재지변이나 비상사태, 기타 부득이한 경우에는 그 서비스를 일시 중단하거나 중지할 수 있습니다. 이때, 회사는 지체없이 회원에게 통보하여야 합니다. 제 8조 (회원의 의무) 회원 가입시에 입력하는 회원의 정보는 정확하여야 합니다. 또한, 이미 제공된 회원정보가 정확한 정보가 되도록 유지, 갱신하여야 합니다. 회원은 공공의 안녕질서 및 미풍양속을 저해하는 다음 각 호의 통신 활동을 하여서는 안됩니다. 가. 범죄행위를 목적으로 하거나 범죄행위를 교사하는 내용 나. 선량한 풍속, 기타 사회질서를 해하는 내용 다. 타인의 명예를 손상시키거나 불이익을 주는 행위 라. 타인의 아이디(ID) 및 암호를 사용하는 행위 마. 다른 회원 또는 제3자의 지적재산권을 침해하는 행위 바. 정보통신설비의 오동작이나 정보 등의 파괴 및 혼란을 유발시키는 컴퓨터 바이러스, 바이러스 감염자료를 등록 또는 유포하는 행위 사. 회사의 승인을 받지 않은 광고, 판촉물, 스팸메일, 행운의 편지, 피라미드 조직, 기타 다른 형태의 권유를 게시, 게재, 메일링 또는 다른 방법으로 전송하는 경우 아. 서비스를 통하여 얻은 정보를 회사의 사전 승락없이 복제 또는 유통시키거나 상업적으로 이용하는 경우 자. 기타 법령에 위배되는 행위 아이디(ID)와 암호(6자이상, 영/숫자혼용,단순문자 또는 개인정보 사용금지)의 관리책임은 회원 본인에게 있으며 암호가 타인에게 노출된 경우 즉시 변경하여야 합니다. 회원에게 부여된 아이디(ID)와 암호의 관리소홀, 부정사용에 의하여 발생하는 모든 결과에 대한 책임은 회원에게 있습니다. 본인의 아이디(ID)가 부정하게 사용된 경우, 회원은 반드시 회사에 그 사실을 통보해야 합니다. 회원은 이 약관 및 관계법령을 준수하여야 합니다. 회사는 회원이 상기 제 조항을 위반했을 경우 즉시 계약해지 및 이용제한을 할 수 있고 이로 인한 손해배상을 청구할 수 있습니다 제 4 장 서비스의 이용 제 9조 (정보의 제공) 회사는 회원이 서비스 이용에 필요하다고 인정되는 다양한 정보를 전자우편이나 일반우편 등의 방법으로 회원에게 제공할 수 있으며 회원은 수신거부 이메일을 회사에 보냄으로써 정보수신 거부를 할 수 있습니다. 가. 유료서비스 이용조건 회사의 유료교육서비스는 회원의 소속기관(공공기관,일반기업체,초/중/고교 교사등)과 회사의 계약에 의해 제공되어질 수 있으며,소속기관과 무관하게 개인적으로 서비스를 받고자 할 경우 회사 홈페이지에 마련된 [고객콜센터]를 통하여 서비스제공조건(본인여부 및 법정대리인 필요여부)을 확인하고, 법적 요건을 만족한 상태에서 가능합니다. 나. 개인 유료서비스 이용시 결제정보 위 [가]항을 만족한 회원이 회사의 유료교육서비스를 소속기관과 무관하게 독자적으로 받고자 할 경우 다음의 다음의 결제정보를 회사에 전화 또는 온라인으로 다음 사항을 기입하여 신청을 하여야 합니다. ① 요금 결제 방법 및 세부사항 이 때 신용카드번호 및 암호 등 개인결제수단의 주요정보는 회사가 보관하지 않으며, 회원은 결제상 문제발생시 결제취소를 요청할 수 있고 회사는 회원이 학습을 시작하지 않았음을 확인한 경우에 한하여 이를 처리할 책임이 있습니다. 다. 회원 불만사항 및 의견수렴 회사는 회원의 불만사항 및 의견을 수렴할 수 있도록 홈페이지내에 고객지원을 위한 [고객 콜센터] 및 [고객의 소리] 메뉴를 제공합니다. 제 10조 (게시물 삭제) 회사는 회원이 게시하거나 제공하는 서비스 내용이 다음 각 호에 해당한다고 판단될 경우 사전 통지없이 삭제할 수 있습니다. 가. 다른 회원 또는 제3자를 비방하거나 명예를 손상시키는 내용인 경우 나. 허위 사실의 유포 다. 공공질서 및 미풍양속에 위반되는 내용인 경우 라. 지적재산권 등 기타 타인의 권리를 침해하는 내용인 경우 마. 회사의 서비스 내용과 합치하지 않는 경우 바. 기타 관계법령에 위반된다고 판단되는 경우 제 11조 (서비스 이용시간) 서비스 운영은 회사의 업무상 또는 기술상 문제가 없는 한 연중무휴 1일 24시간을 원칙으?합니다. 다만, 정기 점검 등의 필요로 회사가 정한 시간은 그러하지 아니하며 사전에 공지합니다. 회사는 일부 서비스의 이용가능 시간을 별도로 정할 수 있습니다. 이 경우 서비스 이용안내를 통해 공지합니다. 제 12조 (서비스 제공의 중지) 회사는 다음 각 호에 해당하는 경우 서비스 제공을 중지할 수 있습니다. 가. 서비스 설비의 증설, 보수 등 공사로 인한 경우 나. 전기통신사업법에 규정된 기간통신사업자가 전기통신 서비스를 중지했을 경우 다. 기타 불가항력적인 경우 천재지변, 국가비상사태 등의 불가항력적인 경우를 제외하고는 서비스 제공 중지 전에 회원에게 공지합니다. 제 5 장 계약해지 및 이용제한 제 13조 (계약해지 및 이용제한) 회원이 이용계약을 해지하고자 할 때에는 회원 본인이 실명, 아이디(ID), 주민등록번호 등을 학습 시작일로부터 7일 이내에 회사에 통보하여 해지신청을 하여야 합니다. 7일 이후의 취소 및 환불 요청에 대하여 회사는, 회사의 귀책사유 시, 잔여 학습율에 해당하는 교육비를 환급하고, 고객의 귀책사유 시, 전체 교육비의 10%에 해당하는 금액을 공제한 후, 잔여 학습율에 해당하는 교육비를 환급합니다. 회사는 회원이 다음 각 호에 해당하는 행위를 했을 경우 사전통지 없이 이용계약을 해지하거나 서비스 이용을 제한할 수 있습니다. 가. 회사의 서비스 운영을 고의로 방해한 경우 나. 공공질서 및 미풍양속에 저해되는 내용을 유포시킨 경우 다. 타인의 아이디(ID) 및 암호를 도용한 경우 라. 회원 가입시 허위 내용을 사용하여 신청하였을 경우 마. 타인의 명예를 손상시키거나 불이익을 주는 행위를 했을 경우 바. 컴퓨터 바이러스 프로그램 등을 유포하는 경우 사. 기타 법률에 위반되는 행위를 할 경우 제 6 장 개인정보 보호 제 14조 (개인정보보호정책) 회사는 회원이 가입시 기재한 개인정보 및 서비스를 제공하면서 획득한 금융거래정보 등의 내용을 보호하기 위해 노력합니다. 회원의 개인정보보호에 관하여는 회사의 \'개인정보보호정책\' 및 관련법령이 정한 바에 의합니다. 제 7 장 손해 배상 제 15조 (손해 배상) 회사는 회원의 부주의로 발생한 어떠한 손해에 관하여도 책임을 지지 않습니다. 제 16조 (면책) 회사는 회원이 서비스를 이용하여 기대하는 이익을 얻지 못하였거나 서비스 자료에 대한 이용으로 발생하는 손해에 대해서는 책임을 지지 않습니다. 회사는 회원의 귀책사유로 인한 서비스 이용의 장애에 대하여 책임을 지지 않습니다. 회사는 천재지변 등의 불가항력으로 인해 서비스를 제공할 수 없는 경우에는 서비스 제공에 대한 책임을 지지 않습니다. 회사는 모든 서비스의 자료 보관 및 전송에 관한 책임이 없으며 자료의 손실이 있는 경우에도 책임을 지지 않습니다. 회사는 제휴사이트가 전송, 제공한 자료의 신뢰도, 정확성 등 내용에 관하여는 책임을 지지 않습니다. 제 8 장 지적재산권 제 17조 (지적재산권) 서비스에 회원이 게재한 자료의 권리와 책임은 회원에게 있으며 회사는 회원의 동의없이 이를 영리적으로 사용할 수 없습니다. 다만, 비영리적인 목적의 경우 서비스 내에 게재할 수 있습니다. 회사가 지적재산권을 가지고 있는 자료, 서비스, 소프트웨어, 상표 등을 회사의 서면동의 없이 전부 또는 일부를 수정, 대여, 대출, 배포, 제작, 양도, 재라이센스, 담보권 설정, 상업적 이용 행위 등을 할 수 없습니다. 제 9 장 관할법원 제 18조 (관할법원) 서비스와 관련되어 분쟁이 발생할 경우, 회사의 본사 소재지를 관할하는 법원을 관할법원으로 합니다. 제휴사이트는 해당 사이트의 약관에 따릅니다. 부칙 (시행일) 본 약관은 2006년 01월 01일부터 시행합니다.</string>
+    <string name="terms_checkbox_value">이용약관내용을 충분히 이해하고 동의합니다</string>
+    <string name="terms_next_button">다음단계</string>
+
+
+    <string name="login_title">로그인</string>
+    <string name="login_phone">휴대전화 번호(-제외 숫자)</string>
+    <string name="login_name">이름 또는 닉네임</string>
+    <string name="login_done">완료</string>
+
+    <string name="before_button">이전단계</string>
+    <string name="next_button">다음단계</string>
+
+    <string name="before_en_button">BACK</string>
+    <string name="next_en_button">EXIT</string>
+    <string name="finish_en_button">FINISH</string>
+
+    <string name="setting_next_en_button">NEXT</string>
+
+    <string name="setting_today_text">평일(1인)</string>
+    <string name="setting_week_text">주말(1인)</string>
+    <string name="setting_15_arrow_text">15발</string>
+    <string name="setting_20_arrow_text">20발</string>
+    <string name="setting_30_arrow_text">30발</string>
+    <string name="setting_30_min_text">30분</string>
+    <string name="setting_1_hour_text">1시간</string>
+    <string name="setting_outter_text">야외체험</string>
+
+    <string name="setting_5000_price_text">5,000</string>
+    <string name="setting_10000_price_text">10,000</string>
+    <string name="setting_15000_price_text">15,000</string>
+    <string name="setting_20000_price_text">20,000</string>
+
+
+    <string name="signup_title">회원가입</string>
+    <string name="signup_nonmember">NONMEMBER</string>
+    <string name="signup_member">MEMBERSHIP</string>
+    <string name="signup_nonmember_detail">비회원 <![CDATA[・]]> 1회 체험하시는 분</string>
+    <string name="signup_member_detail">슈팅존 <![CDATA[・]]> 유료회원 연간회원</string>
+
+    <string name="step1_text">STEP1.</string>
+    <string name="step2_text">STEP2.</string>
+    <string name="step3_text">STEP3.</string>
+    <string name="step4_text">STEP4.</string>
+
+
+    <string name="prohibition_title">절대 금지 사항</string>
+    <string name="prohibition_first_text">음주양궁불가</string>
+    <string name="prohibition_first_detail_text">안전을 위해 한잔이라도 음주를 하신 분은 체험하실 수 없습니다.</string>
+    <string name="prohibition_second_text">어디서나 화살 조심!!</string>
+    <string name="prohibition_second_detail_text">활쏘는 사람이 있으면 사선 앞으로 나가지 않습니다.\r\n꼭 주위를 살피세요</string>
+    <string name="prohibition_third_text">화살 뽑을 때 주변사람이 다칠 수 있습니다.</string>
+    <string name="prohibition_third_detail_text">화살 뽑는 사람 뒤에 서면 화살에 눈이 찔릴 수 있습니다.\r\n뒤에 사람이 있는지 없는지 확인 후 뽑아주세요.</string>
+    <string name="prohibition_fourth_text">화살 없이 활을 쏘지 마세요.</string>
+    <string name="prohibition_fourth_detail_text">화살 없이 활을 쏘면 활이 파손됩니다.</string>
+
+
+    <string name="guide_title">활 쏘는 방법</string>
+    <string name="guide_first_text">1. 스탠스</string>
+    <string name="guide_first_en_text">STANCE</string>
+    <string name="guide_first_detail_text">바닥의 발모양에 맞춰 양발을\n11자 모양으로 서서 레스트 안착,\n노킹을 한 후 활을 쏠 자세를 취한다.</string>
+    <string name="guide_second_text">2. 셋업</string>
+    <string name="guide_second_en_text">SET UP</string>
+    <string name="guide_second_detail_text">단계별 동작에 따라\n활을 쏠 준비를 한다.</string>
+    <string name="guide_second_one_text">노킹(Nocking)</string>
+    <string name="guide_second_one_en_text">NOCKING</string>
+    <string name="guide_second_one_detail_text">활줄의 금속링 사이에 화살 끝부분(노크)를\n딸깍소리가 나도록 끝까지 꽂는다.</string>
+    <string name="guide_second_two_text">레스트(Rest) 안착</string>
+    <string name="guide_second_two_detail_text">활의 왼쪽에 사진과 같이 위차한 부분에\r\n화살을 걸친다.</string>
+    <string name="guide_third_text">3. 당기기</string>
+    <string name="guide_third_en_text">DRAWING</string>
+    <string name="guide_third_detail_text">몸은 정면을 보고\n얼굴만 표적방향으로 돌리고\r\n왼팔은 표적방향으로 뻗어주고\r\n오른팔은 반대방향으로\r\n양팔을 평행으로 유지하며 당긴다.</string>
+    <string name="guide_fourth_text">4. 조준</string>
+    <string name="guide_fourth_en_text">AIMING</string>
+    <string name="guide_fourth_detail_text">활을 당겨 사진과 같이\r\n자세를 고정한 상태로 조준한다.</string>
+    <string name="guide_fourth_one_text">앵커(Anchor)</string>
+    <string name="guide_fourth_one_en_text">ANCHOR</string>
+    <string name="guide_fourth_one_detail_text">활을 당겨 오른손은 턱 밑에 붙이고\r\n활줄을 코와 입술 중앙에 밀착한다.</string>
+    <string name="guide_fourth_two_text">조준(Aiming)</string>
+    <string name="guide_fourth_two_en_text">AIMING</string>
+    <string name="guide_fourth_two_detail_text">오른쪽 눈으로 조준기의 사이트핀을 타겟의\r\n노란색 중앙에 맞춘다.</string>
+    <string name="guide_fifth_text">5. 발사</string>
+    <string name="guide_fifth_en_text">SHOOTING</string>
+    <string name="guide_fifth_detail_text">조준이 되면 당기고 있던\r\n세 손가락을 동시에 부드럽게\r\n놔준다.</string>
+    <string name="guide_sixth_text">6. 발사 후 자세</string>
+    <string name="guide_sixth_en_text">FOLLOW THROUGH</string>
+    <string name="guide_sixth_detail_text">슈팅 후 왼팔은 표적방향\r\n오른팔은 표적반대방향\r\n으로 향한다.</string>
+    <string name="guide_seventh_text">7. 조준기 세팅</string>
+    <string name="guide_seventh_en_text">AIMING</string>
+    <string name="guide_seventh_detail_text">표적의 중앙부분을 기준으로\r\n화살이 모이는 방향으로\r\n조준기 핀을 옮긴다.</string>
+    <string name="guide_eighth_text">8. 화살 뽑기</string>
+    <string name="guide_eighth_detail_text">화살을 짧게 잡고 몸에서 가까운 화살부터\r\n한발씩 뽑아야 합니다.</string>
+
+
+    <string name="guide_one_text">체스트(가슴) 가드는 선택사항이지만\n안전을 위해 착용하는것이 좋습니다.</string>
+    <string name="guide_two_text">암가든는 안전을 위해\n의무적으로 착용하셔야 합니다.</string>
+    <string name="guide_three_text">양발을 어깨넓이로 벌려 11자 모양으로 서주세요.</string>
+
+    <string name="guide_four_title">후킹(Hooking)</string>
+    <string name="guide_four_text">활줄을 오른쪽 세손가락의 첫번째 마디\n부분만 건다.</string>
+    <string name="guide_five_title">그립(Grip)</string>
+    <string name="guide_five_text">활의 움푹 파인 부분에 왼손 손바닥을 밀착\n시켜 가볍게 잡는다.</string>
+    <string name="guide_six_title">팔돌리기</string>
+    <string name="guide_six_text">활을 잡은 팔을 곱게 편 상태에서 팔꿈치가 왼쪽을 향하도록 팔을 돌려준다.</string>
+
+
+    <string name="archery_explanation_text">화살을 발사하신 후에는 꼭!\r\n점수입력 해주세요~</string>
+
+    <string name="archery_title">체험하기</string>
+    <string name="archery_input_button">점수입력</string>
+
+    <string name="confirm_button">확인</string>
+    <string name="cancel_button">취소</string>
+
+    <string name="arrow_value">발수</string>
+    <string name="total_value">총점</string>
+
+
+    <string name="ranking_title">랭킹</string>
+    <string name="ranking_my_detail_history">내기록 보기</string>
+
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+
+
+    <string name="term_test"><![CDATA[<div class="conbody">
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:18px"><b>제 1 장 총 칙</b></span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:12px"><b>제 1 조 (목적)</b><br>
+이 약관은 {슈팅존}(이하 "사이트"라 합니다)에서 제공하는 인터넷서비스(이하 "서비스"라 합니다)의 이용 조건 및 절차에 관한 기본적인 사항을 규정함을 목적으로 합니다.</span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:12px"><b>제 2 조 (약관의 효력 및 변경)</b><br>
+① 이 약관은 서비스 화면이나 기타의 방법으로 이용고객에게 공지함으로써 효력을 발생합니다.<br>
+② 사이트는 이 약관의 내용을 변경할 수 있으며, 변경된 약관은 제1항과 같은 방법으로 공지 또는 통지함으로써 효력을 발생합니다.</span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:12px"><b>제 3 조 (용어의 정의)</b><br>
+이 약관에서 사용하는 용어의 정의는 다음과 같습니다.<br>
+① 회원 : 사이트와 서비스 이용계약을 체결하거나 이용자 아이디(ID)를 부여받은 개인 또는 단체를 말합니다.<br>
+② 신청자 : 회원가입을 신청하는 개인 또는 단체를 말합니다.<br>
+③ 아이디(ID) : 회원의 식별과 서비스 이용을 위하여 회원이 정하고 사이트가 승인하는 문자와 숫자의 조합을 말합니다.<br>
+④ 비밀번호 : 회원이 부여 받은 아이디(ID)와 일치된 회원임을 확인하고, 회원 자신의 비밀을 보호하기 위하여 회원이 정한 문자와 숫자의 조합을 말합니다.<br>
+⑤ 해지 : 사이트 또는 회원이 서비스 이용계약을 취소하는 것을 말합니다.</span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:18px"><b>제 2 장 서비스 이용계약</b></span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:12px"><b>제 4 조 (이용계약의 성립)</b><br>
+① 이용약관 하단의 동의 버튼을 누르면 이 약관에 동의하는 것으로 간주됩니다.<br>
+② 이용계약은 서비스 이용희망자의 이용약관 동의 후 이용 신청에 대하여 사이트가 승낙함으로써 성립합니다.</span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:12px"><b>제 5 조 (이용신청)</b><br>
+① 신청자가 본 서비스를 이용하기 위해서는 사이트 소정의 가입신청 양식에서 요구하는 이용자 정보를 기록하여 제출해야 합니다.<br>
+② 가입신청 양식에 기재하는 모든 이용자 정보는 모두 실제 데이터인 것으로 간주됩니다. 실명이나 실제 정보를 입력하지 않은 사용자는 법적인 보호를 받을 수 없으며, 서비스의 제한을 받을 수 있습니다.</span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:12px"><b>제 6 조 (이용신청의 승낙)</b><br>
+① 사이트는 신청자에 대하여 제2항, 제3항의 경우를 예외로 하여 서비스 이용신청을 승낙합니다.<br>
+② 사이트는 다음에 해당하는 경우에 그 신청에 대한 승낙 제한사유가 해소될 때까지 승낙을 유보할 수 있습니다.<br>
+가. 서비스 관련 설비에 여유가 없는 경우<br>
+나. 기술상 지장이 있는 경우<br>
+다. 기타 사이트가 필요하다고 인정되는 경우<br>
+③ 사이트는 신청자가 다음에 해당하는 경우에는 승낙을 거부할 수 있습니다.<br>
+가. 다른 개인(사이트)의 명의를 사용하여 신청한 경우<br>
+나. 이용자 정보를 허위로 기재하여 신청한 경우<br>
+다. 사회의 안녕질서 또는 미풍양속을 저해할 목적으로 신청한 경우<br>
+라. 기타 사이트 소정의 이용신청요건을 충족하지 못하는 경우</span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:12px"><b>제 7 조 (이용자정보의 변경)</b><br>
+회원은 이용 신청시에 기재했던 회원정보가 변경되었을 경우에는, 온라인으로 수정하여야 하며 변경하지 않음으로 인하여 발생되는 모든 문제의 책임은 회원에게 있습니다.</span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:18px"><b>제 3 장 계약 당사자의 의무</b></span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:12px"><b>제 8 조 (사이트의 의무)</b><br>
+① 사이트는 회원에게 각 호의 서비스를 제공합니다.<br>
+가. 신규서비스와 도메인 정보에 대한 뉴스레터 발송<br>
+나. 추가 도메인 등록시 개인정보 자동 입력<br>
+다. 도메인 등록, 관리를 위한 각종 부가서비스<br>
+② 사이트는 서비스 제공과 관련하여 취득한 회원의 개인정보를 회원의 동의없이 타인에게 누설, 공개 또는 배포할 수 없으며, 서비스관련 업무 이외의 상업적 목적으로 사용할 수 없습니다. 단, 다음 각 호의 1에 해당하는 경우는 예외입니다.<br>
+가. 전기통신기본법 등 법률의 규정에 의해 국가기관의 요구가 있는 경우<br>
+나. 범죄에 대한 수사상의 목적이 있거나 정보통신윤리 위원회의 요청이 있는 경우<br>
+다. 기타 관계법령에서 정한 절차에 따른 요청이 있는 경우<br>
+③ 사이트는 이 약관에서 정한 바에 따라 지속적, 안정적으로 서비스를 제공할 의무가 있습니다.</span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:12px"><b>제 9 조 (회원의 의무)</b></span><br>
+<span style="font-size:12px">① 회원은 서비스 이용 시 다음 각 호의 행위를 하지 않아야 합니다.<br>
+가. 다른 회원의 ID를 부정하게 사용하는 행위<br>
+나. 서비스에서 얻은 정보를 사이트의 사전승낙 없이 회원의 이용 이외의 목적으로 복제하거나 이를 변경, 출판 및 방송 등에 사용하거나 타인에게 제공하는 행위<br>
+다. 사이트의 저작권, 타인의 저작권 등 기타 권리를 침해하는 행위<br>
+라. 공공질서 및 미풍양속에 위반되는 내용의 정보, 문장, 도형 등을 타인에게 유포하는 행위<br>
+마. 범죄와 결부된다고 객관적으로 판단되는 행위<br>
+바. 기타 관계법령에 위배되는 행위<br>
+② 회원은 관계법령, 이 약관에서 규정하는 사항, 서비스 이용 안내 및 주의 사항을 준수하여야 합니다.<br>
+③ 회원은 내용별로 사이트가 서비스 공지사항에 게시하거나 별도로 공지한 이용 제한 사항을 준수하여야 합니다.</span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:18px"><b>제 4 장 서비스 제공 및 이용</b></span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:12px"><b>제 10 조 (회원 아이디(ID)와 비밀번호 관리에 대한 회원의 의무)</b><br>
+① 아이디(ID)와 비밀번호에 대한 모든 관리는 회원에게 책임이 있습니다. 회원에게 부여된 아이디(ID)와 비밀번호의 관리소홀, 부정사용에 의하여 발생하는 모든 결과에 대한 전적인 책임은 회원에게 있습니다.<br>
+② 자신의 아이디(ID)가 부정하게 사용된 경우 또는 기타 보안 위반에 대하여, 회원은 반드시 사이트에 그 사실을 통보해야 합니다.</span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:12px"><b>제 11 조 (서비스 제한 및 정지)</b><br>
+① 사이트는 전시, 사변, 천재지변 또는 이에 준하는 국가비상사태가 발생하거나 발생할 우려가 있는 경우와 전기통신사업법에 의한 기간통신 사업자가 전기통신서비스를 중지하는 등 기타 불가항력적 사유가 있는 경우에는 서비스의 전부 또는 일부를 제한하거나 정지할 수 있습니다.<br>
+② 사이트는 제1항의 규정에 의하여 서비스의 이용을 제한하거나 정지할 때에는 그 사유 및 제한기간 등을 지체없이 회원에게 알려야 합니다.</span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:18px"><b>제5장 계약사항의 변경, 해지</b></span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:12px"><b>제 12 조 (정보의 변경)</b><br>
+회원이 주소, 비밀번호 등 고객정보를 변경하고자 하는 경우에는 홈페이지의 회원정보 변경 서비스를 이용하여 변경할 수 있습니다.</span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:12px"><b>제 13 조 (계약사항의 해지)</b><br>
+회원은 서비스 이용계약을 해지할 수 있으며, 해지할 경우에는 본인이 직접 서비스를 통하거나 전화 또는 온라인 등으로 사이트에 해지신청을 하여야 합니다. 사이트는 해지신청이 접수된 당일부터 해당 회원의 서비스 이용을 제한합니다. 사이트는 회원이 다음 각 항의 1에 해당하여 이용계약을 해지하고자 할 경우에는 해지조치 7일전까지 그 뜻을 이용고객에게 통지하여 소명할 기회를 주어야 합니다.<br>
+① 이용고객이 이용제한 규정을 위반하거나 그 이용제한 기간 내에 제한 사유를 해소하지 않는 경우<br>
+② 정보통신윤리위원회가 이용해지를 요구한 경우<br>
+③ 이용고객이 정당한 사유 없이 의견진술에 응하지 아니한 경우<br>
+④ 타인 명의로 신청을 하였거나 신청서 내용의 허위 기재 또는 허위서류를 첨부하여 이용계약을 체결한 경우<br>
+사이트는 상기 규정에 의하여 해지된 이용고객에 대해서는 별도로 정한 기간동안 가입을 제한할 수 있습니다.</span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:18px"><b>제6장 손해배상</b></span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:12px"><b>제 14 조 (면책조항)</b><br>
+① 사이트는 회원이 서비스 제공으로부터 기대되는 이익을 얻지 못하였거나 서비스 자료에 대한 취사선택 또는 이용으로 발생하는 손해 등에 대해서는 책임이 면제됩니다.<br>
+② 사이트는 회원의 귀책사유나 제3자의 고의로 인하여 서비스에 장애가 발생하거나 회원의 데이터가 훼손된 경우에 책임이 면제됩니다.<br>
+③ 사이트는 회원이 게시 또는 전송한 자료의 내용에 대해서는 책임이 면제됩니다.<br>
+④ 상표권이 있는 도메인의 경우, 이로 인해 발생할 수도 있는 손해나 배상에 대한 책임은 구매한 회원 당사자에게 있으며, 사이트는 이에 대한 일체의 책임을 지지 않습니다.</span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:12px"><b>제 15 조 (관할법원)</b></span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:12px">서비스와 관련하여 사이트와 회원간에 분쟁이 발생할 경우 사이트의 본사 소재지를 관할하는 법원을 관할법원으로 합니다.</span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:12px">[부칙]</span></span></p>
+<p><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:12px">(시행일) 이 약관은 2017년 01월부터 시행합니다.</span></span></p>
+</div>]]></string>
+
+
+</resources>

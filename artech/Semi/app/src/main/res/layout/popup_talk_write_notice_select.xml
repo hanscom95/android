@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <RelativeLayout
+        android:id="@+id/one_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/first_layout"
+            android:layout_width="match_parent"
+            android:layout_height="35.3dp">
+            <TextView
+                android:id="@+id/item_first_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:includeFontPadding="false"
+                android:text="게시판을 선택해주세요."
+                android:textColor="@color/greenblue"
+                android:textSize="13sp"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16.3dp"
+                android:rotation="90"
+                android:src="@mipmap/chevron_right"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/second_layout"
+            android:layout_width="match_parent"
+            android:layout_height="35.3dp"
+            android:layout_below="@+id/first_layout">
+            <TextView
+                android:id="@+id/item_second_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:includeFontPadding="false"
+                android:text="동출요청"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/third_layout"
+            android:layout_width="match_parent"
+            android:layout_height="35.3dp"
+            android:layout_below="@+id/second_layout">
+            <TextView
+                android:id="@+id/item_third_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:includeFontPadding="false"
+                android:text="조행기"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fourth_layout"
+            android:layout_width="match_parent"
+            android:layout_height="35.3dp"
+            android:layout_below="@+id/third_layout">
+            <TextView
+                android:id="@+id/item_fourth_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:includeFontPadding="false"
+                android:text="낚시정보"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fifth_layout"
+            android:layout_width="match_parent"
+            android:layout_height="35.3dp"
+            android:layout_below="@+id/fourth_layout">
+            <TextView
+                android:id="@+id/item_fifth_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:includeFontPadding="false"
+                android:text="자유게시판"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/two_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/two_first_layout"
+            android:layout_width="match_parent"
+            android:layout_height="35.3dp">
+            <TextView
+                android:id="@+id/item_two_first_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:includeFontPadding="false"
+                android:text="조행기"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16.3dp"
+                android:rotation="90"
+                android:src="@mipmap/chevron_right"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/two_second_layout"
+            android:layout_width="match_parent"
+            android:layout_height="35.3dp"
+            android:layout_below="@+id/two_first_layout">
+            <TextView
+                android:id="@+id/item_two_second_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:includeFontPadding="false"
+                android:text="카테고리를 선택해주세요."
+                android:textColor="@color/greenblue"
+                android:textSize="13sp"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16.3dp"
+                android:rotation="90"
+                android:src="@mipmap/chevron_right"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/two_third_layout"
+            android:layout_width="match_parent"
+            android:layout_height="35.3dp"
+            android:layout_below="@+id/two_second_layout">
+            <TextView
+                android:id="@+id/item_two_third_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:includeFontPadding="false"
+                android:text="바다조행기"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/two_fourth_layout"
+            android:layout_width="match_parent"
+            android:layout_height="35.3dp"
+            android:layout_below="@+id/two_third_layout">
+            <TextView
+                android:id="@+id/item_two_fourth_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:includeFontPadding="false"
+                android:text="민물조행기"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/three_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/three_first_layout"
+            android:layout_width="match_parent"
+            android:layout_height="35.3dp">
+            <TextView
+                android:id="@+id/item_three_first_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:includeFontPadding="false"
+                android:text="낚시정보"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16.3dp"
+                android:rotation="90"
+                android:src="@mipmap/chevron_right"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/three_second_layout"
+            android:layout_width="match_parent"
+            android:layout_height="35.3dp"
+            android:layout_below="@+id/three_first_layout">
+            <TextView
+                android:id="@+id/item_three_second_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:includeFontPadding="false"
+                android:text="카테고리를 선택해주세요."
+                android:textColor="@color/greenblue"
+                android:textSize="13sp"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16.3dp"
+                android:rotation="90"
+                android:src="@mipmap/chevron_right"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/three_third_layout"
+            android:layout_width="match_parent"
+            android:layout_height="35.3dp"
+            android:layout_below="@+id/three_second_layout">
+            <TextView
+                android:id="@+id/item_three_third_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:includeFontPadding="false"
+                android:text="조황"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/three_fourth_layout"
+            android:layout_width="match_parent"
+            android:layout_height="35.3dp"
+            android:layout_below="@+id/three_third_layout">
+            <TextView
+                android:id="@+id/item_three_fourth_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:includeFontPadding="false"
+                android:text="포인트"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/three_fifth_layout"
+            android:layout_width="match_parent"
+            android:layout_height="35.3dp"
+            android:layout_below="@+id/three_fourth_layout">
+            <TextView
+                android:id="@+id/item_three_fifth_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:includeFontPadding="false"
+                android:text="용품"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/three_sixth_layout"
+            android:layout_width="match_parent"
+            android:layout_height="35.3dp"
+            android:layout_below="@+id/three_fifth_layout">
+            <TextView
+                android:id="@+id/item_three_sixth_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:includeFontPadding="false"
+                android:text="조법"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/three_seventh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="35.3dp"
+            android:layout_below="@+id/three_sixth_layout">
+            <TextView
+                android:id="@+id/item_three_seventh_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:includeFontPadding="false"
+                android:text="기타"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

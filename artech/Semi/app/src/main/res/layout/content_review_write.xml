@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.semi.normal.ReviewWriteActivity"
+    tools:showIn="@layout/activity_review_write"
+    android:background="@mipmap/bg_white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/first_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="16.8dp">
+
+            <TextView
+                android:id="@+id/ranking_point_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:text="별점"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:fontFamily="@font/notosanscjkkr_bold" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ranking_point_text"
+                android:layout_marginLeft="28.5dp"
+                android:layout_centerVertical="true">
+                <CheckBox
+                    android:id="@+id/one_point_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:background="@drawable/review_write_point_checkbox"/>
+                <CheckBox
+                    android:id="@+id/two_point_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/one_point_checkbox"
+                    android:layout_marginLeft="10dp"
+                    android:button="@null"
+                    android:background="@drawable/review_write_point_checkbox"/>
+                <CheckBox
+                    android:id="@+id/three_point_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/two_point_checkbox"
+                    android:layout_marginLeft="10dp"
+                    android:button="@null"
+                    android:background="@drawable/review_write_point_checkbox"/>
+                <CheckBox
+                    android:id="@+id/four_point_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/three_point_checkbox"
+                    android:layout_marginLeft="10dp"
+                    android:button="@null"
+                    android:background="@drawable/review_write_point_checkbox"/>
+                <CheckBox
+                    android:id="@+id/five_point_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/four_point_checkbox"
+                    android:layout_marginLeft="10dp"
+                    android:button="@null"
+                    android:background="@drawable/review_write_point_checkbox"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/second_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/first_layout"
+            android:layout_alignLeft="@+id/first_layout">
+
+            <TextView
+                android:id="@+id/nickname_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:text="닉네임"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:fontFamily="@font/notosanscjkkr_bold" />
+
+            <TextView
+                android:id="@+id/nickname_value_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/nickname_text"
+                android:layout_marginLeft="17.5dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:fontFamily="@font/nanumgothic" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/third_layout"
+            android:layout_width="match_parent"
+            android:layout_height="158.3sp"
+            android:layout_marginLeft="14.5dp"
+            android:layout_marginRight="17.5dp"
+            android:layout_marginTop="18dp"
+            android:layout_below="@+id/second_layout"
+            android:layout_centerHorizontal="true">
+
+            <EditText
+                android:id="@+id/review_value_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="15.5dp"
+                android:paddingRight="15.5dp"
+                android:includeFontPadding="false"
+                android:hint="입력해주세요"
+                android:gravity="left|top"
+                android:background="@null"
+                android:inputType="text|textMultiLine"
+                android:maxLength="255"
+                android:textColorHint="@color/greyish"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:fontFamily="@font/nanumgothic" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/input_line"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line"/>
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:background="@color/input_line"/>
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/input_line"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/fourth_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="79dp"
+            android:layout_marginLeft="14.5dp"
+            android:layout_marginRight="17.5dp"
+            android:layout_marginTop="18dp"
+            android:layout_below="@+id/third_layout"
+            android:layout_centerHorizontal="true">
+            <RelativeLayout
+                android:id="@+id/first_camera_layout"
+                android:layout_width="103.5dp"
+                android:layout_height="78.8dp"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/first_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/img_camera"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/input_line"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/input_line"/>
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/input_line"/>
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/input_line"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/second_camera_layout"
+                android:layout_width="103.5dp"
+                android:layout_height="78.8dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/first_camera_layout"
+                android:layout_marginLeft="10.5dp">
+
+                <ImageView
+                    android:id="@+id/second_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/img_camera"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/input_line"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/input_line"/>
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/input_line"/>
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/input_line"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/third_camera_layout"
+                android:layout_width="103.5dp"
+                android:layout_height="78.8dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/second_camera_layout"
+                android:layout_marginLeft="10.5dp">
+
+                <ImageView
+                    android:id="@+id/third_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/img_camera"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/input_line"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/input_line"/>
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/input_line"/>
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/input_line"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/warning_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fourth_layout"
+            android:layout_alignLeft="@+id/fourth_layout"
+            android:layout_marginTop="24dp"
+            android:includeFontPadding="false"
+            android:text="허위리뷰나 명예훼손, 욕설, 비방글 등 선량한 업주나 제3자의 권리를 침해하는 게시글은\n서비스 이용약관이나 관련 법률에 따라 제재를 받을 수 있습니다."
+            android:textColor="@color/greyish"
+            android:textSize="8.9sp"
+            android:fontFamily="@font/notosanscjkkr_regular" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

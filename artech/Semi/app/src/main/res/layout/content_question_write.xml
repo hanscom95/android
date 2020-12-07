@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.semi.normal.QuestionWriteActivity"
+    tools:showIn="@layout/activity_question_write"
+    android:paddingBottom="@dimen/nav_padding_bottom">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/first_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/product_insert_first_margin_top"
+            android:layout_centerHorizontal="true">
+            <RelativeLayout
+                android:layout_width="@dimen/product_insert_category_width"
+                android:layout_height="@dimen/product_insert_category_height"
+                android:background="@color/white">
+                <Spinner
+                    android:id="@+id/category_spinner"
+                    android:layout_width="@dimen/product_insert_category_width"
+                    android:layout_height="@dimen/product_insert_category_height"
+                    android:entries="@array/question"
+                    android:background="@null"
+                    android:theme="@style/QuestionSpinner"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_chevron_4_box_unfold"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/white_three"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white_three"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white_three"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white_three"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/second_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/first_layout">
+            <RelativeLayout
+                android:id="@+id/product_name_layout"
+                android:layout_width="@dimen/product_insert_name_layout_width"
+                android:layout_height="@dimen/product_insert_name_layout_height"
+                android:layout_centerHorizontal="true">
+
+                <EditText
+                    android:id="@+id/title_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/product_insert_input_box"
+                    android:hint="제목"
+                    android:inputType="text"
+                    android:maxLength="255"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/product_insert_name_edit_padding"
+                    android:paddingRight="@dimen/product_insert_name_edit_padding"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/greyish"
+                    android:textSize="@dimen/product_insert_edit"
+                    android:fontFamily="@font/notosanscjkkr_regular" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/third_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/second_layout">
+            <RelativeLayout
+                android:layout_width="@dimen/product_insert_category_width"
+                android:layout_height="@dimen/product_insert_category_height"
+                android:background="@color/white">
+                <Spinner
+                    android:id="@+id/reply_address_spinner"
+                    android:layout_width="@dimen/product_insert_category_width"
+                    android:layout_height="@dimen/product_insert_category_height"
+                    android:entries="@array/question_reply"
+                    android:spinnerMode="dropdown"
+                    android:background="@null"
+                    android:theme="@style/QuestionAddressSpinner"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_chevron_4_box_unfold"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/white_three"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white_three"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white_three"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white_three"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fourth_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/third_layout">
+            <RelativeLayout
+                android:id="@+id/replay_address_layout"
+                android:layout_width="@dimen/product_insert_name_layout_width"
+                android:layout_height="@dimen/product_insert_name_layout_height"
+                android:layout_centerHorizontal="true">
+
+                <EditText
+                    android:id="@+id/replay_address_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/product_insert_input_box"
+                    android:hint="답변 받을 연락처나 이메일을 입력해주세요."
+                    android:inputType="phone|textEmailAddress"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/product_insert_name_edit_padding"
+                    android:paddingRight="@dimen/product_insert_name_edit_padding"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/greyish"
+                    android:textSize="@dimen/product_insert_edit"
+                    android:fontFamily="@font/notosanscjkkr_regular" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fifth_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/fourth_layout">
+            <RelativeLayout
+                android:id="@+id/price_layout"
+                android:layout_width="@dimen/product_insert_detail_width"
+                android:layout_height="243dp"
+                android:layout_centerHorizontal="true">
+
+                <EditText
+                    android:id="@+id/question_detail_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="top|left"
+                    android:background="@mipmap/img_inputbox"
+                    android:hint="- 문의하실 내용을 10자 이상 입력해주세요.\n\n- 문의하시는 가맹점 이름과 예약정보를 남겨주시면 보다\n빠른 상담이 가능합니다.\n\n- 입력해주신 연락처는 유선 답변을 위해 수집됩니다."
+                    android:inputType="text|textMultiLine"
+                    android:maxLength="255"
+                    android:padding="@dimen/product_insert_detail_padding"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/greyish"
+                    android:textSize="@dimen/product_insert_edit"
+                    android:fontFamily="@font/notosanscjkkr_regular" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/write_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fifth_layout"
+            android:layout_marginTop="27dp"
+            android:layout_centerHorizontal="true"
+            android:text="작성 완료"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:background="@mipmap/btn_paymentprocessor"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/write_button"/>
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>

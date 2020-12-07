@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="13.8dp">
+
+    <RelativeLayout
+        android:id="@+id/sort_one_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/item_first_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11.3dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="17.3dp">
+            <artech.com.semi.utility.CircleImageView
+                android:id="@+id/item_profile_img"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/img_profilephoto"/>
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/item_profile_img"
+                android:layout_marginLeft="10.8dp"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:text="name"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/notosanscjkkr_medium"/>
+
+
+            <TextView
+                android:id="@+id/item_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:textSize="10.5sp"
+                android:textColor="@color/grey"
+                android:text="0000-00-00(일) 00:00~12:00"
+                android:fontFamily="@font/nanumgothic"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/item_second_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_first_layout"
+            android:layout_alignLeft="@+id/item_first_layout"
+            android:layout_alignRight="@+id/item_first_layout"
+            android:layout_marginTop="16.8dp">
+            <TextView
+                android:id="@+id/item_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/notosanscjkkr_medium"/>
+            <TextView
+                android:id="@+id/item_contents_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_title_text"
+                android:lines="2"
+                android:maxLength="50"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:textSize="12sp"
+                android:textColor="@color/greyish_brown"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_contents_text"
+                android:layout_marginTop="25dp">
+
+                <ImageView
+                    android:id="@+id/item_favorite_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/img_favorite_2"/>
+
+                <TextView
+                    android:id="@+id/item_favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/item_favorite_img"
+                    android:layout_marginLeft="5.5dp"
+                    android:includeFontPadding="false"
+                    android:textSize="12sp"
+                    android:textColor="@color/greyish_brown"
+                    android:text="0"
+                    android:fontFamily="@font/nanumgothic"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+                    <TextView
+                        android:id="@+id/item_review_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:includeFontPadding="false"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:text="댓글"
+                        android:fontFamily="@font/notosanscjkkr_regular"/>
+                    <TextView
+                        android:id="@+id/item_review_value_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/item_review_text"
+                        android:layout_marginLeft="5.8dp"
+                        android:includeFontPadding="false"
+                        android:textSize="12sp"
+                        android:textColor="@color/greyish_brown"
+                        android:text="0"
+                        android:fontFamily="@font/nanumgothic"/>
+                    <TextView
+                        android:id="@+id/item_scrap_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/item_review_value_text"
+                        android:layout_marginLeft="10.3dp"
+                        android:includeFontPadding="false"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:text="스크랩"
+                        android:fontFamily="@font/notosanscjkkr_regular"/>
+                    <TextView
+                        android:id="@+id/item_scrap_value_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/item_scrap_text"
+                        android:layout_marginLeft="5.8dp"
+                        android:includeFontPadding="false"
+                        android:textSize="12sp"
+                        android:textColor="@color/greyish_brown"
+                        android:text="0"
+                        android:fontFamily="@font/nanumgothic"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <View
+            android:id="@+id/item_top_outline"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="@color/greyish"/>
+        <View
+            android:id="@+id/item_bottom_outline"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_below="@+id/item_second_layout"
+            android:layout_marginTop="11dp"
+            android:background="@color/greyish"/>
+    </RelativeLayout>
+
+</RelativeLayout>

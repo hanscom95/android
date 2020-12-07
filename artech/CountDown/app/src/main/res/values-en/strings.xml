@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">ARTIMER</string>
+
+    <string name="shoot_off">SHOOT OFF</string>
+    <string name="language">LANGUAGE</string>
+    <string name="info">APP INFO</string>
+
+    <string name="please_choose">choose</string>
+
+    <string name="number_of_firing">Arrow</string>
+
+    <string name="arrow3">3arrow</string>
+    <string name="arrow6">6arrow</string>
+
+
+    <string name="time2">2 min</string>
+    <string name="time4">4 min</string>
+
+    <string name="time">Shooting time</string>
+
+
+    <string name="round_text">round</string>
+    <string name="round">Round</string>
+
+    <string name="payback_time">Retrieve arrow</string>
+
+    <string name="payback_time5">1 min</string>
+    <string name="payback_time10">2 min</string>
+    <string name="payback_time15">3 min</string>
+    <string name="payback_time20">4 min</string>
+
+
+
+    <string name="user_detail">Arrow\nTime\nRound\nRetrieve arrow etc.</string>
+    <string name="user_setting">Customize</string>
+
+    <string name="user_info">How to use</string>
+    <string name="user_info_text">You can select the menus on the screen in order,\nOr you can add them by clicking Customize.</string>
+
+
+    <string name="confirm">Confirm</string>
+
+
+    <string name="option">Option</string>
+
+
+    <string name="be_prepared">Be prepared.</string>
+
+    <string name="min">min</string>
+    <string name="sec">sec</string>
+
+    <string name="thank_you">Thank you.</string>
+
+    <string name="no_choice">You have unselected items.</string>
+    <string name="waiting_message">Archers to the shooting line.</string>
+    <string name="frequency_message">Get your arrows.</string>
+    <string name="time_end_message">The launch time is over. Please take the arrow out.</string>
+    <string name="command_messages">Shooting arrows in %1$s.</string>
+
+
+    <string name="speaker">Sound</string>
+    <string name="font_color">Text Color</string>
+    <string name="background">Background</string>
+
+
+
+    <string name="info_version">version</string>
+    <string name="info_company">Company</string>
+    <string name="info_product">Product</string>
+    <string name="info_homepage">Homepage</string>
+    <string name="info_reserved">Korea ARTECH All rights reserved</string>
+    <string name="info_copyright">Coptyright ⓒ2018 Artech.co.,ltd, All rights reserved.</string>
+
+</resources>

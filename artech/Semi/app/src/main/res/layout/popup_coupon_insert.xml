@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/coupon_insert_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:includeFontPadding="false"
+        android:text="쿠폰 등록"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:fontFamily="@font/notosanscjkkr_regular"/>
+
+    <EditText
+        android:id="@+id/coupon_insert_edit"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/coupon_insert_title"
+        android:layout_marginTop="50.8dp"
+        android:includeFontPadding="false"
+        android:hint="쿠폰 코드를 입력해 주세요."
+        android:textColorHint="@color/greyish"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:fontFamily="@font/nanumgothic"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true">
+        <RelativeLayout
+            android:id="@+id/cancel_layout"
+            android:layout_width="156dp"
+            android:layout_height="45dp"
+            android:background="@color/white_three">
+            <TextView
+                android:id="@+id/cancel_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:text="취소"
+                android:textColor="@color/warm_grey"
+                android:textSize="13sp"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/confirm_layout"
+            android:layout_width="156dp"
+            android:layout_height="45dp"
+            android:background="@color/aqua_marine"
+            android:layout_toRightOf="@+id/cancel_layout">
+            <TextView
+                android:id="@+id/confirm_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:text="등록"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

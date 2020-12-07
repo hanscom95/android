@@ -1,0 +1,232 @@
+<resources>
+    <string name="app_name">ArCam</string>
+    <string name="app_version">v 0.0.0.1</string>
+    <string name="app_company">ARTECH</string>
+
+
+    <string name="homepage">http://www.artech.limited</string>
+
+    <string name="intro_title">ArCam 1.0</string>
+    <string name="intro_sub_title">for Archery</string>
+    <string name="intro_wifi_popup">Please connect WI-FI to register users\nand equipment at minimum connection.</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string name="terms_title">ArCam</string>
+    <string name="terms_all_check_text">Terms of Use, Collection and Use of Personal Information,\n Location Information Terms and Conditions (optional),\n I agree to all of the Promotion Guidelines (optional).</string>
+    <string name="terms_first_text">Accept Arcam Terms and Conditions</string>
+    <string name="terms_second_text">Information on collecting and using personal information</string>
+    <string name="terms_third_text">Accept Terms of Use(optional)</string>
+    <string name="terms_fourth_text">Receive promotional notifications such as events(optional)</string>
+
+
+    <string name="terms_before_button">Before</string>
+    <string name="terms_next_button">Next</string>
+
+    <string name="terms_required_check">Please select the required check.</string>
+
+    <string name="close_button">Close</string>
+    <string name="back_button">Back</string>
+
+
+    <string name="cancel_button">Cancel</string>
+    <string name="confirm_button">Confirm</string>
+    <string name="insert_button">Insert</string>
+    <string name="skip_button">Skip</string>
+    <string name="save_button">Save</string>
+
+
+    <string name="signup_title">ArCam</string>
+    <string name="signup_username">Username</string>
+    <string name="signup_password">Password</string>
+    <string name="signup_location">Location</string>
+    <string name="signup_team">Team</string>
+    <string name="signup_male">Male</string>
+    <string name="signup_female">Female</string>
+    <string name="signup_month">Month</string>
+    <string name="signup_day">Day</string>
+    <string name="signup_year">Year</string>
+    <string name="signup_email">E-mail</string>
+    <string name="signup_camera">Camera</string>
+
+
+    <string name="signup_male_button">Male</string>
+    <string name="signup_female_button">Female</string>
+
+    <string name="signup_insert_error">Your entry is required</string>
+    <string name="signup_insert_error_fail">Failed to register</string>
+
+
+    <string name="main_message">Hello viva-arcam!</string>
+
+
+
+    <string name="detail_title">ArCam</string>
+    <string name="detail_sub_title">Equipment History</string>
+    <string name="detail_auto_save">Auto Save</string>
+    <string name="detail_riser">Riser</string>
+    <string name="detail_limbs">Limbs</string>
+    <string name="detail_stabilizer">Stabilizer</string>
+    <string name="detail_fingertab">Finger Tab</string>
+    <string name="detail_sight">Sight</string>
+    <string name="detail_cushionplunger">Cushion Plunger</string>
+    <string name="detail_rest">Rest</string>
+    <string name="detail_arrow">Arrow</string>
+    <string name="detail_longstaff">Long Stabilizer</string>
+    <string name="detail_sidestabi">Side Stabilizer</string>
+    <string name="detail_brand">Brand</string>
+    <string name="detail_inch">Inch</string>
+    <string name="detail_pound">Pound</string>
+    <string name="detail_input_hint">Direct input</string>
+    <string name="detail_spinner_hint">--</string>
+    <string name="detail_button">Update</string>
+
+    <string name="detail_insert_error">There was an error saving. Please try again</string>
+
+
+    <string name="autologin_welcom">Welcome!</string>
+    <string name="autologin_auto_text">Auto  Login</string>
+    <string name="autologin_start">Start</string>
+
+
+
+    <string name="menu_finetuning">FINETUNING</string>
+    <string name="menu_scope">SCOPE</string>
+    <string name="menu_score">SCORE</string>
+    <string name="menu_record">RECORD</string>
+    <string name="menu_app_info">INFORMATION</string>
+    <string name="menu_logout">LOGOUT</string>
+
+
+    <string name="menu_right_setting">Setting</string>
+    <string name="menu_right_mymenu">My Menu</string>
+    <string name="menu_right_infoupdate">INFO UPDATE</string>
+    <string name="menu_right_registraion">REGISTRATION OF EQUIPMENT</string>
+    <string name="menu_right_system">System Support</string>
+    <string name="menu_right_service">Service center</string>
+    <string name="menu_right_report">Report a problem</string>
+    <string name="menu_right_about">About Us</string>
+    <string name="menu_right_privacy">Privacy policy</string>
+    <string name="menu_right_terms_conditions">Terms and conditions</string>
+    <string name="menu_right_terms_service">Terms of Service</string>
+    <string name="menu_right_logout">Logout</string>
+
+
+
+    <string name="fine_tuning_title">FineTuning</string>
+    <string name="fine_tuning_first_title">1. Tuning Information</string>
+    <string name="fine_tuning_second_title">2. Environment</string>
+    <string name="fine_tuning_third_title">3. Equipment History</string>
+    <string name="fine_tuning_brace_high">Brace High</string>
+    <string name="fine_tuning_tiller_high">Tiller High</string>
+    <string name="fine_tuning_nocking_point">Nocking Point</string>
+    <string name="fine_tuning_input_hint">Direct input</string>
+    <string name="fine_tuning_weather">Weather</string>
+    <string name="fine_tuning_wind">Wind</string>
+    <string name="fine_tuning_distance">Distance</string>
+    <string name="fine_tuning_third_info">Loading Equipment History</string>
+    <string name="fine_tuning_auto_import">Auto import</string>
+
+
+
+    <string name="scope_title">Scope</string>
+    <string name="scope_finetuning">FINETUNING</string>
+    <string name="scope_setting">SETTING</string>
+
+    <string name="scope_brace_high">Brace High</string>
+    <string name="scope_tiller_high">Tiller High</string>
+    <string name="scope_nocking_point">Nocking Point</string>
+    <string name="scope_arrow">ARROW</string>
+    <string name="scope_score">SCORE</string>
+
+    <string name="score_info_weather">WEATHER</string>
+    <string name="score_info_wind">WIND</string>
+    <string name="score_info_distance">DISTANCE</string>
+
+
+    <string name="score_brace_high">Brace High</string>
+    <string name="score_tiller_high">Tiller High</string>
+    <string name="score_nocking_point">Nocking Point</string>
+    <string name="score_title">Score</string>
+    <string name="score_auto_mode">AUTO</string>
+    <string name="score_auto_focus_text">In order to use the automatic mode, the shooting plate must be in focus.</string>
+    <string name="score_save_button">SAVE</string>
+    <string name="score_enter_button">ENTER</string>
+    <string name="score_cancel_button">CANCEL</string>
+    <string name="score_arrow_text">Arrow</string>
+    <string name="score_total_text">Total</string>
+    <string name="score_auto_error_message">Target recognition is difficult. Please re-target and select rounds.</string>
+    <string name="score_screen_capture_message">save screen?</string>
+    <string name="score_screen_capture_yes">Yes</string>
+    <string name="score_screen_capture_no">No</string>
+    <string name="score_target_setting_message">Set the auto scoring target image again.</string>
+
+
+
+    <string name="record_title">Record</string>
+    <string name="record_training_diary">Training Diary</string>
+    <string name="record_environmental">Environmental Record</string>
+    <string name="record_score_distribution">Score distribution ratio</string>
+    <string name="record_brace_high">Brace High</string>
+    <string name="record_tiller_high">Tiller High</string>
+    <string name="record_nocking_point">Nocking Point</string>
+    <string name="record_weather">Weather</string>
+    <string name="record_wind">Wind</string>
+    <string name="record_distance">Distance</string>
+    <string name="record_comment">Comment</string>
+    <string name="record_chart_no_search_text">No data found.</string>
+    <string name="record_tab1_best_title_text">BEST POINT</string>
+    <string name="record_tab1_information_text">INFORMATION</string>
+    <string name="record_tab1_list">LIST</string>
+    <string name="record_tab1_save">SAVE</string>
+    <string name="record_tab1_modify">MODIFY</string>
+    <string name="record_tab1_delete">DELETE</string>
+
+
+    <string name="record_tab2_score_text">Highest score for\nthis weather</string>
+    <string name="record_tab2_wind_text">Wind weather during\nthis weather</string>
+    <string name="record_tab2_distance_text">In this weather,\nthe best distance</string>
+
+    <string name="record_tab2_table_date_title">date</string>
+    <string name="record_tab2_table_score_title">score</string>
+    <string name="record_tab2_table_tuning_info_title">tuning info</string>
+    <string name="record_tab2_table_environment_title">environment</string>
+    <string name="record_tab2_table_comment_title">comment</string>
+
+
+    <string name="record_tab2_layout_text">Best Score Record</string>
+
+    <string name="record_popup_cancel">CANCEL</string>
+    <string name="record_popup_ok">OK</string>
+
+
+    <string name="equipment_title">Registration of Equipment</string>
+    <string name="user_title">User Info</string>
+
+
+    <string name="monday">MON</string>
+    <string name="tuesday">TUE</string>
+    <string name="wednesday">WED</string>
+    <string name="thursday">THU</string>
+    <string name="friday">FRI</string>
+    <string name="saturday">SAT</string>
+    <string name="sunday">SUN</string>
+
+
+    <string name="url">Camera URL</string>
+    <string name="logout_message">If you log out, the stored data will be deleted.\nAre you sure you want to sign out?</string>
+    <string name="logout_yes">Yes</string>
+    <string name="logout_no">No</string>
+
+    <string name="main_no_permission">Permission has not been set.</string>
+
+    <string name="info_version">version</string>
+    <string name="info_company">Company</string>
+    <string name="info_product">Product</string>
+    <string name="info_homepage">Homepage</string>
+    <string name="info_reserved">Korea ARTECH All rights reserved</string>
+    <string name="info_copyright">Coptyright ⓒ2018 Artech.co.,ltd, All rights reserved.</string>
+</resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.semi.normal.SearchLocationActivity"
+    tools:showIn="@layout/activity_search_location">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/first_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4.8dp">
+            <Button
+                android:id="@+id/location_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/btn_bait_nonpress"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:text="지역 검색"
+                android:textColor="@color/black"
+                android:textSize="11.9sp"
+                android:fontFamily="@font/notosanscjkkr_medium"/>
+            <Button
+                android:id="@+id/bait_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/btn_bait_nonpress"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/location_button"
+                android:layout_marginLeft="4.8dp"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                android:text="미끼 검색"
+                android:textColor="@color/black"
+                android:textSize="11.9sp"
+                android:fontFamily="@font/notosanscjkkr_medium"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/first_layout"
+            android:layout_marginTop="4.8dp">
+            <FrameLayout
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".normal.SearchLocationActivity"/>
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/first_layout"
+            android:layout_marginTop="4.8dp"
+            android:visibility="gone"/>
+        
+        <RelativeLayout
+            android:id="@+id/list_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="13.5dp"
+            android:background="@mipmap/btn_listnback"
+            android:visibility="gone">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+                <ImageView
+                    android:id="@+id/list_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_list_2"/>
+
+                <TextView
+                    android:id="@+id/list_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/list_img"
+                    android:layout_marginLeft="4.8dp"
+                    android:fontFamily="@font/notosanscjkkr_medium"
+                    android:includeFontPadding="false"
+                    android:text="목록으로 보기"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    
+</android.support.constraint.ConstraintLayout>

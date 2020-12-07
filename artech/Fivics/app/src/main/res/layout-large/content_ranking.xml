@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_ranking"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="artech.com.fivics.ranking.RankingActivity"
+    android:background="@mipmap/terms_bg"
+    android:adjustViewBounds="true" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:id="@+id/ranking_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <ImageView
+                android:id="@+id/ranking_logo"
+                android:layout_width="220dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="70dp"
+                android:src="@mipmap/logo_small" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/ranking_step_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ranking_logo"
+                android:layout_marginLeft="18dp"
+                android:layout_toEndOf="@+id/ranking_logo"
+                android:includeFontPadding="false"
+                android:text="@string/step4_text"
+                android:textColor="@color/guide_text"
+                android:textSize="40sp"
+                app:font="NotoSansCJKkr_Bold.otf" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/ranking_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ranking_step_text"
+                android:layout_toEndOf="@+id/ranking_step_text"
+                android:includeFontPadding="false"
+                android:text="@string/ranking_title"
+                android:textColor="@android:color/white"
+                android:textSize="40sp"
+                app:font="NotoSansCJKkr_Medium.otf" />
+
+
+            <RelativeLayout
+                android:id="@+id/banner_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_alignBottom="@+id/ranking_title"
+                android:background="@color/archery_popup_background"
+                android:layout_toStartOf="@+id/title_button"
+                android:layout_toEndOf="@+id/ranking_title">
+                <ImageView
+                    android:id="@+id/main_banner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:src="@mipmap/ic_volume_up_grayblue"/>
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/main_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toEndOf="@+id/main_banner"
+                    android:includeFontPadding="false"
+                    android:text="[슈팅존 수원점 1670-0388]"
+                    android:textColor="@color/main_yellow"
+                    android:textSize="22sp"
+                    app:font="NotoSansCJKkr_Medium.otf" />
+
+                <ViewFlipper
+                    android:id="@+id/main_sub_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toEndOf="@+id/main_title"
+                    android:flipInterval="5000"
+                    android:layout_alignTop="@+id/main_title"
+                    android:layout_alignBottom="@+id/main_title"></ViewFlipper>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/title_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignBottom="@+id/ranking_step_text"
+                android:layout_marginLeft="25dp">
+
+                <ImageView
+                    android:id="@+id/refresh_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_refresh_white"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="38dp"/>
+
+                <ImageView
+                    android:id="@+id/home_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_home_line_white"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/refresh_button"
+                    android:layout_marginRight="38dp"/>
+                <ImageView
+                    android:id="@+id/setting_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_settings_white"
+                    android:layout_toEndOf="@+id/home_button"
+                    android:layout_marginRight="38dp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ranking_title_layout"
+            android:layout_marginTop="35.33dp"
+            android:layout_marginBottom="210dp">
+
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/rank_update_date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="69dp"
+                android:includeFontPadding="false"
+                android:text="UPDATE: 2017-08-04 21:55:54"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                app:font="NotoSansCJKkr_Medium.otf" />
+            <RelativeLayout
+                android:id="@+id/ranking_list_title_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rank_update_date_text"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="57dp"
+                android:layout_marginRight="69dp">
+                <ImageView
+                    android:id="@+id/list_rank_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/rank_text"/>
+                <ImageView
+                    android:id="@+id/list_player_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/list_rank_title_text"
+                    android:src="@mipmap/player_text"/>
+                <ImageView
+                    android:id="@+id/list_avg_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/list_player_title_text"
+                    android:src="@mipmap/avg_text"/>
+                <ImageView
+                    android:id="@+id/list_total_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/list_avg_title_text"
+                    android:src="@mipmap/total_text_top"/>
+                <ImageView
+                    android:id="@+id/list_homeshop_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/list_total_title_text"
+                    android:src="@mipmap/homeshop_text"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ranking_number_one_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="57dp"
+                android:layout_marginRight="69dp"
+                android:layout_below="@+id/ranking_list_title_layout"
+                android:background="@mipmap/rank_list_row">
+
+                <RelativeLayout
+                    android:id="@+id/rank_number_one_column"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/rank_number_one_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="1"
+                        android:textColor="@android:color/white"
+                        android:textSize="32sp"
+                        app:font="NotoSansCJKkr_Bold.otf"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/ranking_number_one_medal_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/medal_1"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/player_number_one_column"
+                    android:layout_width="510dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/rank_number_one_column">
+
+
+                    <ImageView
+                        android:id="@+id/player_number_one_member_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="50dp"
+                        android:src="@mipmap/img_member"
+                        android:visibility="visible" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/player_number_one_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="26dp"
+                        android:layout_toEndOf="@+id/player_number_one_member_img"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="32sp"
+                        app:font="NotoSansCJKkr_Bold.otf" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/avg_number_one_column"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/player_number_one_column">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/avg_number_one_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="32sp"
+                        app:font="NotoSansCJKkr_Bold.otf" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/total_number_one_column"
+                    android:layout_width="305dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/avg_number_one_column">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/total_number_one_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@android:color/white"
+                            android:textSize="32sp"
+                            app:font="NotoSansCJKkr_Bold.otf" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/arrow_number_one_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toEndOf="@+id/total_number_one_text"
+                            android:text=""
+                            android:textColor="@android:color/holo_green_light"
+                            android:textSize="32sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/homeshop_number_one_column"
+                    android:layout_width="500dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/total_number_one_column">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/homeshop_number_one_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="32sp"
+                        app:font="NotoSansCJKkr_Bold.otf" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ranking_number_two_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="57dp"
+                android:layout_marginRight="69dp"
+                android:layout_below="@+id/ranking_number_one_layout"
+                android:background="@mipmap/rank_list_row">
+
+                <RelativeLayout
+                    android:id="@+id/rank_number_two_column"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/rank_number_two_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="1"
+                        android:textColor="@android:color/white"
+                        android:textSize="32sp"
+                        app:font="NotoSansCJKkr_Bold.otf"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/ranking_number_two_medal_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/medal_2"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/player_number_two_column"
+                    android:layout_width="510dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/rank_number_two_column">
+
+
+                    <ImageView
+                        android:id="@+id/player_number_two_member_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="50dp"
+                        android:src="@mipmap/img_member"
+                        android:visibility="visible" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/player_number_two_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="26dp"
+                        android:layout_toEndOf="@+id/player_number_two_member_img"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="32sp"
+                        app:font="NotoSansCJKkr_Bold.otf" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/avg_number_two_column"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/player_number_two_column">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/avg_number_two_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="32sp"
+                        app:font="NotoSansCJKkr_Bold.otf" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/total_number_two_column"
+                    android:layout_width="305dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/avg_number_two_column">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/total_number_two_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@android:color/white"
+                            android:textSize="32sp"
+                            app:font="NotoSansCJKkr_Bold.otf" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/arrow_number_two_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toEndOf="@+id/total_number_two_text"
+                            android:text=""
+                            android:textColor="@android:color/holo_green_light"
+                            android:textSize="32sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/homeshop_number_two_column"
+                    android:layout_width="500dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/total_number_two_column">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/homeshop_number_two_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="32sp"
+                        app:font="NotoSansCJKkr_Bold.otf" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ranking_number_three_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="57dp"
+                android:layout_marginRight="69dp"
+                android:layout_below="@+id/ranking_number_two_layout"
+                android:background="@mipmap/rank_list_row">
+
+                <RelativeLayout
+                    android:id="@+id/rank_number_three_column"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/rank_number_three_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="1"
+                        android:textColor="@android:color/white"
+                        android:textSize="32sp"
+                        app:font="NotoSansCJKkr_Bold.otf"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/ranking_number_three_medal_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/medal_3"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/player_number_three_column"
+                    android:layout_width="510dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/rank_number_three_column">
+
+
+                    <ImageView
+                        android:id="@+id/player_number_three_member_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="50dp"
+                        android:src="@mipmap/img_member"
+                        android:visibility="visible" />
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/player_number_three_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="26dp"
+                        android:layout_toEndOf="@+id/player_number_three_member_img"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="32sp"
+                        app:font="NotoSansCJKkr_Bold.otf" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/avg_number_three_column"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/player_number_three_column">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/avg_number_three_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="32sp"
+                        app:font="NotoSansCJKkr_Bold.otf" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/total_number_three_column"
+                    android:layout_width="305dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/avg_number_three_column">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/total_number_three_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@android:color/white"
+                            android:textSize="32sp"
+                            app:font="NotoSansCJKkr_Bold.otf" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/arrow_number_three_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toEndOf="@+id/total_number_three_text"
+                            android:text=""
+                            android:textColor="@android:color/holo_green_light"
+                            android:textSize="32sp"
+                            app:font="NotoSansCJKkr_Regular.otf" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/homeshop_number_three_column"
+                    android:layout_width="500dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/total_number_three_column">
+
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/homeshop_number_three_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="32sp"
+                        app:font="NotoSansCJKkr_Bold.otf" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/ranking_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ranking_number_three_layout"
+                android:layout_marginLeft="57dp"
+                android:layout_marginRight="69dp"
+                android:layout_above="@+id/my_ranking_layout"
+                android:dividerHeight="0dp"
+                android:divider="@null"></ListView>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="66dp">
+
+                <de.morrox.fontinator.FontButton
+                    android:id="@+id/list_up_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/ic_up"/>
+
+                <de.morrox.fontinator.FontButton
+                    android:id="@+id/list_down_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/list_up_button"
+                    android:background="@mipmap/ic_down"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/my_ranking_layout"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_alignParentBottom="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/myrank">
+
+                    <RelativeLayout
+                        android:id="@+id/my_rank_column"
+                        android:layout_width="190dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/my_rank_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:text="-"
+                            android:textColor="@android:color/white"
+                            android:textSize="32sp"
+                            app:font="NotoSansCJKkr_Bold.otf" />
+
+                        <ImageView
+                            android:id="@+id/my_ranking_medal_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/medal_1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/my_player_column"
+                        android:layout_width="510dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/my_rank_column">
+
+
+                        <ImageView
+                            android:id="@+id/my_player_member_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="100dp"
+                            android:src="@mipmap/img_member"
+                            android:visibility="visible" />
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/my_player_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="26dp"
+                            android:layout_toEndOf="@+id/my_player_member_img"
+                            android:text="HAHA(5662)"
+                            android:textColor="@android:color/white"
+                            android:textSize="32sp"
+                            app:font="NotoSansCJKkr_Bold.otf" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/my_avg_column"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/my_player_column">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/my_avg_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:text="0.0"
+                            android:textColor="@android:color/white"
+                            android:textSize="32sp"
+                            app:font="NotoSansCJKkr_Bold.otf" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/my_total_column"
+                        android:layout_width="310dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/my_avg_column">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true">
+
+                            <de.morrox.fontinator.FontTextView
+                                android:id="@+id/my_total_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@android:color/white"
+                                android:textSize="32sp"
+                                app:font="NotoSansCJKkr_Bold.otf" />
+
+                            <de.morrox.fontinator.FontTextView
+                                android:id="@+id/my_arrow_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toEndOf="@+id/my_total_text"
+                                android:text="(0)"
+                                android:textColor="@android:color/holo_green_light"
+                                android:textSize="32sp"
+                                app:font="NotoSansCJKkr_Regular.otf" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/my_homeshop_column"
+                        android:layout_width="500dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/my_total_column">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/my_homeshop_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:text="수원권선점"
+                            android:textColor="@android:color/white"
+                            android:textSize="32sp"
+                            app:font="NotoSansCJKkr_Bold.otf" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/button_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="58dp">
+
+
+        <RelativeLayout
+            android:id="@+id/before_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/before_img"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="57dp"
+                android:src="@mipmap/ic_arrow_back_grayblue" />
+
+            <de.morrox.fontinator.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_toEndOf="@+id/before_img"
+                android:text="@string/before_en_button"
+                android:textSize="30sp"
+                app:font="NotoSansCJKkr_Bold.otf"
+                android:textColor="@color/archery_grey" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/next_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:visibility="visible">
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:text="@string/finish_en_button"
+                android:textColor="@color/prohibition_text"
+                android:textSize="30sp"
+                app:font="NotoSansCJKkr_Bold.otf" />
+
+            <ImageView
+                android:id="@+id/next_img"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="59dp"
+                android:layout_toEndOf="@+id/next_button"
+                android:src="@mipmap/ic_arrow_next_red" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/my_detail_history_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="67dp"
+        android:background="@mipmap/ranking_bottom">
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/my_detail_history_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/ranking_my_detail_history"
+            android:textColor="@color/archery_board_select"
+            android:textSize="36sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+    </RelativeLayout>
+
+</RelativeLayout>

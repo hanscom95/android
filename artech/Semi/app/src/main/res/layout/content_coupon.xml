@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.semi.normal.CouponActivity"
+    tools:showIn="@layout/activity_coupon">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/first_layout"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/dot_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15.3dp"
+                android:tint="@color/warm_grey"
+                android:src="@mipmap/dot_green"/>
+            <TextView
+                android:id="@+id/use_coupon_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/dot_img"
+                android:layout_marginLeft="10.5dp"
+                android:includeFontPadding="false"
+                android:text="사용 가능한쿠폰"
+                android:textSize="12sp"
+                android:textColor="@color/warm_grey"
+                android:fontFamily="@font/nanumgothic"/>
+            <TextView
+                android:id="@+id/use_coupon_value_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/use_coupon_title_text"
+                android:layout_marginLeft="5dp"
+                android:includeFontPadding="false"
+                android:text="0장"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/nanumgothic"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/input_line" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/first_layout"
+            android:background="@color/white">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/point_info_line"
+                android:layout_marginLeft="15.3dp"
+                android:layout_marginRight="16.3dp"></android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

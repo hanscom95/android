@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_3_4_ranking_popup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="283dp"
+        android:src="@mipmap/bgg_logo"/>
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="109dp"
+        android:background="@mipmap/btn342">
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:includeFontPadding="false"
+            android:text="3·4위전"
+            android:textColor="@android:color/white"
+            android:textSize="32sp"
+            app:font="NotoSansCJKkr_Regular.otf" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rangking_layout"
+        android:layout_width="700dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp">
+
+        <RelativeLayout
+            android:id="@+id/rd_top_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:id="@+id/rd_top_score_layout"
+                android:layout_width="160dp"
+                android:layout_height="98dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/regular_tournament_8th_default">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/rd_top_name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:clickable="false"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:tag="name_text"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:font="NotoSansCJKkr_Medium.otf" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/rd_top_score_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rd_top_name_text"
+                    android:layout_centerHorizontal="true"
+                    android:clickable="false"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:font="NotoSansCJKkr_Medium.otf" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rd_line_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rd_top_score_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/rd_line_default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/r34_non"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/rd_line_left_win"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/r34_left_win"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/rd_line_right_win"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/rd_line_default"
+                    android:src="@mipmap/r34_right_win"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rd_left_layout"
+            android:layout_width="160dp"
+            android:layout_height="98dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rd_top_layout"
+            android:layout_marginLeft="70dp"
+            android:layout_marginStart="70dp"
+            android:background="@drawable/regular_tournament_8th_default"
+            android:onClick="tournamentClick">
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/rd_left_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:clickable="false"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:tag="name_text"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:font="NotoSansCJKkr_Medium.otf" />
+
+            <de.morrox.fontinator.FontEditText
+                android:id="@+id/rd_left_score_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rd_left_name_text"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:clickable="false"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:inputType="number"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:font="NotoSansCJKkr_Medium.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rd_right_layout"
+            android:layout_width="160dp"
+            android:layout_height="98dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/rd_top_layout"
+            android:layout_marginEnd="70dp"
+            android:layout_marginRight="70dp"
+            android:background="@drawable/regular_tournament_8th_default"
+            android:onClick="tournamentClick">
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/rd_right_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:clickable="false"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:tag="name_text"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:font="NotoSansCJKkr_Medium.otf" />
+
+            <de.morrox.fontinator.FontEditText
+                android:id="@+id/rd_right_score_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rd_right_name_text"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:clickable="false"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:inputType="number"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:font="NotoSansCJKkr_Medium.otf" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/badge_3"/>
+    </RelativeLayout>
+
+
+    <de.morrox.fontinator.FontButton
+        android:id="@+id/confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rangking_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
+        android:background="@mipmap/btn342_press"
+        android:text="확인"
+        android:textColor="@color/grey"
+        android:textSize="30sp"
+        app:font="NotoSansCJKkr_Regular.otf" />
+</RelativeLayout>

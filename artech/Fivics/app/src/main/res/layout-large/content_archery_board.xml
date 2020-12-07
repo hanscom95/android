@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_archery"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="artech.com.fivics.score.ArcheryBoardActivity"
+    android:background="@mipmap/terms_bg"
+    android:adjustViewBounds="true" >
+
+    <RelativeLayout
+        android:id="@+id/archery_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:id="@+id/archery_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <ImageView
+                android:id="@+id/archery_logo"
+                android:layout_width="220dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="70dp"
+                android:src="@mipmap/logo_small" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/archery_step_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/archery_logo"
+                android:layout_marginLeft="18dp"
+                android:layout_toEndOf="@+id/archery_logo"
+                android:includeFontPadding="false"
+                android:text="@string/step3_text"
+                android:textColor="@color/guide_text"
+                android:textSize="40sp"
+                app:font="NotoSansCJKkr_Bold.otf" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/archery_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/archery_step_text"
+                android:layout_toEndOf="@+id/archery_step_text"
+                android:includeFontPadding="false"
+                android:text="@string/archery_title"
+                android:textColor="@android:color/white"
+                android:textSize="40sp"
+                app:font="NotoSansCJKkr_Medium.otf" />
+
+
+            <RelativeLayout
+                android:id="@+id/banner_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/archery_title"
+                android:layout_marginLeft="12dp"
+                android:layout_toEndOf="@+id/archery_title"
+                android:layout_toStartOf="@+id/title_button"
+                android:background="@color/archery_popup_background">
+
+                <ImageView
+                    android:id="@+id/main_banner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:src="@mipmap/ic_volume_up_grayblue" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/main_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toEndOf="@+id/main_banner"
+                    android:includeFontPadding="false"
+                    android:text="[슈팅존 수원점 1670-0388]"
+                    android:textColor="@color/main_yellow"
+                    android:textSize="22sp"
+                    app:font="NotoSansCJKkr_Medium.otf" />
+
+
+                <ViewFlipper
+                    android:id="@+id/main_sub_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toEndOf="@+id/main_title"
+                    android:flipInterval="5000"
+                    android:layout_alignTop="@+id/main_title"
+                    android:layout_alignBottom="@+id/main_title"></ViewFlipper>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/title_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/archery_step_text"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="25dp">
+
+                <ImageView
+                    android:id="@+id/refresh_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="38dp"
+                    android:src="@mipmap/ic_refresh_white" />
+
+                <ImageView
+                    android:id="@+id/home_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="38dp"
+                    android:layout_toEndOf="@+id/refresh_button"
+                    android:src="@mipmap/ic_home_line_white" />
+
+                <ImageView
+                    android:id="@+id/setting_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="38dp"
+                    android:layout_toEndOf="@+id/home_button"
+                    android:src="@mipmap/ic_settings_white" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/archery_title_layout"
+            android:layout_marginTop="60.33dp">
+
+            <RelativeLayout
+                android:id="@+id/archery_video_layout"
+                android:layout_width="933dp"
+                android:layout_height="637dp"
+                android:layout_marginLeft="34dp"
+                android:background="@mipmap/camera_background">
+
+                <!--<FrameLayout
+                    android:id="@+id/archery_video_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="28dp"
+                    android:layout_marginLeft="101dp"
+                    android:layout_marginRight="101dp"
+                    android:layout_marginTop="28dp"></FrameLayout>
+
+
+                <artech.com.fivics.utility.TouchView
+                    android:id="@+id/archery_video_touch_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="28dp"
+                    android:layout_marginLeft="101dp"
+                    android:layout_marginRight="101dp"
+                    android:layout_marginTop="28dp"></artech.com.fivics.utility.TouchView>
+                <artech.com.fivics.utility.AutoScoreView
+                    android:id="@+id/archery_auto_score_result_view"
+                    android:layout_width="600px"
+                    android:layout_height="450px"
+                    android:layout_marginBottom="28dp"
+                    android:layout_marginLeft="101dp"
+                    android:layout_marginRight="101dp"
+                    android:layout_marginTop="28dp"></artech.com.fivics.utility.AutoScoreView>-->
+
+
+                <FrameLayout
+                    android:id="@+id/archery_video_view"
+                    android:layout_width="780px"
+                    android:layout_height="585px"
+                    android:layout_marginBottom="26dp"
+                    android:layout_marginLeft="77dp"
+                    android:layout_marginRight="76dp"
+                    android:layout_marginTop="26dp"></FrameLayout>
+
+                <artech.com.fivics.utility.TouchView
+                    android:id="@+id/archery_video_touch_view"
+                    android:layout_width="780px"
+                    android:layout_height="585px"
+                    android:layout_marginBottom="26dp"
+                    android:layout_marginLeft="77dp"
+                    android:layout_marginRight="76dp"
+                    android:layout_marginTop="26dp"></artech.com.fivics.utility.TouchView>
+
+                <artech.com.fivics.utility.AutoScoreView
+                    android:id="@+id/archery_auto_score_result_view"
+                    android:layout_width="600px"
+                    android:layout_height="450px"
+                    android:layout_marginBottom="28dp"
+                    android:layout_marginLeft="101dp"
+                    android:layout_marginRight="101dp"
+                    android:layout_marginTop="28dp"></artech.com.fivics.utility.AutoScoreView>
+
+                <artech.com.fivics.utility.AutoScoreView
+                    android:id="@+id/archery_auto_score_result2_view"
+                    android:layout_width="600px"
+                    android:layout_height="450px"
+                    android:layout_alignParentRight="true"></artech.com.fivics.utility.AutoScoreView>
+
+                <artech.com.fivics.utility.AutoScoreView
+                    android:id="@+id/archery_auto_score_result3_view"
+                    android:layout_width="600px"
+                    android:layout_height="450px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"></artech.com.fivics.utility.AutoScoreView>
+
+
+                <!--<artech.com.fivics.utility.AutoScoreView
+                    android:id="@+id/archery_auto_score_result_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="28dp"
+                    android:layout_marginLeft="101dp"
+                    android:layout_marginRight="101dp"
+                    android:layout_marginTop="28dp"></artech.com.fivics.utility.AutoScoreView>-->
+
+                <!--<artech.com.simple.utility.AutoScoreView
+                    android:id="@+id/archery_auto_score_result_view"
+                    android:layout_width="600px"
+                    android:layout_height="450px"
+                    android:layout_marginBottom="28dp"
+                    android:layout_marginLeft="101dp"
+                    android:layout_marginRight="101dp"
+                    android:layout_marginTop="28dp"></artech.com.simple.utility.AutoScoreView>-->
+
+                <ImageView
+                    android:id="@+id/live_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="111dp"
+                    android:layout_marginTop="40dp"
+                    android:src="@mipmap/live" />
+
+
+                <RelativeLayout
+                    android:id="@+id/video_progressbar_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone">
+                    <ProgressBar
+                        android:id="@+id/video_progressbar"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_centerHorizontal="true"
+                        android:indeterminateTint="@color/archery_board_select"/>
+                    <de.morrox.fontinator.FontTextView
+                        android:id="@+id/video_progressbar_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/video_progressbar"
+                        android:layout_centerHorizontal="true"
+                        android:includeFontPadding="false"
+                        android:text="오토 스코어링 적용중 입니다. 잠시만 기다려 주세요"
+                        android:textColor="@color/archery_board_select"
+                        android:textSize="32sp"
+                        app:font="NotoSansCJKkr_Bold.otf" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/archery_board_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="54dp"
+                android:layout_toEndOf="@+id/archery_video_layout">
+
+                <RelativeLayout
+                    android:id="@+id/board_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/camera_background">
+
+                    <RelativeLayout
+                        android:id="@+id/board_user_name_layout"
+                        android:layout_width="478dp"
+                        android:layout_height="88dp"
+                        android:background="@mipmap/board_name">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/board_user_name_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="HAHA(5678)"
+                            android:textColor="@android:color/white"
+                            android:textSize="36sp"
+                            app:font="NotoSansCJKkr_Medium.otf" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/board_date_layout"
+                        android:layout_width="129dp"
+                        android:layout_height="88dp"
+                        android:layout_toEndOf="@+id/board_user_name_layout"
+                        android:background="@mipmap/board_day">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/board_date_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="星期一"
+                            android:textColor="@android:color/white"
+                            android:textSize="30sp"
+                            app:font="NotoSansCJKkr_Medium.otf" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/board_time_layout"
+                        android:layout_width="325dp"
+                        android:layout_height="88dp"
+                        android:layout_toEndOf="@+id/board_date_layout"
+                        android:background="@mipmap/board_time">
+
+                        <de.morrox.fontinator.FontTextView
+                            android:id="@+id/board_time_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:text="21:55:54"
+                            android:textColor="@android:color/white"
+                            android:textSize="30sp"
+                            app:font="NotoSansCJKkr_Medium.otf" />
+
+                    </RelativeLayout>
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/board_viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="276dp"
+                        android:layout_below="@+id/board_user_name_layout">
+
+                    </android.support.v4.view.ViewPager>
+                </RelativeLayout>
+
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/board_score_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/board_layout"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/archery_input_button"
+                    android:textColor="@color/archery_red"
+                    android:textSize="22sp"
+                    app:font="NotoSansCJKkr_Bold.otf" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/board_score_title_text"
+                    android:layout_marginTop="6dp">
+
+                    <Button
+                        android:id="@+id/score0_button"
+                        android:layout_width="137dp"
+                        android:layout_height="125dp"
+                        android:background="@drawable/toggle_number_miss_button"
+                        android:onClick="goalButtonPush" />
+
+                    <Button
+                        android:id="@+id/score1_button"
+                        android:layout_width="137dp"
+                        android:layout_height="125dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toEndOf="@+id/score0_button"
+                        android:background="@drawable/toggle_number_one_button"
+                        android:onClick="goalButtonPush" />
+
+                    <Button
+                        android:id="@+id/score2_button"
+                        android:layout_width="137dp"
+                        android:layout_height="125dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toEndOf="@+id/score1_button"
+                        android:background="@drawable/toggle_number_two_button"
+                        android:onClick="goalButtonPush" />
+
+                    <Button
+                        android:id="@+id/score3_button"
+                        android:layout_width="137dp"
+                        android:layout_height="125dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toEndOf="@+id/score2_button"
+                        android:background="@drawable/toggle_number_three_button"
+                        android:onClick="goalButtonPush" />
+
+                    <Button
+                        android:id="@+id/score4_button"
+                        android:layout_width="137dp"
+                        android:layout_height="125dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toEndOf="@+id/score3_button"
+                        android:background="@drawable/toggle_number_four_button"
+                        android:onClick="goalButtonPush" />
+
+                    <Button
+                        android:id="@+id/score5_button"
+                        android:layout_width="137dp"
+                        android:layout_height="125dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toEndOf="@+id/score4_button"
+                        android:background="@drawable/toggle_number_five_button"
+                        android:onClick="goalButtonPush" />
+
+                    <Button
+                        android:id="@+id/score6_button"
+                        android:layout_width="137dp"
+                        android:layout_height="125dp"
+                        android:layout_below="@+id/score0_button"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/toggle_number_six_button"
+                        android:onClick="goalButtonPush" />
+
+                    <Button
+                        android:id="@+id/score7_button"
+                        android:layout_width="137dp"
+                        android:layout_height="125dp"
+                        android:layout_alignTop="@+id/score6_button"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toEndOf="@+id/score6_button"
+                        android:background="@drawable/toggle_number_seven_button"
+                        android:onClick="goalButtonPush" />
+
+                    <Button
+                        android:id="@+id/score8_button"
+                        android:layout_width="137dp"
+                        android:layout_height="125dp"
+                        android:layout_alignTop="@+id/score7_button"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toEndOf="@+id/score7_button"
+                        android:background="@drawable/toggle_number_eight_button"
+                        android:onClick="goalButtonPush" />
+
+                    <Button
+                        android:id="@+id/score9_button"
+                        android:layout_width="137dp"
+                        android:layout_height="125dp"
+                        android:layout_alignTop="@+id/score8_button"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toEndOf="@+id/score8_button"
+                        android:background="@drawable/toggle_number_nine_button"
+                        android:onClick="goalButtonPush" />
+
+                    <Button
+                        android:id="@+id/score10_button"
+                        android:layout_width="137dp"
+                        android:layout_height="125dp"
+                        android:layout_alignTop="@+id/score9_button"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toEndOf="@+id/score9_button"
+                        android:background="@drawable/toggle_number_ten_button"
+                        android:onClick="goalButtonPush" />
+
+                    <Button
+                        android:id="@+id/score11_button"
+                        android:layout_width="137dp"
+                        android:layout_height="125dp"
+                        android:layout_alignTop="@+id/score10_button"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toEndOf="@+id/score10_button"
+                        android:background="@drawable/toggle_number_ten_x_button"
+                        android:onClick="goalButtonPush" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/board_layout"
+                    android:layout_marginTop="13.33dp"
+                    android:visibility="gone">
+
+                    <de.morrox.fontinator.FontButton
+                        android:id="@+id/score_input_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@mipmap/input_button"
+                        android:includeFontPadding="false"
+                        android:text="@string/archery_input_button"
+                        android:textColor="@android:color/white"
+                        android:textSize="32sp"
+                        app:font="NotoSansCJKkr_Bold.otf" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/button_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="58dp">
+
+
+        <RelativeLayout
+            android:id="@+id/before_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/before_img"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="57dp"
+                android:src="@mipmap/ic_arrow_back_grayblue" />
+
+            <de.morrox.fontinator.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_toEndOf="@+id/before_img"
+                android:text="@string/before_en_button"
+                android:textSize="30sp"
+                app:font="NotoSansCJKkr_Bold.otf"
+                android:textColor="@color/archery_grey" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/next_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:visibility="invisible">
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:text="@string/setting_next_en_button"
+                android:textColor="@color/prohibition_text"
+                android:textSize="30sp"
+                app:font="NotoSansCJKkr_Bold.otf" />
+
+            <ImageView
+                android:id="@+id/next_img"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="59dp"
+                android:layout_toEndOf="@+id/next_button"
+                android:src="@mipmap/ic_arrow_next_red" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/next_step_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="40dp"
+        android:src="@mipmap/img_quickmenu3"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="67dp">
+
+        <de.morrox.fontinator.FontButton
+            android:id="@+id/auto_scoring_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="95dp"
+            android:includeFontPadding="false"
+            android:background="@drawable/toggle_auto_scoring_button"/>
+
+        <RelativeLayout
+            android:id="@+id/shooting_layout"
+            android:layout_width="186dp"
+            android:layout_height="112dp"
+            android:layout_toEndOf="@+id/auto_scoring_button"
+            android:layout_marginLeft="39dp"
+            android:background="@mipmap/score_bottom"
+            android:gravity="center_horizontal">
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/arrow_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:layout_marginRight="12dp"
+                android:text="@string/arrow_value"
+                android:textSize="30sp"
+                app:font="NotoSansCJKkr_Medium.otf"
+                android:textColor="@color/archery_board_select" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/arrow_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/arrow_title_text"
+                android:includeFontPadding="false"
+                android:text="0"
+                android:textColor="@color/archery_board_select"
+                android:textSize="48sp"
+                app:font="NotoSansCJKkr_Medium.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/total_layout"
+            android:layout_width="186dp"
+            android:layout_height="112dp"
+            android:layout_toEndOf="@+id/shooting_layout"
+            android:layout_marginLeft="15dp"
+            android:background="@mipmap/score_bottom"
+            android:gravity="center_horizontal">
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/total_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:layout_marginRight="12dp"
+                android:text="@string/total_value"
+                android:textSize="30sp"
+                app:font="NotoSansCJKkr_Medium.otf"
+                android:textColor="@color/archery_board_select" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/total_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:layout_toEndOf="@+id/total_title_text"
+                android:text="0"
+                android:textColor="@color/archery_board_select"
+                android:textSize="48sp"
+                app:font="NotoSansCJKkr_Medium.otf" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/explanation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/step3_explanation"
+        android:visibility="visible">
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/explanation_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/archery_explanation_text"
+            android:textColor="@android:color/white"
+            android:textSize="60sp"
+            android:visibility="gone"
+            app:font="NotoSansCJKkr_Medium.otf" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/email_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/emailpopup"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/logo_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="223dp"
+            android:src="@mipmap/logo_small" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/logo_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/email_input_layout"
+            android:layout_width="593dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:background="@mipmap/btn_email">
+
+            <ImageView
+                android:id="@+id/ic_email_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="27dp"
+                android:src="@mipmap/ic_envelope" />
+
+            <de.morrox.fontinator.FontEditText
+                android:id="@+id/email_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:layout_toRightOf="@+id/ic_email_logo"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="e-mail address"
+                android:includeFontPadding="false"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/emailEditHintText"
+                android:textSize="38sp"
+                app:font="NotoSansCJKkr_Regular.otf" />
+        </RelativeLayout>
+
+        <de.morrox.fontinator.FontButton
+            android:id="@+id/send_button"
+            android:layout_width="591dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email_input_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="53dp"
+            android:background="@mipmap/btn_send"
+            android:includeFontPadding="false"
+            android:text="전송"
+            android:textColor="@android:color/white"
+            android:textSize="38sp"
+            app:font="NotoSansCJKkr_Regular.otf" />
+
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/email_popup_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/send_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:clickable="false"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="메일이 전송되는동안\n잠시만 기다려주세요~"
+            android:textColor="@color/emailPopupText"
+            android:textSize="42sp"
+            app:font="NotoSansCJKkr_Bold.otf" />
+
+        <ImageView
+            android:id="@+id/email_close_img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="100dp"
+            android:layout_marginTop="100dp"
+            android:src="@mipmap/ic_close_white" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/auto_score_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <RelativeLayout
+        android:id="@+id/signal_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/signal_bg"
+        android:visibility="gone"
+        android:clickable="true">
+        <ImageView
+            android:id="@+id/signal_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/img_signal1"/>
+    </RelativeLayout>
+</RelativeLayout>

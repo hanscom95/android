@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_terms"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:adjustViewBounds="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@mipmap/bg_blue"
+    tools:context="artech.com.arcam.login.TermsActivity">
+
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/terms_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:includeFontPadding="false"
+        android:layout_marginTop="38dp"
+        android:text="@string/terms_title"
+        android:textColor="@color/whitefont"
+        android:textSize="48sp"
+        app:font="Roboto_Light.otf" />
+
+    <de.morrox.fontinator.FontButton
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="34dp"
+        android:drawableRight="@mipmap/btn_close"
+        android:background="@android:color/transparent"
+        android:includeFontPadding="false"
+        android:gravity="center_vertical"
+        android:textAllCaps="false"
+        android:text="@string/close_button"
+        android:textColor="@color/skybluefont"
+        android:textSize="14sp" />
+
+    <de.morrox.fontinator.FontCheckBox
+        android:id="@+id/terms_all_check"
+        android:layout_width="700dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/terms_title_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:button="@null"
+        android:background="@android:color/transparent"
+        android:drawableRight="@drawable/terms_checkbox"
+        android:text="@string/terms_all_check_text"
+        android:textColor="@color/skybluefont"
+        android:textSize="24sp"
+        app:font="NotoSansCJKkr_Regular.otf" />
+
+    <View
+        android:layout_width="700dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/terms_all_check"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@color/skyblueline" />
+
+    <de.morrox.fontinator.FontCheckBox
+        android:id="@+id/terms_first_check"
+        android:layout_width="700dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/terms_all_check"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:includeFontPadding="false"
+        android:drawablePadding="100dp"
+        android:button="@null"
+        android:background="@android:color/transparent"
+        android:drawableRight="@drawable/terms_checkbox"
+        android:text="@string/terms_first_text"
+        android:textColor="@color/whitefont"
+        android:textSize="24sp"
+        app:font="NotoSansCJKkr_Regular.otf" />
+
+    <View
+        android:layout_width="410dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/terms_first_check"
+        android:layout_alignStart="@+id/terms_first_check"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@color/whiteline" />
+
+    <de.morrox.fontinator.FontCheckBox
+        android:id="@+id/terms_second_check"
+        android:layout_width="700dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/terms_first_check"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:includeFontPadding="false"
+        android:drawablePadding="100dp"
+        android:lineSpacingExtra="0dp"
+        android:button="@null"
+        android:background="@android:color/transparent"
+        android:drawableRight="@drawable/terms_checkbox"
+        android:text="@string/terms_second_text"
+        android:textColor="@color/whitefont"
+        android:textSize="24sp"
+        app:font="NotoSansCJKkr_Regular.otf" />
+    <View
+        android:layout_width="520dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/terms_second_check"
+        android:layout_alignStart="@+id/terms_second_check"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@color/whiteline" />
+
+    <de.morrox.fontinator.FontCheckBox
+        android:id="@+id/terms_third_check"
+        android:layout_width="700dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/terms_second_check"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:includeFontPadding="false"
+        android:drawablePadding="100dp"
+        android:button="@null"
+        android:background="@android:color/transparent"
+        android:drawableRight="@drawable/terms_checkbox"
+        android:text="@string/terms_third_text"
+        android:textColor="@color/whitefont"
+        android:textSize="24sp"
+        app:font="NotoSansCJKkr_Regular.otf" />
+    <View
+        android:layout_width="340dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/terms_third_check"
+        android:layout_alignStart="@+id/terms_third_check"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@color/whiteline" />
+
+    <de.morrox.fontinator.FontCheckBox
+        android:id="@+id/terms_fourth_check"
+        android:layout_width="700dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/terms_third_check"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:includeFontPadding="false"
+        android:drawablePadding="100dp"
+        android:lineSpacingExtra="0dp"
+        android:button="@null"
+        android:background="@android:color/transparent"
+        android:drawableRight="@drawable/terms_checkbox"
+        android:text="@string/terms_fourth_text"
+        android:textColor="@color/whitefont"
+        android:textSize="24sp"
+        app:font="NotoSansCJKkr_Regular.otf" />
+    <View
+        android:layout_width="480dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/terms_fourth_check"
+        android:layout_alignStart="@+id/terms_fourth_check"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@color/whiteline" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/terms_fourth_check"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true">
+        <de.morrox.fontinator.FontButton
+            android:id="@+id/before_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/btn_before"
+            android:paddingBottom="10dp"
+            android:text="@string/terms_before_button"
+            android:textColor="@color/bluegrayfont"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            app:font="NotoSansCJKkr_Medium.otf"/>
+        <de.morrox.fontinator.FontButton
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/btn_next"
+            android:layout_toRightOf="@+id/before_button"
+            android:paddingBottom="10dp"
+            android:text="@string/terms_next_button"
+            android:textColor="@color/whitefont"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            app:font="NotoSansCJKkr_Medium.otf"/>
+    </RelativeLayout>
+
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/terms_version_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:includeFontPadding="false"
+        android:text="@string/app_version"
+        android:textColor="@color/whitebluefont"
+        android:textSize="16sp"
+        app:font="Roboto_Thin.otf" />
+</RelativeLayout>

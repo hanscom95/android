@@ -1,0 +1,268 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="artech.com.semi.normal.ProductDetailActivity">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/first_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+                <TextView
+                    android:id="@+id/guide_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginLeft="13.3dp"
+                    android:includeFontPadding="false"
+                    android:text="안내드립니다."
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/notosanscjkkr_medium"/>
+                <TextView
+                    android:id="@+id/guide_contents_one_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/guide_title_text"
+                    android:layout_alignLeft="@+id/guide_title_text"
+                    android:layout_marginTop="22.5dp"
+                    android:includeFontPadding="false"
+                    android:text="제품이 미끼 상품일 경우, 직접수령을 원칙으로 하며\n다른 배송의 형태일 경우 당사와 판매회원은\n이로 인하여 발생된 손해에 대하여\n책임을 지지 않습니다."
+                    android:textSize="12sp"
+                    android:textColor="@color/greyish_brown"
+                    android:fontFamily="@font/nanumgothic"/>
+                <TextView
+                    android:id="@+id/guide_contents_two_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/guide_contents_one_text"
+                    android:layout_alignLeft="@+id/guide_title_text"
+                    android:layout_marginTop="19dp"
+                    android:includeFontPadding="false"
+                    android:text="제품 수령시: 제품 상태 확인 (이상 발견 시 교환)"
+                    android:textSize="12sp"
+                    android:textColor="@color/greyish_brown"
+                    android:fontFamily="@font/nanumgothic"/>
+
+                <TextView
+                    android:id="@+id/buying_info_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/guide_contents_two_text"
+                    android:layout_alignLeft="@+id/guide_title_text"
+                    android:layout_marginTop="30.5dp"
+                    android:includeFontPadding="false"
+                    android:text="[구매정보]"
+                    android:textSize="12sp"
+                    android:textColor="@color/greenblue"
+                    android:fontFamily="@font/notosanscjkkr_medium"/>
+                <TextView
+                    android:id="@+id/buying_contents_two_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/buying_info_title_text"
+                    android:layout_alignLeft="@+id/guide_title_text"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginBottom="27dp"
+                    android:includeFontPadding="false"
+                    android:text="- 1인당 구매가능수량 : 옵션별 상이함\n- 본 상품은 비회원은 구매가 불가합니다. 이 점 참고 부탁드립니다."
+                    android:textSize="12sp"
+                    android:textColor="@color/greyish_brown"
+                    android:fontFamily="@font/nanumgothic"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/second_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first_layout"
+                android:layout_marginTop="9.3dp"
+                android:background="@color/white">
+                <TextView
+                    android:id="@+id/terms_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginBottom="21.8dp"
+                    android:includeFontPadding="false"
+                    android:text="교환, 반품, 취소 규정"
+                    android:textSize="13sp"
+                    android:textColor="@color/greyish_brown"
+                    android:fontFamily="@font/nanumgothic"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="17dp"
+                    android:tint="@color/greyish_brown"
+                    android:rotation="270"
+                    android:src="@mipmap/chevron_right_2"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/input_line"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_below="@+id/terms_text"
+                    android:background="@color/input_line"/>
+
+            </RelativeLayout>
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/first_layout"
+                android:layout_marginTop="9.3dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                app:ael_expanded="false"
+                app:ael_duration="500"
+                app:ael_interpolator="bounce"
+                app:ael_orientation="vertical">
+                <RelativeLayout
+                    android:id="@+id/terms_title_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/terms_detail_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginBottom="21.8dp"
+                        android:includeFontPadding="false"
+                        android:text="교환, 반품, 취소 규정"
+                        android:textSize="13sp"
+                        android:textColor="@color/greyish_brown"
+                        android:fontFamily="@font/nanumgothic"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="17dp"
+                        android:tint="@color/greyish_brown"
+                        android:rotation="90"
+                        android:src="@mipmap/chevron_right_2"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/terms_title_layout"
+                    android:layout_marginTop="18.8dp">
+
+                    <TextView
+                        android:id="@+id/changing_impossible_title_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:includeFontPadding="false"
+                        android:text="교환 및 반품이 불가능한 경우"
+                        android:textSize="12sp"
+                        android:textColor="@color/dark_green"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/notosanscjkkr_medium"/>
+                    <TextView
+                        android:id="@+id/changing_impossible_contents_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/changing_impossible_title_text"
+                        android:layout_marginTop="13.8dp"
+                        android:layout_marginLeft="27.3dp"
+                        android:includeFontPadding="false"
+                        android:text="택배기사님의 부재, 폐문 등\n택배사고 시 발생되는 분쟁에는 불가\n\n수취인 정보를 잘못 기재해 상품이 미 배송된 경우\n\n교환 및 반품된 상품이 협의내용과 다를 경우\n\n단, 미끼상품은 제품특성상 생물이기 때문에 직접수령을\n원칙으로 하며, 수령 후 단순변심에 의한 경우는\n교환 및 반품이 불가합니다."
+                        android:textSize="12sp"
+                        android:textColor="@color/greyish_brown"
+                        android:fontFamily="@font/notosanscjkkr_medium"/>
+
+                    <TextView
+                        android:id="@+id/changing_possible_title_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18.8dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_below="@+id/changing_impossible_contents_text"
+                        android:includeFontPadding="false"
+                        android:text="교환 및 반품이 불가능한 경우"
+                        android:textSize="12sp"
+                        android:textColor="@color/dark_green"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/notosanscjkkr_medium"/>
+                    <TextView
+                        android:id="@+id/changing_possible_contents_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/changing_possible_title_text"
+                        android:layout_marginTop="13.8dp"
+                        android:layout_marginLeft="27.3dp"
+                        android:includeFontPadding="false"
+                        android:text="받으신 상품 품질상 이상이나 문제가 있는 경우\n\n판매자의 실수로 상품이 오 발송 된 경우\n\n배송시 지정택배사의 실수로 제품이 손상된 경우"
+                        android:textSize="12sp"
+                        android:textColor="@color/greyish_brown"
+                        android:fontFamily="@font/notosanscjkkr_medium"/>
+
+                    <TextView
+                        android:id="@+id/changing_rule_title_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18.8dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_below="@+id/changing_possible_contents_text"
+                        android:includeFontPadding="false"
+                        android:text="취소 및 환불 규정"
+                        android:textSize="12sp"
+                        android:textColor="@color/dark_green"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/notosanscjkkr_medium"/>
+                    <TextView
+                        android:id="@+id/changing_rule_contents_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/changing_rule_title_text"
+                        android:layout_marginTop="13.8dp"
+                        android:layout_marginLeft="27.3dp"
+                        android:includeFontPadding="false"
+                        android:text="수령예정일 기준 7일~3일 전 : 100% 환불\n\n수령예정일 기준 1일전 : 80% 환불\n\n수령예정일 당일 및 No-show : 환불불가"
+                        android:textSize="12sp"
+                        android:textColor="@color/greyish_brown"
+                        android:fontFamily="@font/notosanscjkkr_medium"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_below="@+id/changing_rule_contents_text" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/input_line"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/input_line"/>
+
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

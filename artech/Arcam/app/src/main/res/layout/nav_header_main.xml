@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bluebg"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingBottom="21dp"
+    android:paddingLeft="28dp"
+    android:paddingTop="43dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/img_menuprofile" />
+
+
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/email_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:includeFontPadding="false"
+        android:text=""
+        android:textColor="@color/whitefont"
+        android:textSize="16sp"
+        app:font="Roboto_Regular.otf" />
+
+</LinearLayout>

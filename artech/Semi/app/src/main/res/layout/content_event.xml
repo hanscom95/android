@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.semi.normal.EventActivity"
+    tools:showIn="@layout/activity_event">
+    <RelativeLayout
+        android:id="@+id/first_event_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+        <ImageView
+            android:id="@+id/first_event_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/eventbanner_1"/>
+        <TextView
+            android:id="@+id/first_event_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first_event_img"
+            android:layout_alignRight="@+id/first_event_img"
+            android:layout_marginTop="8dp"
+            android:includeFontPadding="false"
+            android:clickable="false"
+            android:text="2018-08-01(수) ~ 2018-11-30(금)"
+            android:textColor="@color/warm_grey"
+            android:textSize="10.5sp"
+            android:fontFamily="@font/nanumgothic" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/second_event_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_event_layout"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+        <ImageView
+            android:id="@+id/second_event_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/eventbanner_2"/>
+        <TextView
+            android:id="@+id/second_event_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/second_event_img"
+            android:layout_alignRight="@+id/second_event_img"
+            android:layout_marginTop="8dp"
+            android:includeFontPadding="false"
+            android:clickable="false"
+            android:text="2018-08-01(수) ~ 2018-11-30(금)"
+            android:textColor="@color/warm_grey"
+            android:textSize="10.5sp"
+            android:fontFamily="@font/nanumgothic" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/third_event_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/second_event_layout"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+        <ImageView
+            android:id="@+id/third_event_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/eventbanner_3"/>
+        <TextView
+            android:id="@+id/third_event_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/third_event_img"
+            android:layout_alignRight="@+id/third_event_img"
+            android:layout_marginTop="8dp"
+            android:includeFontPadding="false"
+            android:clickable="false"
+            android:text="2018-08-01(수) ~ 2018-11-30(금)"
+            android:textColor="@color/warm_grey"
+            android:textSize="10.5sp"
+            android:fontFamily="@font/nanumgothic" />
+    </RelativeLayout>
+</RelativeLayout>

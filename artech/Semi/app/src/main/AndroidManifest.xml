@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="artech.com.semi">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <!-- 위치정보활용시 추가 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 위치정보활용시 추가 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- WIFI 상태활용시 추가 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <permission
+        android:name="artech.com.semi.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="artech.com.semi.permission.C2D_MESSAGE" />
+
+    <application
+        android:name=".utility.kakao.KakaoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_api_key" />
+
+        <activity android:name=".utility.kakao.KakaoMainActivity" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="artech.com.semi.free.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+        <!--
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/title_activity_splash"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        -->
+
+
+        <!--
+        Add these to your Application declaration
+        to filter for the notification intent
+        -->
+        <!--<receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="artech.com.semi" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".PushListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>-->
+        <!--<service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="false" />-->
+
+        <service
+            android:name=".utility.FirebaseMessagingSerivce">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".utility.FirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".utility.naver.NaverMainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".utility.facebook.FacebookMainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".login.IntroActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".login.LoginActivity"
+            android:theme="@style/LoginTheme.NoActionBar" >
+            <intent-filter>
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.SignupActivity"
+            android:theme="@style/LoginTheme.NoActionBar" />
+        <activity
+            android:name=".login.SignupBusinessActivity"
+            android:theme="@style/LoginTheme.NoActionBar" />
+        <activity
+            android:name=".business.BusinessMainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="kakaocd160b0283b6816a2311d7466736ccdc"
+                    android:host="kakaolink"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".business.ProductInsertActivity"
+            android:theme="@style/LoginTheme.NoActionBar" />
+        <activity
+            android:name=".business.ProductManagementActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".business.SaleManagementActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".business.QuestionManagementActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NaverMapActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".utility.naver.NMapViewer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".utility.google.MapsActivity" />
+        <activity
+            android:name=".utility.payment.ImportActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!-- 웹뷰 및 ISP 등의 어플 인증후 앱으로 다시 호출하기 위한 스키마 설정 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="semiapp" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".utility.TestBannerActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".login.AddressSearchActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name=".utility.AddressesByNameIntentService"
+            android:exported="false" />
+
+        <activity
+            android:name=".normal.NormalMainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".normal.SearchLocationActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".login.SignupBusinessSecondActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".normal.PaymentActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".normal.PaymentSuccessActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".business.ProductUpdateActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".normal.ShopDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".normal.ReviewWriteActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".normal.ProductManagementActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".normal.ProductDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".normal.FavoritesActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".normal.BuyingCheckActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".normal.RecommendShopActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".normal.BestShopActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".normal.PurchaseHistorySuccessActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".normal.PurchaseHistoryWaitingActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".normal.EventActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".normal.PurchaseHistoryDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".normal.NoticeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".normal.MyInfoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".normal.MyInfoUpdateActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".normal.MoreActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".normal.QuestionActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".normal.QuestionWriteActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".normal.SettingActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".normal.QuestionDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".normal.PointActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".normal.CouponActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".normal.TalkActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".normal.TalkDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".normal.TalkMyActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".normal.TalkWriteActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".normal.TalkReviewActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".normal.TermsUseActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".normal.PrivacyActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".normal.TermsElectronicActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".normal.TermsLocationActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".business.MyInfoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".business.MyInfoUpdateActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".business.TermsUseActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".business.QuestionManagementDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".business.QuestionManagementReviewDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".business.UpdateBusinessInfoActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".normal.RecentlyProductActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".normal.ShopProductActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".normal.RefundActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".normal.ReviewActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".business.UsingActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".login.IdPwFIndActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+    </application>
+
+</manifest>

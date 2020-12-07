@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.semi.normal.BuyingCheckActivity"
+    tools:showIn="@layout/activity_buying_check">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/first_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingTop="17dp"
+            android:paddingBottom="20dp">
+            <ImageView
+                android:id="@+id/fresh_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/img_fresh_poor_2"/>
+
+            <TextView
+                android:id="@+id/name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fresh_img"
+                android:layout_marginTop="9.5dp"
+                android:layout_centerHorizontal="true"
+                android:includeFontPadding="false"
+                android:text="name"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/nanumgothic" />
+
+            <TextView
+                android:id="@+id/contents_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_text"
+                android:layout_marginTop="8.8dp"
+                android:layout_centerHorizontal="true"
+                android:includeFontPadding="false"
+                android:text="contents"
+                android:textColor="@color/soft_grey"
+                android:textSize="13sp"
+                android:fontFamily="@font/notosanscjkkr_regular" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/second_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/first_layout"
+            android:layout_marginTop="8dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/info_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27dp"
+                android:layout_marginLeft="16dp"
+                android:includeFontPadding="false"
+                android:text="주의사항 및 안내"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/nanumgothic" />
+
+            <RelativeLayout
+                android:id="@+id/info_detail_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/info_text"
+                android:layout_alignLeft="@+id/info_text"
+                android:layout_marginTop="23dp">
+
+                <RelativeLayout
+                    android:id="@+id/info_first_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/first_dot_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/dot_green"/>
+
+                    <TextView
+                        android:id="@+id/info_first_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/first_dot_img"
+                        android:layout_marginLeft="8.8dp"
+                        android:includeFontPadding="false"
+                        android:text="업체의 사정으로 상세 정보가 수시로 변경될 수 있으며,\n이로인한 불이익은 세상에 모든 미끼가 책임지지 않습니다."
+                        android:textColor="@color/light_black"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/nanumgothic" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/info_second_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/info_first_layout"
+                    android:layout_marginTop="17dp">
+
+                    <ImageView
+                        android:id="@+id/second_dot_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/dot_green"/>
+
+                    <TextView
+                        android:id="@+id/info_second_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/second_dot_img"
+                        android:layout_marginLeft="8.8dp"
+                        android:includeFontPadding="false"
+                        android:text="구매하신 상품은 예약자 정보에 기재해준 정보를 기준으로 수령\n할 수 있습니다."
+                        android:textColor="@color/light_black"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/nanumgothic" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/info_third_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/info_second_layout"
+                    android:layout_marginTop="17dp">
+
+                    <ImageView
+                        android:id="@+id/third_dot_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/dot_green"/>
+
+                    <TextView
+                        android:id="@+id/info_third_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/third_dot_img"
+                        android:layout_marginLeft="8.8dp"
+                        android:includeFontPadding="false"
+                        android:text="수령예정일 기준 7~3일전 100%환불\n수령예정일 기준 1일전  80%환불\n수령예정일 당일 및 no show 환불불가\n(제품에 이상이나 문제가 있는 경우 판매자에게 문의)"
+                        android:textColor="@color/light_black"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/nanumgothic" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/info_fourth_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/info_third_layout"
+                    android:layout_marginTop="17dp"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/fourth_dot_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/dot_green"/>
+
+                    <TextView
+                        android:id="@+id/info_fourth_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/fourth_dot_img"
+                        android:layout_marginLeft="8.8dp"
+                        android:includeFontPadding="false"
+                        android:text="티켓사용방법 : 결제시 제시"
+                        android:textColor="@color/light_black"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/nanumgothic" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/payment_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/info_detail_layout"
+                android:layout_marginTop="90dp"
+                android:layout_centerHorizontal="true"
+                android:text="결제진행하기"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:fontFamily="@font/nanumgothic"
+                android:background="@mipmap/btn_paymentprocessor"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

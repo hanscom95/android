@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5.44dp">
+
+    <ImageView
+        android:id="@+id/second_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/img_warning"
+        android:layout_centerHorizontal="true" />
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/second_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/second_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-18dp"
+        android:text="@string/prohibition_second_text"
+        android:textSize="40sp"
+        android:textColor="@color/prohibition_text"
+        app:font="NotoSansCJKkr_Bold.otf"/>
+    <de.morrox.fontinator.FontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/second_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-25dp"
+        android:gravity="center"
+        android:text="@string/prohibition_second_detail_text"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        app:font="NotoSansCJKkr_Medium.otf"/>
+</RelativeLayout>

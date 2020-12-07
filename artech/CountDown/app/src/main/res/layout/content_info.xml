@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.artech.countdown.InfoActivity"
+    tools:showIn="@layout/activity_info"
+    android:background="@color/black">
+    <ImageView
+        android:id="@+id/info_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/appicon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp"/>
+
+    <ImageView
+        android:id="@+id/info_name_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/image_artimer2"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/info_logo"
+        android:layout_marginTop="23dp"/>
+
+    <RelativeLayout
+        android:id="@+id/version_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/info_name_img"
+        android:layout_marginTop="13dp">
+
+        <TextView
+            android:id="@+id/info_version_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="@string/info_version"
+            android:textColor="@color/graybluegreenfont"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/info_version_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/info_version_text"
+            android:layout_marginLeft="10dp"
+            android:includeFontPadding="false"
+            android:text="@string/app_version"
+            android:textColor="@color/graybluegreenfont"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/company_layout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/version_layout"
+        android:layout_marginTop="64dp">
+
+        <TextView
+            android:id="@+id/info_company_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="@string/info_company"
+            android:textColor="@color/graybluegreenfont"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/info_company_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:includeFontPadding="false"
+            android:text="@string/app_company"
+            android:textColor="@color/mint2font"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/product_layout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/company_layout"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/info_product_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="@string/info_product"
+            android:textColor="@color/graybluegreenfont"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/info_product_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:includeFontPadding="false"
+            android:text="@string/app_name"
+            android:textColor="@color/mint2font"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/homepage_layout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/product_layout"
+        android:layout_marginTop="13dp">
+
+        <TextView
+            android:id="@+id/info_homepage_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="@string/info_homepage"
+            android:textColor="@color/graybluegreenfont"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/info_homepage_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:includeFontPadding="false"
+            android:autoLink="web"
+            android:text="@string/homepage"
+            android:textColor="@color/mint2font"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/copyright_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp">
+
+        <TextView
+            android:id="@+id/info_copyright_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_centerHorizontal="true"
+            android:text="@string/info_reserved"
+            android:textColor="@color/graybluegreen2font"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/info_copyright_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/info_copyright_text"
+            android:layout_centerHorizontal="true"
+            android:includeFontPadding="false"
+            android:text="@string/info_copyright"
+            android:textColor="@color/graybluegreen2font"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/main_version_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:includeFontPadding="false"
+        android:text="@string/app_version"
+        android:textColor="@color/graybluegreenfont"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone" />
+</RelativeLayout>

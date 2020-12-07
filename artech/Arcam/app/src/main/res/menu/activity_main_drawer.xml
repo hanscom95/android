@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_finetuning"
+            android:icon="@mipmap/ic_menu_build_non_press"
+            android:title="@string/menu_finetuning"/>
+        <item
+            android:id="@+id/nav_scope"
+            android:icon="@mipmap/ic_menu_telescope_non_press"
+            android:title="@string/menu_scope" />
+        <item
+            android:id="@+id/nav_score"
+            android:icon="@mipmap/ic_menu_chart_non_press"
+            android:title="@string/menu_score" />
+        <item
+            android:id="@+id/nav_record"
+            android:icon="@mipmap/ic_menu_note_non_press"
+            android:title="@string/menu_record" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_user"
+            android:icon="@mipmap/ic_mymenu"
+            android:title="@string/menu_right_infoupdate"/>
+        <item
+            android:id="@+id/nav_equipment"
+            android:icon="@mipmap/ic_system"
+            android:title="@string/menu_right_registraion"/>
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@mipmap/ic_info_nonpress"
+            android:title="@string/menu_app_info"/>
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@android:drawable/ic_menu_revert"
+            android:title="@string/menu_logout"/>
+    </group>
+</menu>

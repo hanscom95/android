@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_archery_finish"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="1572dp"
+    android:minHeight="786dp"
+    android:background="@mipmap/popup_keypad"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:id="@+id/popup_download_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/popup_keypad">
+        <ImageView
+            android:id="@+id/popup_logo_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/logo_small"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"/>
+
+        <RelativeLayout
+            android:id="@+id/popup_camera_layout"
+            android:layout_width="300dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/popup_regular_state"
+            android:layout_below="@+id/popup_logo_img"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/popup_camera_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/popup_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/popup_camera_layout"
+            android:layout_marginTop="10dp"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="HAHA(5678)"
+            android:textColor="@android:color/white"
+            android:textSize="50sp"
+            app:font="NotoSansCJKkr_Medium.otf"/>
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/popup_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/popup_name_text"
+            android:layout_marginTop="5dp"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="2017-08-04 21:55:54"
+            android:textColor="@android:color/white"
+            android:textSize="26sp"
+            app:font="NotoSansCJKkr_Medium.otf"/>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/popup_date_text"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp">
+
+            <RelativeLayout
+                android:id="@+id/popup_shooting_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/score_bottom"
+                android:gravity="center_horizontal">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/popup_arrow_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:layout_marginRight="25dp"
+                    android:text="발수"
+                    android:textSize="30sp"
+                    app:font="NotoSansCJKkr_Medium.otf"
+                    android:textColor="@color/archery_board_select" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/popup_arrow_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/popup_arrow_title_text"
+                    android:includeFontPadding="false"
+                    android:text="0"
+                    android:textColor="@color/archery_board_select"
+                    android:textSize="48sp"
+                    app:font="NotoSansCJKkr_Medium.otf" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/popup_total_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/popup_shooting_layout"
+                android:layout_marginLeft="30dp"
+                android:background="@mipmap/score_bottom"
+                android:gravity="center_horizontal">
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/popup_total_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:layout_marginRight="25dp"
+                    android:text="총점"
+                    android:textSize="30sp"
+                    app:font="NotoSansCJKkr_Medium.otf"
+                    android:textColor="@color/archery_board_select" />
+
+                <de.morrox.fontinator.FontTextView
+                    android:id="@+id/popup_total_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:layout_toEndOf="@+id/popup_total_title_text"
+                    android:text="0"
+                    android:textColor="@color/archery_board_select"
+                    android:textSize="48sp"
+                    app:font="NotoSansCJKkr_Medium.otf" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/camera_img_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/result_popup"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <de.morrox.fontinator.FontTextView
+        android:id="@+id/first_finish_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/popup_download_layout"
+        android:background="@null"
+        android:includeFontPadding="false"
+        android:gravity="center"
+        android:text="메일로 전송하시겠습니까?"
+        android:textColor="@android:color/white"
+        android:textSize="48sp"
+        app:font="NotoSansCJKkr_Medium.otf" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/yes_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="73dp"
+            android:layout_marginLeft="99dp"
+            android:background="@null"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="YES"
+            android:textColor="@color/archery_popup_button_text"
+            android:textSize="47.78sp"
+            android:visibility="visible"
+            app:font="NotoSansCJKkr_Regular.otf" />
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/no_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="73dp"
+            android:layout_marginRight="99dp"
+            android:background="@null"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="NO"
+            android:textColor="@color/archery_popup_button_text"
+            android:textSize="47.78sp"
+            app:font="NotoSansCJKkr_Regular.otf" />
+    </RelativeLayout>
+
+</RelativeLayout>

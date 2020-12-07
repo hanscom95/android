@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+        android:id="@+id/checkbox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/aqua_marine"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:fontFamily="@font/nanumgothic"
+        android:visibility="visible"/>
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/checkbox1"
+        android:layout_marginLeft="9dp"
+        android:text="이용 규정, 개인정보 수집 및 이용, 개인정보 제 3자\n제공 동의"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:fontFamily="@font/nanumgothic"/>
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/text1"
+        android:text="(필수)"
+        android:textColor="@color/light_red"
+        android:textSize="13sp"
+        android:fontFamily="@font/nanumgothic"/>
+</RelativeLayout>

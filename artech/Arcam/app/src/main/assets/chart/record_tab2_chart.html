@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>activity chart</title>
+    <style type="text/css">
+        #container rect.highcharts-background {fill : transparent;}
+    </style>
+
+
+    <script type="text/javascript" src="file:///android_asset/chart/jquery.min.js"></script>
+    <script type="text/javascript">
+        function setChartData(data1) {
+            var chart = $('#container').highcharts();
+
+            chart.series[0].setData(data1, true);
+        }
+
+
+        $(function () {
+            Highcharts.setOptions({
+                chart: {
+                    style: {
+                        fontFamily: 'file:///android_asset/fonts/NotoSansCJKkr_Regular.otf'
+                    }
+                },
+                colors: ["#3f86ca"]
+            });
+
+             $('#container').highcharts({
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text : ""
+                },
+                tooltip: {
+                    enabled: false
+                },
+                credits : {
+                    enabled: false
+                },
+                legend: {
+                    enabled: false
+                },
+                exporting: {
+                    enabled: false
+                },
+                xAxis: {
+                    categories: ['0(miss)', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'x-10']
+                },
+                yAxis: {
+                    title: {
+                        text: 'Arrow'
+                    }
+                },
+                plotOptions: {
+                    column:{
+                        dataLabels: {
+                            enabled: true
+                        }
+                    },
+                    series: {
+                        stacking: 'normal'
+                    }
+                },
+                series: [{
+                    name: 'score',
+                    //data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+                    color: '#3f86ca'
+                }]
+            });
+            $('#container rect').attr('fill', 'transparent');
+        });
+
+    </script>
+</head>
+<body>
+<script src="file:///android_asset/chart/highcharts.js"></script>
+<script src="file:///android_asset/chart/exporting.js"></script>
+
+<div id="container" style="min-width: 536px; height: 219px; margin: 0;"></div>
+
+</body>
+</html>

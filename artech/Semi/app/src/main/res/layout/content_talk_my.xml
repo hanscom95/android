@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="artech.com.semi.normal.TalkMyActivity"
+    tools:showIn="@layout/activity_talk_my">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/black"
+        app:tabIndicatorHeight="0.8dp">
+        <android.support.design.widget.TabItem
+            android:id="@+id/tab_one_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="게시글"/>
+        <android.support.design.widget.TabItem
+            android:id="@+id/tab_two_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="댓글"/>
+        <android.support.design.widget.TabItem
+            android:id="@+id/tab_three_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사진"/>
+        <android.support.design.widget.TabItem
+            android:id="@+id/tab_four_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="스크랩"/>
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_below="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

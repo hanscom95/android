@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.semi.normal.NormalMainActivity"
+    tools:showIn="@layout/activity_normal_main">
+
+    <RelativeLayout
+        android:id="@+id/second_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="5.8dp"
+        android:paddingBottom="6dp"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+            <RelativeLayout
+                android:id="@+id/local_search_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/btn_mainquickmenu_2">
+                <ImageView
+                    android:id="@+id/local_search_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="23dp"
+                    android:clickable="false"
+                    android:src="@mipmap/img_mainquickic_1"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="19.3dp"
+                    android:layout_toRightOf="@+id/local_search_img"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/local_search_main_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:clickable="false"
+                        android:text="지역 검색"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/notosanscjkkr_medium" />
+                    <TextView
+                        android:id="@+id/local_search_sub_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/local_search_main_text"
+                        android:layout_marginTop="4.3dp"
+                        android:includeFontPadding="false"
+                        android:clickable="false"
+                        android:text="가까운 낚시방찾기"
+                        android:textColor="@color/warm_grey"
+                        android:textSize="10.5sp"
+                        android:fontFamily="@font/notosanscjkkr_regular" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bait_search_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/local_search_layout"
+                android:layout_marginLeft="3dp"
+                android:background="@mipmap/btn_mainquickmenu_2">
+                <ImageView
+                    android:id="@+id/bait_search_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="24dp"
+                    android:clickable="false"
+                    android:src="@mipmap/img_mainquickic_2" />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="19.3dp"
+                    android:layout_toRightOf="@+id/bait_search_img"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/bait_search_main_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:clickable="false"
+                        android:text="미끼 검색"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/notosanscjkkr_medium" />
+                    <TextView
+                        android:id="@+id/bait_search_sub_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bait_search_main_text"
+                        android:layout_marginTop="4.3dp"
+                        android:includeFontPadding="false"
+                        android:clickable="false"
+                        android:text="원하는 미끼찾기"
+                        android:textColor="@color/warm_grey"
+                        android:textSize="10.5sp"
+                        android:fontFamily="@font/notosanscjkkr_regular" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/second_layout">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/third_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp">
+
+                <RelativeLayout
+                    android:id="@+id/best_bait_layout"
+                    android:layout_width="116dp"
+                    android:layout_height="97.3dp"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:id="@+id/hot_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15.8dp"
+                        android:background="@mipmap/img_mark">
+
+                        <TextView
+                            android:id="@+id/hot_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/nanumgothic"
+                            android:includeFontPadding="false"
+                            android:text="HOT"
+                            android:textColor="@color/white"
+                            android:textSize="7.5sp" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/best_bait_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/hot_layout"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:src="@mipmap/ic_bestbait" />
+
+                    <TextView
+                        android:id="@+id/best_bait_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/best_bait_img"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="11dp"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="베스트미끼"
+                        android:textColor="@color/black"
+                        android:textSize="13.1dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/hot_deal_layout"
+                    android:layout_width="116dp"
+                    android:layout_height="97.3dp"
+                    android:layout_marginLeft="3.3dp"
+                    android:layout_toRightOf="@+id/best_bait_layout"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:id="@+id/up_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15.8dp"
+                        android:background="@mipmap/img_mark">
+
+                        <TextView
+                            android:id="@+id/up_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/nanumgothic"
+                            android:includeFontPadding="false"
+                            android:text="UP"
+                            android:textColor="@color/white"
+                            android:textSize="7.5sp" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/hot_deal_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/up_layout"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4.5dp"
+                        android:src="@mipmap/ic_hotdeal" />
+
+                    <TextView
+                        android:id="@+id/hot_deal_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/hot_deal_img"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="11.3dp"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="핫딜"
+                        android:textColor="@color/black"
+                        android:textSize="13.1dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sea_layout"
+                    android:layout_width="116dp"
+                    android:layout_height="97.3dp"
+                    android:layout_marginLeft="3.3dp"
+                    android:layout_toRightOf="@+id/hot_deal_layout"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/sea_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="26dp"
+                        android:src="@mipmap/ic_sea" />
+
+                    <TextView
+                        android:id="@+id/sea_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sea_img"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="11.3dp"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="바다·민물"
+                        android:textColor="@color/black"
+                        android:textSize="13.1dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fishing_room_layout"
+                    android:layout_width="116dp"
+                    android:layout_height="97.3dp"
+                    android:layout_alignLeft="@+id/best_bait_layout"
+                    android:layout_below="@+id/best_bait_layout"
+                    android:layout_marginTop="3.3dp"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/fishing_room_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="32.8dp"
+                        android:src="@mipmap/ic_trophy" />
+
+                    <TextView
+                        android:id="@+id/fishing_room_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/fishing_room_img"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="11.3dp"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="명예낚시방"
+                        android:textColor="@color/black"
+                        android:textSize="13.1dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/talk_layout"
+                    android:layout_width="116dp"
+                    android:layout_height="97.3dp"
+                    android:layout_alignTop="@+id/fishing_room_layout"
+                    android:layout_marginLeft="3.3dp"
+                    android:layout_toRightOf="@+id/fishing_room_layout"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/talk_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="32.8dp"
+                        android:src="@mipmap/ic_talk" />
+
+                    <TextView
+                        android:id="@+id/talk_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/talk_img"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="Talk"
+                        android:textColor="@color/black"
+                        android:textSize="13.1dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/recommendation_layout"
+                    android:layout_width="116dp"
+                    android:layout_height="97.3dp"
+                    android:layout_alignTop="@+id/talk_layout"
+                    android:layout_marginLeft="3.3dp"
+                    android:layout_toRightOf="@+id/talk_layout"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/recommendation_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="32.8dp"
+                        android:src="@mipmap/ic_store" />
+
+                    <TextView
+                        android:id="@+id/recommendation_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/recommendation_img"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="11.3dp"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="추천업체"
+                        android:textColor="@color/black"
+                        android:textSize="13.1dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fourth_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/third_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12.5dp">
+
+                <ImageView
+                    android:id="@+id/banner_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/banner" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fifth_zero_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fourth_layout"
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginTop="8.5dp"
+                android:background="@color/white">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+                    <RelativeLayout
+                        android:id="@+id/bait_best_layout"
+                        android:layout_width="178dp"
+                        android:layout_height="38.8dp"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:src="@mipmap/bait_best"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/warm_grey"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/warm_grey"/>
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/warm_grey"/>
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:background="@color/warm_grey"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/shop_best_layout"
+                        android:layout_width="178dp"
+                        android:layout_height="38.8dp"
+                        android:layout_toRightOf="@+id/bait_best_layout"
+                        android:layout_marginLeft="3.8dp"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:src="@mipmap/shop_best"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/warm_grey"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/warm_grey"/>
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/warm_grey"/>
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:background="@color/warm_grey"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/bait_best_first_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bait_best_layout"
+                        android:layout_marginTop="3.8dp"
+                        android:background="@mipmap/w_2_box_2">
+
+                        <ImageView
+                            android:id="@+id/bait_best_trophy_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="14.8dp"
+                            android:src="@mipmap/img_trophy"/>
+
+                        <TextView
+                            android:id="@+id/bait_best_first_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/bait_best_trophy_img"
+                            android:layout_marginLeft="10.8dp"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:textSize="13.4sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/notosanscjkkr_regular"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/shop_best_first_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/shop_best_layout"
+                        android:layout_below="@+id/shop_best_layout"
+                        android:layout_marginTop="3.8dp"
+                        android:background="@mipmap/w_2_box_2">
+
+                        <ImageView
+                            android:id="@+id/shop_best_trophy_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="14.8dp"
+                            android:src="@mipmap/img_trophy"/>
+
+                        <TextView
+                            android:id="@+id/shop_best_first_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/shop_best_trophy_img"
+                            android:layout_marginLeft="10.8dp"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:textSize="13.4sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/notosanscjkkr_regular"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/bait_best_second_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bait_best_first_layout"
+                        android:layout_marginTop="3.8dp"
+                        android:background="@mipmap/w_2_box_2">
+
+                        <ImageView
+                            android:id="@+id/bait_best_second_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="25.8dp"
+                            android:src="@mipmap/second"/>
+
+                        <TextView
+                            android:id="@+id/bait_best_second_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/bait_best_second_img"
+                            android:layout_marginLeft="22dp"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:textSize="13.4sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/notosanscjkkr_regular"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/shop_best_second_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/shop_best_first_layout"
+                        android:layout_alignLeft="@+id/shop_best_first_layout"
+                        android:layout_marginTop="3.8dp"
+                        android:background="@mipmap/w_2_box_2">
+
+                        <ImageView
+                            android:id="@+id/shop_best_second_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="25.8dp"
+                            android:src="@mipmap/second"/>
+
+                        <TextView
+                            android:id="@+id/shop_best_second_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/shop_best_second_img"
+                            android:layout_marginLeft="22dp"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:textSize="13.4sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/notosanscjkkr_regular"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/bait_best_third_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bait_best_second_layout"
+                        android:layout_marginTop="3.8dp"
+                        android:background="@mipmap/w_2_box_2">
+
+                        <ImageView
+                            android:id="@+id/bait_best_third_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="25.8dp"
+                            android:src="@mipmap/third"/>
+
+                        <TextView
+                            android:id="@+id/bait_best_third_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/bait_best_third_img"
+                            android:layout_marginLeft="22dp"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:textSize="13.4sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/notosanscjkkr_regular"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/shop_best_third_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/shop_best_second_layout"
+                        android:layout_below="@+id/shop_best_second_layout"
+                        android:layout_marginTop="3.8dp"
+                        android:background="@mipmap/w_2_box_2">
+
+                        <ImageView
+                            android:id="@+id/shop_best_third_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="25.8dp"
+                            android:src="@mipmap/third"/>
+
+                        <TextView
+                            android:id="@+id/shop_best_third_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/shop_best_third_img"
+                            android:layout_marginLeft="22dp"
+                            android:layout_centerVertical="true"
+                            android:includeFontPadding="false"
+                            android:textSize="13.4sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/notosanscjkkr_regular"/>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fifth_layout"
+                android:layout_width="match_parent"
+                android:layout_height="231.5dp"
+                android:layout_below="@+id/fourth_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8.5dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/fifth_title_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17.5dp"
+                    android:layout_marginTop="14dp">
+
+                    <TextView
+                        android:id="@+id/fifth_title_first_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosanscjkkr_bold"
+                        android:includeFontPadding="false"
+                        android:text="오늘의"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/fifth_title_second_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/fifth_title_first_text"
+                        android:fontFamily="@font/notosanscjkkr_bold"
+                        android:includeFontPadding="false"
+                        android:text=" BEST "
+                        android:textColor="@color/aqua_marine"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/fifth_title_third_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/fifth_title_second_text"
+                        android:fontFamily="@font/notosanscjkkr_bold"
+                        android:includeFontPadding="false"
+                        android:text="미끼"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fifth_first_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fifth_title_layout"
+                    android:layout_marginLeft="18.5dp"
+                    android:layout_marginTop="22.8dp"
+                    android:background="@mipmap/img_maintoday_bait_1">
+
+                    <TextView
+                        android:id="@+id/fifth_first_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/notosanscjkkr_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="크릴\n천연미끼"
+                        android:textColor="@color/white"
+                        android:textSize="13.4sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fifth_second_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/fifth_first_layout"
+                    android:layout_marginLeft="45dp"
+                    android:layout_toRightOf="@+id/fifth_first_layout"
+                    android:background="@mipmap/img_maintoday_bait_2">
+
+                    <TextView
+                        android:id="@+id/fifth_second_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/notosanscjkkr_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="게미끼"
+                        android:textColor="@color/white"
+                        android:textSize="13.4sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fifth_third_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/fifth_second_layout"
+                    android:layout_marginLeft="44.3dp"
+                    android:layout_toRightOf="@+id/fifth_second_layout"
+                    android:background="@mipmap/img_maintoday_bait_3">
+
+                    <TextView
+                        android:id="@+id/fifth_third_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/notosanscjkkr_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="깐새우"
+                        android:textColor="@color/white"
+                        android:textSize="13.4sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fifth_fourth_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/fifth_first_layout"
+                    android:layout_below="@+id/fifth_first_layout"
+                    android:layout_marginTop="16dp"
+                    android:background="@mipmap/img_maintoday_bait_4">
+
+                    <TextView
+                        android:id="@+id/fifth_fourth_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/notosanscjkkr_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="혼무시"
+                        android:textColor="@color/white"
+                        android:textSize="13.4sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fifth_fifth_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/fifth_fourth_layout"
+                    android:layout_marginLeft="45dp"
+                    android:layout_toRightOf="@+id/fifth_fourth_layout"
+                    android:background="@mipmap/img_maintoday_bait_5">
+
+                    <TextView
+                        android:id="@+id/fifth_fifth_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/notosanscjkkr_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="개불"
+                        android:textColor="@color/white"
+                        android:textSize="13.4sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fifth_sixth_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/fifth_fifth_layout"
+                    android:layout_marginLeft="44dp"
+                    android:layout_toRightOf="@+id/fifth_fifth_layout"
+                    android:background="@mipmap/img_maintoday_bait">
+
+                    <TextView
+                        android:id="@+id/fifth_sixth_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/notosanscjkkr_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="무"
+                        android:textColor="@color/white"
+                        android:textSize="13.4sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/warm_grey" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/warm_grey" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sixth_layout"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/fifth_zero_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10.8dp"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:id="@+id/sixth_title_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="14dp">
+
+                    <TextView
+                        android:id="@+id/sixth_title_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/notosanscjkkr_bold"
+                        android:includeFontPadding="false"
+                        android:text="추천업체"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/sixth_more_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="17dp"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="모두보기 >"
+                        android:textColor="@color/soft_grey"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sixth_title_layout"
+                    android:layout_marginLeft="17.3dp"
+                    android:layout_marginTop="13dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:id="@+id/recommendation_first_layout"
+                            android:layout_width="136.3dp"
+                            android:layout_height="149dp"
+                            android:background="@color/white">
+
+                            <ImageView
+                                android:id="@+id/recommendation_first_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="98.8dp"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/img_recommendation" />
+
+                            <TextView
+                                android:id="@+id/recommendation_title_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/recommendation_first_img"
+                                android:layout_marginLeft="10.3dp"
+                                android:layout_marginRight="10.3dp"
+                                android:layout_marginTop="8.5dp"
+                                android:fontFamily="@font/nanumgothic"
+                                android:includeFontPadding="false"
+                                android:singleLine="true"
+                                android:text="업체"
+                                android:textColor="@color/black"
+                                android:textSize="10.5sp" />
+
+                            <View
+                                android:id="@+id/recommendation_middle_line"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.3dp"
+                                android:layout_below="@+id/recommendation_title_text"
+                                android:layout_marginLeft="11dp"
+                                android:layout_marginRight="10.8dp"
+                                android:layout_marginTop="8.3dp"
+                                android:background="@color/warm_grey" />
+
+                            <TextView
+                                android:id="@+id/recommendation_sub_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/recommendation_middle_line"
+                                android:layout_marginLeft="10.3dp"
+                                android:layout_marginRight="10.3dp"
+                                android:layout_marginTop="7dp"
+                                android:fontFamily="@font/nanumgothic"
+                                android:includeFontPadding="false"
+                                android:singleLine="true"
+                                android:text="지역"
+                                android:textColor="@color/greyish"
+                                android:textSize="9sp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.3dp"
+                                android:background="@color/warm_grey" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.3dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/warm_grey" />
+
+                            <View
+                                android:layout_width="0.3dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/warm_grey" />
+
+                            <View
+                                android:layout_width="0.3dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:background="@color/warm_grey" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/recommendation_second_layout"
+                            android:layout_width="136.3dp"
+                            android:layout_height="149dp"
+                            android:layout_marginLeft="18.3dp"
+                            android:layout_toRightOf="@+id/recommendation_first_layout"
+                            android:background="@color/white">
+
+                            <ImageView
+                                android:id="@+id/recommendation_second_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="98.8dp"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/img_recommendation" />
+
+                            <TextView
+                                android:id="@+id/recommendation_title_second_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/recommendation_second_img"
+                                android:layout_marginLeft="10.3dp"
+                                android:layout_marginRight="10.3dp"
+                                android:layout_marginTop="8.5dp"
+                                android:fontFamily="@font/nanumgothic"
+                                android:includeFontPadding="false"
+                                android:singleLine="true"
+                                android:text="업체"
+                                android:textColor="@color/black"
+                                android:textSize="10.5sp" />
+
+                            <View
+                                android:id="@+id/recommendation_middle_second_line"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.3dp"
+                                android:layout_below="@+id/recommendation_title_second_text"
+                                android:layout_marginLeft="11dp"
+                                android:layout_marginRight="10.8dp"
+                                android:layout_marginTop="8.3dp"
+                                android:background="@color/warm_grey" />
+
+                            <TextView
+                                android:id="@+id/recommendation_sub_second_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/recommendation_middle_second_line"
+                                android:layout_marginLeft="10.3dp"
+                                android:layout_marginRight="10.3dp"
+                                android:layout_marginTop="7dp"
+                                android:fontFamily="@font/nanumgothic"
+                                android:includeFontPadding="false"
+                                android:singleLine="true"
+                                android:text="지역"
+                                android:textColor="@color/greyish"
+                                android:textSize="9sp" />
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.3dp"
+                                android:background="@color/warm_grey" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.3dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/warm_grey" />
+
+                            <View
+                                android:layout_width="0.3dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/warm_grey" />
+
+                            <View
+                                android:layout_width="0.3dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:background="@color/warm_grey" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/recommendation_third_layout"
+                            android:layout_width="136.3dp"
+                            android:layout_height="149dp"
+                            android:layout_marginLeft="18.3dp"
+                            android:layout_toRightOf="@+id/recommendation_second_layout"
+                            android:background="@color/white">
+
+                            <ImageView
+                                android:id="@+id/recommendation_third_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="98.8dp"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/img_recommendation" />
+
+                            <TextView
+                                android:id="@+id/recommendation_title_third_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/recommendation_third_img"
+                                android:layout_marginLeft="10.3dp"
+                                android:layout_marginRight="10.3dp"
+                                android:layout_marginTop="8.5dp"
+                                android:fontFamily="@font/nanumgothic"
+                                android:includeFontPadding="false"
+                                android:singleLine="true"
+                                android:text="업체"
+                                android:textColor="@color/black"
+                                android:textSize="10.5sp" />
+
+                            <View
+                                android:id="@+id/recommendation_middle_third_line"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.3dp"
+                                android:layout_below="@+id/recommendation_title_third_text"
+                                android:layout_marginLeft="11dp"
+                                android:layout_marginRight="10.8dp"
+                                android:layout_marginTop="8.3dp"
+                                android:background="@color/warm_grey" />
+
+                            <TextView
+                                android:id="@+id/recommendation_sub_third_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/recommendation_middle_third_line"
+                                android:layout_marginLeft="10.3dp"
+                                android:layout_marginRight="10.3dp"
+                                android:layout_marginTop="7dp"
+                                android:fontFamily="@font/nanumgothic"
+                                android:includeFontPadding="false"
+                                android:singleLine="true"
+                                android:text="지역"
+                                android:textColor="@color/greyish"
+                                android:textSize="9sp" />
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.3dp"
+                                android:background="@color/warm_grey" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.3dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/warm_grey" />
+
+                            <View
+                                android:layout_width="0.3dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/warm_grey" />
+
+                            <View
+                                android:layout_width="0.3dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:background="@color/warm_grey" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </HorizontalScrollView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/warm_grey" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/warm_grey" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/seventh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="370.3dp"
+                android:layout_below="@+id/sixth_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8.3dp"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:id="@+id/seventh_title_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/first_event_layout"
+                    android:layout_marginTop="14dp">
+
+                    <TextView
+                        android:id="@+id/seventh_title_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/notosanscjkkr_bold"
+                        android:includeFontPadding="false"
+                        android:text="이벤트"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/first_event_layout"
+                    android:layout_width="324dp"
+                    android:layout_height="101.5dp"
+                    android:layout_below="@+id/seventh_title_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12.5dp"
+                    android:background="@mipmap/meventbanner_1">
+
+                    <TextView
+                        android:id="@+id/first_event_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/notosanscjkkr_bold"
+                        android:includeFontPadding="false"
+                        android:text="이벤트 1"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:visibility="invisible"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/second_event_layout"
+                    android:layout_width="324dp"
+                    android:layout_height="101.5dp"
+                    android:layout_below="@+id/first_event_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4.5dp"
+                    android:background="@mipmap/meventbanner_2">
+
+                    <TextView
+                        android:id="@+id/second_event_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/notosanscjkkr_bold"
+                        android:includeFontPadding="false"
+                        android:text="이벤트 2"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:visibility="invisible"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/third_event_layout"
+                    android:layout_width="324dp"
+                    android:layout_height="101.5dp"
+                    android:layout_below="@+id/second_event_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4.5dp"
+                    android:background="@mipmap/meventbanner_3">
+
+                    <TextView
+                        android:id="@+id/third_event_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/notosanscjkkr_bold"
+                        android:includeFontPadding="false"
+                        android:text="이벤트 3"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:visibility="invisible"/>
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/warm_grey" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/warm_grey" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/eighth_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seventh_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="19.8dp"
+                android:background="@mipmap/btn_top">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/img_top" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ninth_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eighth_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="19.5dp"
+                android:paddingLeft="15.5dp"
+                android:paddingRight="17.8dp">
+
+                <RelativeLayout
+                    android:id="@+id/ninth_first_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/invalid_name_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/invalid_name" />
+
+                    <RelativeLayout
+                        android:id="@+id/company_info_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            android:id="@+id/company_info_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/notosanscjkkr_regular"
+                            android:includeFontPadding="false"
+                            android:text="사업자 정보"
+                            android:textColor="@color/greyish"
+                            android:textSize="8.9sp" />
+
+                        <ImageView
+                            android:id="@+id/company_info_fold_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/company_info_text"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="2.5dp"
+                            android:src="@mipmap/ic_fold_3"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/terms_comapny_info_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ninth_first_layout"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/terms_comapny_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosanscjkkr_bold"
+                        android:includeFontPadding="false"
+                        android:text="(주)알텍"
+                        android:textColor="@color/grey"
+                        android:textSize="9sp" />
+
+                    <TextView
+                        android:id="@+id/company_info_detail_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/terms_comapny_text"
+                        android:fontFamily="@font/notosanscjkkr_bold"
+                        android:includeFontPadding="false"
+                        android:text="대표이사: 유한철\n사업자등록번호: 224-88-00394\n메일: artech5545@naver.com\n고객센터: 070-8676-1662\n주소: 경기도 용인시 수지구 신수로 767 분당수지유타워 지식산업센터\n호스팅서비스제공자: 알텍\n전자금융분쟁처리 Tel: 070-8676-1662 Fax: 070-8668-1880\n\n세미는 통신판매중개자이며 통신판매의 당사자가 아닙니다.\n따라서 세미는 상품거래정보 및 거래에 대한 책임을 지지 않습니다."
+                        android:textColor="@color/grey"
+                        android:textSize="9sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ninth_second_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/terms_comapny_info_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="18.8dp">
+
+                    <RelativeLayout
+                        android:id="@+id/ninth_second_first_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/linebox_terms">
+
+                        <TextView
+                            android:id="@+id/terms_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/notosanscjkkr_regular"
+                            android:includeFontPadding="false"
+                            android:text="이용약관"
+                            android:textColor="@color/greyish"
+                            android:textSize="8.9sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ninth_second_second_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.5dp"
+                        android:layout_toRightOf="@+id/ninth_second_first_layout"
+                        android:background="@mipmap/linebox_terms">
+
+                        <TextView
+                            android:id="@+id/individual_terms_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/notosanscjkkr_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="개인정보\n처리방침"
+                            android:textColor="@color/greyish"
+                            android:textSize="8.9sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ninth_second_third_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.5dp"
+                        android:layout_toRightOf="@+id/ninth_second_second_layout"
+                        android:background="@mipmap/linebox_terms">
+
+                        <TextView
+                            android:id="@+id/electronic_finance_terms_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/notosanscjkkr_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="전자금융\n거래이용약관"
+                            android:textColor="@color/greyish"
+                            android:textSize="8.9sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ninth_second_fourth_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.5dp"
+                        android:layout_toRightOf="@+id/ninth_second_third_layout"
+                        android:background="@mipmap/linebox_terms">
+
+                        <TextView
+                            android:id="@+id/location_terms_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/notosanscjkkr_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="위치정보\n이용약관"
+                            android:textColor="@color/greyish"
+                            android:textSize="8.9sp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ninth_third_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ninth_second_layout"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/terms_detail_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosanscjkkr_regular"
+                        android:includeFontPadding="false"
+                        android:text="(주)알텍은 통신판매중개자로서 통신판매의 당사자가 아니며,\n상품의 예약, 이용 및 환불 등과 관련된 의무와 책임은 각 판매자에게 있습니다."
+                        android:textColor="@color/greyish"
+                        android:textSize="8.9sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/ninth_layout">
+            </RelativeLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/business_bottom_nav_height"
+                android:layout_below="@+id/ninth_layout"
+                android:layout_marginTop="49.3dp" />
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

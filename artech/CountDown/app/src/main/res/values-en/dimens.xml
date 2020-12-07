@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="setting_round">35sp</dimen>
+    <dimen name="setting_round_value">43sp</dimen>
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_step_finish"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="1190dp"
+    android:minHeight="595dp"
+    android:background="@mipmap/popup_keypad"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="173dp">
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/first_finish_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="체험이 모두 완료되었습니다."
+            android:textColor="@android:color/white"
+            android:textSize="48sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/second_finish_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/first_finish_text"
+            android:background="@null"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="화살을 회수하신 후 랭킹을 확인하세요~"
+            android:textColor="@android:color/white"
+            android:textSize="48sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/third_finish_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/second_finish_text"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="이용해주셔서 감사합니다!"
+            android:textColor="@android:color/white"
+            android:textSize="48sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="62dp">
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/finish_round_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:background="@null"
+            android:gravity="center"
+            android:text="THANK YOU"
+            android:textColor="@color/archery_popup_button_text"
+            android:textSize="48sp"
+            app:font="NotoSansCJKkr_Medium.otf"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

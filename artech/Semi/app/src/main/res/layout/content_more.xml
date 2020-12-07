@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.semi.normal.MoreActivity"
+    tools:showIn="@layout/activity_more"
+    android:paddingBottom="40dp">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/first_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/banner_more"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/second_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first_layout"
+                android:paddingLeft="15.8dp"
+                android:paddingRight="15.8dp"
+                android:background="@color/white">
+                <RelativeLayout
+                    android:id="@+id/notice_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp">
+                    <TextView
+                        android:id="@+id/notice_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:includeFontPadding="false"
+                        android:text="공지사항"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/notosanscjkkr_medium"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/chevron_right"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/event_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:layout_below="@+id/notice_layout">
+                    <TextView
+                        android:id="@+id/event_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:includeFontPadding="false"
+                        android:text="이벤트"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/notosanscjkkr_medium"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/chevron_right"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/ad_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:layout_below="@+id/event_layout">
+                    <TextView
+                        android:id="@+id/ad_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:includeFontPadding="false"
+                        android:text="광고문의"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/notosanscjkkr_medium"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/chevron_right"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/question_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:layout_below="@+id/ad_layout">
+                    <TextView
+                        android:id="@+id/question_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:includeFontPadding="false"
+                        android:text="고객문의"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/notosanscjkkr_medium"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/chevron_right"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/setting_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:layout_below="@+id/question_layout">
+                    <TextView
+                        android:id="@+id/setting_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:includeFontPadding="false"
+                        android:text="설정"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/notosanscjkkr_medium"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/chevron_right"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_below="@+id/notice_layout"
+                    android:background="@color/input_line" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_below="@+id/event_layout"
+                    android:background="@color/input_line" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_below="@+id/ad_layout"
+                    android:background="@color/input_line" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_below="@+id/question_layout"
+                    android:background="@color/input_line" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_below="@+id/second_layout"
+                android:background="@color/input_line" />
+
+
+            <TextView
+                android:id="@+id/semi_admin_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/second_layout"
+                android:layout_marginTop="50.8dp"
+                android:layout_centerHorizontal="true"
+                android:includeFontPadding="false"
+                android:text="세상에모든미끼 고객센터"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:fontFamily="@font/bmdohyeon"/>
+
+            <TextView
+                android:id="@+id/semi_admin_tel_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/semi_admin_text"
+                android:layout_marginTop="8.8dp"
+                android:layout_centerHorizontal="true"
+                android:includeFontPadding="false"
+                android:text="070-8676-1662"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:fontFamily="@font/notosanscjkkr_bold"/>
+
+            <TextView
+                android:id="@+id/semi_admin_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/semi_admin_tel_text"
+                android:layout_marginTop="4.3dp"
+                android:layout_centerHorizontal="true"
+                android:includeFontPadding="false"
+                android:text="(오전 9시 - 오후 6시)"
+                android:textColor="@color/grey"
+                android:textSize="9sp"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+
+            <View
+                android:id="@+id/bottom_line"
+                android:layout_width="333.5dp"
+                android:layout_height="0.8dp"
+                android:layout_below="@+id/semi_admin_time_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="56.5dp"
+                android:background="@color/input_line"/>
+
+            <TextView
+                android:id="@+id/semi_copy_right_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bottom_line"
+                android:layout_marginTop="14.8dp"
+                android:layout_centerHorizontal="true"
+                android:includeFontPadding="false"
+                android:text="COPYRIGHT 2016 ARTECH. ALL RIGHTS RESERVED."
+                android:textColor="@color/greyish"
+                android:textSize="9sp"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+
+            <Button
+                android:id="@+id/version_button"
+                android:layout_width="wrap_content"
+                android:layout_height="21.3dp"
+                android:layout_below="@+id/semi_copy_right_text"
+                android:layout_marginTop="8.5dp"
+                android:layout_marginBottom="50dp"
+                android:layout_centerHorizontal="true"
+                android:text="Verision 1.0.0.0"
+                android:textSize="9sp"
+                android:textColor="@color/greyish"
+                android:fontFamily="@font/notosanscjkkr_regular"
+                android:background="@mipmap/more_box"/>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>

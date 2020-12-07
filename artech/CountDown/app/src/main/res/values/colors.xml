@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="clockText">#40ffbf</color>
+    <color name="grayblackbg">#111111</color>
+    <color name="grayblack2bg">#151515</color>
+
+
+    <color name="black">#000000</color>
+
+    <color name="red">#ff271d</color>
+    <color name="yellow">#fdfd00</color>
+    <color name="green">#00ff00</color>
+    <color name="mint">#00ffb3</color>
+    <color name="blue">#00ccff</color>
+    <color name="purple">#ff00f0</color>
+    <color name="white">#ffffff</color>
+
+
+    <color name="info">#ffc11c</color>
+
+    <color name="graybluegreenfont">#668c88</color>
+    <color name="graybluegreen2font">#476865</color>
+    <color name="mint2font">#8fffc4</color>
+
+</resources>

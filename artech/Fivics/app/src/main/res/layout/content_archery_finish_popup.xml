@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_archery_finish"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="793dp"
+    android:minHeight="393dp"
+    android:background="@mipmap/popup_keypad"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="115.33dp">
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/now_round_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="1ROUND 를 완료하였습니다."
+            android:textColor="@android:color/white"
+            android:textSize="32sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/next_round_please_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/now_round_text"
+            android:background="@null"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="추가결제 후 2ROUND를 진행하시겠습니까?"
+            android:textColor="@android:color/white"
+            android:textSize="32sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="51.33dp">
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/next_round_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="66dp"
+            android:layout_marginBottom="51.33dp"
+            android:background="@null"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="2R 계속하기"
+            android:textColor="@color/archery_popup_button_text"
+            android:textSize="32sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/finish_round_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="66dp"
+            android:layout_marginBottom="51.33dp"
+            android:includeFontPadding="false"
+            android:background="@null"
+            android:gravity="center"
+            android:text="끝내기(결과보기)"
+            android:textColor="@color/archery_popup_button_text"
+            android:textSize="32sp"
+            app:font="NotoSansCJKkr_Medium.otf" />
+    </RelativeLayout>
+
+</RelativeLayout>

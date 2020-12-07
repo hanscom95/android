@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.semi.normal.QuestionDetailActivity"
+    tools:showIn="@layout/activity_question_detail"
+    android:paddingBottom="@dimen/nav_padding_bottom">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="123.5dp">
+
+        <TextView
+            android:id="@+id/non_question_first_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:includeFontPadding="false"
+            android:text="등록된 1:1문의가 없습니다."
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="@font/nanumgothic"/>
+
+        <TextView
+            android:id="@+id/non_question_second_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/non_question_first_text"
+            android:layout_marginTop="8.8dp"
+            android:includeFontPadding="false"
+            android:text="소중한 의견에 귀 기울여 신속하고 정확하게\n답변드리도록 하겠습니다."
+            android:textSize="12sp"
+            android:textColor="@color/warm_grey"
+            android:fontFamily="@font/nanumgothic"/>
+    </RelativeLayout>
+</RelativeLayout>

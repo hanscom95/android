@@ -1,0 +1,108 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="today_top">18dp</dimen>
+    <dimen name="gauge_top">15dp</dimen>
+    <dimen name="walking_top">17dp</dimen>
+    <dimen name="activity_side">24dp</dimen>
+
+    <dimen name="gauge_top_text_interval">0dp</dimen>
+    <dimen name="gauge_inner">33dp</dimen>
+    <dimen name="info_top">13dp</dimen>
+    <dimen name="info_title">30dp</dimen>
+    <dimen name="info_inner_interval">3dp</dimen>
+    <dimen name="info_text_interval">20dp</dimen>
+    <dimen name="info_box_height">66dp</dimen>
+    <dimen name="info_title_interval">13dp</dimen>
+    <dimen name="info_box_interval">8dp</dimen>
+
+
+    <dimen name="info_main_text">48sp</dimen>
+    <dimen name="info_sub_text">22sp</dimen>
+
+    <dimen name="activity_bottom_button">50dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+
+
+    <dimen name="motions_content">13dp</dimen>
+    <dimen name="motions_content_right">6dp</dimen>
+    <dimen name="motion_box_right_interval">5dp</dimen>
+    <dimen name="motion_box_bottom_interval">9dp</dimen>
+    <dimen name="motion_text_start_interval">13dp</dimen>
+    <dimen name="motion_text_top_interval">6dp</dimen>
+    <dimen name="motion_value_top_interval">0dp</dimen>
+    <dimen name="motion_value_shot_top_interval">0dp</dimen>
+    <dimen name="motion_total_bottom_interval">23dp</dimen>
+    <dimen name="motion_image_size">55dp</dimen>
+
+
+    <dimen name="motion_info_box_interval">11dp</dimen>
+    <dimen name="motion_top">21dp</dimen>
+    <dimen name="mo_info_detail_img_top">16dp</dimen>
+    <dimen name="mo_info_top">13dp</dimen>
+    <dimen name="mo_gauge_top">-8dp</dimen>
+    <dimen name="motion_side">24dp</dimen>
+    <dimen name="motion_info_title">30dp</dimen>
+    <dimen name="mo_list_img_right">30dp</dimen>
+
+
+    <dimen name="mo_credits_text">22sp</dimen>
+
+
+    <dimen name="sleep_info_box_interval">11dp</dimen>
+    <dimen name="sleep_info_box_img_interval">15dp</dimen>
+    <dimen name="sleep_gauge_interval">13dp</dimen>
+    <dimen name="sleep_side">24dp</dimen>
+
+
+    <dimen name="heart_side">24dp</dimen>
+    <dimen name="heart_panel_interval">11dp</dimen>
+    <dimen name="heart_info_box_interval">11dp</dimen>
+    <dimen name="heart_info_inner_interval">13dp</dimen>
+
+
+    <!-- menu page -->
+    <dimen name="menu_logo_top_profile">17.83dp</dimen>
+    <dimen name="menu_logo_top_goal">15.17dp</dimen>
+    <dimen name="menu_logo_top_activity">15.33dp</dimen>
+    <dimen name="menu_logo_top_motion">12.83dp</dimen>
+    <dimen name="menu_logo_top_sleep">20dp</dimen>
+    <dimen name="menu_logo_top_heartrate">18dp</dimen>
+    <dimen name="menu_logo_top_option">16.17dp</dimen>
+    <dimen name="menu_logo_top_logout">18.17dp</dimen>
+
+    <dimen name="menu_logo_start_profile">34.33dp</dimen>
+    <dimen name="menu_logo_start_goal">35dp</dimen>
+    <dimen name="menu_logo_start_activity">35dp</dimen>
+    <dimen name="menu_logo_start_motion">33.33dp</dimen>
+    <dimen name="menu_logo_start_sleep">30dp</dimen>
+    <dimen name="menu_logo_start_heartrate">30dp</dimen>
+    <dimen name="menu_logo_start_option">33.33dp</dimen>
+    <dimen name="menu_logo_start_logout">35dp</dimen>
+
+    <dimen name="menu_text_top">26.67dp</dimen>
+
+    <dimen name="menu_direction_end">33.33dp</dimen>
+    <dimen name="menu_direction_top">26.67dp</dimen>
+
+
+    <!--Profile Size-->
+    <dimen name="strapline_top">16.67dp</dimen>
+    <dimen name="strapline_bottom">11.67dp</dimen>
+
+    <dimen name="text_top_interval">20dp</dimen>
+    <dimen name="text_start_interval">13.33dp</dimen>
+    <dimen name="text_end_interval">13.33dp</dimen>
+
+    <dimen name="box_bottom_interval">13.33dp</dimen>
+    <dimen name="box_start_interval">20dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+
+</resources>

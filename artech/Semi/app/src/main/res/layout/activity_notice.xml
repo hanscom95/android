@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="artech.com.semi.normal.NoticeActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="16.3dp">
+                <ImageView
+                    android:id="@+id/app_bar_back_img"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitStart"
+                    android:src="@mipmap/ic_back"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/toolbar_title_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="공지사항"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/login_title_text"
+                    android:fontFamily="@font/notosanscjkkr_medium" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_notice" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:visibility="gone">
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_view"
+            app:itemBackground="@color/light_grey"
+            app:itemIconTint="@drawable/normal_bottom_nav_button"
+            app:itemTextColor="@drawable/normal_bottom_nav_button"
+            app:menu="@menu/normal_navigation"  />
+
+        <View
+            android:id="@+id/line_view"
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="@color/warm_grey" />
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

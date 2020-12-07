@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@mipmap/ic_home_nonpress"
+        android:title="@string/business_home"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/navigation_product_insert"
+        android:icon="@mipmap/ic_add_nonpress"
+        android:title="@string/business_product_insert"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/navigation_product_manage"
+        android:icon="@mipmap/ic_list_nonpress"
+        android:title="@string/business_product_manage"
+        app:showAsAction="ifRoom" />
+
+    <!--<item
+        android:id="@+id/navigation_sale"
+        android:icon="@mipmap/ic_list_2_nonpress"
+        android:title="@string/business_sale_manage"
+        app:showAsAction="ifRoom"
+        android:visible="false"/>-->
+
+    <item
+        android:id="@+id/navigation_question"
+        android:icon="@mipmap/ic_details_nonpress"
+        android:title="@string/business_notice_manage"
+        app:showAsAction="ifRoom" />
+
+</menu>

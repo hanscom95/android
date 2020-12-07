@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFFFF</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#4083ff</color>
+
+    <color name="colorBlue">#3F51B5</color>
+    <color name="colorBlueDark">#303f9f</color>
+
+    <color name="activity_bg">#00295B</color>
+    <color name="motion_bg">#B2ED11</color>
+    <color name="sleep_bg">#ACB9C1</color>
+    <color name="heart_bg">#FF4115</color>
+    <color name="notification_bg">#F0F2F1</color>
+    <color name="option_bg">#7D878E</color>
+    <color name="archery_bg">#7d878e</color>
+
+
+    <color name="today">#989C9E</color>
+    <color name="gauge_percent">#989C9E</color>
+    <color name="chart_axis_title">#7D878E</color>
+    <color name="chart_walking">#F21C4A</color>
+    <color name="chart_running">#9EF2E2</color>
+
+    <color name="chart_activation_text">#414042</color>
+    <color name="chart_non_activation_text">#989C9E</color>
+    <color name="chart_credits_bg">#F0F2F1</color>
+    <color name="chart_push_up">#209FED</color>
+    <color name="chart_sit_up">#FFA310</color>
+    <color name="chart_butterfly">#61D6E5</color>
+    <color name="chart_shoulder_press">#F43131</color>
+    <color name="chart_biceps_curl">#FFC610</color>
+    <color name="chart_kettlebell">#6C00D3</color>
+    <color name="chart_squat">#23759E</color>
+    <color name="chart_bench">#FF5317</color>
+    <color name="chart_cable_row">#00CE84</color>
+    <color name="chart_dumbell">#8E0000</color>
+    <color name="chart_alternate">#7F5CFF</color>
+
+
+    <color name="chart_light_sleep">#FFDD71</color>
+    <color name="chart_deep_sleep">#5329D6</color>
+
+
+    <color name="chart_max">#C90000</color>
+    <color name="chart_min">#FFA912</color>
+
+    <color name="account_text">#7D878E</color>
+    <color name="account_untext">#acacac</color>
+
+    <color name="black_overlay">#66000000</color>
+
+
+    <color name="archery_unselect">#A7A9AC</color>
+
+    <color name="archery_round_select">#e9e9e9</color>
+    <color name="archery_black">#000000</color>
+    <color name="archery_grey">#D1D3D4</color>
+    <color name="archery_red">#DD001B</color>
+    <color name="archery_yellow">#ffd000</color>
+    <color name="archery_blue">#1DC5FF</color>
+
+    <color name="archery_info">#EFBFAB</color>
+    <color name="archery_text_active">#414042</color>
+    <color name="archery_text_disabled">#A7A9AC</color>
+
+    <color name="main_info">#000000</color>
+
+    <color name="main_grey">#b9bec1</color>
+    <color name="main_yellow">#f9c24d</color>
+
+
+    <color name="signup_member_detail_text">#bbbbbb</color>
+    <color name="signup_member_select_text">#ffd277</color>
+
+    <color name="prohibition_text">#FB0707</color>
+    <color name="prohibition_grey">#b9bec1</color>
+
+
+    <color name="guide_text">#FB0707</color>
+    <color name="guide_grey">#b9bec1</color>
+
+    <color name="archery_text">#FB0707</color>
+
+
+    <color name="archery_red_new">#fb0707</color>
+    <color name="archery_blue_new">#4cf0d5</color>
+    <color name="archery_yellow_new">#f9c24d</color>
+    <color name="archery_black_new">#000000</color>
+    <color name="archery_white_new">#ffffff</color>
+
+    <color name="archery_board_select">#4cf0d5</color>
+    <color name="archery_board_none">#3c4956</color>
+    <color name="archery_board_text">#252e37</color>
+    <color name="archery_board_one">#7b7472</color>
+    <color name="archery_board_two">#24201f</color>
+
+    <color name="archery_popup_button_text">#4CF0D4</color>
+
+    <color name="archery_popup_background">#60000000</color>
+
+
+
+    <color name="emailPopupText">#ffff</color>
+    <color name="emailEditHintText">#acacac</color>
+</resources>

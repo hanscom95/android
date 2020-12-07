@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.manager.group.GroupListActivity"
+    tools:showIn="@layout/app_bar_group_list"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:id="@+id/group_list_title_layout"
+        android:layout_width="734dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/regular_state"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp">
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/name_title_text"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="이름"
+            android:textSize="24sp"
+            app:font="NotoSansCJKkr_Medium.otf"
+            android:textColor="@android:color/black"/>
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/score_title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/name_title_text"
+            android:layout_toRightOf="@+id/name_title_text"
+            android:layout_toEndOf="@+id/name_title_text"
+            android:layout_toLeftOf="@+id/total_title_text"
+            android:layout_toStartOf="@+id/total_title_text"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="점수"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            app:font="NotoSansCJKkr_Medium.otf" />"
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/total_title_text"
+            android:layout_width="81dp"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="합계"
+            android:textSize="24sp"
+            app:font="NotoSansCJKkr_Medium.otf"
+            android:textColor="@android:color/black"
+            android:layout_alignBaseline="@+id/ranking_title_text"
+            android:layout_alignBottom="@+id/ranking_title_text"
+            android:layout_toLeftOf="@+id/ranking_title_text"
+            android:layout_toStartOf="@+id/ranking_title_text" />
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/ranking_title_text"
+            android:layout_width="73dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="16dp"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="순위"
+            android:textSize="24sp"
+            app:font="NotoSansCJKkr_Medium.otf"
+            android:textColor="@android:color/black" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/group_list_view"
+        android:layout_width="734dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_list_title_layout"
+        android:layout_alignLeft="@+id/group_list_title_layout"
+        android:layout_alignStart="@+id/group_list_title_layout"
+        android:layout_above="@+id/bottom_button_layout"
+        android:layout_marginBottom="60dp"
+        android:dividerHeight="0dp"
+        android:divider="@null"/>
+
+    <RelativeLayout
+        android:id="@+id/bottom_button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="149dp">
+
+        <de.morrox.fontinator.FontButton
+            android:id="@+id/exit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/toggle_exit_group_button"
+            android:layout_marginRight="4.5dp"
+            android:visibility="gone"/>
+
+        <de.morrox.fontinator.FontButton
+            android:id="@+id/add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/exit_button"
+            android:layout_marginLeft="4.5dp"
+            android:background="@drawable/toggle_add_button"/>
+    </RelativeLayout>
+</RelativeLayout>

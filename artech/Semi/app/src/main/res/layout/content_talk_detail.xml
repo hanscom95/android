@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.semi.normal.TalkDetailActivity"
+    tools:showIn="@layout/activity_talk_detail">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/first_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+                <TextView
+                    android:id="@+id/title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:layout_marginTop="20.3dp"
+                    android:layout_marginLeft="16.8dp"
+                    android:text="title"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/notosanscjkkr_medium"/>
+
+                <TextView
+                    android:id="@+id/date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:layout_below="@+id/title_text"
+                    android:layout_alignLeft="@+id/title_text"
+                    android:layout_marginTop="6.5dp"
+                    android:text="0000년 00월 00일"
+                    android:textSize="9sp"
+                    android:textColor="@color/greyish"
+                    android:fontFamily="@font/notosanscjkkr_regular"/>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="222.5dp"
+                    android:layout_below="@+id/date_text"
+                    android:layout_marginTop="10.5dp"
+                    android:visibility="gone"></android.support.v4.view.ViewPager>
+
+
+                <TextView
+                    android:id="@+id/contents_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="60dp"
+                    android:includeFontPadding="false"
+                    android:layout_below="@+id/viewPager"
+                    android:layout_alignLeft="@+id/title_text"
+                    android:layout_marginTop="16.3dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/notosanscjkkr_regular"/>
+
+                <View
+                    android:id="@+id/first_middle_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_below="@+id/contents_text"
+                    android:background="@color/input_line"/>
+                
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/first_middle_line"
+                    android:visibility="gone">
+                    <RelativeLayout
+                        android:id="@+id/favorite_first_layout"
+                        android:layout_width="25.5dp"
+                        android:layout_height="25.5dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_centerVertical="true">
+                        <artech.com.semi.utility.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/img_profilephoto"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/img_favorite_22"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/favorite_second_layout"
+                        android:layout_width="25.5dp"
+                        android:layout_height="25.5dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@+id/favorite_first_layout"
+                        android:layout_centerVertical="true">
+                        <artech.com.semi.utility.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/img_profilephoto"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/img_favorite_22"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/favorite_third_layout"
+                        android:layout_width="25.5dp"
+                        android:layout_height="25.5dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@+id/favorite_second_layout"
+                        android:layout_centerVertical="true">
+                        <artech.com.semi.utility.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/img_profilephoto"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/img_favorite_22"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/input_line"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/second_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first_layout"
+                android:layout_marginTop="13dp"
+                android:background="@color/white">
+                <RelativeLayout
+                    android:id="@+id/review_top_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50.3dp">
+
+                    <TextView
+                        android:id="@+id/review_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.5dp"
+                        android:text="댓글"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/notosanscjkkr_regular"/>
+                    <TextView
+                        android:id="@+id/review_value_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:layout_toRightOf="@+id/review_text"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2.5dp"
+                        android:text="0"
+                        android:textSize="12sp"
+                        android:textColor="@color/warm_grey"
+                        android:fontFamily="@font/notosanscjkkr_regular"/>
+
+                    <TextView
+                        android:id="@+id/review_more_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="18.3dp"
+                        android:text="더보기"
+                        android:textSize="12sp"
+                        android:textColor="@color/greenblue"
+                        android:fontFamily="@font/notosanscjkkr_regular"/>
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/review_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/review_top_layout"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/bottom_first_layout"
+            android:layout_width="match_parent"
+            android:layout_height="54dp">
+
+            <ImageView
+                android:id="@+id/camera_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16.5dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_photo_3_c"
+                android:visibility="invisible"/>
+
+            <EditText
+                android:id="@+id/review_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/camera_img"
+                android:layout_toLeftOf="@+id/review_insert_text"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="14.5dp"
+                android:background="@mipmap/btn_input"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:hint="댓글을 입력해주세요."
+                android:inputType="text"
+                android:maxLines="1"
+                android:maxLength="255"
+                android:singleLine="true"
+                android:gravity="left|center"
+                android:textSize="13sp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/warm_grey"
+                android:fontFamily="@font/nanumgothic"/>
+            <TextView
+                android:id="@+id/review_insert_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="14.5dp"
+                android:includeFontPadding="false"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:text="등록"
+                android:fontFamily="@font/notosanscjkkr_regular"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/input_line"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/input_line"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottom_second_layout"
+            android:layout_width="match_parent"
+            android:layout_height="52.8dp"
+            android:layout_below="@+id/bottom_first_layout">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true">
+
+                <CheckBox
+                    android:id="@+id/item_two_favorites_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="6dp"
+                    android:text="좋아요"
+                    android:textSize="12sp"
+                    android:textColor="@color/greyish_brown"
+                    android:button="@drawable/favorites_heart_checkbox"
+                    android:fontFamily="@font/notosanscjkkr_regular"/>
+
+                <RelativeLayout
+                    android:id="@+id/item_two_review_write_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/item_two_favorites_checkbox"
+                    android:layout_marginLeft="55dp">
+
+                    <ImageView
+                        android:id="@+id/item_two_review_write_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_review_2"/>
+
+                    <TextView
+                        android:id="@+id/item_two_review_write_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/item_two_review_write_img"
+                        android:layout_marginLeft="4.8dp"
+                        android:includeFontPadding="false"
+                        android:textSize="12sp"
+                        android:textColor="@color/greyish_brown"
+                        android:text="댓글쓰기"
+                        android:fontFamily="@font/nanumgothic"/>
+
+                </RelativeLayout>
+
+                <CheckBox
+                    android:id="@+id/item_two_scrap_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/item_two_review_write_layout"
+                    android:layout_marginLeft="64dp"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="6dp"
+                    android:text="스크랩"
+                    android:textSize="12sp"
+                    android:textColor="@color/greyish_brown"
+                    android:button="@drawable/scrap_checkbox"
+                    android:fontFamily="@font/notosanscjkkr_regular"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

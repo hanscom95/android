@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/content_scale_list_layout"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="artech.com.manager.scale.ScaleListActivity"
+    tools:showIn="@layout/app_bar_scale_list">
+
+    <RelativeLayout
+        android:id="@+id/scale_main_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="135dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="14dp"
+        android:background="@mipmap/ticket_white_shadow"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/scale_title_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/team_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="63dp"
+                android:layout_marginTop="68dp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="단체명"
+                android:textColor="@color/scaleTitleText"
+                android:textSize="24sp"
+                app:font="NotoSansCJKkr_Regular.otf" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/team_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/team_title_text"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@+id/team_title_text"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text=""
+                android:textColor="@color/scaleTitle"
+                android:textSize="30sp"
+                app:font="NotoSansCJKkr_Medium.otf" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/team_record_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="81dp"
+                android:layout_marginTop="70dp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="17/08/22 03 : 20 : 15"
+                android:textColor="@color/scaleTitleText"
+                android:textSize="24sp"
+                app:font="NotoSansCJKkr_Regular.otf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/scale_list_title_layout"
+            android:layout_width="649dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scale_title_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/regular_state">
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/ranking_title_text"
+                android:layout_width="67dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="순위"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:font="NotoSansCJKkr_Medium.otf" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/name_title_text"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/ranking_title_text"
+                android:layout_toEndOf="@+id/ranking_title_text"
+                android:layout_toLeftOf="@+id/score_title_text"
+                android:layout_toRightOf="@+id/ranking_title_text"
+                android:layout_toStartOf="@+id/score_title_text"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="이름"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:font="NotoSansCJKkr_Medium.otf" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/score_title_text"
+                android:layout_width="332dp"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/name_title_text"
+                android:layout_toLeftOf="@+id/total_title_text"
+                android:layout_toStartOf="@+id/total_title_text"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="점수"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:font="NotoSansCJKkr_Medium.otf" />
+
+            <de.morrox.fontinator.FontTextView
+                android:id="@+id/total_title_text"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="합계점수"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:font="NotoSansCJKkr_Medium.otf" />
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/scale_list_view"
+            android:layout_width="649dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottom_button_layout"
+            android:layout_alignLeft="@+id/scale_list_title_layout"
+            android:layout_alignStart="@+id/scale_list_title_layout"
+            android:layout_below="@+id/scale_list_title_layout"
+            android:layout_marginBottom="36dp"
+            android:divider="@null"
+            android:dividerHeight="0dp" />
+
+        <RelativeLayout
+            android:id="@+id/bottom_button_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="72dp">
+
+            <RelativeLayout
+                android:id="@+id/first_button_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <de.morrox.fontinator.FontButton
+                    android:id="@+id/print_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="13dp"
+                    android:background="@drawable/toggle_scale_print_button" />
+
+                <de.morrox.fontinator.FontButton
+                    android:id="@+id/add_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_toRightOf="@+id/print_button"
+                    android:background="@drawable/toggle_scale_add_button" />
+
+                <de.morrox.fontinator.FontButton
+                    android:id="@+id/finish_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_toRightOf="@+id/add_button"
+                    android:background="@drawable/toggle_scale_close_button" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/second_button_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <de.morrox.fontinator.FontButton
+                    android:id="@+id/round_8th_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="18.5dp"
+                    android:background="@drawable/toggle_scale_8_button" />
+
+                <de.morrox.fontinator.FontButton
+                    android:id="@+id/round_16th_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18.5dp"
+                    android:layout_toRightOf="@+id/round_8th_button"
+                    android:background="@drawable/toggle_scale_16_button" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/email_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/emailpopup"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/logo_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/suwon_logo"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="233dp"/>
+
+
+        <de.morrox.fontinator.FontTextView
+            android:id="@+id/email_popup_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/logo_img"
+            android:layout_marginTop="175dp"
+            android:gravity="center"
+            android:clickable="false"
+            android:text="슈팅존을 이용해 주셔서 감사합니다!\n결과전송을 위해 이메일을 입력해주세요"
+            android:textSize="30sp"
+            android:textColor="@color/emailPopupText"
+            app:font="NotoSansCJKkr_Bold.otf" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/email_popup_text"
+            android:layout_marginTop="50dp"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/email_input_layout"
+            android:layout_width="593dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email_popup_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="202dp"
+            android:background="@mipmap/btn_email">
+
+            <ImageView
+                android:id="@+id/ic_email_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_envelope"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="27dp"/>
+
+            <de.morrox.fontinator.FontEditText
+                android:id="@+id/email_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ic_email_logo"
+                android:layout_marginLeft="14dp"
+                android:includeFontPadding="false"
+                android:gravity="center_vertical"
+                android:background="@null"
+                android:hint="e-mail address"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textSize="30sp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/emailEditHintText"
+                app:font="NotoSansCJKkr_Regular.otf"/>
+        </RelativeLayout>
+
+        <de.morrox.fontinator.FontButton
+            android:id="@+id/send_button"
+            android:layout_width="591dp"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/btn_send"
+            android:layout_below="@+id/email_input_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="53dp"
+            android:text="전송"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            app:font="NotoSansCJKkr_Regular.otf"/>
+    </RelativeLayout>
+</RelativeLayout>
