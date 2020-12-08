@@ -6,7 +6,8 @@ chart는 웹뷰로 불러오며 jquery의 highcharts lib 사용<br>
 
 외부 DB는 사용 안하고 java SQLite 사용<br><br><br>
 
-이 앱은 웨어러블의 working, running, fitnees(11종류), 양궁 모션 등이 들어간 앱이다. (주)알텍의 외뢰로 개발 됬으며 양궁 스코프, 점수 모니터링 목적으로 만들어 졌다.
+이 앱은 웨어러블의 working, running, fitnees(11종류), 양궁 모션 등이 들어간 앱이다. <br>
+(주)알텍의 외뢰로 개발 됬으며 Raspberry Pi camera module을 streaming video service로 송신 받아 양궁 스코프, 점수 모니터링 영상을 출력한다.<br>
 
 ## Preview
 ![ScreenShot](./screenshot/Screenshot_20170404-162626.png)
