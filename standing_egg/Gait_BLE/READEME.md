@@ -6,7 +6,7 @@ chart는 NChart3D lib 실시간 렌더링 chart 사용<br>
 이 앱은 Gait Tracking이라는 알고리즘을 효과적으로 보여주기 위해 만들었으며 3차원 공간에서의 움직임을 x,y,z 축으로 보여준다.<br>
 
 ## Preview
-![ScreenShot](./screenshot/그림1.png)
+![ScreenShot](./screenshot/그림1.jpg)
 ![ScreenShot](./screenshot/capture1.png)
 ![ScreenShot](./screenshot/capture2.png)
 ![ScreenShot](./screenshot/capture3.png)
