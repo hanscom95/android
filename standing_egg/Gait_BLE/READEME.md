@@ -7,7 +7,7 @@ chart는 NChart3D lib 실시간 렌더링 chart 사용<br>
 
 ## Preview
 ![ScreenShot](./screenshot/그림1.jpg)
-![ScreenShot](./screenshot/capture1.png)
-![ScreenShot](./screenshot/capture2.png)
-![ScreenShot](./screenshot/capture3.png)
-![ScreenShot](./screenshot/capture4.png)
+![ScreenShot](./screenshot/capture1.PNG)
+![ScreenShot](./screenshot/capture2.PNG)
+![ScreenShot](./screenshot/capture3.PNG)
+![ScreenShot](./screenshot/capture4.PNG)
