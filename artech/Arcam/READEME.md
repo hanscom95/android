@@ -11,5 +11,5 @@ OpenSource는 openCVLibrary330를 사용 했다.<br>
 ![ScreenShot](./screenshot/6_finetuning.jpg)
 ![ScreenShot](./screenshot/arappinfo.jpg)
 ![ScreenShot](./screenshot/record.jpg)
-![ScreenShot](./screenshot/record2.jpg)
-![ScreenShot](./screenshot/record3.jpg)
+![ScreenShot](./screenshot/record_2.jpg)
+![ScreenShot](./screenshot/record_3.jpg)
