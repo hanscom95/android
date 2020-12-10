@@ -6,9 +6,12 @@ chart는 웹뷰로 불러오며 jquery의 highcharts lib 사용<br>
 
 외부 DB는 사용 안하고 java SQLite 사용<br><br><br>
 
-이 앱은 웨어러블의 walking, running, fitnees(11종류), 양궁 모션 등이 들어간 앱이다. x의 외뢰로 개발 됬으며 양궁 스코프, 점수 모니터링 목적으로 만들어 졌다.
+이 앱은 웨어러블의 walking, running, fitnees(11종류) 등이 들어간 앱이다.
 
 ## Preview
-![ScreenShot](./screenshot/Screenshot_20170404-162626.png)
-![ScreenShot](./screenshot/Screenshot_20170407-161128.png)
-![ScreenShot](./screenshot/Screenshot_20170404-183548.png)
+![ScreenShot](./screenshot/main.png)
+![ScreenShot](./screenshot/2.png)
+![ScreenShot](./screenshot/activity-tracking.png)
+![ScreenShot](./screenshot/activity-tracking2.png)
+![ScreenShot](./screenshot/user-option-1.png)
+![ScreenShot](./screenshot/Battery-시안.png)
